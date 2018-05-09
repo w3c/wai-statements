@@ -1,0 +1,2 @@
+# wai-statements
+Accessibility Statements
