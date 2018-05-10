@@ -1,6 +1,6 @@
 ---
 title: "Accessibility Statements"
-permalink: /plan/statements/
+permalink: /planning/statements/
 github:
   repository: wai-statements
 footer: > # Text in footer in HTML
