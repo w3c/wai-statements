@@ -94,10 +94,10 @@ Remark: The elements below could be presented folded and then unfold if they are
 
 ### Conformance Status
 * The options for the conformance status are:
-** Fully conformant: The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
-** Partially conformant: A specific functionality of the website or mobile app is non-conformant with the standard/guideline.
-** Non conformant: The majority of the website or mobile app is non-conformant with the standard/guideline.
-** No assessment available: The website or mobile app has not been evaluated against the standard/guideline or the evaluation result is not available.
+* * Fully conformant: The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
+* * Partially conformant: A specific functionality of the website or mobile app is non-conformant with the standard/guideline.
+* * Non conformant: The majority of the website or mobile app is non-conformant with the standard/guideline.
+* * No assessment available: The website or mobile app has not been evaluated against the standard/guideline or the evaluation result is not available.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">What is the conformance status of the website or mobile application..</textarea><button type="button">Add to my Accessibility Statement</button>
 
