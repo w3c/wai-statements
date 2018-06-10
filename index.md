@@ -63,6 +63,8 @@ This section contains a list of potential elements that can be included in an ac
 ### Title
 * Provide the accessibility statement with a title that helps people associate the statement with the actual resource it is describing.
 * <strong>Example:</strong> For the website of the university of Sampel, this could be 'University of Sampel accessibility statement' (add further detailing if necessary, for example if the statement is only about a smaller part of the website, like the university library). 
+* Title: .........
+* <textarea rows="1" cols="50">Fill in your title here..</textarea>
 
 ### Introduction
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
