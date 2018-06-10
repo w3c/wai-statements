@@ -34,6 +34,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione placeat ab laboriosam. **Assumenda aut, praesentium (bold)** commodi _nesciunt natus (italic)_ ipsum fugiat [voluptates nisi ipsam voluptas (Link)](https://example.com) recusandae, a. [Sunt eos veritatis numquam (Internal link)]({{ "/permalink/to/page/" | relative_url }})!
 
+<p>This is a test to see if I still know how to make a webpage... And to test making a page in Github and committing it :-)</p>
+<p>Do I need to use html code?</p>
+
+<h3>This would be a heading 3</h3>
+
+
 ### Heading Level 3 {#anchor2}
 
 1. This is 
