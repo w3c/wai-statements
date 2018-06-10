@@ -46,33 +46,25 @@ The accessibility statement can (optionally) be used to describe other measures 
 The primary audience for this resource are persons who need to create an accessibility statement. These can be owners of websites and mobile applications, or those responsible for the website or mobile application. Providing an accessibility statement could be voluntarily or required. The requirement could be from the organization itself, from procurers, from researchers, or from a broader initiative such as the EU Directive etc. The guidance on this page provides them with an internationally harmonized model to generate an accessibility statement, including an example for the page markup.
 	
 An important audience for the accessibility statement are users with disabilities. They may find information about accessible alternatives, accessibility support and/or information about where they can provide input and/or feedback on the accessibility of a website or mobile application. They will also benefit from a harmonized and consistent model.
-	
 
 ### Levels of guidance
 
-	<p>This resource offers guidance for different objectives:
-	<ol>
-	<li>Description of elements that can be part of an accessibility statement</li>
-	<li>Minimal model accessibility statement</li>
-	<li>Comprehensive model accessibility statement</li>
-	</ol>
+This resource offers guidance for different objectives:
+Description of elements that can be part of an accessibility statement
+Minimal model accessibility statement
+Comprehensive model accessibility statement
+
+The minimal and comprehensive model accessibility statements also provide a 'datamodel' comparable to the model produced in WCAG-EM to help harmonize consistent reporting.
+
+## List and description of elements {#List and description of elements}
+
+This section contains a list of potential elements that can be included in an accessibility statement for a website or mobile application. Every element has a short explanation, one of more examples and a proposed dataformat. Anyone setting up an accessibility statement can use any of these elements. Section 'minimal model accessibility statement' and section 'comprehensive model accessibility statement' provide examples of a minimal and a comprehensive accessibility statement.
 	
-	<p>The minimal and comprehensive model accessibility statements also provide a 'datamodel' comparable to the model produced in WCAG-EM to help harmonize consistent reporting.</p>
+### Title
+Provide the accessibility statement with a title that helps people associate the statement with the actual resource it is describing.
+<strong>Example:</strong> For the website of the university of Sampel, this could be 'University of Sampel accessibility statement' (add further detailing if necessary, for example if the statement is only about a smaller part of the website, like the university library). 
 
-<h2 id="Listanddescriptionofelements">List and description of elements</h2>
+### Introduction
+Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
+<strong>Example:</strong> Example here.
 
-	<p>This section contains a list of potential elements that can be included in an accessibility statement for a website or mobile application. Every element has a short explanation, one of more examples and a proposed dataformat. Anyone setting up an accessibility statement can use any of these elements. Section 'minimal model accessibility statement' and section 'comprehensive model accessibility statement' provide examples of a minimal and a comprehensive accessibility statement.</p>
-	
-<h2 id="Title">Title</h2>
-
-	<p>Provide the accessibility statement with a title that helps people associate the statement with the actual resource it is describing. </p>
-	<ul>
-	<li><strong>Example:</strong> For the website of the university of Sampel, this could be 'University of Sampel accessibility statement' (add further detailing if necessary, for example if the statement is only about a smaller part of the website, like the university library). </li>
-	</ul>
-	
-<h2 id="Introduction">Introduction</h2>
-
-	<p>Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.</p>
-	<ul>
-	<li><strong>Example:</strong> Example here </li>
-	</ul>
