@@ -59,32 +59,38 @@ The minimal and comprehensive model accessibility statements also provide a 'dat
 ## List and description of elements {#Listofelements}
 
 This section contains a list of potential elements that can be included in an accessibility statement for a website or mobile application. Every element has a short explanation, one of more examples and a proposed dataformat. Anyone setting up an accessibility statement can use any of these elements. Section 'minimal model accessibility statement' and section 'comprehensive model accessibility statement' provide examples of a minimal and a comprehensive accessibility statement.
-	
+
+Remark: The elements below could be presented folded and then unfold if they are clicked/active. The textareas are there for discussion only. They do not work.. 
+
 ### Title
 * Provide the accessibility statement with a title that helps people associate the statement with the actual resource it is describing.
 * <strong>Example:</strong> For the website of the university of Sampel, this could be 'University of Sampel accessibility statement' (add further detailing if necessary, for example if the statement is only about a smaller part of the website, like the university library). 
-* Title: .........
-* <textarea rows="1" cols="50">Fill in your title here..</textarea>
+* <textarea rows="1" cols="50">Fill in your title here..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Introduction
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Name of website/mobile app
 * Name of the website or mobile app. This includes version information and a date.
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Fill in the name of your website or mobile app here..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Description
 * A brief description of the website or mobile app in scope of this Statement.
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Add your description here..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Scope limitations
 * Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover)
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Date
 * Date on which the Statement was last modified.
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">When did you write this statement? yyyymmdd</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Conformance Status
 * The options for the conformance status are:
@@ -93,10 +99,12 @@ This section contains a list of potential elements that can be included in an ac
 ** Non conformant: The majority of the website or mobile app is non-conformant with the standard/guideline.
 ** No assessment available: The website or mobile app has not been evaluated against the standard/guideline or the evaluation result is not available.
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">What is the conformance status of the website or mobile application..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Evaluation report
 * Details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about accessibility. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
 * <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Link to evaluation report..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Etc. Thats it for now...
 Is this how we want it?
