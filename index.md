@@ -113,7 +113,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * Name (or department etc.): <textarea rows="1" cols="50">Name...</textarea>
 * E-mail address: <textarea rows="1" cols="50">E-mail address...</textarea>
 * Phone number: <textarea rows="1" cols="50">Phone number...</textarea>
-<button type="button">Add to my Accessibility Statement</button>
+* <button type="button">Add to my Accessibility Statement</button>
 
 ### Notes
 * Any information important for the understanding of this Statement.
