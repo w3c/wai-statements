@@ -106,8 +106,47 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Link to evaluation report..</textarea><button type="button">Add to my Accessibility Statement</button>
 
-### Etc. Thats it for now...
-Is this how we want it?
+### Contact information
+* For questions about this Statement. This could be an email of the person responsible for the Accessibility Statement. It is important to point out the person or department directly responsible for accessibility is important to point out.
+* <textarea rows="1" cols="50">E-mail address</textarea>
+* <textarea rows="1" cols="50">Phone number</textarea><button type="button">Add to my Accessibility Statement</button>
+
+### Notes
+* Any information important for the understanding of this Statement
+
+### Remarks and explanation
+* Explanation of the parts of the content that are not accessible, and the reasons for that inaccessibility and, where appropriate, the accessible alternatives provided for to justify the conformance level and conformance status. When the conformance level is ’Partial conformant’ or ‘Non conformant’, the explanation requires information about:
+** Website (and mobile application) areas that do not conform
+** Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
+** If a SC does not apply, explain why it does not apply
+** Explain accessible alternatives that are used (if available) and why they have been used
+
+### Feedback
+* An invitation to send feedback about the Accessibility Statement (This is a description of, and a link to, a feedback mechanism)
+Request accessible format - A possibility to request information that is not accessible.
+
+### Enforcement procedure
+* Description of and link to enforcement procedure.
+
+## Examples for optional requirements
+
+### Compliance basis
+* Where do the requirements originate (organization, legal requirement, ..)
+
+### Quality assurance method used
+* The quality assurance method used (WCAG-EM, internal QA, other)
+
+### Intention of the organization
+* The intention could be to reach a higher level of conformance or to work on full conformance of all websites and mobile apps. It also describes the manner in which digital accessibility is embedded in the organization's policy.
+
+### Conformance Measures
+* Add conformance measures to ‘remarks and explanations’. For every accessibility problem identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect.
+
+### Organisational measures
+* Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
+
+### Formal confirmation
+* Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
 
 ## Minimal Model Accessibility Statement
 Todo
