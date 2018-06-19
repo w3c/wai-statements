@@ -138,7 +138,7 @@ Request accessible format - A possibility to request information that is not acc
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Link to enforcement procedure..</textarea><button type="button">Add to my Accessibility Statement</button>
 
-## Examples for optional requirements
+## More optional elements
 
 ### Compliance basis
 * Where do the requirements originate (organization, legal requirement, ..)
