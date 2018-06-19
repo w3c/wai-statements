@@ -121,10 +121,10 @@ Remark: The elements below could be presented folded and then unfold if they are
 
 ### Remarks and explanation
 * Explanation of the parts of the content that are not accessible, and the reasons for that inaccessibility and, where appropriate, the accessible alternatives provided for to justify the conformance level and conformance status. When the conformance level is ’Partial conformant’ or ‘Non conformant’, the explanation requires information about:
-** Website (and mobile application) areas that do not conform
-** Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
-** If a SC does not apply, explain why it does not apply
-** Explain accessible alternatives that are used (if available) and why they have been used.
+* * Website (and mobile application) areas that do not conform
+* * Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
+* * If a SC does not apply, explain why it does not apply
+* * Explain accessible alternatives that are used (if available) and why they have been used.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Part of content/Area that does not conform..</textarea>
 * <textarea rows="1" cols="50">Reason for the non-conformance...</textarea>
@@ -166,8 +166,7 @@ Request accessible format - A possibility to request information that is not acc
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Accessibility barrier... (SC or Test)</textarea>
 * <textarea rows="1" cols="50">Measures to be taken...</textarea>
-* <textarea rows="1" cols="50">Deadline date...</textarea>
-* <textarea rows="1" cols="50"><strong>+</strong> Add mare barriers</textarea><button type="button">Add to my Accessibility Statement</button>
+* <textarea rows="1" cols="50">Deadline date...</textarea><button type="button">Add to my Accessibility Statement</button><button type="button">+ Add more barriers</button>
 
 ### Organisational measures
 * Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
