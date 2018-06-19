@@ -112,7 +112,8 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <strong>Example:</strong> Example here.
 * Name (or department etc.): <textarea rows="1" cols="50">Name...</textarea>
 * E-mail address: <textarea rows="1" cols="50">E-mail address...</textarea>
-* Phone number: <textarea rows="1" cols="50">Phone number...</textarea><button type="button">Add to my Accessibility Statement</button>
+* Phone number: <textarea rows="1" cols="50">Phone number...</textarea>
+<button type="button">Add to my Accessibility Statement</button>
 
 ### Notes
 * Any information important for the understanding of this Statement.
@@ -166,7 +167,8 @@ Request accessible format - A possibility to request information that is not acc
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Accessibility barrier... (SC or Test)</textarea>
 * <textarea rows="1" cols="50">Measures to be taken...</textarea>
-* <textarea rows="1" cols="50">Deadline date...</textarea><button type="button">Add to my Accessibility Statement</button><button type="button">+ Add more barriers</button>
+* <textarea rows="1" cols="50">Deadline date...</textarea><button type="button">Add to my Accessibility Statement</button>
+<button type="button">+ Add more barriers</button>
 
 ### Organisational measures
 * Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
