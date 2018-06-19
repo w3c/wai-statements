@@ -108,45 +108,70 @@ Remark: The elements below could be presented folded and then unfold if they are
 
 ### Contact information
 * For questions about this Statement. This could be an email of the person responsible for the Accessibility Statement. It is important to point out the person or department directly responsible for accessibility is important to point out.
+* <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">E-mail address</textarea>
 * <textarea rows="1" cols="50">Phone number</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Notes
-* Any information important for the understanding of this Statement
+* Any information important for the understanding of this Statement.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Notes for the understanding of this accessibility statement.</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Remarks and explanation
 * Explanation of the parts of the content that are not accessible, and the reasons for that inaccessibility and, where appropriate, the accessible alternatives provided for to justify the conformance level and conformance status. When the conformance level is ’Partial conformant’ or ‘Non conformant’, the explanation requires information about:
 ** Website (and mobile application) areas that do not conform
 ** Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
 ** If a SC does not apply, explain why it does not apply
-** Explain accessible alternatives that are used (if available) and why they have been used
+** Explain accessible alternatives that are used (if available) and why they have been used.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Place remarks and explanations here...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Feedback
 * An invitation to send feedback about the Accessibility Statement (This is a description of, and a link to, a feedback mechanism)
 Request accessible format - A possibility to request information that is not accessible.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Link to feedback mechanism.</textarea>
+* <textarea rows="1" cols="50">Description of the feedback mechnamism..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Enforcement procedure
 * Description of and link to enforcement procedure.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Link to enforcement procedure..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ## Examples for optional requirements
 
 ### Compliance basis
 * Where do the requirements originate (organization, legal requirement, ..)
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Information about compliance basis..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Quality assurance method used
 * The quality assurance method used (WCAG-EM, internal QA, other)
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Qualtity assurance method..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Intention of the organization
 * The intention could be to reach a higher level of conformance or to work on full conformance of all websites and mobile apps. It also describes the manner in which digital accessibility is embedded in the organization's policy.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Intention of the organization..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Conformance Measures
 * Add conformance measures to ‘remarks and explanations’. For every accessibility problem identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Accessibility barrier (SC or Test)</textarea>
+* <textarea rows="1" cols="50">Measures to be taken...</textarea>
+* <textarea rows="1" cols="50">Deadline date</textarea>
+* <textarea rows="1" cols="50"><strong>+</strong> Add mare barriers</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Organisational measures
 * Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Organizational measures..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Formal confirmation
 * Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
+* <strong>Example:</strong> Example here.
+* <textarea rows="1" cols="50">Who is the formal confirmation from..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ## Minimal Model Accessibility Statement
 Todo
