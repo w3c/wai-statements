@@ -62,7 +62,7 @@ This section contains a list of potential elements that can be included in an ac
 
 Remark: The elements below could be presented folded and then unfold if they are clicked/active. The textareas and buttons are there for discussion only. They do not work.. 
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Title_input" %}
 
 ### Title
 
@@ -74,7 +74,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Introduction_input" %}
 ### Introduction
 {% include excol.html type="middle" %}
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
@@ -82,7 +82,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <textarea rows="1" cols="50">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Name_input" %}
 ### Name of website/mobile app
 {% include excol.html type="middle" %}
 * Name of the website or mobile app. This includes version information and a date.
@@ -90,7 +90,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <textarea rows="1" cols="50">Fill in the name of your website or mobile app here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Description_input" %}
 ### Description
 {% include excol.html type="middle" %}
 * A brief description of the website or mobile app in scope of this Statement.
@@ -98,7 +98,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <textarea rows="1" cols="50">Add your description here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Scope_limitations_input" %}
 ### Scope limitations
 {% include excol.html type="middle" %}
 * Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover)
@@ -106,7 +106,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <textarea rows="1" cols="50">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Date_input" %}
 ### Date
 {% include excol.html type="middle" %}
 * Date on which the Statement was last modified.
@@ -114,7 +114,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * When did you write this statement?: <textarea rows="1" cols="50">yyyymmdd</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="" %}
+{% include excol.html type="start" id="Conformance_status_input" %}
 ### Conformance Status
 {% include excol.html type="middle" %}
 * The options for the conformance status are:
@@ -127,25 +127,36 @@ Remark: The elements below could be presented folded and then unfold if they are
 * Comment: The textarea should be a select box
 {% include excol.html type="middle" %}
 
+{% include excol.html type="start" id="Evaluation_report_input" %}
 ### Evaluation report
+{% include excol.html type="middle" %}
 * Details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about accessibility. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add a link to the evaluation report..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="middle" %}
 
+{% include excol.html type="start" id="Contact_information_input" %}
 ### Contact information
+{% include excol.html type="middle" %}
 * For questions about this Statement. This could be an email of the person responsible for the Accessibility Statement. It is important to point out the person or department directly responsible for accessibility is important to point out.
 * <strong>Example:</strong> Example here.
 * Name (or department etc.): <textarea rows="1" cols="50">Name...</textarea>
 * E-mail address: <textarea rows="1" cols="50">E-mail address...</textarea>
 * Phone number: <textarea rows="1" cols="50">Phone number...</textarea>
 * <button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="middle" %}
 
+{% include excol.html type="start" id="Notes_input" %}
 ### Notes
+{% include excol.html type="middle" %}
 * Any information important for the understanding of this Statement.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add any notes here that help persons understand the statement</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="middle" %}
 
+{% include excol.html type="start" id="Remarks_explanations_input" %}
 ### Remarks and explanation
+{% include excol.html type="middle" %}
 * Explanation of the parts of the content that are not accessible, and the reasons for that inaccessibility and, where appropriate, the accessible alternatives provided for to justify the conformance level and conformance status. When the conformance level is ’Partial conformant’ or ‘Non conformant’, the explanation requires information about:
 * * Website (and mobile application) areas that do not conform
 * * Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
@@ -157,18 +168,25 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <textarea rows="1" cols="50">Reason for the non-applicability...</textarea>
 * <textarea rows="1" cols="50">Link to the accessible alternative...</textarea>
 * <textarea rows="1" cols="50">Explain why accessible alternative has been used...</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="middle" %}
 
+{% include excol.html type="start" id="Feedback_input" %}
 ### Feedback
+{% include excol.html type="middle" %}
 * An invitation to send feedback about the Accessibility Statement (This is a description of, and a link to, a feedback mechanism)
 Request accessible format - A possibility to request information that is not accessible.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add a link to the feedback mechanism here...</textarea>
 * <textarea rows="1" cols="50">Provide a description of the feedback mechnamism here..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="middle" %}
 
+{% include excol.html type="start" id="Enforcement_procedure_input" %}
 ### Enforcement procedure
+{% include excol.html type="middle" %}
 * Description of and link to enforcement procedure.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add a link to the enforcement procedure here..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="middle" %}
 
 ## More optional elements
 
