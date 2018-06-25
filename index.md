@@ -66,7 +66,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 ### Title
 {% include excol.html type="middle" %}
 * Provide the accessibility statement with a title that helps people associate the statement with the actual resource it is describing.
-* <strong>Example:</strong> For the website of the university of Sampel, this could be 'University of Sampel accessibility statement' (add further detailing if necessary, for example if the statement is only about a smaller part of the website, like the university library). 
+* <strong>Example:</strong> For the website of the university of Sampel, this could be "University of Sampel website Accessibility Statement" . Add further detailing if necessary, for example if the Accessibility Statement is only about a smaller part of the website, like the university library: "University of Sampel library website Accessibility Statement. If it is for the app: "University of Sampel app Accessibility Statement"
 * <textarea rows="1" cols="50">Fill in your title here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
@@ -74,16 +74,17 @@ Remark: The elements below could be presented folded and then unfold if they are
 ### Introduction
 {% include excol.html type="middle" %}
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> "This is the Accessibility Statement of the website of Sampel University. This Accessibility Statement provides an understanding of the accessibility of our website/mobile application, and where to get information or leave feedback if you experience problems with its accessibility".
 * <textarea rows="1" cols="50">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Name_input" %}
 ### Name of website/mobile app
 {% include excol.html type="middle" %}
-* Name of the website or mobile app. This includes version information and a date.
-* <strong>Example:</strong> Example here.
-* <textarea rows="1" cols="50">Fill in the name of your website or mobile app here..</textarea><button type="button">Add to my Accessibility Statement</button>
+* Name of the website or mobile app. This includes version information and a date if necessary to recognize a specific version of a website or mobile application. For a website this includes the URI, for a mobile application it could include a link to the place where the app can be downloaded or installed from.
+* <strong>Example:</strong> For the website: "www.universityofsampel.ort". Or for the library: "www.universityofsampel.ort/library/". For a mobile app it could be: "universityofsampel.ort/appshop/libraryapp (version 1.2.3)"
+
+* <textarea rows="1" cols="50">Fill in the name/URI of your website or mobile app here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Description_input" %}
