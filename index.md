@@ -74,32 +74,49 @@ Remark: The elements below could be presented folded and then unfold if they are
 
 {% include excol.html type="end" %}
 
+{% include excol.html type="start" id="" %}
 ### Introduction
+{% include excol.html type="middle" %}
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="" %}
 ### Name of website/mobile app
+{% include excol.html type="middle" %}
 * Name of the website or mobile app. This includes version information and a date.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Fill in the name of your website or mobile app here..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="" %}
 ### Description
+{% include excol.html type="middle" %}
 * A brief description of the website or mobile app in scope of this Statement.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add your description here..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="" %}
 ### Scope limitations
+{% include excol.html type="middle" %}
 * Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover)
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="" %}
 ### Date
+{% include excol.html type="middle" %}
 * Date on which the Statement was last modified.
 * <strong>Example:</strong> Example here.
 * When did you write this statement?: <textarea rows="1" cols="50">yyyymmdd</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="" %}
 ### Conformance Status
+{% include excol.html type="middle" %}
 * The options for the conformance status are:
 * * Fully conformant: The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
 * * Partially conformant: A specific functionality of the website or mobile app is non-conformant with the standard/guideline.
@@ -108,6 +125,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">What is the conformance status of the website or mobile application..</textarea><button type="button">Add to my Accessibility Statement</button>
 * Comment: The textarea should be a select box
+{% include excol.html type="middle" %}
 
 ### Evaluation report
 * Details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about accessibility. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
