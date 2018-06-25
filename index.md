@@ -175,10 +175,18 @@ Request accessible format - A possibility to request information that is not acc
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Has your organization taken measures to achieve accessibility...</textarea><button type="button">Add to my Accessibility Statement</button>
 
+{% include excol.html type="start" id="" %}
+
 ### Formal confirmation
-* Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
+
+{% include excol.html type="middle" %}
+
+Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Who is the formal confirmation from...</textarea><button type="button">Add to my Accessibility Statement</button>
+
+{% include excol.html type="end" %}
+
 
 ## Minimal Model Accessibility Statement
 Todo
