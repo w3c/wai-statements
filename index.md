@@ -129,7 +129,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * Details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about accessibility. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add a link to the evaluation report..</textarea><button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="middle" %}
+{% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Contact_information_input" %}
 ### Contact information
@@ -140,7 +140,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * E-mail address: <textarea rows="1" cols="50">E-mail address...</textarea>
 * Phone number: <textarea rows="1" cols="50">Phone number...</textarea>
 * <button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="middle" %}
+{% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Notes_input" %}
 ### Notes
@@ -148,7 +148,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * Any information important for the understanding of this Statement.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add any notes here that help persons understand the statement</textarea><button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="middle" %}
+{% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Remarks_explanations_input" %}
 ### Remarks and explanation
@@ -164,7 +164,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * <textarea rows="1" cols="50">Reason for the non-applicability...</textarea>
 * <textarea rows="1" cols="50">Link to the accessible alternative...</textarea>
 * <textarea rows="1" cols="50">Explain why accessible alternative has been used...</textarea><button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="middle" %}
+{% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Feedback_input" %}
 ### Feedback
@@ -174,7 +174,7 @@ Request accessible format - A possibility to request information that is not acc
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add a link to the feedback mechanism here...</textarea>
 * <textarea rows="1" cols="50">Provide a description of the feedback mechnamism here..</textarea><button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="middle" %}
+{% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Enforcement_procedure_input" %}
 ### Enforcement procedure
@@ -182,7 +182,7 @@ Request accessible format - A possibility to request information that is not acc
 * Description of and link to enforcement procedure.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Add a link to the enforcement procedure here..</textarea><button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="middle" %}
+{% include excol.html type="end" %}
 
 ## More optional elements
 
