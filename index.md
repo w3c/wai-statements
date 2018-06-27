@@ -13,7 +13,7 @@ footer: > # Text in footer in HTML
 {% include box.html type="start" title="Summary" class="" %}
 {:/}
 
-The purpose of this resource is to provide a guide for owners of websites and mobile applications to describe the accessibility of their web and mobile products and services in an accessibility statement.
+This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for people with disabilities, to get an understanding of the accessibility and where to get information or leave to feedback.
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -30,11 +30,12 @@ The purpose of this resource is to provide a guide for owners of websites and mo
 {% include toc.html type="end" %}
 {:/}
 
+<!--
+
 ## Purpose {#Purpose}
 
 This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for people with disabilities, to get an understanding of the accessibility and where to get information or leave to feedback.
 
-<!--
 ## Introduction {#Introduction}
 This page lists and describes the information that can be added to an accessibility statement. The purpose of this accessibility statement is to support consistent reporting of the accessibility of websites and mobile applications. It provides a model that will help and guide owners of websites and mobile applications who wish to publish an accessibility statement on their website or mobile application. The reason for a statement can be organizational, local, or national requirements like the EU Directive 2016/2102 in Europe. A reason could also be the wish of an organization to provide harmonized accessibility information to the public. The model accessibility statement is aligned with the <a href="https://www.w3.org/TR/WCAG21/#conformance">authoritative interpretation of WCAG</a> and with <a href="https://www.w3.org/TR/WCAG-EM/#step5c">step 5c of WCAG-EM</a>.
 
