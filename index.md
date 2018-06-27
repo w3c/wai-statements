@@ -237,3 +237,5 @@ Todo
 ## Comprehensive Model Accessibility Statement
 Todo
 
+## Good practice on writing and placing statements (draft heading)
+Todo
