@@ -49,8 +49,6 @@ The primary audience for this resource are persons who need to create an accessi
 	
 An important audience for the accessibility statement are users with disabilities. They may find information about accessible alternatives, accessibility support and/or information about where they can provide input and/or feedback on the accessibility of a website or mobile application. They will also benefit from a harmonized and consistent model.
 
--->
-
 ### Levels of guidance
 
 This resource offers guidance for different objectives:
@@ -59,6 +57,8 @@ Minimal model accessibility statement
 Comprehensive model accessibility statement
 
 The minimal and comprehensive model accessibility statements also provide a 'datamodel' comparable to the model produced in WCAG-EM to help harmonize consistent reporting.
+
+-->
 
 ## List and description of elements {#Listofelements}
 
