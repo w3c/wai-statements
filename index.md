@@ -30,6 +30,10 @@ This guide and tool helps owners of websites and mobile applications to describe
 {% include toc.html type="end" %}
 {:/}
 
+## Introduction {#Introduction}
+
+To be edited...
+
 <!--
 
 ## Purpose {#Purpose}
@@ -59,6 +63,8 @@ Comprehensive model accessibility statement
 The minimal and comprehensive model accessibility statements also provide a 'datamodel' comparable to the model produced in WCAG-EM to help harmonize consistent reporting.
 
 -->
+
+{% include excol.html type="all" %}
 
 ## List and description of elements {#Listofelements}
 
