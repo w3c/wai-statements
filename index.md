@@ -32,8 +32,9 @@ The purpose of this resource is to provide a guide for owners of websites and mo
 
 ## Purpose {#Purpose}
 
-The purpose of this resource is to provide a guide for owners of websites and mobile applications to describe the accessibility of their web and mobile products and services. The purpose of the resulting accessibility statements is for people with disabilities to get an understanding of the accessibility of a product or service, and where to get information or leave feedback if the product or service is not accessible. A secondary purpose of the resulting accessibility statements is to support monitoring and procurement of web and mobile accessibility.
+This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for people with disabilities, to get an understanding of the accessibility and where to get information or leave to feedback.
 
+<!--
 ## Introduction {#Introduction}
 This page lists and describes the information that can be added to an accessibility statement. The purpose of this accessibility statement is to support consistent reporting of the accessibility of websites and mobile applications. It provides a model that will help and guide owners of websites and mobile applications who wish to publish an accessibility statement on their website or mobile application. The reason for a statement can be organizational, local, or national requirements like the EU Directive 2016/2102 in Europe. A reason could also be the wish of an organization to provide harmonized accessibility information to the public. The model accessibility statement is aligned with the <a href="https://www.w3.org/TR/WCAG21/#conformance">authoritative interpretation of WCAG</a> and with <a href="https://www.w3.org/TR/WCAG-EM/#step5c">step 5c of WCAG-EM</a>.
 
@@ -46,6 +47,8 @@ The accessibility statement can (optionally) be used to describe other measures 
 The primary audience for this resource are persons who need to create an accessibility statement. These can be owners of websites and mobile applications, or those responsible for the website or mobile application. Providing an accessibility statement could be voluntarily or required. The requirement could be from the organization itself, from procurers, from researchers, or from a broader initiative such as the EU Directive etc. The guidance on this page provides them with an internationally harmonized model to generate an accessibility statement, including an example for the page markup.
 	
 An important audience for the accessibility statement are users with disabilities. They may find information about accessible alternatives, accessibility support and/or information about where they can provide input and/or feedback on the accessibility of a website or mobile application. They will also benefit from a harmonized and consistent model.
+
+-->
 
 ### Levels of guidance
 
