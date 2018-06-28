@@ -32,9 +32,15 @@ This guide and tool helps owners of websites and mobile applications to describe
 
 ## Example Accessibility Statements
 
+{% include excol.html type="start" id="minimal_example" %}
+
 ### Minimal Example
 
+{% include excol.html type="middle" %}
+
 [to be written]
+
+{% include excol.html type="end" %}
 
 {% include excol.html type="start" id="comprehensive_example" %}
 
@@ -175,7 +181,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 ### Notes
 {% include excol.html type="middle" %}
 * Any information important for the understanding of this Statement.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Add any notes here that help persons understand the statement</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
@@ -187,7 +193,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * * Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
 * * If a SC does not apply, explain why it does not apply
 * * Explain accessible alternatives that are used (if available) and why they have been used.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Part of content/Area that does not conform..</textarea>
 * <textarea rows="1" cols="50">Reason for the non-conformance...</textarea>
 * <textarea rows="1" cols="50">Reason for the non-applicability...</textarea>
@@ -200,7 +206,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 {% include excol.html type="middle" %}
 * An invitation to send feedback about the Accessibility Statement (This is a description of, and a link to, a feedback mechanism)
 Request accessible format - A possibility to request information that is not accessible.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Add a link to the feedback mechanism here...</textarea>
 * <textarea rows="1" cols="50">Provide a description of the feedback mechnamism here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -209,7 +215,7 @@ Request accessible format - A possibility to request information that is not acc
 ### Enforcement procedure
 {% include excol.html type="middle" %}
 * Description of and link to enforcement procedure.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Add a link to the enforcement procedure here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
@@ -217,22 +223,22 @@ Request accessible format - A possibility to request information that is not acc
 
 ### Compliance basis
 * Where do the requirements originate (organization, legal requirement, ..)
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Explain why your organization strives for conformance...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Quality assurance method used
 * The quality assurance method used (WCAG-EM, internal QA, other)
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Add qualtity assurance method used...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Intention of the organization
 * The intention could be to reach a higher level of conformance or to work on full conformance of all websites and mobile apps. It also describes the manner in which digital accessibility is embedded in the organization's policy.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Add information about the intention of the organization regarding accessibility..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Conformance Measures
 * Add conformance measures to ‘remarks and explanations’. For every accessibility problem identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Accessibility barrier... (SC or Test)</textarea>
 * <textarea rows="1" cols="50">Measures to be taken...</textarea>
 * <textarea rows="1" cols="50">Deadline date...</textarea><button type="button">Add to my Accessibility Statement</button>
@@ -240,13 +246,13 @@ Request accessible format - A possibility to request information that is not acc
 
 ### Organisational measures
 * Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Has your organization taken measures to achieve accessibility...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Formal confirmation
 * Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
-* <strong>Example:</strong> Example here.
+* <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Who is the formal confirmation from...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ## Good practice on writing and placing statements (draft heading)
-Todo
+[to be written]
