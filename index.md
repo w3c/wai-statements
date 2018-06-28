@@ -30,6 +30,23 @@ This guide and tool helps owners of websites and mobile applications to describe
 {% include toc.html type="end" %}
 {:/}
 
+## Example Accessibility Statements
+
+### Minimal Example
+
+[to be written]
+
+{% include excol.html type="start" id="comprehensive_example" %}
+
+### Comprehensive Example
+
+{% include excol.html type="middle" %}
+
+[to be written]
+
+{% include excol.html type="end" %}
+
+
 ## Introduction {#Introduction}
 
 To be edited...
@@ -230,12 +247,6 @@ Request accessible format - A possibility to request information that is not acc
 * Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
 * <strong>Example:</strong> Example here.
 * <textarea rows="1" cols="50">Who is the formal confirmation from...</textarea><button type="button">Add to my Accessibility Statement</button>
-
-## Minimal Model Accessibility Statement
-Todo
-
-## Comprehensive Model Accessibility Statement
-Todo
 
 ## Good practice on writing and placing statements (draft heading)
 Todo
