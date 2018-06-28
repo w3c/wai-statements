@@ -91,7 +91,7 @@ The minimal and comprehensive model accessibility statements also provide a 'dat
 
 ## List and description of elements {#Listofelements}
 
-This section contains a list of potential elements that can be included in an accessibility statement for a website or mobile application. Every element has a short explanation, one of more examples and a proposed dataformat. Anyone setting up an accessibility statement can use any of these elements. Section 'minimal model accessibility statement' and section 'comprehensive model accessibility statement' provide examples of a minimal and a comprehensive accessibility statement.
+This section contains a list of potential elements that can be included in an accessibility statement for a website or mobile application. Every element has a short explanation, one or more examples and a proposed dataformat. Anyone setting up an accessibility statement can use any of these elements. Section 'minimal model accessibility statement' and section 'comprehensive model accessibility statement' provide examples of a minimal and a comprehensive accessibility statement.
 
 Remark: The elements below could be presented folded and then unfold if they are clicked/active. The textareas and buttons are there for discussion only. They do not work.. 
 
