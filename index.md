@@ -2,7 +2,7 @@
 title: "Accessibility Statements"
 permalink: /planning/statements/
 github:
-  repository: wai-statements
+  repository: w3c/wai-statements
 footer: > # Text in footer in HTML
   <p><strong>Date: DRAFT $date$</strong> Updated 00 Month 2000. First published 00 Month 2000.</p>
   <p><strong>Editors:</strong> <a href="http://www.w3.org/People/shadi/">Shadi Abou-Zahra</a> and Eric Velleman. Contributors: Name, Name, and <a href="https://www.w3.org/WAI/EO/participants">EOWG Participants</a>.</p>
