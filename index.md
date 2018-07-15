@@ -146,9 +146,9 @@ Mobile application example: This mobile application is limited to the US version
 {% include excol.html type="start" id="Date_input" %}
 ### Date
 {% include excol.html type="middle" %}
-* Provide the date on which this Accessibility Statement was last modified.
-* <strong>Example:</strong> For the first or May of the year 2018, this would be "20180501"
-* <strong>Format:</strong> [YYYYMMDD]
+* Provide the date on which this Accessibility Statement was last modified. As a minimum provide the month and year.
+* <strong>Example:</strong> For the first or May of the year 2018, this would be "2018/05/01" or if you only want to provide the month and year "May, 2018" or 2018/05
+* <strong>Format:</strong> [YYYY/MM/DD] or [YYYY/MM] or [Month, YYYY]
 * When did you write this statement?: <textarea rows="1" cols="50">YYYMMDD</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
@@ -163,6 +163,15 @@ Mobile application example: This mobile application is limited to the US version
 * <strong>Format:</strong> [Fully conformant/Partially conformant/Non conformance/No assessment available]
 * <textarea rows="1" cols="50">What is the conformance status of the website or mobile application..</textarea><button type="button">Add to my Accessibility Statement</button>
 * Comment: The textarea should be a select box
+{% include excol.html type="end" %}
+
+{% include excol.html type="start" id="Evaluation_report_input" %}
+### Standards applied
+{% include excol.html type="middle" %}
+* Which standards/guidelines have been followed for the conformance statement? Although most national and regional requirements are harmonized with WCAG, there may be legal or other requirements that make it necessary to point to a specific standards. For example, in the US organizations may use the revised Section 508 standards, while in Europe, organizations may have reasons to use the latest version of EN 301 549. Both are completely harmonized with WCAG.
+* <strong>Example:</strong> For example, the website of Sampel University was evaluated using WCAG2.1.
+* <strong>Format:</strong> [WCAG2.0/WCAG2.1/Section508/EN 301 549][version number]
+* <textarea rows="1" cols="25">EN 301 549</textarea><textarea rows="1" cols="10">1.1.2</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Evaluation_report_input" %}
