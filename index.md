@@ -171,8 +171,17 @@ Mobile application example: This mobile application is limited to the US version
 * * Non conformant: The majority of the website or mobile app is non-conformant with the standard/guideline.
 * * No assessment available: The website or mobile app has not been evaluated against the standard/guideline or the evaluation result is not available.
 * <strong>Format:</strong> [Fully conformant/Partially conformant/Non conformance/No assessment available]
-* <textarea rows="1" cols="50">What is the conformance status of the website or mobile application..</textarea><button type="button">Add to my Accessibility Statement</button>
+* <textarea rows="1" cols="30">Selectbox</textarea><button type="button">Add to my Accessibility Statement</button>
 * Comment: The textarea should be a select box that also includes A, AA and AAA as extra options. Maybe add the option to conform with A and partial conform with AA?
+{% include excol.html type="end" %}
+
+{% include excol.html type="start" id="Evaluation_report_input" %}
+### How was the accessibility evaluated
+{% include excol.html type="middle" %}
+* Provide details about the evaluation methodology that was used. This could also be desribed seperately in an evaluation report that is linked from the Accessibility Statement. Include information about the procedure, documents used and the involvement of persons with disabilities.
+* <strong>Example:</strong> For website: "For the evaluation of this website, we followed WCAG-EM and we tested different user stories with persons with disabilities" or "For the evaluation of this website/mobile application, we asked an independent third party to evaluate using the WCAG-EM report tool" or "Details about the evaluation methodology can be found in the evaluation report that that can be found at: https://www.universityofsampel.ort/accessibility/evaluationreport".
+* <strong>Format:</strong> [Description of how the accessibility was evaluated]
+* <textarea rows="1" cols="50">Add a description of how the accessibility was evaluated..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Notes_input" %}
