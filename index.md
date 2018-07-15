@@ -108,43 +108,48 @@ Remark: The elements below could be presented folded and then unfold if they are
 ### Introduction
 {% include excol.html type="middle" %}
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
-* <strong>Example:</strong> "This is the Accessibility Statement of the website of Sampel University. This Accessibility Statement provides an understanding of the accessibility of our website/mobile application, and where to get information or leave feedback if you experience problems with its accessibility".
+* <strong>Example:</strong> "This Accessibility Statement provides an understanding of the accessibility of our website/mobile application, and where to get information or leave feedback if you experience problems with its accessibility".
+* <strong>Format:</strong> [Introduction paragraph]
 * <textarea rows="1" cols="50">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Name_input" %}
 ### Name of website/mobile app
 {% include excol.html type="middle" %}
-* Name of the website or mobile app. This includes version information and a date if necessary to recognize a specific version of a website or mobile application. For a website this includes the URI, for a mobile application it could include a link to the place where the app can be downloaded or installed from.
-* <strong>Example:</strong> For the public website this could be: "www.universityofsampel.ort". Or for the library: "www.universityofsampel.ort/library/" or shop: "www.universityofsampel.ort/shop". For the mobile version of their website: "m.universityofsampel.ort". The Dutch version of their website: "nl.universityofsampel.ort". their mobile wayfinder app it could be: "universityofsampel.ort/appshop/wayfinderapp (version 1.2.3)"
-
-* <textarea rows="1" cols="50">Fill in the name/URI of your website or mobile app here..</textarea><button type="button">Add to my Accessibility Statement</button>
+* Provide the name of the website or mobile application that is the subject of this Accessibility Statement. This includes version information and a date if necessary to recognize a specific version. For a website this could be or include the URI, for a mobile application it could be or include a link to the place where the app can be downloaded or installed from.
+* <strong>Example:</strong> For the public website this could be: "https://www.universityofsampel.ort". Or for the library: "https://www.universityofsampel.ort/library/" or shop: "https://www.universityofsampel.ort/shop". For the mobile version of their website: "https://m.universityofsampel.ort". The Dutch version of their website: "nl.universityofsampel.ort". For their mobile wayfinder app it could be: "https://universityofsampel.ort/appshop/wayfinderapp (version 1.2.3) or https://nameofappstore.ext/appname". 
+* <strong>Format:</strong> [https://www.universityofsampel.ort/library/]
+* <textarea rows="1" cols="50">https://www.universityofsampel.ort/library/</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Description_input" %}
 ### Description
 {% include excol.html type="middle" %}
-* A brief description of the website or mobile app in scope of this Statement.
-* <strong>Example:</strong> For the website: "The worlds leading higher education and research University". Or for the mobile application: "The University of Sampel navigational and way-finding mobile application".
+* A brief description of the website or mobile app that is the subject of this Accessibility Statement. 
+* <strong>Example:</strong> For the website: "This is the library of the worlds leading higher education and research University". Or for the mobile application: "The University of Sampel navigational and way-finding mobile application".
+* <strong>Format:</strong> [Description]
 * <textarea rows="1" cols="50">Add your description here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Scope_limitations_input" %}
 ### Scope limitations
 {% include excol.html type="middle" %}
-* Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover). A website can be part of a larger website, such as the online shop in the preceding example at www.universityofsampel.ort/shop. The scope of the Accessibility Statement can then be limited to this this specific part. The Accessibility Statement could also exclude certain elements of the website. More information about exceptions to the scope can be found at: https://www.w3.org/TR/WCAG-EM/#step1a
-* <strong>Example:</strong> "University of Sampel strives to conform to WCAG2.1. it is not always possible to do so in all areas of the website. Therefore the following url’s are excluded from this statement."
+* Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover). A website can be part of a larger website, such as the online shop in the preceding example at www.universityofsampel.ort/shop. The scope of the Accessibility Statement can then be limited to this specific part. The scope limitation can also apply to states of the website or mobile application. For instance if the website or mobile application is different depending on the time of the day, the country, certain specifics of the user, etc. The scope may then be limited to the US version of the website or application or to the Dutch version of the mobile application. The Accessibility Statement could also exclude certain elements of the website or mobile application. More information about exceptions to the scope can be found at: https://www.w3.org/TR/WCAG-EM/#step1a
+* <strong>Example:</strong> Website example: "University of Sampel strives to conform to WCAG2.1. it is not always possible to do so in all areas of the website. Therefore the following url’s are excluded from this statement:"
 [www.url.com/page1] (Add reason why)
 [www.url.com/page2] (Add reason why)
+Mobile application example: This mobile application is limited to the US version of the wayfinder application.
+* <strong>Format:</strong> [Scope limitation(s)]
 * <textarea rows="1" cols="50">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Date_input" %}
 ### Date
 {% include excol.html type="middle" %}
-* Date on which the Statement was last modified.
+* Provide the date on which this Accessibility Statement was last modified.
 * <strong>Example:</strong> For the first or May of the year 2018, this would be "20180501"
-* When did you write this statement?: <textarea rows="1" cols="50">yyyymmdd</textarea><button type="button">Add to my Accessibility Statement</button>
+* <strong>Format:</strong> [YYYYMMDD]
+* When did you write this statement?: <textarea rows="1" cols="50">YYYMMDD</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Conformance_status_input" %}
@@ -155,6 +160,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 * * Partially conformant: A specific functionality of the website or mobile app is non-conformant with the standard/guideline.
 * * Non conformant: The majority of the website or mobile app is non-conformant with the standard/guideline.
 * * No assessment available: The website or mobile app has not been evaluated against the standard/guideline or the evaluation result is not available.
+* <strong>Format:</strong> [Fully conformant/Partially conformant/Non conformance/No assessment available]
 * <textarea rows="1" cols="50">What is the conformance status of the website or mobile application..</textarea><button type="button">Add to my Accessibility Statement</button>
 * Comment: The textarea should be a select box
 {% include excol.html type="end" %}
@@ -162,28 +168,28 @@ Remark: The elements below could be presented folded and then unfold if they are
 {% include excol.html type="start" id="Evaluation_report_input" %}
 ### Evaluation report
 {% include excol.html type="middle" %}
-* Details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about accessibility. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
-* <strong>Example:</strong> With the example of the Sampel University library website, this could be: "www.universityofsampel.ort/evaluationreport/library". For the mobile application an example is: "www.universityofsampel.ort/evaluationreport/mobileapp"
+* Provide details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about the  accessibility of the website or mobile application for this Accessibility Statement. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
+* <strong>Example:</strong> With the example of the Sampel University library website, this could be: "https://www.universityofsampel.ort/evaluationreport/library". For the mobile application an example is: "https://www.universityofsampel.ort/evaluationreport/mobileapp"
+* <strong>Format:</strong> [https://www.universityofsampel.ort/evaluationreport/wayfinderapp123]
 * <textarea rows="1" cols="50">Add a link to the evaluation report..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Contact_information_input" %}
 ### Contact information
 {% include excol.html type="middle" %}
-* For questions about this Statement. This could be an email of the person responsible for the Accessibility Statement. It is important to point out the person or department directly responsible for accessibility is important to point out.
-* <strong>Example:</strong> Department of Communication of Sampel University; Accessibility@universityofsampel.ort; +31 111 111 111
-* Name (or department etc.): <textarea rows="1" cols="50">Name...</textarea>
-* E-mail address: <textarea rows="1" cols="50">E-mail address...</textarea>
-* Phone number: <textarea rows="1" cols="50">Phone number...</textarea>
+* Who can people contact for questions about this Accessibility Statement. This could be an email going to the person responsible for the Accessibility Statement. This is very different depending on the audience. For example, if procurers want to contact you about your Accessibility Statement, you may want to point them to another place than persons with disabilities who have questions or feedback about the accessibility of your website or mobile application.
+* <strong>Example:</strong> Persons with disabilities, please contact: Department of Communication; accessibility@universityofsampel.ort; Tel.: +31 111 111 1111. Procurers, please contact: procurers@universityofsampel.ort; Tel.: +31 111 111 112.
+* <strong>Format:</strong> [Contact information 1]; [Contact information 2]
 * <button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Notes_input" %}
 ### Notes
 {% include excol.html type="middle" %}
-* Any information important for the understanding of this Statement.
-* <strong>Example:</strong> [to be written]
-* <textarea rows="1" cols="50">Add any notes here that help persons understand the statement</textarea><button type="button">Add to my Accessibility Statement</button>
+* Any information important for the understanding of this Statement and/or changes since the previous Accessibility Statement.
+* <strong>Example:</strong> For the updated wayfinder app, this could be: "We have added more color contrast to the main selection menu of the wayfinder app. Due to building activities on the campus of our university, we have also added new routes for persons who are blind". For the website of the University of Sampel library, this could be: "The news department of our website has now added 'skiplinks to jump over headers. This way, persons using screenreader software can quickly jump to the main content of our webpages". 
+* <strong>Format:</strong> [Information important for the understandig of this Accessibility Statement]; [Identify accessibility changes since the previous Accessibility Statement]
+* <textarea rows="1" cols="50">Add information that is important for the understanding or explains accessibility related changes since the previous version</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Remarks_explanations_input" %}
