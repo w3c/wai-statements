@@ -248,8 +248,9 @@ Mobile application example: This mobile application is limited to the US version
 ## More optional elements
 
 ### Compliance basis
-* Where do the requirements originate (organization, legal requirement, ..)
-* <strong>Example:</strong> [to be written]
+* Where does the requirement to be conformant originate from (organization, legal requirement, other motivation). This could be a non-public statement, for example if a company requires their departments to report on compliance to a central unit/department.
+* <strong>Example:</strong> If this is not public, but as an internal requirement from a top department in the organization, an example  could be: "Required by department X for compliance". If required by law to report like in Europe, it could be: "Directive 2016/2102 of the European Union" or in the US: "ADA". It could also be local legislation like "WGBH/cz" in the Netherlands.
+* <strong>Format:</strong> [Describe the compliance basis]
 * <textarea rows="1" cols="50">Explain why your organization strives for conformance...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Quality assurance method used
