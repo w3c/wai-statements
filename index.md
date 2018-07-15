@@ -96,11 +96,12 @@ This section contains a list of potential elements that can be included in an ac
 Remark: The elements below could be presented folded and then unfold if they are clicked/active. The textareas and buttons are there for discussion only. They do not work.. 
 
 {% include excol.html type="start" id="Title_input" %}
-### Title
+### Title of Accessibility Statement
 {% include excol.html type="middle" %}
-* Provide the accessibility statement with a title that helps people associate the statement with the actual resource it is describing.
-* <strong>Example:</strong> For the website of the university of Sampel, this could be "University of Sampel website Accessibility Statement". Add further detailing if necessary, for example if the Accessibility Statement is only about a smaller part of the website, like the university library: "University of Sampel library website Accessibility Statement. If it is for the app: "University of Sampel app Accessibility Statement"
-* <textarea rows="1" cols="50">Fill in your title here..</textarea><button type="button">Add to my Accessibility Statement</button>
+* Provide the accessibility statement with a title that helps people understand where the document is from and what it is for. 
+* <strong>Example:</strong> For the website of the university of Sampel, this could be "University of Sampel Accessibility Statement".
+* <strong>Format:</strong> [Name of your organization] Accessibility Statement
+* <textarea rows="1" cols="50">Name of your organization</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Introduction_input" %}
