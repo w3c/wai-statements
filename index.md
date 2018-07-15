@@ -118,7 +118,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 {% include excol.html type="middle" %}
 * Provide the name of the website or mobile application that is the subject of this Accessibility Statement. This includes version information and a date if necessary to recognize a specific version. For a website this could be or include the URI, for a mobile application it could be or include a link to the place where the app can be downloaded or installed from.
 * <strong>Example:</strong> For the public website this could be: "https://www.universityofsampel.ort". Or for the library: "https://www.universityofsampel.ort/library/" or shop: "https://www.universityofsampel.ort/shop". For the mobile version of their website: "https://m.universityofsampel.ort". The Dutch version of their website: "nl.universityofsampel.ort". For their mobile wayfinder app it could be: "https://universityofsampel.ort/appshop/wayfinderapp (version 1.2.3) or https://nameofappstore.ext/appname". 
-* <strong>Format:</strong> [https://www.universityofsampel.ort/library/]
+* <strong>Format:</strong> URL: [https://www.universityofsampel.ort/library/] or APP: [https://nameofappstore.ext/appname]
 * <textarea rows="1" cols="50">https://www.universityofsampel.ort/library/</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
@@ -175,6 +175,15 @@ Mobile application example: This mobile application is limited to the US version
 * Comment: The textarea should be a select box that also includes A, AA and AAA as extra options. Maybe add the option to conform with A and partial conform with AA?
 {% include excol.html type="end" %}
 
+{% include excol.html type="start" id="Notes_input" %}
+### Notes/main accessibility changes since previous version
+{% include excol.html type="middle" %}
+* Any information important for the understanding of this Statement and/or changes since the previous Accessibility Statement.
+* <strong>Example:</strong> For the updated wayfinder app, this could be: "We have added more color contrast to the main selection menu of the wayfinder app. Due to building activities on the campus of our university, we have also added new routes for persons who are blind". For the website of the University of Sampel library, this could be: "The news department of our website has now added 'skiplinks to jump over headers. This way, persons using screenreader software can quickly jump to the main content of our webpages". 
+* <strong>Format:</strong> [Information important for the understandig of this Accessibility Statement]; [Identify accessibility changes since the previous Accessibility Statement]
+* <textarea rows="1" cols="50">Add information that is important for the understanding or explains accessibility related changes since the previous version</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
+
 {% include excol.html type="start" id="Evaluation_report_input" %}
 ### Evaluation results/link to evaluation report
 {% include excol.html type="middle" %}
@@ -191,15 +200,6 @@ Mobile application example: This mobile application is limited to the US version
 * <strong>Example:</strong> Persons with disabilities, please contact: Department of Communication; accessibility@universityofsampel.ort; Tel.: +31 111 111 1111. Procurers, please contact: procurers@universityofsampel.ort; Tel.: +31 111 111 112.
 * <strong>Format:</strong> [Contact information 1]; [Contact information 2]
 * <button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="end" %}
-
-{% include excol.html type="start" id="Notes_input" %}
-### Notes
-{% include excol.html type="middle" %}
-* Any information important for the understanding of this Statement and/or changes since the previous Accessibility Statement.
-* <strong>Example:</strong> For the updated wayfinder app, this could be: "We have added more color contrast to the main selection menu of the wayfinder app. Due to building activities on the campus of our university, we have also added new routes for persons who are blind". For the website of the University of Sampel library, this could be: "The news department of our website has now added 'skiplinks to jump over headers. This way, persons using screenreader software can quickly jump to the main content of our webpages". 
-* <strong>Format:</strong> [Information important for the understandig of this Accessibility Statement]; [Identify accessibility changes since the previous Accessibility Statement]
-* <textarea rows="1" cols="50">Add information that is important for the understanding or explains accessibility related changes since the previous version</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Remarks_explanations_input" %}
