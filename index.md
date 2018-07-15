@@ -38,7 +38,27 @@ This guide and tool helps owners of websites and mobile applications to describe
 
 {% include excol.html type="middle" %}
 
-[to be written]
+## Example Library Accessibility Statement (for website)
+This Accessibility Statement provides an understanding of the accessibility of our website, and where to get information or leave feedback if you experience problems with its accessibility
+
+Name of website: http://www.example-library.org
+Brief description: This is the library of the worlds leading example education and research Institute.
+Scope limitation: This Accessibility Statement only applies to the library and not to the rest of our corporate website.
+Date: July 2018
+Standards applied: EN 301 549 v1.1.2
+Conformance status: Fully conformant (The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).)
+How was the accessibility evaluated: For the evaluation of this website, we followed WCAG-EM and we tested different user stories with persons with disabilities
+Notes/Main accessibility changes since previous version: The news department of our website has now added ‘skiplinks to jump over headers. This way, persons using screenreader software can quickly jump to the main content of our webpages
+Link to evaluation report: https://www.example-library.org/accessibility/
+Contact information: Persons with disabilities, please contact: Department of Communication; accessibility@example-library.org; Tel.: 1234567890
+Feedback: If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.example-library.org/accessibility/
+Enforcement procedure: N/A
+Compliance basis: Directive 2016/2102 of the European Union
+Intention of the organization: The website is now WCAG AA conformant but we are working on implementing AAA Success Criteria that help persons with cognitive disabilities.
+Conformance measures: N/A
+Organizational measures: Our organization has added web accessibility to our procurement requirements. We also train our staff in web accessibility once a year. The accessibility of web and mobile application is also part of our Quality Assurance method and included in our ISO 9001 procedures.
+Formal confirmation: Approved by Hannibal, Director A-Team
+
 
 {% include excol.html type="end" %}
 
