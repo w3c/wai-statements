@@ -177,7 +177,7 @@ Mobile application example: This mobile application is limited to the US version
 * When did you write this statement?: <textarea rows="1" cols="50">July, 2018</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="Evaluation_report_input" %}
+{% include excol.html type="start" id="Standards_applied_input" %}
 ### Standards applied
 {% include excol.html type="middle" %}
 * Which standards/guidelines have been followed for the conformance statement? Although most national and regional requirements are harmonized with WCAG, there may be legal or other requirements that make it necessary to point to a specific standards. For example, in the US organizations may use the revised Section 508 standards, while in Europe, organizations may have reasons to use the latest version of EN 301 549. Both are completely harmonized with WCAG.
@@ -200,7 +200,7 @@ Mobile application example: This mobile application is limited to the US version
 * Comment: The textarea should be a select box that also includes A, AA and AAA as extra options. Maybe add the option to conform with A and partial conform with AA?
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="Evaluation_report_input" %}
+{% include excol.html type="start" id="How_was_accessibility_evaluated_input" %}
 ### How was the accessibility evaluated
 {% include excol.html type="middle" %}
 * Provide details about the evaluation methodology that was used. This could also be desribed seperately in an evaluation report that is linked from the Accessibility Statement. Include information about the procedure, documents used and the involvement of persons with disabilities.
@@ -209,7 +209,7 @@ Mobile application example: This mobile application is limited to the US version
 * <textarea rows="1" cols="50">Add a description of how the accessibility was evaluated..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="Evaluation_report_input" %}
+{% include excol.html type="start" id="Web_technologies_relied_upon_input" %}
 ### Web technologies relied upon
 {% include excol.html type="middle" %}
 * Describe the web technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported. Besides HTML and CSS, you may have included web technologies like JavaScript, WAI-ARIA, PDF, etc. in your evaluation. Provide a list of technologies that are relied upon according to WCAG 2.0. For more information please read: https://www.w3.org/TR/WCAG-EM/#step2d.
@@ -220,7 +220,7 @@ Mobile application example: This mobile application is limited to the US version
 <button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-{% include excol.html type="start" id="Evaluation_report_input" %}
+{% include excol.html type="start" id="Accessibility_support_baseline_input" %}
 ### Accessibility support baseline
 {% include excol.html type="middle" %}
 * Describe the minimum set of combinations of operating systems, web browsers, assistive technologies, and other user agents that the website is expected to work with, and that is in-line with the WCAG 2.0 guidance on accessibility support. For more information about accessibility support baseline, please read: https://www.w3.org/TR/WCAG-EM/#step1c
@@ -230,7 +230,7 @@ Mobile application example: This mobile application is limited to the US version
 {% include excol.html type="end" %}
 
 
-{% include excol.html type="start" id="Notes_input" %}
+{% include excol.html type="start" id="Notes_and_changes_input" %}
 ### Notes/main accessibility changes since previous version
 {% include excol.html type="middle" %}
 * Any information important for the understanding of this Statement and/or changes since the previous Accessibility Statement.
@@ -293,11 +293,14 @@ Mobile application example: This mobile application is limited to the US version
 
 ## More optional elements
 
+{% include excol.html type="start" id="Compliance_basis_input" %}
 ### Compliance basis
+{% include excol.html type="middle" %}
 * Where does the requirement to be conformant originate from (organization, legal requirement, other motivation). This could be a non-public statement, for example if a company requires their departments to report on compliance to a central unit/department.
 * <strong>Example:</strong> If this is not public, but as an internal requirement from a top department in the organization, an example  could be: "Required by department X for compliance". If required by law to report like in Europe, it could be: "Directive 2016/2102 of the European Union" or in the US: "ADA". It could also be local legislation like "WGBH/cz" in the Netherlands.
 * <strong>Format:</strong> [Describe the compliance basis]
 * <textarea rows="1" cols="50">Explain why your organization strives for conformance...</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
 <!--
 ### Quality assurance method used
@@ -306,29 +309,41 @@ Mobile application example: This mobile application is limited to the US version
 * <textarea rows="1" cols="50">Add qualtity assurance method used...</textarea><button type="button">Add to my Accessibility Statement</button>
 -->
 
+{% include excol.html type="start" id="Intention_organization_input" %}
 ### Intention of the organization
+{% include excol.html type="middle" %}
 * The intention could be to reach a higher level of conformance or to work on full conformance of all websites and mobile apps. It also describes the manner in which digital accessibility is embedded in the organization's policy.
 * <strong>Example:</strong> The website is now WCAG AA conformant but we are working on implementing AAA Success Criteria that help persons with cognitive disabilities. 
 * <strong>Format:</strong> [Description of the intention of the organization]
 * <textarea rows="1" cols="50">Add information about the intention of the organization regarding accessibility..</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="Conformance_measures_input" %}
 ### Conformance Measures
+{% include excol.html type="middle" %}
 * Add conformance measures to the element ‘remarks and explanation’. For every non-conformity identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect. This can be added to the table as a seperate column. This information is important for persons with disabilities to understand what the organization will do to repair non-conformities and when they can expect this to work. These non-conformities can also be beyond the required conformity level (the organization may want to apply AAA Success criteria while this is not required by law or by procurers).
 * <strong>Format:</strong> Add [Description of the conformance measures] as a column to the table in ‘remarks and explanation’ or add a separate section named "conformance measures"
 * <strong>Example:</strong> Add column to the table described in element ‘remarks and explanation’. Instead of an extra column in the table, conformance measures can also be a seperate section. 
 <button type="button">Add conformance measures to 'remarks and explanation' table</button><button type="button">Add seperate paragraph about conformance measures</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="Organizational_measures_input" %}
 ### Organisational measures
+{% include excol.html type="middle" %}
 * Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
 * <strong>Example:</strong> Our organization has added web accessibility to our procurement requirements. We also train our staff in web accessibility once a year. The accessibility of web and mobile application is also part of our Quality Assurance method and included in our ISO 9001 procedures.
 * <strong>Format:</strong> [Description of organizational measures]
 * <textarea rows="1" cols="50">Has your organization taken measures to achieve accessibility...</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
+{% include excol.html type="start" id="Formal_confirmation_input" %}
 ### Formal confirmation
+{% include excol.html type="middle" %}
 * Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
 * <strong>Example:</strong> This could look like: "Approved by the Dean of the University of Sampel" or Approved by the Accessibility Department of organization X"
 * <strong>Format:</strong> Approved by [name/department];[function]
 * <textarea rows="1" cols="50">Approved by Hannibal, Director A-Team</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
 
 ## Good practice on writing and placing statements (draft heading)
 [to be written]
