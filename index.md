@@ -253,33 +253,36 @@ Mobile application example: This mobile application is limited to the US version
 * <strong>Format:</strong> [Describe the compliance basis]
 * <textarea rows="1" cols="50">Explain why your organization strives for conformance...</textarea><button type="button">Add to my Accessibility Statement</button>
 
+<!--
 ### Quality assurance method used
 * The quality assurance method used (WCAG-EM, internal QA, other)
 * <strong>Example:</strong> [to be written]
 * <textarea rows="1" cols="50">Add qualtity assurance method used...</textarea><button type="button">Add to my Accessibility Statement</button>
+-->
 
 ### Intention of the organization
 * The intention could be to reach a higher level of conformance or to work on full conformance of all websites and mobile apps. It also describes the manner in which digital accessibility is embedded in the organization's policy.
-* <strong>Example:</strong> [to be written]
+* <strong>Example:</strong> The website is now WCAG AA conformant but we are working on implementing AAA Success Criteria that help persons with cognitive disabilities. 
+* <strong>Format:</strong> [Description of the intention of the organization]
 * <textarea rows="1" cols="50">Add information about the intention of the organization regarding accessibility..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Conformance Measures
-* Add conformance measures to ‘remarks and explanations’. For every accessibility problem identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect.
-* <strong>Example:</strong> [to be written]
-* <textarea rows="1" cols="50">Accessibility barrier... (SC or Test)</textarea>
-* <textarea rows="1" cols="50">Measures to be taken...</textarea>
-* <textarea rows="1" cols="50">Deadline date...</textarea><button type="button">Add to my Accessibility Statement</button>
-<button type="button">+ Add more barriers</button>
+* Add conformance measures to the element ‘remarks and explanation’. For every non-conformity identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect. This can be added to the table as a seperate column. This information is important for persons with disabilities to understand what the organization will do to repair non-conformities and when they can expect this to work. These non-conformities can also be beyond the required conformity level (the organization may want to apply AAA Success criteria while this is not required by law or by procurers).
+* <strong>Format:</strong> Add [Description of the conformance measures] as a column to the table in ‘remarks and explanation’ or add a separate section named "conformance measures"
+* <strong>Example:</strong> Add column to the table described in element ‘remarks and explanation’. Instead of an extra column in the table, conformance measures can also be a seperate section. 
+<button type="button">Add conformance measures to 'remarks and explanation' table</button><button type="button">Add seperate paragraph about conformance measures</button>
 
 ### Organisational measures
 * Measures implemented to achieve sustainable accessibility like procurement actions, training, raising awareness, QA, etc.
-* <strong>Example:</strong> [to be written]
+* <strong>Example:</strong> Our organization has added web accessibility to our procurement requirements. We also train our staff in web accessibility once a year. The accessibility of web and mobile application is also part of our Quality Assurance method and included in our ISO 9001 procedures.
+* <strong>Format:</strong> [Description of organizational measures]
 * <textarea rows="1" cols="50">Has your organization taken measures to achieve accessibility...</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ### Formal confirmation
 * Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
-* <strong>Example:</strong> [to be written]
-* <textarea rows="1" cols="50">Who is the formal confirmation from...</textarea><button type="button">Add to my Accessibility Statement</button>
+* <strong>Example:</strong> This could look like: "Approved by the Dean of the University of Sampel" or Approved by the Accessibility Department of organization X"
+* <strong>Format:</strong> Approved by [name/department];[function]
+* <textarea rows="1" cols="50">Approved by Hannibal, Director A-Team</textarea><button type="button">Add to my Accessibility Statement</button>
 
 ## Good practice on writing and placing statements (draft heading)
 [to be written]
