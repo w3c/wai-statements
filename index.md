@@ -13,7 +13,7 @@ footer: > # Text in footer in HTML
 {% include box.html type="start" title="Summary" class="" %}
 {:/}
 
-This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for people with disabilities, to get an understanding of the accessibility and where to get information or leave to feedback.
+This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for accessibility champions/advocates, CSR officers and persons with disabilities. Persons with disabilities can use the accessibility statement to find information about accessible alternatives, accessibility support and/or information about where they can provide input and/or feedback on the accessibility of a website or mobile application. 
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -61,7 +61,7 @@ To be edited...
 
 ## Purpose {#Purpose}
 
-This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for people with disabilities, to get an understanding of the accessibility and where to get information or leave to feedback.
+This guide and tool helps owners of websites and mobile applications to describe the accessibility of their products and services. The resulting accessibility statements are for people with disabilities, to get an understanding of the accessibility and where to get information or leave feedback.
 
 ## Introduction {#Introduction}
 This page lists and describes the information that can be added to an accessibility statement. The purpose of this accessibility statement is to support consistent reporting of the accessibility of websites and mobile applications. It provides a model that will help and guide owners of websites and mobile applications who wish to publish an accessibility statement on their website or mobile application. The reason for a statement can be organizational, local, or national requirements like the EU Directive 2016/2102 in Europe. A reason could also be the wish of an organization to provide harmonized accessibility information to the public. The model accessibility statement is aligned with the <a href="https://www.w3.org/TR/WCAG21/#conformance">authoritative interpretation of WCAG</a> and with <a href="https://www.w3.org/TR/WCAG-EM/#step5c">step 5c of WCAG-EM</a>.
