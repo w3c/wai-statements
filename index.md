@@ -38,26 +38,31 @@ This guide and tool helps owners of websites and mobile applications to describe
 
 {% include excol.html type="middle" %}
 
-## Example Library Accessibility Statement (for website)
+### Example Library Accessibility Statement (for website)
 This Accessibility Statement provides an understanding of the accessibility of our website, and where to get information or leave feedback if you experience problems with its accessibility
 
-Name of website: http://www.example-library.org
-Brief description: This is the library of the worlds leading example education and research Institute.
-Scope limitation: This Accessibility Statement only applies to the library and not to the rest of our corporate website.
-Date: July 2018
-Standards applied: EN 301 549 v1.1.2
-Conformance status: Fully conformant (The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).)
-How was the accessibility evaluated: For the evaluation of this website, we followed WCAG-EM and we tested different user stories with persons with disabilities
-Notes/Main accessibility changes since previous version: The news department of our website has now added ‘skiplinks to jump over headers. This way, persons using screenreader software can quickly jump to the main content of our webpages
-Link to evaluation report: https://www.example-library.org/accessibility/
-Contact information: Persons with disabilities, please contact: Department of Communication; accessibility@example-library.org; Tel.: 1234567890
-Feedback: If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.example-library.org/accessibility/
-Enforcement procedure: N/A
-Compliance basis: Directive 2016/2102 of the European Union
-Intention of the organization: The website is now WCAG AA conformant but we are working on implementing AAA Success Criteria that help persons with cognitive disabilities.
-Conformance measures: N/A
-Organizational measures: Our organization has added web accessibility to our procurement requirements. We also train our staff in web accessibility once a year. The accessibility of web and mobile application is also part of our Quality Assurance method and included in our ISO 9001 procedures.
-Formal confirmation: Approved by Hannibal, Director A-Team
+<strong>Name of website:</strong> http://www.example-library.org
+
+<strong>Scope limitation:</strong> This Accessibility Statement only applies to the library and not to the rest of our corporate website.
+
+<strong>Date:</strong> July 2018
+
+<strong>Standards applied:</strong> EN 301 549 v1.1.2
+
+<strong>Conformance status:</strong> Fully conformant (The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
+
+<strong>Web technologies relied upon for conformance:</strong> HTML, CSS, Javascript, WAI-ARIA, PDF and SMIL.
+
+<strong>Accessibility Support baseline:</strong> This website does not work with older versions of screenreader XYZ (older than version 1.2.3). The videoplayer does not show captions in the older version of the XYZ browser (before version 1.2.3)
+
+<strong>Link to evaluation report:</strong> https://www.example-library.org/accessibility/
+
+Comment: maybe better to include a table here with A and AA SC and pass/fail/n/a. But do not know how to make table in Github yet ;-)
+
+INSERT TABLE HERE (4 columns)
+
+<strong>Optional: Feedback:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.example-library.org/accessibility/
+
 
 
 {% include excol.html type="end" %}
@@ -203,6 +208,27 @@ Mobile application example: This mobile application is limited to the US version
 * <strong>Format:</strong> [Description of how the accessibility was evaluated]
 * <textarea rows="1" cols="50">Add a description of how the accessibility was evaluated..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
+
+{% include excol.html type="start" id="Evaluation_report_input" %}
+### Web technologies relied upon
+{% include excol.html type="middle" %}
+* Describe the web technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported. Besides HTML and CSS, you may have included web technologies like JavaScript, WAI-ARIA, PDF, etc. in your evaluation. Provide a list of technologies that are relied upon according to WCAG 2.0. For more information please read: https://www.w3.org/TR/WCAG-EM/#step2d.
+* <strong>Example:</strong> For website: "Web technologies relied upon for conformance: HTML, CSS, Javascript, WAI-ARIA, PDF and SMIL".
+* <strong>Format:</strong> [HTML; CSS; Javascript; WAI-ARIA; PDF; SMIL]
+* Provide answer via checkboxes with technologies and editfield
+
+<button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
+
+{% include excol.html type="start" id="Evaluation_report_input" %}
+### Accessibility support baseline
+{% include excol.html type="middle" %}
+* Describe the minimum set of combinations of operating systems, web browsers, assistive technologies, and other user agents that the website is expected to work with, and that is in-line with the WCAG 2.0 guidance on accessibility support. For more information about accessibility support baseline, please read: https://www.w3.org/TR/WCAG-EM/#step1c
+* <strong>Example:</strong> For website: "This website does not work with older versions of screenreader XYZ (older than version 1.2.3). The videoplayer does not show captions in the older version of the XYZ browser (before version 1.2.3)".
+* <strong>Format:</strong> [Description of accessibility support baseline]
+* <textarea rows="1" cols="50">Add description of the accessibility support baseline</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
+
 
 {% include excol.html type="start" id="Notes_input" %}
 ### Notes/main accessibility changes since previous version
