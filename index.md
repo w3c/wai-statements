@@ -123,7 +123,7 @@ Remark: The elements below could be presented folded and then unfold if they are
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Description_input" %}
-### Description
+### Brief description
 {% include excol.html type="middle" %}
 * A brief description of the website or mobile app that is the subject of this Accessibility Statement. 
 * <strong>Example:</strong> For the website: "This is the library of the worlds leading higher education and research University". Or for the mobile application: "The University of Sampel navigational and way-finding mobile application".
@@ -196,10 +196,26 @@ Mobile application example: This mobile application is limited to the US version
 {% include excol.html type="start" id="Evaluation_report_input" %}
 ### Evaluation results/link to evaluation report
 {% include excol.html type="middle" %}
-* Provide details about the evaluation methodology that was followed and the testing that was carried out to draw conclusions about the  accessibility of the website or mobile application for this Accessibility Statement. If a test report is available then link to it. An example of a testreport can be found in <a href="https://www.w3.org/TR/WCAG-EM/#step5">WCAG-EM step 5</a>.
-* <strong>Example:</strong> With the example of the Sampel University library website, this could be: "https://www.universityofsampel.ort/evaluationreport/library". For the mobile application an example is: "https://www.universityofsampel.ort/evaluationreport/mobileapp"
-* <strong>Format:</strong> [https://www.universityofsampel.ort/evaluationreport/wayfinderapp123]
-* <textarea rows="1" cols="50">Add a link to the evaluation report..</textarea><button type="button">Add to my Accessibility Statement</button>
+* Link to a seperate evaluation report or provide details about the evaluation results here. Either provide a full list of all Success Criteria and mark if they have Passed or Failed or only provide results for Success Criteria that failed. If desired, SC that are not applicable on the website or mobile application can be marked as Not Applicable.
+* <strong>Example:</strong> Provide a table where the first column contains the SC or other numbering of the standards followed by the evaluator. Then provide one or more columns marking if the SC are Pass, Fail (or N/A). For WCAG2.1 the first row would contain: "1.1.1 Non-text Content / [Pass/Fail/N/A]". For users with disabilities is may help to explain the SC a bit more using the text in WCAG2.1. For example: "1.4.1 Use of color / Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. / [Pass/Fail/N/A].
+* <strong>Format:</strong> Table columns: [SC number and title]/[Explanation]/[Pass/Fail/N/A] or [https://www.universityofsampel.ort/accessibility/evaluationreport]
+* <textarea rows="1" cols="50">Add a table or link to an evaluation report</textarea><button type="button">Add to my Accessibility Statement</button>
+{% include excol.html type="end" %}
+
+{% include excol.html type="start" id="Remarks_explanations_input" %}
+### Remarks and explanation
+{% include excol.html type="middle" %}
+* This extends the element "evaluation results/link to evaluation report". Provide an explanation for the parts of the content that are not accessible and the reasons for that inaccessibility and, where appropriate, the accessible alternatives provided for to justify the conformance level and conformance status. When the conformance level is ’Partial conformant’ or ‘Non conformant’. This explanation can be added to the evaluation report or added to the table described in the "evaluation results/link to evaluation report". The explanation requires information about:
+* * Website (and mobile application) areas that do not conform
+* * Reasons for not conforming. Explain why Success Criteria are non-conformant
+* * Explain accessible alternatives that are used (if available) and optionally why they have been used.
+* <strong>Example:</strong> This could be presented as a table where a row would have the following columns:
+* * SC number and title
+* * Explanation
+* * Pass/Fail/N/A
+* * Option: If non-conformant: Reason for the non-conformance and link to accessible alternative is available or applicable
+* * Option: If there is no accessible alternative: When will the non-conformance be repaired
+<button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Contact_information_input" %}
@@ -207,42 +223,26 @@ Mobile application example: This mobile application is limited to the US version
 {% include excol.html type="middle" %}
 * Who can people contact for questions about this Accessibility Statement. This could be an email going to the person responsible for the Accessibility Statement. This is very different depending on the audience. For example, if procurers want to contact you about your Accessibility Statement, you may want to point them to another place than persons with disabilities who have questions or feedback about the accessibility of your website or mobile application.
 * <strong>Example:</strong> Persons with disabilities, please contact: Department of Communication; accessibility@universityofsampel.ort; Tel.: +31 111 111 1111. Procurers, please contact: procurers@universityofsampel.ort; Tel.: +31 111 111 112.
-* <strong>Format:</strong> [Contact information 1]; [Contact information 2]
+* <strong>Format:</strong> [Contact information 1 (name; dept; email; phone)]; [Contact information 2 (name; dept; email; phone)]
 * <button type="button">Add to my Accessibility Statement</button>
-{% include excol.html type="end" %}
-
-{% include excol.html type="start" id="Remarks_explanations_input" %}
-### Remarks and explanation
-{% include excol.html type="middle" %}
-* Explanation of the parts of the content that are not accessible, and the reasons for that inaccessibility and, where appropriate, the accessible alternatives provided for to justify the conformance level and conformance status. When the conformance level is ’Partial conformant’ or ‘Non conformant’, the explanation requires information about:
-* * Website (and mobile application) areas that do not conform
-* * Reasons for not conforming. Explain which Success Criteria are non-conformant and indicate why
-* * If a SC does not apply, explain why it does not apply
-* * Explain accessible alternatives that are used (if available) and why they have been used.
-* <strong>Example:</strong> [to be written]
-* <textarea rows="1" cols="50">Part of content/Area that does not conform..</textarea>
-* <textarea rows="1" cols="50">Reason for the non-conformance...</textarea>
-* <textarea rows="1" cols="50">Reason for the non-applicability...</textarea>
-* <textarea rows="1" cols="50">Link to the accessible alternative...</textarea>
-* <textarea rows="1" cols="50">Explain why accessible alternative has been used...</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Feedback_input" %}
 ### Feedback
 {% include excol.html type="middle" %}
-* An invitation to send feedback about the Accessibility Statement (This is a description of, and a link to, a feedback mechanism)
-Request accessible format - A possibility to request information that is not accessible.
-* <strong>Example:</strong> [to be written]
-* <textarea rows="1" cols="50">Add a link to the feedback mechanism here...</textarea>
-* <textarea rows="1" cols="50">Provide a description of the feedback mechnamism here..</textarea><button type="button">Add to my Accessibility Statement</button>
+* An invitation to send feedback or request content in an accessible format. Provide a description of, and a link to, a feedback mechanism.
+* <strong>Example:</strong> For the university of Sampel website, this could be: "If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.universityofsampel.ort/accessibility/". For a mobile application there could be a link to the webform in the settings of the app: "If you have any feedback on the accessibility of this app, please use the [link opens webpage] accessibility feedbackform on our website[End of link] (this link opens in your browser)"
+* <strong>Format:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: [URL of feedbackform]
+* <textarea rows="1" cols="50">Add a link to the feedbackform here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Enforcement_procedure_input" %}
 ### Enforcement procedure
 {% include excol.html type="middle" %}
-* Description of and link to enforcement procedure.
-* <strong>Example:</strong> [to be written]
-* <textarea rows="1" cols="50">Add a link to the enforcement procedure here..</textarea><button type="button">Add to my Accessibility Statement</button>
+* If you have an enforcement procedure then add a description and if available a link here. An example of an enforcement procedure is to describe what will happen when a person sends in feedback.
+* <strong>Example:</strong> If you contact us through the feedbackform we will try answer your feedback question within 2 businessdays. 
+* <strong>Format:</strong> [Text about enforcement procedure]; [If available add link to enforcement procedure]
+* <textarea rows="1" cols="50">Add a short description and a link to the enforcement procedure here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 ## More optional elements
