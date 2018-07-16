@@ -23,6 +23,8 @@ This guide and tool helps owners of websites and mobile applications to describe
 {% include toc.html type="start" title="Page Contents" %}
 {:/}
 
+{::options toc_levels="2" /}
+
 - This will be replaced by an automatically generated TOC when using Markdown formatting.
 {:toc}
 
