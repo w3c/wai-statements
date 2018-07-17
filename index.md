@@ -255,23 +255,23 @@ Mobile application example: This mobile application is limited to the US version
 </tr>
 <tr>
 <th id="r2" headers="h1">1.1.1 Non-text Content: (Level A)</th>
-<td headers="r2 h2"><textarea rows="1" cols="10"></textarea></td>
-<td headers="r2 h3"><textarea rows="1" cols="10"></textarea></td>
+<td headers="r2 h2"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r2 h3"><textarea rows="1" cols="20"></textarea></td>
 </tr>
 <tr>
 <th id="r3" headers="h1">1.2.1 Audio-only and Video-only (Prerecorded): (Level A)</th>
-<td headers="r3 h2">3</td>
-<td headers="r3 h3">4</td>
+<td headers="r3 h2"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r3 h3"><textarea rows="1" cols="20"></textarea></td>
 </tr>
 <tr>
 <th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
-<td headers="r4 h2">5</td>
-<td headers="r4 h3">6</td>
+<td headers="r4 h2"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r4 h3"><textarea rows="1" cols="20"></textarea></td>
 </tr>
 <tr>
 <th id="r5" headers="h1">1.2.3 Audio Description or Media Alternative (Prerecorded): (Level A)</th>
-<td headers="r5 h2">7</td>
-<td headers="r5 h3">8</td>
+<td headers="r5 h2"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r5 h3"><textarea rows="1" cols="20"></textarea></td>
 </tr>
 <tr>
 <th id="r6" headers="h1">1.2.4 Captions (Live): (Level AA)</th>
