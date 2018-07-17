@@ -192,8 +192,8 @@ Mobile application example: This mobile application is limited to the US version
 {% include excol.html type="middle" %}
 * The options for the conformance status are:
 * * Fully conformant: The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
-* * Partially conformant: A specific functionality of the website or mobile app is non-conformant with the standard/guideline.
-* * Non conformant: The majority of the website or mobile app is non-conformant with the standard/guideline.
+* * Partially conformant: A specific functionality of the website or mobile app is non-conformant with the standard/guideline and there is not an accessible alternative provided.
+* * Non conformant: The website or mobile app is non-conformant with the standard/guideline.
 * * No assessment available: The website or mobile app has not been evaluated against the standard/guideline or the evaluation result is not available.
 * <strong>Format:</strong> [Fully conformant/Partially conformant/Non conformance/No assessment available]
 * <textarea rows="1" cols="30">Selectbox</textarea><button type="button">Add to my Accessibility Statement</button>
@@ -245,6 +245,56 @@ Mobile application example: This mobile application is limited to the US version
 * Link to a seperate evaluation report or provide details about the evaluation results here. Either provide a full list of all Success Criteria and mark if they have Passed or Failed or only provide results for Success Criteria that failed. If desired, SC that are not applicable on the website or mobile application can be marked as Not Applicable.
 * <strong>Example:</strong> Provide a table where the first column contains the SC or other numbering of the standards followed by the evaluator. Then provide one or more columns marking if the SC are Pass, Fail (or N/A). For WCAG2.1 the first row would contain: "1.1.1 Non-text Content / [Pass/Fail/N/A]". For users with disabilities is may help to explain the SC a bit more using the text in WCAG2.1. For example: "1.4.1 Use of color / Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. / [Pass/Fail/N/A].
 * <strong>Format:</strong> Table columns: [SC number and title]/[Explanation]/[Pass/Fail/N/A] or [https://www.universityofsampel.ort/accessibility/evaluationreport]
+
+<table border="1" cellpadding="5" cellspacing="2" summary="Conformance with Success Criteria">
+<caption></caption>
+<tr>
+<th id="h1">Success Criteria</th>
+<th id="h2">Level of Conformance</th>
+<th id="h3">Remarks and explanation</th>
+</tr>
+<tr>
+<th id="r2" headers="h1">1.1.1 Non-text Content: (Level A)</th>
+<td headers="r2 h2"><textarea rows="1" cols="10"></textarea></td>
+<td headers="r2 h3"><textarea rows="1" cols="10"></textarea></td>
+</tr>
+<tr>
+<th id="r3" headers="h1">1.2.1 Audio-only and Video-only (Prerecorded): (Level A)</th>
+<td headers="r3 h2">3</td>
+<td headers="r3 h3">4</td>
+</tr>
+<tr>
+<th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
+<td headers="r4 h2">5</td>
+<td headers="r4 h3">6</td>
+</tr>
+<tr>
+<th id="r5" headers="h1">1.2.3 Audio Description or Media Alternative (Prerecorded): (Level A)</th>
+<td headers="r5 h2">7</td>
+<td headers="r5 h3">8</td>
+</tr>
+<tr>
+<th id="r6" headers="h1">1.2.4 Captions (Live): (Level AA)</th>
+<td headers="r6 h2">7</td>
+<td headers="r6 h3">8</td>
+</tr>
+<tr>
+<th id="r7" headers="h1">1.2.5 Audio Description (Prerecorded): (Level AA)</th>
+<td headers="r7 h2">7</td>
+<td headers="r7 h3">8</td>
+</tr>
+<tr>
+<th id="r8" headers="h1">1.3.1 Info and Relationships: (Level A)</th>
+<td headers="r8 h2">7</td>
+<td headers="r8 h3">8</td>
+</tr>
+</table>
+
+
+
+
+
+
 * <textarea rows="1" cols="50">Add a table or link to an evaluation report</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
