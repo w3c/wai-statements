@@ -59,9 +59,9 @@ This Accessibility Statement provides an understanding of the accessibility of o
 
 <strong>Link to evaluation report:</strong> https://www.example-library.org/accessibility/
 
-Comment: maybe better to include a table here with A and AA SC and pass/fail/n/a. But do not know how to make table in Github yet ;-)
+Comment: maybe better to include a table here with A and AA SC and pass/fail/n/a.
 
-INSERT TABLE HERE (4 columns)
+INSERT TABLE HERE (3 columns)
 
 <strong>Optional: Feedback:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.example-library.org/accessibility/
 
@@ -126,8 +126,8 @@ This section contains a list of potential elements that can be included in an ac
 * Provide the accessibility statement with a title that helps people understand where the document is from and what it is for. 
 * <strong>Example:</strong> For the website of the university of Sampel, this could be "University of Sampel Accessibility Statement".
 * <strong>Format:</strong> [Name of your organization] Accessibility Statement
-* <textarea rows="1" cols="50">Name of your organization</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
+* <textarea rows="1" cols="50">Name of your organization</textarea><button type="button">Add to my Accessibility Statement</button>
 
 {% include excol.html type="start" id="Introduction_input" %}
 ### Introduction
