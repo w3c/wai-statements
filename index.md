@@ -127,7 +127,7 @@ This section contains a list of potential elements that can be included in an ac
 * <strong>Example:</strong> For the website of the university of Sampel, this could be "University of Sampel Accessibility Statement".
 * <strong>Format:</strong> [Name of your organization] Accessibility Statement
 {% include excol.html type="end" %}
-* <textarea rows="1" cols="50">Name of your organization</textarea><button type="button">Add to my Accessibility Statement</button>
+<textarea rows="1" cols="70">Name of your organization</textarea><button type="button">Add to my Accessibility Statement</button>
 
 {% include excol.html type="start" id="Introduction_input" %}
 ### Introduction
@@ -135,7 +135,7 @@ This section contains a list of potential elements that can be included in an ac
 * Provide a short introductory paragraph for people who don't know what accessibility or an Accessibility Statement is.
 * <strong>Example:</strong> "This Accessibility Statement provides an understanding of the accessibility of our website/mobile application, and where to get information or leave feedback if you experience problems with its accessibility".
 * <strong>Format:</strong> [Introduction paragraph]
-* <textarea rows="1" cols="50">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
+* <textarea rows="1" cols="70">Add your short introduction here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Name_input" %}
@@ -144,8 +144,8 @@ This section contains a list of potential elements that can be included in an ac
 * Provide the name of the website or mobile application that is the subject of this Accessibility Statement. This includes version information and a date if necessary to recognize a specific version. For a website this could be or include the URI, for a mobile application it could be or include a link to the place where the app can be downloaded or installed from.
 * <strong>Example:</strong> For the public website this could be: "https://www.universityofsampel.ort". Or for the library: "https://www.universityofsampel.ort/library/" or shop: "https://www.universityofsampel.ort/shop". For the mobile version of their website: "https://m.universityofsampel.ort". The Dutch version of their website: "nl.universityofsampel.ort". For their mobile wayfinder app it could be: "https://universityofsampel.ort/appshop/wayfinderapp (version 1.2.3) or https://nameofappstore.ext/appname". 
 * <strong>Format:</strong> URL: [https://www.universityofsampel.ort/library/] or APP: [https://nameofappstore.ext/appname]
-* <textarea rows="1" cols="50">https://www.universityofsampel.ort/library/</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
+<textarea rows="1" cols="70"></textarea><button type="button">Add to my Accessibility Statement</button>
 
 {% include excol.html type="start" id="Description_input" %}
 ### Brief description
@@ -165,8 +165,8 @@ This section contains a list of potential elements that can be included in an ac
 [www.url.com/page2] (Add reason why)
 Mobile application example: This mobile application is limited to the US version of the wayfinder application.
 * <strong>Format:</strong> [Scope limitation(s)]
-* <textarea rows="1" cols="50">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
+<textarea rows="3" cols="70">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
 
 {% include excol.html type="start" id="Date_input" %}
 ### Date
@@ -174,8 +174,8 @@ Mobile application example: This mobile application is limited to the US version
 * Provide the date on which this Accessibility Statement was last modified. As a minimum provide the month and year.
 * <strong>Example:</strong> For the first or May of the year 2018, this would be "2018/05/01" or if you only want to provide the month and year "May, 2018" or 2018/05
 * <strong>Format:</strong> [YYYY/MM/DD] or [YYYY/MM] or [Month, YYYY]
-* When did you write this statement?: <textarea rows="1" cols="50">July, 2018</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
+<textarea rows="1" cols="70">July, 2018</textarea><button type="button">Add to my Accessibility Statement</button>
 
 {% include excol.html type="start" id="Standards_applied_input" %}
 ### Standards applied
@@ -183,9 +183,17 @@ Mobile application example: This mobile application is limited to the US version
 * Which standards/guidelines have been followed for the conformance statement? Although most national and regional requirements are harmonized with WCAG, there may be legal or other requirements that make it necessary to point to a specific standards. For example, in the US organizations may use the revised Section 508 standards, while in Europe, organizations may have reasons to use the latest version of EN 301 549. Both are completely harmonized with WCAG.
 * <strong>Example:</strong> For example, the website of Sampel University was evaluated using WCAG2.1.
 * <strong>Format:</strong> [WCAG2.0/WCAG2.1/Section508/EN 301 549]/[version number]
-* <textarea rows="1" cols="25">EN 301 549</textarea><textarea rows="1" cols="10">1.1.2</textarea><button type="button">Add to my Accessibility Statement</button>
 * Comment: The textarea should be a select box. There is no need for a seperate version number input as these can all be included in the list.
 {% include excol.html type="end" %}
+<select>
+  <option value="WCAG20">Web Content Accessibility Guidelines 2.0 AA</option>
+  <option value="WCAG21">Web Content Accessibility Guidelines 2.1 AA</option>
+  <option value="Section508">Section508 AA</option>
+  <option value="EN301549">European Standard EN 301 549 AA v1.1.2</option>
+  <option value="EN301549">European Standard EN 301 549 AA v1.2</option>
+  <option value="other">Other option (explain below)</option>
+</select>
+<textarea rows="1" cols="25">Remarks and explanations</textarea><textarea rows="1" cols="10">1.1.2</textarea><button type="button">Add to my Accessibility Statement</button>
 
 {% include excol.html type="start" id="Conformance_status_input" %}
 ### Conformance Status
