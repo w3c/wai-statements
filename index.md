@@ -197,13 +197,13 @@ The minimal and comprehensive model accessibility statements also provide a 'dat
 
 ## List and description of elements {#Listofelements}
 
-This section contains a list of potential elements that can be included in an accessibility statement for a website or mobile application. Every element has a short explanation, one or more examples and a proposed dataformat. Anyone setting up an accessibility statement can use any of these elements. Section 'minimal model accessibility statement' and section 'comprehensive model accessibility statement' provide examples of a minimal and a comprehensive accessibility statement. <strong>Comment:</strong> The textareas and buttons are there for discussion only. They do not work.. 
+This section contains a list of potential elements that can be included in an Accessibility Statement for a website or mobile application. Every element has a short explanation, one or more examples and a proposed dataformat. Anyone setting up an Accessibility Statement can use any of these elements. Section 'minimal example' and section 'comprehensive example' provide examples of a minimal and a comprehensive Accessibility Statement. <strong>Comment:</strong> The textareas and buttons are there for discussion only. They do not work.. 
 
 {% include excol.html type="start" id="Title_input" %}
 ### Title of Accessibility Statement
 {% include excol.html type="middle" %}
 * Provide the accessibility statement with a title that helps people understand where the document is from and what it is for. 
-* <strong>Example:</strong> For the website of the university of Sampel, this could be "University of Sampel Accessibility Statement".
+* <strong>Example:</strong> For the website of the Citylights, this could be "Citylights website Accessibility Statement".
 * <strong>Format:</strong> [Name of your organization] Accessibility Statement
 * <textarea rows="1" cols="70">Name of your organization</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -221,8 +221,8 @@ This section contains a list of potential elements that can be included in an ac
 ### URI of website/mobile app
 {% include excol.html type="middle" %}
 * Provide the URI of the website or mobile application that is the subject of this Accessibility Statement. This includes version information and a date if necessary to recognize a specific version. For a website this could be or include the URI, for a mobile application it could be or include a link to the place where the app can be downloaded or installed from.
-* <strong>Example:</strong> For the public website this could be: "https://www.universityofsampel.ort". Or for the library: "https://www.universityofsampel.ort/library/" or shop: "https://www.universityofsampel.ort/shop". For the mobile version of their website: "https://m.universityofsampel.ort". The Dutch version of their website: "nl.universityofsampel.ort". For their mobile wayfinder app it could be: "https://universityofsampel.ort/appshop/wayfinderapp (version 1.2.3) or https://nameofappstore.ext/appname". 
-* <strong>Format:</strong> URL: [https://www.universityofsampel.ort/library/] or APP: [https://nameofappstore.ext/appname]
+* <strong>Example:</strong> For the public website this could be: "https://www.w3.org/WAI/demos/bad/after/home.html". If the website would have a seperate section per city, the URI could be "website/city.html" or if they have a shop: "website/shop.html". The Dutch version of their website could be: "website/nl/". For their mobile app it could be: "https://nameofappstore.ext/linktoapp (version 1.2.3)". 
+* <strong>Format:</strong> URL: [https://www.w3.org/WAI/demos/bad/after/home.html] or APP: [https://nameofappstore.ext/linktoapp]
 * <textarea rows="1" cols="70"></textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
@@ -230,7 +230,7 @@ This section contains a list of potential elements that can be included in an ac
 ### Brief description
 {% include excol.html type="middle" %}
 * A brief description of the website or mobile app that is the subject of this Accessibility Statement. 
-* <strong>Example:</strong> For the website: "This is the library of the worlds leading higher education and research University". Or for the mobile application: "The University of Sampel navigational and way-finding mobile application".
+* <strong>Example:</strong> For the website: "Our website, citylights includes inline annotations that can be activated to highlight some of the key accessibility repairs. Each web page is also accompanied by an evaluation report to inform the developers of the level of conformance to WCAG2.0. This Accessibility Statement includes the contact information page.". Or for the mobile application: "The mobile application for citylights".
 * <strong>Format:</strong> [Description]
 * <textarea rows="1" cols="50">Add your description here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -238,11 +238,14 @@ This section contains a list of potential elements that can be included in an ac
 {% include excol.html type="start" id="Scope_limitations_input" %}
 ### Scope limitations
 {% include excol.html type="middle" %}
-* Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover). A website can be part of a larger website, such as the online shop in the preceding example at www.universityofsampel.ort/shop. The scope of the Accessibility Statement can then be limited to this specific part. The scope limitation can also apply to states of the website or mobile application. For instance if the website or mobile application is different depending on the time of the day, the country, certain specifics of the user, etc. The scope may then be limited to the US version of the website or application or to the Dutch version of the mobile application. The Accessibility Statement could also exclude certain elements of the website or mobile application. More information about exceptions to the scope can be found at: https://www.w3.org/TR/WCAG-EM/#step1a
-* <strong>Example:</strong> Website example: "University of Sampel strives to conform to WCAG2.1. it is not always possible to do so in all areas of the website. Therefore the following url’s are excluded from this statement:"
+* Describe any limitations to the scope of this Accessibility Statement (what parts of the portal/service/app does this Statement not cover). A website can be part of a larger website, such as the online shop. The scope of the Accessibility Statement can then be limited to this specific part. The scope limitation can also apply to states of the website or mobile application. For instance if the website or mobile application is different depending on the time of the day, the country, certain specifics of the user, etc. The scope may then be limited to the US version of the website or application or to the Dutch version of the mobile application. The Accessibility Statement could also exclude certain elements of the website or mobile application. More information about exceptions to the scope can be found at: https://www.w3.org/TR/WCAG-EM/#step1a
+* <strong>Example:</strong> Website example: "This Accessibility Statement only applies to the 'After' part of the demonstration website. It does not apply to the rest of the W3C or WAI website. The Accessibility Statement does not apply to the 'Before' part of the demonstration website". If specific parts are excluded, they can be added: "The following url’s are excluded from this statement:
+
 [www.url.com/page1] (Add reason why)
+
 [www.url.com/page2] (Add reason why)
-Mobile application example: This mobile application is limited to the US version of the wayfinder application.
+
+Mobile application example: This Accessibility Statement is limited to the US version of the mobile application."
 * <strong>Format:</strong> [Scope limitation(s)]
 * <textarea rows="3" cols="70">Describe any limitations to the scope here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -260,7 +263,7 @@ Mobile application example: This mobile application is limited to the US version
 ### Standards applied
 {% include excol.html type="middle" %}
 * Which standards/guidelines have been followed for the conformance statement? Although most national and regional requirements are harmonized with WCAG, there may be legal or other requirements that make it necessary to point to a specific standards. For example, in the US organizations may use the revised Section 508 standards, while in Europe, organizations may have reasons to use the latest version of EN 301 549. Both are completely harmonized with WCAG.
-* <strong>Example:</strong> For example, the website of Sampel University was evaluated using WCAG2.1.
+* <strong>Example:</strong> For example, the website of Citylights was evaluated using WCAG2.0.
 * <strong>Format:</strong> [WCAG2.0/WCAG2.1/Section508/EN 301 549]/[version number]
 * Comment: The textarea should be a select box. There is no need for a seperate version number input as these can all be included in the list.
 * <select>
@@ -291,7 +294,7 @@ Mobile application example: This mobile application is limited to the US version
 ### How was the accessibility evaluated
 {% include excol.html type="middle" %}
 * Provide details about the evaluation methodology that was used. This could also be desribed seperately in an evaluation report that is linked from the Accessibility Statement. Include information about the procedure, documents used and the involvement of persons with disabilities.
-* <strong>Example:</strong> For website: "For the evaluation of this website, we followed WCAG-EM and we tested different user stories with persons with disabilities" or "For the evaluation of this website/mobile application, we asked an independent third party to evaluate using the WCAG-EM report tool" or "Details about the evaluation methodology can be found in the evaluation report that that can be found at: https://www.universityofsampel.ort/accessibility/evaluationreport".
+* <strong>Example:</strong> For website: "For the evaluation of this website, we followed WCAG-EM and we tested different user stories with persons with disabilities" or "For the evaluation of this website/mobile application, we asked an independent third party to evaluate using the WCAG-EM report tool" or "Details about the evaluation methodology can be found in the evaluation report that that can be found at: https://www.w3.org/WAI/demos/bad/after/reports/home.html".
 * <strong>Format:</strong> [Description of how the accessibility was evaluated]
 * <textarea rows="1" cols="50">Add a description of how the accessibility was evaluated..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -300,8 +303,8 @@ Mobile application example: This mobile application is limited to the US version
 ### Web technologies relied upon
 {% include excol.html type="middle" %}
 * Describe the web technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported. Besides HTML and CSS, you may have included web technologies like JavaScript, WAI-ARIA, PDF, etc. in your evaluation. Provide a list of technologies that are relied upon according to WCAG 2.0. For more information please read: https://www.w3.org/TR/WCAG-EM/#step2d.
-* <strong>Example:</strong> For website: "Web technologies relied upon for conformance: HTML, CSS, Javascript, WAI-ARIA, PDF and SMIL".
-* <strong>Format:</strong> [HTML; CSS; Javascript; WAI-ARIA; PDF; SMIL]
+* <strong>Example:</strong> For website: "Web technologies relied upon for conformance: HTML, CSS, Javascript".
+* <strong>Format:</strong> [HTML; CSS; Javascript; WAI-ARIA; PDF; SMIL; Other]
 * Provide answer via checkboxes with technologies and editfield
 
 <button type="button">Add to my Accessibility Statement</button>
@@ -321,7 +324,7 @@ Mobile application example: This mobile application is limited to the US version
 ### Notes/main accessibility changes since previous version
 {% include excol.html type="middle" %}
 * Any information important for the understanding of this Statement and/or changes since the previous Accessibility Statement.
-* <strong>Example:</strong> For the updated wayfinder app, this could be: "We have added more color contrast to the main selection menu of the wayfinder app. Due to building activities on the campus of our university, we have also added new routes for persons who are blind". For the website of the University of Sampel library, this could be: "The news department of our website has now added 'skiplinks to jump over headers. This way, persons using screenreader software can quickly jump to the main content of our webpages". 
+* <strong>Example:</strong> For the updated wayfinder app, this could be: "We have added more color contrast to the main selection menu of the wayfinder app. Due to building activities on the campus of our university, we have also added new routes for persons who are blind". For the Citylights website there is a changelog available, this could be: "Changes compared to the previous version are described in the changelog on the following webpage: https://www.w3.org/WAI/demos/bad/changelog.html". 
 * <strong>Format:</strong> [Information important for the understandig of this Accessibility Statement]; [Identify accessibility changes since the previous Accessibility Statement]
 * <textarea rows="1" cols="50">Add information that is important for the understanding or explains accessibility related changes since the previous version</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -330,8 +333,8 @@ Mobile application example: This mobile application is limited to the US version
 ### Evaluation results/link to evaluation report
 {% include excol.html type="middle" %}
 * Link to a seperate evaluation report or provide details about the evaluation results here. Either provide a full list of all Success Criteria and mark if they have Passed or Failed or only provide results for Success Criteria that failed. If desired, SC that are not applicable on the website or mobile application can be marked as Not Applicable.
-* <strong>Example:</strong> Provide a table where the first column contains the SC or other numbering of the standards followed by the evaluator. Then provide one or more columns marking if the SC are Pass, Fail (or N/A). For WCAG2.1 the first row would contain: "1.1.1 Non-text Content / [Pass/Fail/N/A]". For users with disabilities is may help to explain the SC a bit more using the text in WCAG2.1. For example: "1.4.1 Use of color / Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. / [Pass/Fail/N/A].
-* <strong>Format:</strong> Table columns: [SC number and title]/[Explanation]/[Pass/Fail/N/A] or [https://www.universityofsampel.ort/accessibility/evaluationreport]
+* <strong>Example:</strong> Provide a table where the first column contains the SC. Then provide one or more columns marking if the SC are Pass, Fail (or N/A). For users with disabilities is may help to explain the SC a bit more using the text in WCAG. For example: "1.4.1 Use of color: Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. / [Pass/Fail/N/A].
+* <strong>Format:</strong> Table columns: [SC number and title]/[Pass/Fail/N/A] or [https://www.w3.org/WAI/demos/bad/after/reports/home.html]. Minimal version: 
 
 <table border="1" cellpadding="5" cellspacing="2" summary="Conformance with Success Criteria">
 <caption></caption>
@@ -360,29 +363,11 @@ Mobile application example: This mobile application is limited to the US version
 <td headers="r5 h2"><textarea rows="1" cols="20"></textarea></td>
 <td headers="r5 h3"><textarea rows="1" cols="20"></textarea></td>
 </tr>
-<tr>
-<th id="r6" headers="h1">1.2.4 Captions (Live): (Level AA)</th>
-<td headers="r6 h2">7</td>
-<td headers="r6 h3">8</td>
-</tr>
-<tr>
-<th id="r7" headers="h1">1.2.5 Audio Description (Prerecorded): (Level AA)</th>
-<td headers="r7 h2">7</td>
-<td headers="r7 h3">8</td>
-</tr>
-<tr>
-<th id="r8" headers="h1">1.3.1 Info and Relationships: (Level A)</th>
-<td headers="r8 h2">7</td>
-<td headers="r8 h3">8</td>
-</tr>
 </table>
 
+Etc.
 
-
-
-
-
-* <textarea rows="1" cols="50">Add a table or link to an evaluation report</textarea><button type="button">Add to my Accessibility Statement</button>
+* <textarea rows="1" cols="50">Add a table or link to an evaluation report or importa JSON file from the Evaluation Report Tool</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Remarks_explanations_input" %}
@@ -405,7 +390,7 @@ Mobile application example: This mobile application is limited to the US version
 ### Contact information
 {% include excol.html type="middle" %}
 * Who can people contact for questions about this Accessibility Statement. This could be an email going to the person responsible for the Accessibility Statement. This is very different depending on the audience. For example, if procurers want to contact you about your Accessibility Statement, you may want to point them to another place than persons with disabilities who have questions or feedback about the accessibility of your website or mobile application.
-* <strong>Example:</strong> Persons with disabilities, please contact: Department of Communication; accessibility@universityofsampel.ort; Tel.: +31 111 111 1111. Procurers, please contact: procurers@universityofsampel.ort; Tel.: +31 111 111 112.
+* <strong>Example:</strong> Persons with disabilities, please contact: Department of Communication; accessibility@website; Tel.: +31 111 111 1111. Procurers, please contact: procurers@website; Tel.: +31 111 111 112.
 * <strong>Format:</strong> [Contact information 1 (name; dept; email; phone)]; [Contact information 2 (name; dept; email; phone)]
 * <button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -414,7 +399,7 @@ Mobile application example: This mobile application is limited to the US version
 ### Feedback
 {% include excol.html type="middle" %}
 * An invitation to send feedback or request content in an accessible format. Provide a description of, and a link to, a feedback mechanism.
-* <strong>Example:</strong> For the university of Sampel website, this could be: "If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.universityofsampel.ort/accessibility/". For a mobile application there could be a link to the webform in the settings of the app: "If you have any feedback on the accessibility of this app, please use the [link opens webpage] accessibility feedbackform on our website[End of link] (this link opens in your browser)"
+* <strong>Example:</strong> For Citylights, this could be "If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: [link to webpage with feedback form]". For a mobile application there could be a link to the feedback form in the settings of the app: "If you have any feedback on the accessibility of this app, please use the [link opens webpage] accessibility feedback form on our website[End of link] (this link opens in your browser)"
 * <strong>Format:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: [URL of feedbackform]
 * <textarea rows="1" cols="50">Add a link to the feedbackform here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -434,7 +419,7 @@ Mobile application example: This mobile application is limited to the US version
 ### Compliance basis
 {% include excol.html type="middle" %}
 * Where does the requirement to be conformant originate from (organization, legal requirement, other motivation). This could be a non-public statement, for example if a company requires their departments to report on compliance to a central unit/department.
-* <strong>Example:</strong> If this is not public, but as an internal requirement from a top department in the organization, an example  could be: "Required by department X for compliance". If required by law to report like in Europe, it could be: "Directive 2016/2102 of the European Union" or in the US: "ADA". It could also be local legislation like "WGBH/cz" in the Netherlands.
+* <strong>Example:</strong> If this is not public, but as an internal requirement from a top department in the organization, an example  could be: "Required by department X for compliance". If required by law to report like in Europe, it could be: "Directive 2016/2102 of the European Union" or in the US: "ADA". It could also be local legislation like "WGBH/cz" in the Netherlands. For Citylights, the example could be "Our organization supports is committed to the promoting a high degree of usability for people with disabilities. Our management requires involvement of different stakeholders in Web accessibility. These include disability organizations, accessibility research organizations, and more. We also want to follow legal rquirements."
 * <strong>Format:</strong> [Describe the compliance basis]
 * <textarea rows="1" cols="50">Explain why your organization strives for conformance...</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -450,7 +435,7 @@ Mobile application example: This mobile application is limited to the US version
 ### Intention of the organization
 {% include excol.html type="middle" %}
 * The intention could be to reach a higher level of conformance or to work on full conformance of all websites and mobile apps. It also describes the manner in which digital accessibility is embedded in the organization's policy.
-* <strong>Example:</strong> The website is now WCAG AA conformant but we are working on implementing AAA Success Criteria that help persons with cognitive disabilities. 
+* <strong>Example:</strong> The website within the scope of this Accessibility Statement is now WCAG2.0 AAA conformant but we are planning to implement WCAG2.1 AAA Success Criteria to the website within the next year.
 * <strong>Format:</strong> [Description of the intention of the organization]
 * <textarea rows="1" cols="50">Add information about the intention of the organization regarding accessibility..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
@@ -460,8 +445,8 @@ Mobile application example: This mobile application is limited to the US version
 {% include excol.html type="middle" %}
 * Add conformance measures to the element ‘remarks and explanation’. For every non-conformity identified, describe the measures that will be taken and the schedule that indicates when those measures are put into effect. This can be added to the table as a seperate column. This information is important for persons with disabilities to understand what the organization will do to repair non-conformities and when they can expect this to work. These non-conformities can also be beyond the required conformity level (the organization may want to apply AAA Success criteria while this is not required by law or by procurers).
 * <strong>Format:</strong> Add [Description of the conformance measures] as a column to the table in ‘remarks and explanation’ or add a separate section named "conformance measures"
-* <strong>Example:</strong> Add column to the table described in element ‘remarks and explanation’. Instead of an extra column in the table, conformance measures can also be a seperate section. 
-<button type="button">Add conformance measures to 'remarks and explanation' table</button><button type="button">Add seperate paragraph about conformance measures</button>
+* <strong>Example:</strong> Not applicable because our Citylights website is already conformant with WCAG2.0 AAA.
+<button type="button">Add conformance measures to the table (results) or add separate section</button><button type="button">Add seperate section about conformance measures</button>
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Organizational_measures_input" %}
@@ -477,9 +462,9 @@ Mobile application example: This mobile application is limited to the US version
 ### Formal confirmation
 {% include excol.html type="middle" %}
 * Formal confirmation on management level of the timeliness and the correctness of the Accessibility Statement, and confirmation that the designated administrator or other responsible person or function formally agrees with the content of the Accessibility Statement by the organization.
-* <strong>Example:</strong> This could look like: "Approved by the Dean of the University of Sampel" or Approved by the Accessibility Department of organization X"
+* <strong>Example:</strong> This could look like: "This Accessibility Statement is approved by the Communication Department of Citylights (July 2018)" or Approved by the Citylights Accessibility Department"
 * <strong>Format:</strong> Approved by [name/department];[function]
-* <textarea rows="1" cols="50">Approved by Hannibal, Director A-Team</textarea><button type="button">Add to my Accessibility Statement</button>
+* <textarea rows="1" cols="50">Approved by Hannibal, Director A-Team of Citylights</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
 ## Good practice on writing and placing statements (draft heading)
