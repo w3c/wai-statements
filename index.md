@@ -40,7 +40,7 @@ This guide and tool helps owners of websites and mobile applications to describe
 
 {% include excol.html type="middle" %}
 
-### Citylights Before and After Demonstration website Accessibility Statement
+### Citylights website Accessibility Statement
 This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.
 
 <strong>URI of website:</strong> https://www.w3.org/WAI/demos/bad/Overview.html
@@ -73,7 +73,7 @@ Comment: Functionality does not work yet.
 
 {% include excol.html type="middle" %}
 
-### Citylights Before and After Demonstration website Accessibility Statement
+### Citylights website Accessibility Statement
 This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.
 
 <strong>URI of website:</strong> https://www.w3.org/WAI/demos/bad/Overview.html
