@@ -129,7 +129,7 @@ Optional: Below is the output of the Evaluation Report Tool (imported JSON file)
 <tr>
 <th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
 <td headers="r4 h2">N/a</td>
-<td headers="r4 h3"><textarea rows="1" cols="15"></textarea></td>
+<td headers="r4 h3"><textarea rows="2" cols="15"></textarea></td>
 <td headers="r4 h4"><textarea rows="2" cols="15"></textarea></td>
 <td headers="r4 h5"><textarea rows="2" cols="15"></textarea></td>
 <td headers="r4 h6"><textarea rows="2" cols="15"></textarea></td>
