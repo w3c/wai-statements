@@ -161,7 +161,7 @@ Comment: Etc. Functionality does not work yet.
 
 ## Introduction {#Introduction}
 
-This page and the offers guidance to owners of websites and mobile applications to describe the accessibility of their products and services in an Accessibility Statement.
+This page offers guidance to owners of websites and mobile applications to describe the accessibility of their website or mobile application in an Accessibility Statement.
 
 <!--
 
