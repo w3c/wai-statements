@@ -413,8 +413,6 @@ Etc.
 * <textarea rows="1" cols="50">Add a short description and a link to the enforcement procedure here..</textarea><button type="button">Add to my Accessibility Statement</button>
 {% include excol.html type="end" %}
 
-## More optional elements
-
 {% include excol.html type="start" id="Compliance_basis_input" %}
 ### Compliance basis
 {% include excol.html type="middle" %}
