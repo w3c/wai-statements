@@ -40,32 +40,30 @@ This guide and tool helps owners of websites and mobile applications to describe
 
 {% include excol.html type="middle" %}
 
-### Example Library Accessibility Statement (for website)
-This Accessibility Statement provides an understanding of the accessibility of our website, and where to get information or leave feedback if you experience problems with its accessibility
+### Citylights Before and After Demonstration website Accessibility Statement
+This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.
 
-<strong>Name of website:</strong> http://www.example-library.org
+<strong>URI of website:</strong> https://www.w3.org/WAI/demos/bad/Overview.html
 
-<strong>Scope limitation:</strong> This Accessibility Statement only applies to the library and not to the rest of our corporate website.
+<strong>Scope limitation:</strong> This Accessibility Statement only applies to the 'After' part of our website. The Accessibility Statement does not apply to the 'Before' part of our website. This Accessibility Statement includes the contact information page on the W3C/WAI website.
 
 <strong>Date:</strong> July 2018
 
-<strong>Standards applied:</strong> EN 301 549 v1.1.2
+<strong>Standards applied:</strong> Web Content Accessibility Guidelines 2.0 AA
 
-<strong>Conformance status:</strong> Fully conformant (The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
+<strong>Conformance status:</strong> Fully conformant: The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
 
-<strong>Web technologies relied upon for conformance:</strong> HTML, CSS, Javascript, WAI-ARIA, PDF and SMIL.
+<strong>Web technologies relied upon for conformance:</strong> HTML, CSS, Javascript.
 
-<strong>Accessibility Support baseline:</strong> This website does not work with older versions of screenreader XYZ (older than version 1.2.3). The videoplayer does not show captions in the older version of the XYZ browser (before version 1.2.3)
+<strong>Accessibility Support baseline:</strong> Works with most popular browsers and assistive technology that is not older than 5 years
 
-<strong>Link to evaluation report:</strong> https://www.example-library.org/accessibility/
+<strong>Evaluation results/link to evaluation report:</strong> https://www.w3.org/WAI/demos/bad/after/reports/home.html
 
-Comment: maybe better to include a table here with A and AA SC and pass/fail/n/a.
+Optional: Below is the output of the Evaluation Report Tool (imported JSON file). 
 
-INSERT TABLE HERE (3 columns)
+Comment: Functionality does not work yet.
 
-<strong>Optional: Feedback:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.example-library.org/accessibility/
-
-
+<strong>(For EU Directive 2016/2102:) Feedback:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.w3.org/WAI/about/contacting/#feedback-on-specific-documents
 
 {% include excol.html type="end" %}
 
@@ -75,14 +73,86 @@ INSERT TABLE HERE (3 columns)
 
 {% include excol.html type="middle" %}
 
-[to be written]
+### Citylights Before and After Demonstration website Accessibility Statement
+This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.
+
+<strong>URI of website:</strong> https://www.w3.org/WAI/demos/bad/Overview.html
+
+<strong>Brief description:</strong> Our website, citylights includes inline annotations that can be activated to highlight some of the key accessibility repairs. Each web page is also accompanied by an evaluation report to inform the developers of the level of conformance to WCAG2.0. This Accessibility Statement includes the contact information page.
+
+<strong>Scope limitation:</strong> This Accessibility Statement only applies to the 'After' part of the demonstration website. It does not apply to the rest of the W3C or WAI website. The Accessibility Statement also does not apply to the 'Before' part of the demonstration website.
+
+<strong>Date:</strong> July 2018
+
+<strong>Standards applied:</strong> Web Content Accessibility Guidelines 2.0 AAA
+
+<strong>Conformance status:</strong> Fully conformant: The website or mobile app fully meets the standard/guideline without any exeptions (or by using accessible alternatives as described in the Standard/guideline).
+
+<strong>How was the accessibility evaluated:</strong> The website was evaluated by the members of the W3C/WAI Education and Outreach Working Group.
+
+<strong>Web technologies relied upon for conformance:</strong> HTML, CSS, Javascript.
+
+<strong>Accessibility Support baseline:</strong> Works with most popular browsers and assistive technology that is not older than 5 years
+
+<strong>Notes/main accessibility changes since previous version:</strong> Changes compared to the previous version are described in the changelog on the following webpage: https://www.w3.org/WAI/demos/bad/changelog.html
+
+<strong>Evaluation results/link to evaluation report:</strong> https://www.w3.org/WAI/demos/bad/after/reports/home.html
+
+Optional: Below is the output of the Evaluation Report Tool (imported JSON file). Comment: currently a placeholder for real output from the JSON file.
+
+<table border="1" cellpadding="5" cellspacing="2" summary="Conformance with Success Criteria">
+<caption></caption>
+<tr>
+<th id="h1">Success Criteria</th>
+<th id="h2">Level of Conformance</th>
+<th id="h3">Remarks and explanations</th>
+<th id="h3">If non-conformant, reason:</th>
+<th id="h3">If non-conformant, alternative:</th>
+<th id="h3">If non-conformant, repair deadline:</th>
+</tr>
+<tr>
+<th id="r2" headers="h1">1.1.1 Non-text Content: (Level A)</th>
+<td headers="r2 h2">Pass</td>
+<td headers="r2 h3"><textarea rows="1" cols="20"></textarea></td>
+</tr>
+<tr>
+<th id="r3" headers="h1">1.2.1 Audio-only and Video-only (Prerecorded): (Level A)</th>
+<td headers="r3 h2">N/a</td>
+<td headers="r3 h3"><textarea rows="1" cols="20"></textarea></td>
+</tr>
+<tr>
+<th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
+<td headers="r4 h2">N/a</td>
+<td headers="r4 h3"><textarea rows="1" cols="20"></textarea></td>
+</tr>
+</table>
+
+Comment: Etc. Functionality does not work yet.
+
+<strong>Remarks and explanation:</strong> See table with results
+
+<strong>Contact information:</strong> https://www.w3.org/WAI/about/contacting/
+
+<strong>(For EU Directive 2016/2102:) Feedback:</strong> If you have feedback about the accessibility of the website described in this Accessibility Statement, please use the feedback form on the following page: https://www.w3.org/WAI/about/contacting/#feedback-on-specific-documents
+
+<strong>(For EU Directive 2016/2102:) Enforcement procedure:</strong> If you contact us through the feedbackform we will try answer your feedback question within 2 businessdays.
+
+<strong>Compliance basis:</strong> Our organization supports is committed to the promoting a high degree of usability for people with disabilities. Our management requires involvement of different stakeholders in Web accessibility. These include disability organizations, accessibility research organizations, and more. We also want to follow legal rquirements.
+
+<strong>Intention of the organization:</strong>The website within the scope of this Accessibility Statement is now WCAG AAA conformant but we are planning to implementing WCAG2.1 AAA Success Criteria to the website within the next year.
+
+<strong>Conformance Measures:</strong> Not applicable. The current website is fully conformant.
+
+<strong>Organisational measures:</strong> Our organization has added web accessibility to our procurement requirements. We also train our staff in web accessibility once a year. The accessibility of web and mobile application is also part of our Quality Assurance method and included in our ISO 9001 procedures.
+
+<strong>Formal confirmation:</strong> This Accessibility Statement is approved by the Communication Department of Citylights (July 2018)
 
 {% include excol.html type="end" %}
 
 
 ## Introduction {#Introduction}
 
-To be edited...
+This page and the offers guidance to owners of websites and mobile applications to describe the accessibility of their products and services in an Accessibility Statement.
 
 <!--
 
@@ -139,9 +209,9 @@ This section contains a list of potential elements that can be included in an ac
 {% include excol.html type="end" %}
 
 {% include excol.html type="start" id="Name_input" %}
-### Name of website/mobile app
+### URI of website/mobile app
 {% include excol.html type="middle" %}
-* Provide the name of the website or mobile application that is the subject of this Accessibility Statement. This includes version information and a date if necessary to recognize a specific version. For a website this could be or include the URI, for a mobile application it could be or include a link to the place where the app can be downloaded or installed from.
+* Provide the URI of the website or mobile application that is the subject of this Accessibility Statement. This includes version information and a date if necessary to recognize a specific version. For a website this could be or include the URI, for a mobile application it could be or include a link to the place where the app can be downloaded or installed from.
 * <strong>Example:</strong> For the public website this could be: "https://www.universityofsampel.ort". Or for the library: "https://www.universityofsampel.ort/library/" or shop: "https://www.universityofsampel.ort/shop". For the mobile version of their website: "https://m.universityofsampel.ort". The Dutch version of their website: "nl.universityofsampel.ort". For their mobile wayfinder app it could be: "https://universityofsampel.ort/appshop/wayfinderapp (version 1.2.3) or https://nameofappstore.ext/appname". 
 * <strong>Format:</strong> URL: [https://www.universityofsampel.ort/library/] or APP: [https://nameofappstore.ext/appname]
 * <textarea rows="1" cols="70"></textarea><button type="button">Add to my Accessibility Statement</button>
