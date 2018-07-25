@@ -41,7 +41,7 @@ This guide and tool helps owners of websites and mobile applications to describe
 {% include excol.html type="middle" %}
 
 ### Citylights website Accessibility Statement
-This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.
+<strong>This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.</strong>
 
 <strong>URI of website:</strong> https://www.w3.org/WAI/demos/bad/Overview.html
 
@@ -74,7 +74,7 @@ Comment: Functionality does not work yet.
 {% include excol.html type="middle" %}
 
 ### Citylights website Accessibility Statement
-This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.
+<strong>This Accessibility Statement provides an understanding of the accessibility of the Citylights website and where to get information or leave feedback if you experience problems with its accessibility.</strong>
 
 <strong>URI of website:</strong> https://www.w3.org/WAI/demos/bad/Overview.html
 
@@ -100,30 +100,39 @@ This Accessibility Statement provides an understanding of the accessibility of t
 
 Optional: Below is the output of the Evaluation Report Tool (imported JSON file). Comment: currently a placeholder for real output from the JSON file.
 
-<table border="1" cellpadding="5" cellspacing="2" summary="Conformance with Success Criteria">
+<table border="1" cellpadding="2" cellspacing="2" summary="Conformance with Success Criteria">
 <caption></caption>
 <tr>
 <th id="h1">Success Criteria</th>
-<th id="h2">Level of Conformance</th>
+<th id="h2">Result</th>
 <th id="h3">Remarks and explanations</th>
-<th id="h3">If non-conformant, reason:</th>
-<th id="h3">If non-conformant, alternative:</th>
-<th id="h3">If non-conformant, repair deadline:</th>
+<th id="h4">If non-conformant, reason:</th>
+<th id="h5">If non-conformant, alternative:</th>
+<th id="h6">If non-conformant, repair deadline:</th>
 </tr>
 <tr>
 <th id="r2" headers="h1">1.1.1 Non-text Content: (Level A)</th>
 <td headers="r2 h2">Pass</td>
-<td headers="r2 h3"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r2 h3"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r2 h4"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r2 h5"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r2 h6"><textarea rows="2" cols="15"></textarea></td>
 </tr>
 <tr>
 <th id="r3" headers="h1">1.2.1 Audio-only and Video-only (Prerecorded): (Level A)</th>
 <td headers="r3 h2">N/a</td>
-<td headers="r3 h3"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r3 h3"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r3 h4"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r3 h5"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r3 h6"><textarea rows="2" cols="15"></textarea></td>
 </tr>
 <tr>
 <th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
 <td headers="r4 h2">N/a</td>
-<td headers="r4 h3"><textarea rows="1" cols="20"></textarea></td>
+<td headers="r4 h3"><textarea rows="1" cols="15"></textarea></td>
+<td headers="r4 h4"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r4 h5"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r4 h6"><textarea rows="2" cols="15"></textarea></td>
 </tr>
 </table>
 
