@@ -59,7 +59,27 @@ This guide and tool helps owners of websites and mobile applications to describe
 
 <strong>Evaluation results/link to evaluation report:</strong> https://www.w3.org/WAI/demos/bad/after/reports/home.html
 
-Optional: Below is the output of the Evaluation Report Tool (imported JSON file). 
+Optional: Below is the output of the Evaluation Report Tool (imported JSON file). Comment: currently a placeholder for real output from the Report Tool file.
+
+<table border="1" cellpadding="2" cellspacing="2" summary="Conformance with Success Criteria">
+<caption></caption>
+<tr>
+<th id="h1">Success Criteria</th>
+<th id="h2">Result</th>
+</tr>
+<tr>
+<th id="r2" headers="h1">1.1.1 Non-text Content: (Level A)</th>
+<td headers="r2 h2">Pass</td>
+</tr>
+<tr>
+<th id="r3" headers="h1">1.2.1 Audio-only and Video-only (Prerecorded): (Level A)</th>
+<td headers="r3 h2">Pass</td>
+</tr>
+<tr>
+<th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
+<td headers="r4 h2">Pass</td>
+</tr>
+</table>
 
 Comment: Functionality does not work yet.
 
@@ -113,26 +133,26 @@ Optional: Below is the output of the Evaluation Report Tool (imported JSON file)
 <tr>
 <th id="r2" headers="h1">1.1.1 Non-text Content: (Level A)</th>
 <td headers="r2 h2">Pass</td>
-<td headers="r2 h3"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r2 h4"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r2 h5"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r2 h6"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r2 h3">...</td>
+<td headers="r2 h4">...</td>
+<td headers="r2 h5">...</td>
+<td headers="r2 h6">...</td>
 </tr>
 <tr>
 <th id="r3" headers="h1">1.2.1 Audio-only and Video-only (Prerecorded): (Level A)</th>
-<td headers="r3 h2">N/a</td>
-<td headers="r3 h3"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r3 h4"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r3 h5"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r3 h6"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r3 h2">Pass</td>
+<td headers="r3 h3">...</td>
+<td headers="r3 h4">...</td>
+<td headers="r3 h5">...</td>
+<td headers="r3 h6">...</td>
 </tr>
 <tr>
 <th id="r4" headers="h1">1.2.2 Captions (Prerecorded): (Level A)</th>
-<td headers="r4 h2">N/a</td>
-<td headers="r4 h3"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r4 h4"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r4 h5"><textarea rows="2" cols="15"></textarea></td>
-<td headers="r4 h6"><textarea rows="2" cols="15"></textarea></td>
+<td headers="r4 h2">Pass</td>
+<td headers="r4 h3">...</td>
+<td headers="r4 h4">...</td>
+<td headers="r4 h5">...</td>
+<td headers="r4 h6">...</td>
 </tr>
 </table>
 
