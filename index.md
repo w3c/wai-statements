@@ -270,11 +270,17 @@ external_css: /content-images/wai-statements/statements.css
                 <input type="text" id="accstmnt_contact_responsetime" placeholder="Example: 2" />
               </div>
             </fieldset>
-
+<!-- Ingevoegd_EV -->
+            <fieldset class="group" id="accstmt_date_group">
+              <legend>Date of this accessibility statement</legend>
+<!-- Ingevoegd_EV -->
             <div class="field">
               <label for="accstmt_date">Date of this accessibility statement</label>
               <input type="date" id="accstmt_date" class="today" />
             </div>
+<!-- Ingevoegd_EV -->
+            </fieldset>
+<!-- Ingevoegd_EV -->
           </div>
         </fieldset>
 
