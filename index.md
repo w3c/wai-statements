@@ -272,7 +272,7 @@ external_css: /content-images/wai-statements/statements.css
             </fieldset>
 <!-- Ingevoegd_EV -->
             <fieldset class="group" id="accstmt_date_group">
-              <legend>Date of this accessibility statement</legend>
+              <legend>Date</legend>
 <!-- Ingevoegd_EV -->
             <div class="field">
               <label for="accstmt_date">Date of this accessibility statement</label>
