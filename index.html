@@ -561,7 +561,7 @@ external_css: /content-images/wai-statements/statements.css
           <button type="button" id="accstmnt_btn_preview">
             Preview
           </button>
-
+{% comment %}
           <button type="button" id="accstmnt_btn_json" disabled>
             Export as JSON
           </button>
@@ -573,6 +573,7 @@ external_css: /content-images/wai-statements/statements.css
           <button type="button" id="accstmnt_btn_other" disabled>
             Export as Other
           </button>
+{% endcomment %}
         </div>
       </form>
     </div>
@@ -677,5 +678,4 @@ external_css: /content-images/wai-statements/statements.css
   </section>
 </div>
 
-<script src="{{ "/content-images/wai-statements/accordion.js" | relative_url}}"></script>
 <script src="{{ "/content-images/wai-statements/statements.js" | relative_url}}"></script>
