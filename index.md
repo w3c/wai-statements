@@ -122,7 +122,7 @@ external_css: /content-images/wai-statements/statements.css
         </dd>
       </dl>
 
-      <a href="#create" class="nav">Create your statement</a>
+      <a href="#create" class="button">Create your statement</a>
     </div>
   </section>
 
