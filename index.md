@@ -626,7 +626,7 @@ external_css: /content-images/wai-statements/statements.css
           <button type="button" id="accstmnt_btn_preview">
             Preview
           </button>
-
+          <!-- Disabled buttons / Work in progress; future features
           <button type="button" id="accstmnt_btn_json" disabled>
             Export as JSON
           </button>
@@ -638,6 +638,7 @@ external_css: /content-images/wai-statements/statements.css
           <button type="button" id="accstmnt_btn_other" disabled>
             Export as Other
           </button>
+          -->
         </div>
       </form>
     </div>
