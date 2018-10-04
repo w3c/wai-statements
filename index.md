@@ -134,8 +134,7 @@ external_css: /content-images/wai-statements/statements.css
     </nav>
 
     <div class="container">
-      <h2>Accessibility Statements</h2>
-
+      <h2>Create statement</h2>
       <p>The tool consists of four parts. The first part is where you provide basic information necessary for an accessibility statement. In the other parts, you can add supportive information for users, links to related documents and organizational measures.</p>
 
       <form role="presentation" class="Accordion" data-allow-multiple data-allow-toggle>
