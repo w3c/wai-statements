@@ -3,10 +3,10 @@ title: "Accessibility Statements"
 permalink: /planning/statements/
 github:
   repository: w3c/wai-statements
-footer: > # Text in footer in HTML
-  <p><strong>Date: DRAFT $date$</strong> Updated 00 Month 2000. First published 00 Month 2000.</p>
-  <p><strong>Editors:</strong> <a href="http://www.w3.org/People/shadi/">Shadi Abou-Zahra</a> and Eric Velleman. Contributors: Name, Name, and <a href="https://www.w3.org/WAI/EO/participants">EOWG Participants</a>.</p>
-  <p>Developed by the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>). Developed as part of the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT Project</a> funded by the <strong>European Commission under the 7th Framework</strong>.</p>
+footer: >
+  <p><strong>Status:</strong> DRAFT Updated $date$.</p>
+  <p><strong>Editors:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Martijn Frazer, and Leon Baauw.</p>
+  <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="./acknowledgements.html">Acknowledgements</a>.</p>
 external_css: /content-images/wai-statements/statements.css
 ---
 <div id="accstatement">
@@ -115,9 +115,9 @@ external_css: /content-images/wai-statements/statements.css
         <dd id="intro5" aria-labelledby="intro5title" role="region" class="Accordion-panel" hidden>
           <p>The following examples were created using this accessibility statements generator:</p>
           <ul>
-            <li>Accessibility statement for the “Before” section of the “Before and After Demo (BAD)”</li>
-            <li>Accessibility statement for the “After” section of the “Before and After Demo (BAD)”</li>
-            <li>Accessibility statement for the entire “Before and After Demo (BAD)”</li>
+            <li><a href="./example-statement1.html">Accessibility statement for the “Before” section of the “Before and After Demo (BAD)”</a></li>
+            <li><a href="./example-statement2.html">Accessibility statement for the “After” section of the “Before and After Demo (BAD)”</a></li>
+            <li><a href="./example-statement3.html">Accessibility statement for the entire content of the “Before and After Demo (BAD)”</a></li>
           </ul>
         </dd>
       </dl>
