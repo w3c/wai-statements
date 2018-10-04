@@ -153,35 +153,27 @@ external_css: /content-images/wai-statements/statements.css
             <p class="intro">This section includes the minimal set of information recommended for an accessibility statement. It includes information about your organization, the accessibility standard you applied, and contact information for feedback.</p>
 
             <div class="field">
-              <label for="accstmt_org">Name of your organization</label>
-
-              <input type="text" id="accstmt_org" placeholder="Example: Citylights Inc."  />
+              <label class="heading-2" for="accstmt_org">Name of your organization</label>
+              <input type="text" id="accstmt_org" placeholder="Example: Citylights Inc." />
             </div>
 
             <div class="field">
-              <label for="accstmt_url">Web address of your website or app <button type="button" class="info-open" aria-expanded="false" aria-controls="info_url"><span>i</span></button></label>
-
+              <label class="heading-2" for="accstmt_url">Web address of your website or app <button type="button" class="info-open" aria-expanded="false" aria-controls="info_url"><span>i</span></button></label>
               <div class="information" id="info_url" hidden><p>Provide the web address of the website or mobile application that is the subject of this accessibility statement. This includes version information and the release date, if necessary to recognize a specific version. For mobile applications this could include a link to the place where the app can be downloaded or installed.</p>
               <p><strong>Example:</strong> website: "https://www.w3.org/WAI/demos/bad/after/". Mobile application: "[link to the app] (version 1.2.3)".</p></div>
-
-
               <input type="text" id="accstmt_url" placeholder="Example: https://www.w3.org/WAI/demos/bad/after/home.html" />
             </div>
 
             <div class="field">
-              <label for="accstmt_namesite">Name of your website or mobile application <button type="button" class="info-open" aria-expanded="false" aria-controls="info_namesite"><span>i</span></button></label>
-
+              <label class="heading-2" for="accstmt_namesite">Name of your website or mobile application <button type="button" class="info-open" aria-expanded="false" aria-controls="info_namesite"><span>i</span></button></label>
               <div class="information" id="info_namesite" hidden><p>If you provide a name for your website or mobile application, the generator can make this name a link to the website or mobile application. This will improve the readability of your accessibility statement. </p>
               <p><strong>Example:</strong> website: "Citylights website". Mobile application: "CitylightsApp".</p></div>
-
               <input type="text" id="accstmt_namesite" placeholder="Example: Citylights website or CitylightsApp" />
             </div>
 
-            <div class="field">
-              <h3 class="label">Accessibility standards applied <button type="button" class="info-open" aria-expanded="false" aria-controls="info_standards"><span>i</span></button></h3>
-
+            <fieldset class="field">
+              <legend class="heading-2">Accessibility standards applied <button type="button" class="info-open" aria-expanded="false" aria-controls="info_standards"><span>i</span></button></legend>
               <div class="information" id="info_standards" hidden><p>State the accessibility standard that you have been aiming to apply. Usually this is the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">W3C Web Content Accessibility Guidelines (WCAG)</a> 2.0 Level AA, but may also be the latest version WCAG 2.1.</p></div>
-
               <p class="expl">Which version and level of WCAG has been applied to the website?</p>
 
               <fieldset class="radio-group" id="standard-version">
@@ -194,7 +186,7 @@ external_css: /content-images/wai-statements/statements.css
               </fieldset>
 
               <fieldset class="radio-group" id="standard-level">
-                <legend>Level</legend>
+                <legend class="text">Level</legend>
                 <input type="checkbox" name="accstmnt_standard_level" id="accstmnt_standard_level_a" />
                 <label for="accstmnt_standard_level_a">A</label>
 
@@ -204,10 +196,10 @@ external_css: /content-images/wai-statements/statements.css
                 <input type="checkbox" name="accstmnt_standard_level" id="accstmnt_standard_level_aaa" />
                 <label for="accstmnt_standard_level_aaa">AAA</label>
               </fieldset>
-            </div>
+            </fieldset>
 
             <fieldset class="field" id="conformance-status">
-              <legend class="label">Conformance status</legend>
+              <legend class="heading-2">Conformance status</legend>
               <p class="expl">Describe the current conformance status.</p>
 
               <div class="radio-field">
@@ -233,41 +225,42 @@ external_css: /content-images/wai-statements/statements.css
             </fieldset>
 
             <div class="field">
-              <label for="accstmt_additions">Additions to the requirements <button type="button" class="info-open" aria-expanded="false" aria-controls="info_additions"><span>i</span></button></label>
-
+              <label class="heading-2" for="accstmt_additions">Additions to the requirements <button type="button" class="info-open" aria-expanded="false" aria-controls="info_additions"><span>i</span></button></label>
               <div class="information" id="info_additions" hidden><p>In some cases, you may have gone beyond the minimal conformance target, to provide better accessibility and a higher user experience. Describe these additional accessibility requirements that you have implemented, to help users understand what they can expect.</p>
               <p><strong>Example:</strong> “Although our goal is level AA conformance, we have also applied some level AAA success criteria. For example, images of text are only used for decorative purposes. When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating. We added sign language in all our videos.”</p></div>
-
               <p class="expl">List any additional requirements that you implemented beyond the conformance level.</p>
-
               <textarea id="accstmt_additions" rows="3"></textarea>
             </div>
 
             <fieldset class="group" id="form-feedback">
-              <legend>Feedback</legend>
-
+              <legend class="heading-2">Feedback</legend>
               <p class="expl">Provide contact information so that users can ask questions or give feedback regarding accessibility related issues. Provide at least one of the options.</p>
 
               <div class="field">
                 <label for="accstmnt_contact_phone">Phone us at</label>
                 <input type="tel" id="accstmnt_contact_phone" placeholder="Example: +31 30 239 82 70" />
               </div>
+
               <div class="field">
                 <label for="accstmnt_contact_email">E-mail us at</label>
                 <input type="email" id="accstmnt_contact_email" placeholder="Write email address here" />
               </div>
+
               <div class="field">
                 <label for="accstmnt_contact_visit">Visit us at</label>
                 <input type="text" id="accstmnt_contact_visit" placeholder="Write your visitors address here" />
               </div>
+
               <div class="field">
                 <label for="accstmnt_contact_write">Write us at</label>
                 <input type="text" id="accstmnt_contact_write" placeholder="Write your mailbox address here" />
               </div>
+
               <div class="field">
                 <label for="accstmnt_contact_social">Twitter at</label>
                 <input type="url" id="accstmnt_contact_social" placeholder="Example: @CitylightsIncBAD" />
               </div>
+
               <div class="field">
                 <label for="accstmnt_contact_responsetime">Office working days we try to answer the feedback</label>
                 <input type="text" id="accstmnt_contact_responsetime" placeholder="Example: 2" />
@@ -275,12 +268,12 @@ external_css: /content-images/wai-statements/statements.css
             </fieldset>
 <!-- Ingevoegd_EV -->
             <fieldset class="group" id="accstmt_date_group">
-              <legend>Date</legend>
+              <legend class="heading-2">Date</legend>
 <!-- Ingevoegd_EV -->
-            <div class="field">
-              <label for="accstmt_date">Date of this accessibility statement</label>
-              <input type="date" id="accstmt_date" class="today" />
-            </div>
+              <div class="field">
+                <label for="accstmt_date">Date of this accessibility statement</label>
+                <input type="date" id="accstmt_date" class="today" />
+              </div>
 <!-- Ingevoegd_EV -->
             </fieldset>
 <!-- Ingevoegd_EV -->
@@ -302,8 +295,7 @@ external_css: /content-images/wai-statements/statements.css
             <p class="intro">Describe the efforts your organization takes with respect to meeting the standards and to ensuring accessibility for people with disabilities.</p>
 
             <fieldset class="group">
-              <legend>Organizational measures</legend>
-
+              <legend class="heading-2">Organizational measures</legend>
               <p class="expl">Select the measures you implemented to achieve sustainable accessibility, such as procurement actions, training, raising awareness, or quality assurance.</p>
 
               <ul class="nolist field" id="effort-list">
@@ -338,15 +330,14 @@ external_css: /content-images/wai-statements/statements.css
               </ul>
             </fieldset>
 
-              <br/>
-
             <fieldset class="group" id="accstmnt_orginfo_othermeasures">
-                <legend>List other measures you have implemented, different from the ones listed above.</legend>
+                <legend class="heading-2">List other measures you have implemented, different from the ones listed above.</legend>
 
                 <div class="field line">
                   <label for="accstmnt_orginfo_othermeasures_1">Other measure 1</label>
                   <input type="text" id="accstmnt_orginfo_othermeasures_1" placeholder="We include people with disabilities in our list of personas" />
                 </div>
+
                 <div class="field proto">
                   <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n]</label>
                   <input type="text" id="accstmnt_orginfo_othermeasures_[n]" />
@@ -374,8 +365,7 @@ external_css: /content-images/wai-statements/statements.css
             <p class="intro">By providing the following information you help people with disabilities understand how digital accessibility was measured and where to find accessible alternatives (if applicable).</p>
 
             <fieldset class="group">
-              <legend>Limitations <button type="button" class="info-open" aria-expanded="false" aria-controls="support_limitations"><span>i</span></button></legend>
-
+              <legend class="heading-2">Limitations <button type="button" class="info-open" aria-expanded="false" aria-controls="support_limitations"><span>i</span></button></legend>
               <div class="information" id="support_limitations" hidden><p>There are many situations in which limitations to accessibility can occur, such as ensuring instant accessibility of user-generated content. Providing transparency on these situations helps users to understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web Accessibility Directive public bodies may be required to provide such information</p>
               <p><strong>Example</strong>:</p>
                 <ul>
@@ -386,7 +376,6 @@ external_css: /content-images/wai-statements/statements.css
                   <li><strong>What to do in the meantime:</strong> Please contact example@e-mail if you encounter an issue.</li>
                 </ul>
               </div>
-
               <p class="expl">Provide an explanation for the parts of the content that are not accessible and where to find accessibility alternatives when they are provided.</p>
 
               <table id="accstmnt_issues" class="dense">
@@ -443,14 +432,12 @@ external_css: /content-images/wai-statements/statements.css
             </fieldset>
 
             <fieldset class="group">
-              <legend>Technologies used <button type="button" class="info-open" aria-expanded="false" aria-controls="support_tech"><span>i</span></button></legend>
-
+              <legend class="heading-2">Technologies used <button type="button" class="info-open" aria-expanded="false" aria-controls="support_tech"><span>i</span></button></legend>
               <div class="information" id="support_tech" hidden><p>you may be relying on technologies such as JavaScript, WAI-ARIA,or SVG to ensure accessibility of your content. Provide a list of technologies that are relied upon according to <a href="https://www.w3.org/TR/WCAG20/#conformance-reqs">WCAG 2 conformance requirement 4</a>.</p></div>
-
               <p class="expl">Describe the technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported.</p>
 
               <fieldset class="field">
-                <legend>Relied upon:</legend>
+                <legend class="heading-2">Relied upon:</legend>
 
                 <ul id="tech_relied" class="input-cols nolist">
                   <li class="radio-field">
@@ -492,46 +479,47 @@ external_css: /content-images/wai-statements/statements.css
             </fieldset>
 
             <fieldset class="group" id="compatible_tech">
-              <legend>Compatibility with browsers and assistive technology <button type="button" class="info-open" aria-expanded="false" aria-controls="support_asstech"><span>i</span></button></legend>
-
+              <legend class="heading-2">Compatibility with browsers and assistive technology <button type="button" class="info-open" aria-expanded="false" aria-controls="support_asstech"><span>i</span></button></legend>
               <div class="information" id="support_asstech" hidden><p>WCAG does not pre-define which combinations of features and technologies must be supported as this depends on the particular context of the website, including its language, the web technologies that are used to create the content, and the user agents currently available. Both <a href="https://www.w3.org/TR/WCAG-EM/#step1c">WCAG-EM</a> and <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance#uc-accessibility-support-head">Understanding Accessibility Support</a> provide more guidance on the WCAG concept of accessibility support.</p>
               <p><strong>Example:</strong> "NVDA vx.x"</p></div>
-
               <p class="expl">Describe the minimum (combinations of) operating systems, web browsers, assistive technologies, and other user agents that the website is expected to work with, and that is in-line with the <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance#uc-accessibility-support-head">WCAG 2.0 guidance on accessibility support</a>.</p>
 
               <div class="field line">
                 <label for="accstmnt_asstech_1">Technology 1</label>
                 <input type="text" id="accstmnt_asstech_1" placeholder="Example: NVDA version X" />
               </div>
+
               <div class="field line">
                 <label for="accstmnt_asstech_2">Technology 2</label>
                 <input type="text" id="accstmnt_asstech_2" placeholder="Example: iOS version X" />
               </div>
+
               <div class="field line">
                 <label for="accstmnt_asstech_3">Technology 3</label>
                 <input type="text" id="accstmnt_asstech_3" placeholder="Works best in browser / OS version X" />
               </div>
+
               <div class="field proto">
                 <label for="accstmnt_asstech_[n]">Other technology</label>
                 <input type="text" id="accstmnt_asstech_[n]" />
               </div>
+
               <button type="button" class="add-line">
                 Add extra line
               </button>
             </fieldset>
 
             <fieldset class="group" id="incompatible_tech">
-              <legend>Not compatible with <button type="button" class="info-open" aria-expanded="false" aria-controls="support_incompatible"><span>i</span></button></legend>
-
+              <legend class="heading-2">Not compatible with <button type="button" class="info-open" aria-expanded="false" aria-controls="support_incompatible"><span>i</span></button></legend>
               <div class="information" id="support_incompatible" hidden><p>Help users understand what versions of operating systems, web browsers, assistive technologies, and other user agents are not (or no longer) supported. This helps determine if they can use your website or mobile application.</p>
               <p><strong>Example:</strong> Website: “We do not actively support web browsers older than 3 major versions”. Mobile application: “We do not actively support operating systems older than 5 years”.</p></div>
-
               <p class="expl">Describe (combinations of) operating systems, web browsers, assistive technologies, and other user agents that the content is not expected to work with.</p>
 
               <div class="field line">
                 <label for="accstmnt_incompatible_tech_1">Technology 1</label>
                 <input type="text" id="accstmnt_othertech_1" />
               </div>
+
               <div class="field proto">
                 <label for="accstmnt_incompatible_tech_[n]">Technology [n]</label>
                 <input type="text" id="accstmnt_othertech_[n]" />
@@ -542,8 +530,7 @@ external_css: /content-images/wai-statements/statements.css
               </button>
             </fieldset>
 
-
-          <div class="field">
+            <div class="field">
               <label for="accstmnt_audit_url">Link to recent audit results
                 <button type="button" class="info-open" aria-expanded="false" aria-controls="info_audit_url"><span>i</span></button>
               </label>
@@ -583,7 +570,7 @@ external_css: /content-images/wai-statements/statements.css
             <p class="intro">In this section, you can add information about the formal approval of this accessibility statement and the complaints procedure (if available).</p>
 
             <fieldset class="group">
-              <legend>Formal approval of this accessibility statement <button type="button" class="info-open" aria-expanded="false" aria-controls="org_approved"><span>i</span></button></legend>
+              <legend class="heading-2">Formal approval of this accessibility statement <button type="button" class="info-open" aria-expanded="false" aria-controls="org_approved"><span>i</span></button></legend>
 
               <div class="information" id="org_approved" hidden><p>Your organization may want to formally approve this statement for internal purposes or to show users that this is part of your corporate policy.</p>
               <p><strong>Example:</strong></p>
@@ -611,11 +598,9 @@ external_css: /content-images/wai-statements/statements.css
             </fieldset>
 
             <div class="field">
-              <label for="accstmt_complaints">Enforcement procedure <button type="button" class="info-open" aria-expanded="false" aria-controls="info_complaints"><span>i</span></button></label>
-
+              <label class="heading-2" for="accstmt_complaints">Enforcement procedure <button type="button" class="info-open" aria-expanded="false" aria-controls="info_complaints"><span>i</span></button></label>
               <div class="information" id="info_complaints" hidden><p>Inform users about your feedback procedure. This may motivate them to provide you with valuable feedback about the accessibility of your website or mobile application.</p>
               <p><strong>Example:</strong> "We aim to respond to accessibility complaints within 2 working days, and to propose a solution within 10 working days. You are entitled to escalate a complaint to [organizational or legal entity], should you be dissatisfied with our response to you."</p></div>
-
               <textarea id="accstmt_complaints" rows="3" placeholder="Example: We aim to respond within 10 working days. Should you be dissatisfied with our response, you can file a complaint with [organizational or legal entity]"></textarea>
             </div>
           </div>
