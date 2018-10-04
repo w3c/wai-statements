@@ -1,5 +1,7 @@
 ---
 title: Acknowledgements - Web Accessibility Statements
+permalink: /planning/statements/acknowledgements/
+parent: /planning/statements/
 nosidenav: true
 footer: >
   <p><strong>Status:</strong> DRAFT Updated $date$.</p>
@@ -7,7 +9,7 @@ footer: >
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 ---
 
-This [Web Accessibility Statements]({% link _wai-statements/index.md %}) resource was developed by the [Education Outreach Working Group (EOWG)](https://www.w3.org/WAI/EO/) with support from the [WAI-Tools Project](https://www.w3.org/WAI/Tools/), co-funded by the European Commission.
+This [Web Accessibility Statements]({{ "/planning/statements/" | relative_url }}) resource was developed by the [Education Outreach Working Group (EOWG)](https://www.w3.org/WAI/EO/) with support from the [WAI-Tools Project](https://www.w3.org/WAI/Tools/), co-funded by the European Commission.
 
 Project Leadership
 ------------------
