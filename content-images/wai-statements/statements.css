@@ -229,6 +229,7 @@
       #accstatement form .radio-group legend
       {
         margin-bottom: 0.25em;
+        font-size: 1rem;
       }
       #accstatement form .radio-group input
       {
