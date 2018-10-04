@@ -6,7 +6,7 @@ github:
 footer: >
   <p><strong>Status:</strong> DRAFT Updated $date$.</p>
   <p><strong>Editors:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Martijn Frazer, and Leon Baauw.</p>
-  <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="./acknowledgements.html">Acknowledgements</a>.</p>
+  <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="./acknowledgements/">Acknowledgements</a>.</p>
 external_css: /content-images/wai-statements/statements.css
 ---
 <div id="accstatement">
@@ -23,107 +23,79 @@ external_css: /content-images/wai-statements/statements.css
 
       <h2>Accessibility Statement</h2>
 
-{% include box.html type="start" title="Summary" class="" %}
+  {% include box.html type="start" title="Summary" class="" %}
 
-      <p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it.</p>
+        <p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it.</p>
 
-{% include box.html type="end" %}
+  {% include box.html type="end" %}
 
-      <dl role="presentation" class="Accordion" data-allow-multiple data-allow-toggle>
-        <dt role="heading" aria-level="3">
-          <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="intro1" id="intro1title">
-            <span class="Accordion-icon"></span>
+  {% include excol.html type="all" %}
 
-            <span class="Accordion-title">
-              Why provide an accessibility statement
-            </span>
-          </button>
-        </dt>
-        <dd id="intro1" aria-labelledby="intro1title" role="region" class="Accordion-panel" hidden>
-          <p>Accessibility statements are important for several reasons:</p>
-          <ul>
-            <li>Show your users that you care about accessibility and about them</li>
-            <li>Provide them with information about the accessibility of your content</li>
-            <li>Demonstrate commitment to accessibility, and to social responsibility</li>
-          </ul>
-          <p>In some situations, you may be required to provide an accessibility statement, such as public bodies in countries that implement the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive</a>. The W3C list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> can help you identify policies applicable to you.</p>
-        </dd>
+  {% include excol.html type="start" %}
 
-        <dt role="heading" aria-level="3">
-          <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="intro2" id="intro2title">
-            <span class="Accordion-icon"></span>
+  <h3>Why provide an accessibility statement</h3>
 
-            <span class="Accordion-title">
-              What to include in an accessibility statement
-            </span>
-          </button>
-        </dt>
-        <dd id="intro2" aria-labelledby="intro2title" role="region" class="Accordion-panel" hidden>
-          <p>Accessibility statements should contain at least the following:</p>
-          <ul>
-            <li>A commitment to accessibility for people with disabilities</li>
-            <li>The accessibility standard applied, such as <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG 2.1</a></li>
-            <li>Contact information in case users encounter problems</li>
-            <li>Any known limitations, to avoid frustration of your users</li>
-          </ul>
-          <p>It is also advisable to include the following information:</p>
-          <ul>
-            <li>Measures taken by your organization to ensure accessibility</li>
-            <li>Technical prerequisites, such as supported web browsers</li>
-            <li>Environments in which the content has been tested to work</li>
-            <li>References to applicable national or local laws and policies</li>
-          </ul>
-          <p>Note that in some situations you may be required to provide particular content in your accessibility statements. For example, the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive</a> requires public bodies to list the parts of the content that are not accessible, an explanation of why they are not accessible, and where possible accessible alternatives for the content (Article 7(1.a)).</p>
-        </dd>
+  {% include excol.html type="middle" %}
+  <p>Accessibility statements are important for several reasons:</p>
+  <ul>
+    <li>Show your users that you care about accessibility and about them</li>
+    <li>Provide them with information about the accessibility of your content</li>
+    <li>Demonstrate commitment to accessibility, and to social responsibility</li>
+  </ul>
+  <p>In some situations, you may be required to provide an accessibility statement, such as public bodies in countries that implement the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive {% include_cached external.html %}</a>. The W3C list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> can help you identify policies applicable to you.</p>
 
-        <dt role="heading" aria-level="3">
-          <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="intro3" id="intro3title">
-            <span class="Accordion-icon"></span>
+  {% include excol.html type="end" %}
 
-            <span class="Accordion-title">
-              How to write an accessibility statement
-            </span>
-          </button>
-        </dt>
-        <dd id="intro3" aria-labelledby="intro3title" role="region" class="Accordion-panel" hidden>
-          <p>Accessibility statements are primarily for users of your content. Usually they will access the statements when they encounter problems. Technical and jurisdictional language will likely lead to confusion and increase the frustration rather than help your users. It is important to write in simple language, and to provide information that is useful to the users, rather than to the developers or the lawyers.</p>
-          <p>In particular, accessibility statements should explain functionality and known limitations in common terms. For example, rather than to say “WCAG 2.0 SC 1.2.2 was not met”, it is better to say “videos do not have captions”. Accessibility statements are not technical assessments or declarations of conformity, though they will ideally refer to these to provide verification and increase credibility.</p>
-        </dd>
+  {% include excol.html type="start" %}
 
-        <dt role="heading" aria-level="3">
-          <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="intro4" id="intro4title">
-            <span class="Accordion-icon"></span>
+  <h3>What to include in an accessibility statement</h3>
 
-            <span class="Accordion-title">
-              Where to put an accessibility statement
-            </span>
-          </button>
-        </dt>
-        <dd id="intro4" aria-labelledby="intro4title" role="region" class="Accordion-panel" hidden>
-          <p>Accessibility statements should be easy to find. Linking them from several places, such as from the footer, help menu, sitemap, and others relevant content areas will help. Also linking and naming them consistently across the pages of your website, and across websites and mobile applications that share a common “look and feel”, supports findability.</p>
-        </dd>
+  {% include excol.html type="middle" %}
+  <p>Accessibility statements should contain at least the following:</p>
+  <ul>
+    <li>A commitment to accessibility for people with disabilities</li>
+    <li>The accessibility standard applied, such as <a href="{{ "/standards-guidelines/wcag/" | relative_url }}">WCAG 2.1</a></li>
+    <li>Contact information in case users encounter problems</li>
+    <li>Any known limitations, to avoid frustration of your users</li>
+  </ul>
+  <p>It is also advisable to include the following information:</p>
+  <ul>
+    <li>Measures taken by your organization to ensure accessibility</li>
+    <li>Technical prerequisites, such as supported web browsers</li>
+    <li>Environments in which the content has been tested to work</li>
+    <li>References to applicable national or local laws and policies</li>
+  </ul>
+  <p>Note that in some situations you may be required to provide particular content in your accessibility statements. For example, the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive {% include_cached external.html %}</a> requires public bodies to list the parts of the content that are not accessible, an explanation of why they are not accessible, and where possible accessible alternatives for the content (Article 7(1.a)).</p>
+  {% include excol.html type="end" %}
 
-        <dt role="heading" aria-level="3">
-          <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="intro5" id="intro5title">
-            <span class="Accordion-icon"></span>
+  {% include excol.html type="start" %}
 
-            <span class="Accordion-title">
-              Examples of accessibility statements
-            </span>
-          </button>
-        </dt>
-        <dd id="intro5" aria-labelledby="intro5title" role="region" class="Accordion-panel" hidden>
-          <p>The following examples were created using this accessibility statements generator:</p>
-          <ul>
-            <li><a href="./example-statement1.html">Accessibility statement for the “Before” section of the “Before and After Demo (BAD)”</a></li>
-            <li><a href="./example-statement2.html">Accessibility statement for the “After” section of the “Before and After Demo (BAD)”</a></li>
-            <li><a href="./example-statement3.html">Accessibility statement for the entire content of the “Before and After Demo (BAD)”</a></li>
-          </ul>
-        </dd>
-      </dl>
+  <h3>How to write an accessibility statement</h3>
 
-      <a href="#create" class="button">Create your statement</a>
-    </div>
+  {% include excol.html type="middle" %}
+  <p>Accessibility statements are primarily for users of your content. Usually they will access the statements when they encounter problems. Technical and jurisdictional language will likely lead to confusion and increase the frustration rather than help your users. It is important to write in simple language, and to provide information that is useful to the users, rather than to the developers or the lawyers.</p>
+  <p>In particular, accessibility statements should explain functionality and known limitations in common terms. For example, rather than to say “WCAG 2.0 SC 1.2.2 was not met”, it is better to say “videos do not have captions”. Accessibility statements are not technical assessments or declarations of conformity, though they will ideally refer to these to provide verification and increase credibility.</p>
+  {% include excol.html type="end" %}
+
+  {% include excol.html type="start" %}
+  <h3>Where to put an accessibility statement</h3>
+  {% include excol.html type="middle" %}
+  <p>Accessibility statements should be easy to find. Linking them from several places, such as from the footer, help menu, sitemap, and others relevant content areas will help. Also linking and naming them consistently across the pages of your website, and across websites and mobile applications that share a common “look and feel”, supports findability.</p>
+  {% include excol.html type="end" %}
+
+  {% include excol.html type="start" %}
+  <h3>Examples of accessibility statements</h3>
+  {% include excol.html type="middle" %}
+  <p>The following examples were created using this accessibility statements generator:</p>
+  <ul>
+    <li><a href="./example-statement1.html">Accessibility statement for the “Before” section of the “Before and After Demo (BAD)”</a></li>
+    <li><a href="./example-statement2.html">Accessibility statement for the “After” section of the “Before and After Demo (BAD)”</a></li>
+    <li><a href="./example-statement3.html">Accessibility statement for the entire content of the “Before and After Demo (BAD)”</a></li>
+  </ul>
+  {% include excol.html type="end" %}
+
+  <a href="#create" class="button" style="margin-top: 2rem;">Create your statement</a>
+
   </section>
 
   <section class="page create" hidden>
@@ -137,19 +109,12 @@ external_css: /content-images/wai-statements/statements.css
       <h2>Create statement</h2>
       <p>The tool consists of four parts. The first part is where you provide basic information necessary for an accessibility statement. In the other parts, you can add supportive information for users, links to related documents and organizational measures.</p>
 
-      <form role="presentation" class="Accordion" data-allow-multiple data-allow-toggle>
-        <fieldset>
-          <legend class="header">
-            <button type="button" class="Accordion-trigger" aria-expanded="true" aria-controls="create1" id="create1title">
-              <span class="Accordion-icon"></span>
+      {% include excol.html type="all" %}
 
-              <span class="Accordion-title">
-                Basic information
-              </span>
-            </button>
-          </legend>
-
-          <div id="create1" aria-labelledby="create1title" role="region" class="Accordion-panel" >
+      <form>
+        {% include excol.html type="start" open="true" %}
+          <h3>Basic information</h3>
+        {% include excol.html type="middle" %}
             <p class="intro">This section includes the minimal set of information recommended for an accessibility statement. It includes information about your organization, the accessibility standard you applied, and contact information for feedback.</p>
 
             <div class="field">
@@ -277,21 +242,12 @@ external_css: /content-images/wai-statements/statements.css
 <!-- Ingevoegd_EV -->
             </fieldset>
 <!-- Ingevoegd_EV -->
-          </div>
-        </fieldset>
+        {% include excol.html type="end" %}
 
-        <fieldset>
-          <legend class="header">
-            <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="create3" id="create3title">
-              <span class="Accordion-icon"></span>
+        {% include excol.html type="start" %}
+                <h3>Your efforts</h3>
+        {% include excol.html type="middle" %}
 
-              <span class="Accordion-title">
-                Your efforts
-              </span>
-            </button>
-          </legend>
-
-          <div id="create3" aria-labelledby="create3title" role="region" class="Accordion-panel" hidden>
             <p class="intro">Describe the efforts your organization takes with respect to meeting the standards and to ensuring accessibility for people with disabilities.</p>
 
             <fieldset class="group">
@@ -347,21 +303,11 @@ external_css: /content-images/wai-statements/statements.css
                   Add extra line
                 </button>
             </fieldset>
-          </div>
-        </fieldset>
+        {% include excol.html type="end" %}
 
-        <fieldset>
-          <legend class="header">
-            <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="create2" id="create2title">
-              <span class="Accordion-icon"></span>
-
-              <span class="Accordion-title">
-                Technical information
-              </span>
-            </button>
-          </legend>
-
-          <div id="create2" aria-labelledby="create2title" role="region" class="Accordion-panel" hidden>
+        {% include excol.html type="start" %}
+                <h3>Technical information</h3>
+        {% include excol.html type="middle" %}
             <p class="intro">By providing the following information you help people with disabilities understand how digital accessibility was measured and where to find accessible alternatives (if applicable).</p>
 
             <fieldset class="group">
@@ -552,21 +498,11 @@ external_css: /content-images/wai-statements/statements.css
             </div>
 
 
-          </div>
-        </fieldset>
+        {% include excol.html type="end" %}
 
-        <fieldset>
-          <legend class="header">
-            <button type="button" class="Accordion-trigger" aria-expanded="false" aria-controls="create4" id="create4title">
-              <span class="Accordion-icon"></span>
-
-              <span class="Accordion-title">
-                Approval and complaints process
-              </span>
-            </button>
-          </legend>
-
-          <div id="create4" aria-labelledby="create4title" role="region" class="Accordion-panel" hidden>
+        {% include excol.html type="start" %}
+                <h3>Approval and complaints process</h3>
+        {% include excol.html type="middle" %}
             <p class="intro">In this section, you can add information about the formal approval of this accessibility statement and the complaints procedure (if available).</p>
 
             <fieldset class="group">
@@ -603,14 +539,13 @@ external_css: /content-images/wai-statements/statements.css
               <p><strong>Example:</strong> "We aim to respond to accessibility complaints within 2 working days, and to propose a solution within 10 working days. You are entitled to escalate a complaint to [organizational or legal entity], should you be dissatisfied with our response to you."</p></div>
               <textarea id="accstmt_complaints" rows="3" placeholder="Example: We aim to respond within 10 working days. Should you be dissatisfied with our response, you can file a complaint with [organizational or legal entity]"></textarea>
             </div>
-          </div>
-        </fieldset>
+        {% include excol.html type="end" %}
 
         <div class="action button-group">
           <button type="button" id="accstmnt_btn_preview">
             Preview
           </button>
-          <!-- Disabled buttons / Work in progress; future features
+{% comment %}
           <button type="button" id="accstmnt_btn_json" disabled>
             Export as JSON
           </button>
@@ -622,7 +557,7 @@ external_css: /content-images/wai-statements/statements.css
           <button type="button" id="accstmnt_btn_other" disabled>
             Export as Other
           </button>
-          -->
+{% endcomment %}
         </div>
       </form>
     </div>
@@ -727,5 +662,4 @@ external_css: /content-images/wai-statements/statements.css
   </section>
 </div>
 
-<script src="{{ "/content-images/wai-statements/accordion.js" | relative_url}}"></script>
 <script src="{{ "/content-images/wai-statements/statements.js" | relative_url}}"></script>
