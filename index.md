@@ -23,7 +23,15 @@ external_css: /content-images/wai-statements/statements.css
 
       <h2>Accessibility Statement</h2>
 
+{::nomarkdown}
+{% include box.html type="start" title="Summary" class="" %}
+{:/}
+
       <p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it.</p>
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
 
       <dl role="presentation" class="Accordion" data-allow-multiple data-allow-toggle>
         <dt role="heading" aria-level="3">
