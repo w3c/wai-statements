@@ -14,7 +14,7 @@ external_css: /content-images/wai-statements/statements.css
     <div class="container">
 
   {% include box.html type="start" title="Summary" class="" %}
-      <p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it.</p>
+      <p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it. Read more below about accessibility statements or <a href="#create">create your statement</a>.</p>
   {% include box.html type="end" %}
 
   {% include excol.html type="all" %}
@@ -29,7 +29,7 @@ external_css: /content-images/wai-statements/statements.css
         <li>Provide them with information about the accessibility of your content</li>
         <li>Demonstrate commitment to accessibility, and to social responsibility</li>
       </ul>
-      <p>In some situations, you may be required to provide an accessibility statement, such as public bodies in countries that implement the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive {% include_cached external.html %}</a>. The W3C list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> can help you identify policies applicable to you.</p>
+      <p>In some situations, you may be required to provide an accessibility statement, such as public bodies in countries that implement the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive {% include_cached external.html %}</a>. The W3C list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> can help you identify policies applicable to you. </p>
   {% include excol.html type="end" %}
 
   {% include excol.html type="start" %}
@@ -58,7 +58,7 @@ external_css: /content-images/wai-statements/statements.css
 
   {% include excol.html type="middle" %}
       <p>Accessibility statements are primarily for users of your content. Usually they will access the statements when they encounter problems. Technical and jurisdictional language will likely lead to confusion and increase the frustration rather than help your users. It is important to write in simple language, and to provide information that is useful to the users, rather than to the developers or the lawyers.</p>
-      <p>In particular, accessibility statements should explain functionality and known limitations in common terms. For example, rather than to say “WCAG 2.0 SC 1.2.2 was not met”, it is better to say “videos do not have captions”. Accessibility statements are not technical assessments or declarations of conformity, though they will ideally refer to these to provide verification and increase credibility.</p>
+      <p>In particular, accessibility statements should explain functionality and known limitations in common terms. For example, rather than to say “WCAG Success Criterion 1.2.2 was not met”, it is better to say “videos do not have captions”. Accessibility statements are not technical assessments or declarations of conformity, though they will ideally refer to these to provide verification and increase credibility.</p>
   {% include excol.html type="end" %}
 
   {% include excol.html type="start" %}
@@ -80,8 +80,8 @@ external_css: /content-images/wai-statements/statements.css
       </ul>
   {% include excol.html type="end" %}
 
-  <a href="#create" class="button" style="margin-top: 2rem;">Create your statement</a>
-
+      <p><a href="#create" class="button" style="margin-top: 2rem;">Create your statement</a></p>
+    </div>
   </section>
 
   <section class="page create" hidden>
@@ -542,19 +542,7 @@ external_css: /content-images/wai-statements/statements.css
           <button type="button" id="accstmnt_btn_preview">
             Preview
           </button>
-{% comment %}
-          <button type="button" id="accstmnt_btn_json" disabled>
-            Export as JSON
-          </button>
 
-          <button type="button" id="accstmnt_btn_html" disabled>
-            Export as HTML
-          </button>
-
-          <button type="button" id="accstmnt_btn_other" disabled>
-            Export as Other
-          </button>
-{% endcomment %}
         </div>
       </form>
     </div>
