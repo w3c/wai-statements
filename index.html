@@ -139,25 +139,25 @@ external_css: /content-images/wai-statements/statements.css
         <div class="field">
           <p class="expl">Which version and level of WCAG has been applied to the website?</p>
 
-          <fieldset class="radio-group" id="standard-version">
-            <legend>Version</legend>
-            <input type="checkbox" name="accstmnt_standard_version" id="accstmnt_standard_version_20" />
-            <label for="accstmnt_standard_version_20">2.0</label>
+          <fieldset class="field" id="standard-version">
+            <legend class="label">Standard applied</legend>
+            <div class="radio-field">
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" />
+                <label for="accstmnt_standard_wcag20aa">WCAG 2.0 AA</label>
+            </div>
 
-            <input type="checkbox" name="accstmnt_standard_version" id="accstmnt_standard_version_21" />
-            <label for="accstmnt_standard_version_21">2.1</label>
-          </fieldset>
+            <div class="radio-field">
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa" />
+                <label for="accstmnt_standard_wcag21aa">WCAG 2.1 AA</label>
+            </div>
 
-          <fieldset class="radio-group" id="standard-level">
-            <legend>Level</legend>
-            <input type="checkbox" name="accstmnt_standard_level" id="accstmnt_standard_level_a" />
-            <label for="accstmnt_standard_level_a">A</label>
-
-            <input type="checkbox" name="accstmnt_standard_level" id="accstmnt_standard_level_aa" />
-            <label for="accstmnt_standard_level_aa">AA</label>
-
-            <input type="checkbox" name="accstmnt_standard_level" id="accstmnt_standard_level_aaa" />
-            <label for="accstmnt_standard_level_aaa">AAA</label>
+            <div class="radio-field">
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" />
+                <div>
+                    <label for="accstmnt_standard_other">Other</label>
+                    <input aria-label="Other standard name" type="text" name="accstmnt_standard_other" id="accstmnt_standard_other">
+                </div>
+            </div>
           </fieldset>
         </div>
 
