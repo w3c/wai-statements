@@ -14,7 +14,7 @@ This [Web Accessibility Statements]({{ "/planning/statements/" | relative_url }}
 Project Leadership
 ------------------
 
--   **Editor and Project Lead:**
+-   **Project Lead:**
     -   [Shadi Abou-Zahra](https://www.w3.org/People/shadi), W3C WAI
 -   **Project Team:**
     -   [Shadi Abou-Zahra](https://www.w3.org/People/shadi), W3C WAI
@@ -22,6 +22,7 @@ Project Leadership
     -   Sanne Eendebak, Accessibility Foundation
     -   Martijn Frazer, Accessibility Foundation
     -   Leon Baauw, Accessibility Foundation
+    -   Roel Antonisse, Accessibility Foundation
 -   **EOWG Co-Chairs:**
     -   Sharron Rush, Knowbility
     -   Brent Bakken, Pearson
@@ -50,8 +51,10 @@ Contributing EOWG Participants
 -   Howard Kramer
 -   Kris Anne Kinney
 -   Laura Keen
+-   Lewis Phillips
 -   Norah Sinclair
 -   Rachel Comerford
+-   Sarah Pulis
 -   Sylvie Duchateau
 -   Shadi Abou-Zahra
 -   Sharron Rush
