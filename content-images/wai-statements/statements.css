@@ -24,6 +24,13 @@ width: auto;
 {
   margin-bottom: 0.25em;
 }
+
+#accstatement form .field label,
+#accstatement form .field .label
+{
+  font-size: 1rem;
+  font-weight: normal;
+}
 #accstatement form .radio-group input
 {
   height: 0;
@@ -50,4 +57,18 @@ width: auto;
 {
   background-color: #2D6197;
   color: #fff;
+}
+
+#accstmnt_standard_other_name
+{
+  box-sizing: content-box;
+  display: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-left: 0.5em;
+  padding: 0.5rem;
+}
+#accstmnt_standard_other:checked~#accstmnt_standard_other_name
+{
+  display: block;
 }
