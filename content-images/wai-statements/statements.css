@@ -61,11 +61,12 @@ width: auto;
 
 #accstmnt_standard_other_name
 {
+  box-sizing: content-box;
   display: none;
-  align-self: center;
   flex-grow: 1;
   flex-shrink: 1;
   margin-left: 0.5em;
+  padding: 0.5rem;
 }
 #accstmnt_standard_other:checked~#accstmnt_standard_other_name
 {
