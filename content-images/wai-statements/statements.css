@@ -59,7 +59,15 @@ width: auto;
   color: #fff;
 }
 
-#accstatement .radio-field [type="text"]
+#accstmnt_standard_other_name
+{
+  display: none;
+  align-self: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-left: 0.5em;
+}
+#accstmnt_standard_other:checked~#accstmnt_standard_other_name
 {
   display: block;
 }
