@@ -32,11 +32,11 @@ Project Leadership
 Special Thanks
 --------------
 
+-   [Eric Eggert](https://www.w3.org/People/yatil), W3C WAI
 -   Katie John and Leon Hubert, UK Cabinet Office
 -   Jorge Fernandes, Portugal Foundation for Science and Technology (FCT)
 -   Dagfinn Romen, Norway Agency for Public Management and eGovernment (Difi)
 -   Lainey Feingold, LFLegal
--   [Eric Eggert](https://www.w3.org/People/yatil), W3C WAI
 
 Contributing EOWG Participants
 ------------------------------
