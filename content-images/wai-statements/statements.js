@@ -12,8 +12,8 @@ var page = {
     });
   },
   setPage: function() {
-    if(['acchome', 'create', 'preview'].indexOf(location.hash.substring(1)) < 0) {
-      location.hash = 'acchome';
+    if(['create', 'preview'].indexOf(location.hash.substring(1)) < 0) {
+      location.hash = 'create';
     } else {
       page.showPage();
     }
