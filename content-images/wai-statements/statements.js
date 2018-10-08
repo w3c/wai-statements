@@ -136,10 +136,11 @@ var page = {
 
     // statement: conformance status
     (function() {
-      var versionInput = document.querySelector('#accstatement #standard-version input:checked');
-      var levelInput = document.querySelector('#accstatement #standard-level input:checked');
-      var version = (versionInput) ? versionInput.labels[0].innerText : null;
-      var level = (levelInput) ? levelInput.labels[0].innerText : null;
+      var standardAppliedInput = document.querySelector('#accstatement #standard-applied input:checked');
+      var standardAppliedOtherInput = document.querySelector('#accstatement #standard-applied #accstmnt_standard_other_name');
+      var standardApplied = standardAppliedInput && standardAppliedInput.labels[0].innerText === 'Other'
+        ? standardAppliedOtherInput.value
+        : standardAppliedInput.labels[0].innerText;
       var statusInput = document.querySelector('#accstatement #conformance-status input:checked');
       var status = statusInput.labels[0].querySelector('.status');
       var meaning = statusInput.labels[0].querySelector('.meaning');
@@ -147,9 +148,8 @@ var page = {
       var html = block.innerHTML;
       var additions = result.querySelector('#statement-additions');
 
-      if(version && level && status) {
-        html = html.replace('[accstmnt_standard_version]', version);
-        html = html.replace('[accstmnt_standard_level]', level);
+      if(standardApplied && status) {
+        html = html.replace('[accstmnt_standard_applied]', standardApplied);
         html = html.split('[conformance_status]').join(status.innerText);
         html = html.replace('[conformance_meaning]', meaning.innerText);
         block.innerHTML = html;
