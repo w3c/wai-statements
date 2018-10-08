@@ -246,43 +246,61 @@ external_css: /content-images/wai-statements/statements.css
 
         <fieldset class="group">
           <legend class="visuallyhidden">Limitations</legend>
-
           <p class="expl">List the parts of the content that are not accessible, a description of the issue, why the issue occurs, and what to do in the mean time, such as who to contact or where to find accessibility alternatives where appropriate.</p>
 
-          <table id="accstmnt_issues" class="dense">
-            <thead>
-              <tr>
-                <th>Content part</th>
-                <th>Description of the issue</th>
-                <th>Why the issue occurs</th>
-                <th>What we are doing about it</th>
-                <th>What to do in the meantime</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="line">
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_element" name="element" placeholder="User comments" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_description" name="description" placeholder="Not always accessible" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_reason" name="reason" placeholder="User generated content" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_us" name="us" placeholder="Repair in 2 days" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_you" name="you" placeholder="contact us" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="accstmnt_issues">
+              <fieldset class="line">
+                  <legend class="label">Limitation 1</legend>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_element">Content part</label>
+                      <input type="text" id="accstmnt_limitation_1_element" name="element" placeholder="User comments" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_description">Description of the issue</label>
+                      <input type="text" id="accstmnt_limitation_1_description" name="description" placeholder="Not always accessible" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_reason">Why the issue occurs</label>
+                      <input type="text" id="accstmnt_limitation_1_reason" name="reason" placeholder="User generated content" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_us">What we are doing about it</label>
+                      <input type="text" id="accstmnt_limitation_1_us" name="us" placeholder="Repair in 2 days" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_you">What to do in the meantime</label>
+                      <input type="text" id="accstmnt_limitation_1_you" name="you" placeholder="contact us" />
+                  </div>
+              </fieldset>
 
-          <button type="button" class="add-line">
-            Add extra line
-          </button>
+              <fieldset class="proto">
+                  <legend class="label">Limitation [n]</legend>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_element">Content part</label>
+                      <input type="text" id="accstmnt_limitation_[n]_element" name="element" placeholder="User comments" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_description">Description of the issue</label>
+                      <input type="text" id="accstmnt_limitation_[n]_description" name="description" placeholder="Not always accessible" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_reason">Why the issue occurs</label>
+                      <input type="text" id="accstmnt_limitation_[n]_reason" name="reason" placeholder="User generated content" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_us">What we are doing about it</label>
+                      <input type="text" id="accstmnt_limitation_[n]_us" name="us" placeholder="Repair in 2 days" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_you">What to do in the meantime</label>
+                      <input type="text" id="accstmnt_limitation_[n]_you" name="you" placeholder="contact us" />
+                  </div>
+              </fieldset>
+
+              <button type="button" class="add-line">
+                Add limitation
+              </button>
+          </div>
         </fieldset>
 
         <h3 class="label">Compatibility with user environment <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_asstech"><span>i</span></button></h3>
