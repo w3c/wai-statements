@@ -212,12 +212,18 @@ external_css: /content-images/wai-statements/statements.css
           </ul>
 
           <div class="field line">
-            <label for="accstmnt_orginfo_othermeasures_1">Other measure</label>
+            <label for="accstmnt_orginfo_othermeasures_1">Other measure 1</label>
             <input type="text" id="accstmnt_orginfo_othermeasures_1" placeholder="We include people with disabilities in our list of personas" />
-            <button type="button" class="add-line">
-              Add measure
-            </button>
           </div>
+
+          <div class="field proto">
+            <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n]</label>
+            <input type="text" id="accstmnt_orginfo_othermeasures_[n]" placeholder="We include people with disabilities in our list of personas" />
+          </div>
+
+          <button type="button" class="add-line">
+            Add measure
+          </button>
         </fieldset>
         {% include excol.html type="end" %}
 
