@@ -72,14 +72,14 @@
   - name: Developing an Accessibility Statement
     url: "/planning/statements/"
     pages:
+    - name: Generator
+      url: "/planning/statements/generator/"
     - name: Example 1
       url: "/planning/statements/example-1/"
     - name: Example 2
       url: "/planning/statements/example-2/"
     - name: Example 3
       url: "/planning/statements/example-3/"
-    - name: Generator
-      url: "/planning/statements/generator/"
   - name: Involving Users for Better Accessibility
     url: "/planning/involving-users/"
   - name: International Laws & Policies
