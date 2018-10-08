@@ -328,36 +328,39 @@ external_css: /content-images/wai-statements/statements.css
           <legend class="label">Relied upon:</legend>
 
           <ul id="tech_relied" class="input-cols nolist">
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_html" />
               <label for="accstmnt_tech_html">HTML</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_aria" />
               <label for="accstmnt_tech_aria">WAI-ARIA</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_css" />
               <label for="accstmnt_tech_css">CSS</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_js" />
               <label for="accstmnt_tech_js">Javascript</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_smil" />
               <label for="accstmnt_tech_smil">SMIL</label>
             </li>
+
+            <li class="radio-field proto">
+                <input type="checkbox" id="accstmnt_tech_other_[n]" />
+                <span id="accstmnt_tech_other_label_[n]"><label for="accstmnt_tech_other_[n]">Technology [n]</label><span class="visuallyhidden"> name</span></span>
+                <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" />
+            </li>
           </ul>
 
-          <div class="field">
-            <label for="accstmnt_tech_other">Other technology</label>
-            <input type="text" id="accstmnt_tech_other" />
-          </div>
+          <button class="add-line" type="button">Add technology</button>
         </fieldset>
 
         <h3 class="label">Related evidence <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_related"><span>i</span></button></h3>
