@@ -37,25 +37,22 @@ external_css: /content-images/wai-statements/statements.css
 
         {% include excol.html type="middle" %}
         <h3 class="label">About your statement <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_about"><span>i</span></button></h3>
-        <div class="information" id="info_about" hidden><p>Provide the name of your organization, and the address and name of your website or mobile application. This information will be used to customize the accessibility statement with the correct names and web address.</p></div>
+        <div class="information" id="info_about" hidden><p>Provide the name of your organization, and the address and name of your website or mobile application. For mobile applications, include version information and the release date, to identify a specific version. This information will be used to customize the accessibility statement with the correct names and web address.</p></div>
 
         <div class="field">
-          <label for="accstmt_org">Name of your organization <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_org"><span>i</span></button></label>
-          <div class="information" id="info_org" hidden><p>Provide the name of your organization as you want it to appear in the generated accessibility statement.</p>
+          <label for="accstmt_org">Name of your organization (Example: Citylights Inc.)</label>
           <p><strong>Example:</strong> Citylights Inc.</p></div>
           <input type="text" id="accstmt_org" placeholder="Example: Citylights Inc."  />
         </div>
 
         <div class="field">
-          <label for="accstmt_url">Address of your website or mobile application <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_url"><span>i</span></button></label>
-          <div class="information" id="info_url" hidden><p>Provide the web address of the website or mobile application that is the subject of this accessibility statement. This includes version information and the release date, if necessary, to recognize a specific version. For mobile applications this could include a link to the place where the app can be downloaded or installed.</p>
+          <label for="accstmt_url">Address of your website or mobile application (Example: https://example.org)</label>
           <p><strong>Example:</strong> website: "https://www.w3.org/WAI/demos/bad/". Mobile application: "[link to the app] (version 1.2.3)".</p></div>
           <input type="text" id="accstmt_url" placeholder="Example: https://www.w3.org/WAI/demos/bad/" />
         </div>
 
         <div class="field">
-          <label for="accstmt_namesite">Name of your website or mobile application <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_namesite"><span>i</span></button></label>
-          <div class="information" id="info_namesite" hidden><p>If you provide a name for your website or mobile application, the generator can make this name a link to the website or mobile application. This will improve the readability of your accessibility statement.</p>
+          <label for="accstmt_namesite">Name of your website or mobile application (Example: Citylights App)</label>
           <p><strong>Example:</strong> website: "Citylights Website". Mobile application: "Citylights App".</p></div>
           <input type="text" id="accstmt_namesite" placeholder="Example: Citylights Website or Citylights App" />
         </div>
