@@ -81,5 +81,10 @@ width: auto;
 
 #accstatement .proto
 {
-  display: none;  
+  display: none;
+}
+
+#accstatement .group button.add-line
+{
+  margin-left: 36px;
 }
