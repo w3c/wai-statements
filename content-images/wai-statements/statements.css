@@ -59,16 +59,22 @@ width: auto;
   color: #fff;
 }
 
-#accstmnt_standard_other_name
+#accstatement form .radio-field input[type="text"]
 {
   box-sizing: content-box;
-  display: none;
   flex-grow: 1;
   flex-shrink: 1;
   margin-left: 0.5em;
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
 }
-#accstmnt_standard_other:checked~#accstmnt_standard_other_name
+
+#accstatement #accstmnt_standard_other_name
+{
+  display: none;
+}
+
+#accstatement #accstmnt_standard_other:checked~#accstmnt_standard_other_name
 {
   display: block;
 }
