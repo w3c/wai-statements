@@ -69,6 +69,7 @@ var page = {
         newLine.innerHTML = newLine.innerHTML.split('[n]').join(lines.length + 1);
 
         proto.parentNode.insertBefore(newLine, proto);
+        newLine.querySelector('input, textarea').focus();
       });
     }
   },
