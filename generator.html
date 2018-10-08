@@ -69,7 +69,7 @@ external_css: /content-images/wai-statements/statements.css
           <fieldset class="field" id="standard-applied">
             <legend class="label">Standard applied</legend>
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" />
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" checked />
                 <label for="accstmnt_standard_wcag20aa">WCAG 2.0 AA</label>
             </div>
 
@@ -126,31 +126,39 @@ external_css: /content-images/wai-statements/statements.css
         <div class="information" id="info_feedback" hidden><p>Provide information about the ways in which users can get in touch with your organization to provide feedback or to seek help on accessibility aspects. Ideally you should provide more than one option. Also indicate the duration by which users can expect a response from your organization.</p></div>
 
         <fieldset class="group" id="form-feedback">
-        <legend class="visuallyhidden">Feedback</legend>
-          <div class="field">
+          <legend class="visuallyhidden">Feedback</legend>
+          <div class="field line">
             <label for="accstmnt_contact_phone">Phone us at</label>
             <input type="tel" id="accstmnt_contact_phone" placeholder="Example: +12 34 567 89 00" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_email">E-mail us at</label>
             <input type="email" id="accstmnt_contact_email" placeholder="citylights@example.org" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_visit">Visit us at</label>
             <input type="text" id="accstmnt_contact_visit" placeholder="Main Street 1, 234 Example Ville, Earth" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_write">Write us at</label>
             <input type="text" id="accstmnt_contact_write" placeholder="PO Box 1, 234 Example Ville, Earth" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_social">Twitter at</label>
             <input type="url" id="accstmnt_contact_social" placeholder="Example: @CitylightsIncBAD" />
           </div>
+
+          <div class="field proto">
+              <label for="accstmnt_feedback_other_contact_[n]">Contact [n]</label>
+              <input type="text" id="accstmnt_feedback_other_contact_[n]" placeholder="Example: Facebook: www.facebook.com/CitylightsInc" />
+          </div>
+          <button type="button" class="add-line">Add contact</button>
+
           <div class="field">
             <label for="accstmnt_contact_responsetime">Typical duration for response</label>
             <input type="text" id="accstmnt_contact_responsetime" placeholder="Example: 2 work days" />
           </div>
+
         </fieldset>
 
         <h3 class="label">Date of statement <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_date"><span>i</span></button></h3>
@@ -204,12 +212,18 @@ external_css: /content-images/wai-statements/statements.css
           </ul>
 
           <div class="field line">
-            <label for="accstmnt_orginfo_othermeasures_1">Other measure</label>
+            <label for="accstmnt_orginfo_othermeasures_1">Other measure 1</label>
             <input type="text" id="accstmnt_orginfo_othermeasures_1" placeholder="We include people with disabilities in our list of personas" />
-            <button type="button" class="add-line">
-              Add measure
-            </button>
           </div>
+
+          <div class="field proto">
+            <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n]</label>
+            <input type="text" id="accstmnt_orginfo_othermeasures_[n]" placeholder="We include people with disabilities in our list of personas" />
+          </div>
+
+          <button type="button" class="add-line">
+            Add measure
+          </button>
         </fieldset>
         {% include excol.html type="end" %}
 
@@ -219,7 +233,7 @@ external_css: /content-images/wai-statements/statements.css
         {% include excol.html type="middle" %}
 
         <h3 class="label">Limitations <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_limitations"><span>i</span></button></h3>
-        <div class="information" id="info_measures" hidden><p>There are many situations in which limitations to accessibility can occur, such as ensuring instant accessibility of user-generated content. Providing transparency on these situations helps users to understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web Accessibility Directive, public bodies are required to provide information on the parts of the content that do not conform, the reason for not conforming, and, if applicable, where to find accessible alternatives.</p>
+        <div class="information" id="info_limitations" hidden><p>There are many situations in which limitations to accessibility can occur, such as ensuring instant accessibility of user-generated content. Providing transparency on these situations helps users to understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web Accessibility Directive, public bodies are required to provide information on the parts of the content that do not conform, the reason for not conforming, and, if applicable, where to find accessible alternatives.</p>
           <p><strong>Example:</strong></p>
           <ul>
             <li><strong>Content part:</strong> User comments (other examples: forms, video, documents, etc.)</li>
@@ -232,43 +246,61 @@ external_css: /content-images/wai-statements/statements.css
 
         <fieldset class="group">
           <legend class="visuallyhidden">Limitations</legend>
-
           <p class="expl">List the parts of the content that are not accessible, a description of the issue, why the issue occurs, and what to do in the mean time, such as who to contact or where to find accessibility alternatives where appropriate.</p>
 
-          <table id="accstmnt_issues" class="dense">
-            <thead>
-              <tr>
-                <th>Content part</th>
-                <th>Description of the issue</th>
-                <th>Why the issue occurs</th>
-                <th>What we are doing about it</th>
-                <th>What to do in the meantime</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="line">
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_element" name="element" placeholder="User comments" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_description" name="description" placeholder="Not always accessible" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_reason" name="reason" placeholder="User generated content" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_us" name="us" placeholder="Repair in 2 days" />
-                </td>
-                <td>
-                  <input type="text" id="accstmnt_limitation_1_you" name="you" placeholder="contact us" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="accstmnt_issues">
+              <fieldset id="accstmnt_limitation_1" class="line">
+                  <legend class="label">Limitation 1</legend>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_element">Content part</label>
+                      <input type="text" id="accstmnt_limitation_1_element" name="element" placeholder="User comments" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_description">Description of the issue</label>
+                      <input type="text" id="accstmnt_limitation_1_description" name="description" placeholder="Not always accessible" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_reason">Why the issue occurs</label>
+                      <input type="text" id="accstmnt_limitation_1_reason" name="reason" placeholder="User generated content" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_us">What we are doing about it</label>
+                      <input type="text" id="accstmnt_limitation_1_us" name="us" placeholder="Repair in 2 days" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_1_you">What to do in the meantime</label>
+                      <input type="text" id="accstmnt_limitation_1_you" name="you" placeholder="contact us" />
+                  </div>
+              </fieldset>
 
-          <button type="button" class="add-line">
-            Add extra line
-          </button>
+              <fieldset id="accstmnt_limitation_[n]" class="proto">
+                  <legend class="label">Limitation [n]</legend>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_element">Content part</label>
+                      <input type="text" id="accstmnt_limitation_[n]_element" name="element" placeholder="User comments" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_description">Description of the issue</label>
+                      <input type="text" id="accstmnt_limitation_[n]_description" name="description" placeholder="Not always accessible" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_reason">Why the issue occurs</label>
+                      <input type="text" id="accstmnt_limitation_[n]_reason" name="reason" placeholder="User generated content" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_us">What we are doing about it</label>
+                      <input type="text" id="accstmnt_limitation_[n]_us" name="us" placeholder="Repair in 2 days" />
+                  </div>
+                  <div class="field">
+                      <label for="accstmnt_limitation_[n]_you">What to do in the meantime</label>
+                      <input type="text" id="accstmnt_limitation_[n]_you" name="you" placeholder="contact us" />
+                  </div>
+              </fieldset>
+
+              <button type="button" class="add-line">
+                Add limitation
+              </button>
+          </div>
         </fieldset>
 
         <h3 class="label">Compatibility with user environment <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_asstech"><span>i</span></button></h3>
@@ -292,13 +324,6 @@ external_css: /content-images/wai-statements/statements.css
             <label for="accstmnt_asstech_3">Environment 3</label>
             <input type="text" id="accstmnt_asstech_3" placeholder="Example: Browser X with Assistive Technology Y" />
           </div>
-          <div class="field proto">
-            <label for="accstmnt_asstech_[n]">Other environment</label>
-            <input type="text" id="accstmnt_asstech_[n]" />
-          </div>
-          <button type="button" class="add-line">
-            Add environment
-          </button>
         </fieldset>
 
         <h3 class="label">Known incompatibility <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_incompatible"><span>i</span></button></h3>
@@ -314,11 +339,11 @@ external_css: /content-images/wai-statements/statements.css
 
           <div class="field line">
             <label for="accstmnt_incompatible_tech_1">Environment 1</label>
-            <input type="text" id="accstmnt_othertech_1" />
+            <input type="text" id="accstmnt_incompatible_tech_1" />
           </div>
           <div class="field proto">
             <label for="accstmnt_incompatible_tech_[n]">Environment [n]</label>
-            <input type="text" id="accstmnt_othertech_[n]" />
+            <input type="text" id="accstmnt_incompatible_tech_[n]" />
           </div>
 
           <button type="button" class="add-line">
@@ -335,36 +360,39 @@ external_css: /content-images/wai-statements/statements.css
           <legend class="label">Relied upon:</legend>
 
           <ul id="tech_relied" class="input-cols nolist">
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_html" />
               <label for="accstmnt_tech_html">HTML</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_aria" />
               <label for="accstmnt_tech_aria">WAI-ARIA</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_css" />
               <label for="accstmnt_tech_css">CSS</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_js" />
               <label for="accstmnt_tech_js">Javascript</label>
             </li>
 
-            <li class="radio-field">
+            <li class="radio-field line">
               <input type="checkbox" id="accstmnt_tech_smil" />
               <label for="accstmnt_tech_smil">SMIL</label>
             </li>
+
+            <li class="radio-field proto">
+                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" />
+                <span id="accstmnt_tech_other_label_[n]"><label for="accstmnt_tech_other_[n]">Technology [n]</label><span class="visuallyhidden"> name</span></span>
+                <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" />
+            </li>
           </ul>
 
-          <div class="field">
-            <label for="accstmnt_tech_other">Other technology</label>
-            <input type="text" id="accstmnt_tech_other" />
-          </div>
+          <button class="add-line" type="button">Add technology</button>
         </fieldset>
 
         <h3 class="label">Related evidence <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_related"><span>i</span></button></h3>
