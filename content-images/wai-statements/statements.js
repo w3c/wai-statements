@@ -251,12 +251,12 @@ var page = {
 
     // statement: limitations & alternatives
     (function() {
-      var tableRows = document.querySelectorAll('#accstmnt_issues tbody tr');
+      var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');
       var block = result.querySelector('#statement-limitations-block');
       var list = result.querySelector('#statement-limitations');
       var html = '';
 
-      for(i = 0; i < tableRows.length; i += 1) {
+      for(i = 0; i < limitations.length; i += 1) {
         (function(row) {
           var element = row.querySelector('input[name=element]').value;
           var description = row.querySelector('input[name=description]').value;
@@ -268,7 +268,7 @@ var page = {
             html += '<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>';
           }
 
-        }(tableRows[i]));
+        }(limitations[i]));
       }
 
       if(html) {
