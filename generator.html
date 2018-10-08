@@ -126,31 +126,39 @@ external_css: /content-images/wai-statements/statements.css
         <div class="information" id="info_feedback" hidden><p>Provide information about the ways in which users can get in touch with your organization to provide feedback or to seek help on accessibility aspects. Ideally you should provide more than one option. Also indicate the duration by which users can expect a response from your organization.</p></div>
 
         <fieldset class="group" id="form-feedback">
-        <legend class="visuallyhidden">Feedback</legend>
-          <div class="field">
+          <legend class="visuallyhidden">Feedback</legend>
+          <div class="field line">
             <label for="accstmnt_contact_phone">Phone us at</label>
             <input type="tel" id="accstmnt_contact_phone" placeholder="Example: +12 34 567 89 00" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_email">E-mail us at</label>
             <input type="email" id="accstmnt_contact_email" placeholder="citylights@example.org" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_visit">Visit us at</label>
             <input type="text" id="accstmnt_contact_visit" placeholder="Main Street 1, 234 Example Ville, Earth" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_write">Write us at</label>
             <input type="text" id="accstmnt_contact_write" placeholder="PO Box 1, 234 Example Ville, Earth" />
           </div>
-          <div class="field">
+          <div class="field line">
             <label for="accstmnt_contact_social">Twitter at</label>
             <input type="url" id="accstmnt_contact_social" placeholder="Example: @CitylightsIncBAD" />
           </div>
+
+          <div class="field proto">
+              <label for="accstmnt_feedback_other_contact_[n]">Contact [n]</label>
+              <input type="text" id="accstmnt_feedback_other_contact_[n]" placeholder="Example: Facebook: www.facebook.com/CitylightsInc" />
+          </div>
+          <button type="button" class="add-line">Add contact</button>
+
           <div class="field">
             <label for="accstmnt_contact_responsetime">Typical duration for response</label>
             <input type="text" id="accstmnt_contact_responsetime" placeholder="Example: 2 work days" />
           </div>
+
         </fieldset>
 
         <h3 class="label">Date of statement <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_date"><span>i</span></button></h3>
