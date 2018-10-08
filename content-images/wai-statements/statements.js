@@ -186,17 +186,20 @@ var page = {
     // statement: technologies for conformance
     (function() {
       var parent = result.querySelector('#statement-conftech');
-      var checkboxes = document.querySelectorAll('#accstatement #tech_relied input:checked');
-      var othertech = document.querySelector('#accstatement #accstmnt_tech_other');
+      var relied_techs = document.querySelectorAll('#accstatement #tech_relied input:checked');
       var list = result.querySelector('#statement-tech');
       var html = '';
 
-      for(i = 0; i < checkboxes.length; i += 1) {
-        html += '<li>'+checkboxes[i].labels[0].innerText+'</li>';
-      }
-      if(othertech.value) {
-        html += '<li>'+othertech.value+'</li>';
-      }
+      Array.prototype.forEach.call(relied_techs, function(tech) {
+        var isOtherTech = tech.name === 'accstmnt_tech_other';
+        var techValue = tech.labels[0].innerText;
+
+        if (isOtherTech) {
+          techValue = tech.parentNode.querySelector('[type="checkbox"] ~ [type="text"]').value;
+        }
+
+        html += '<li>'+techValue+'</li>';
+      });
 
       if(html.length) {
         list.innerHTML = html;
