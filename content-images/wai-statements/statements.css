@@ -79,6 +79,11 @@ width: auto;
   display: block;
 }
 
+#accstatement #accstmnt_issues > fieldset > legend
+{
+  font-size: 1rem;
+}
+
 #accstatement .proto
 {
   display: none;
