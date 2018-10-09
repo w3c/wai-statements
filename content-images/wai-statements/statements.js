@@ -111,7 +111,7 @@ var page = {
       var block = result.querySelector('#statement-measures-block');
       var list = result.querySelector('#statement-measures');
       var inputPredefined = document.querySelectorAll('#accstatement .page.create #effort-list input:checked');
-      var inputOther = document.querySelectorAll('#accstatement .page.create #accstmnt_orginfo_othermeasures input');
+      var inputOther = document.querySelectorAll('#accstatement .page.create #accstmnt_orginfo_othermeasures :not(.proto) > input');
       var html = '';
 
       // add from predefined
