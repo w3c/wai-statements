@@ -10,9 +10,27 @@ var page = {
     document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
       location.hash = 'preview';
     });
+
+    // Set button-backtotop href
+    Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
+      el.addEventListener('click', function handleBackToTopClick(event) {
+        el.setAttribute('href', '#' + page.getCurrentPage() + '-top');
+      })
+    })
+  },
+  routes: [
+    'create',
+    'preview',
+  ],
+  getCurrentPage: function getCurrentPage() {
+    return Array.prototype.filter.call(page.routes, function(route) {
+      var hash = window.location.hash;
+
+      return hash.indexOf(route) !== -1;
+    })[0];
   },
   setPage: function() {
-    if(['create', 'preview'].indexOf(location.hash.substring(1)) < 0) {
+    if(page.routes.indexOf(location.hash.substring(1)) < 0) {
       location.hash = 'create';
     } else {
       page.showPage();
@@ -21,8 +39,15 @@ var page = {
   showPage: function() {
     var i;
     var pages = document.querySelectorAll('#accstatement .page');
+    var currentPage = page.getCurrentPage();
+    var backToTop = document.querySelectorAll('a.button-backtotop');
 
-    if(location.hash === '#preview') {
+    // Set back to top anchor href
+    Array.prototype.forEach.call(backToTop, function setHref(el) {
+      el.setAttribute('href', '#' + page.getCurrentPage() + '-top');
+    })
+
+    if(currentPage === 'preview') {
       page.showPreview();
     }
 
@@ -32,7 +57,7 @@ var page = {
     }
 
     // show current page
-    document.querySelector('#accstatement .page.'+location.hash.substring(1)).removeAttribute('hidden');
+    document.querySelector('#accstatement .page.'+currentPage).removeAttribute('hidden');
 
     window.scrollTo(0, 0);
   },
