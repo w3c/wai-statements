@@ -10,8 +10,8 @@ footer: >
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="../acknowledgements/">Acknowledgements</a>.</p>
 external_css: /content-images/wai-statements/statements.css
 ---
-<section class="page statement-example-2">
-    <div class="container proto" hidden="">
+
+{% include box.html type="start" title="Example of an accessibility statement including recommended parts" class="example" %}
       <h2>Accessibility Statement for [accstmt_namesite]</h2>
 
       <p>[accstmt_org] is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
@@ -185,5 +185,4 @@ external_css: /content-images/wai-statements/statements.css
       <hr noshade="">
 
       <p>This statement was last updated on 2018-10-08.</p>
-    </div>
-  </section>
+{% include box.html type="end" %}
