@@ -331,11 +331,23 @@ var page = {
     }
   },
   today: function() {
+    var dateToday = new Date();
+    var day = dateToday.getDate();
+    var month = dateToday.getMonth() + 1;
+    var year = dateToday.getFullYear();
+    var dateTodayString = ''
+      + day + '-'
+      + month + '-'
+      + year;
     var dates = document.querySelectorAll('#accstatement input.today');
     var i;
 
     for(i = 0; i < dates.length; i += 1) {
-      dates[i].valueAsDate = new Date();
+      try {
+        dates[i].valueAsDate = dateToday;
+      } catch (e) {
+        dates[i].value = dateTodayString;
+      }
     }
   }
 };
