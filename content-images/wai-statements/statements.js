@@ -305,8 +305,7 @@ var page = {
 
     // statement: approval
     (function() {
-      if(!document.getElementById('accstmnt_orginfo_approved_org').value
-      && !document.getElementById('accstmnt_orginfo_approved_name').value
+      if(!document.getElementById('accstmnt_orginfo_approved_name').value
       && !document.getElementById('accstmnt_orginfo_approved_function').value) {
         result.querySelector('#statement-approval-block').setAttribute('hidden', '');
       }
