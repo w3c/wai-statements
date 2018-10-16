@@ -37,7 +37,7 @@ Special Thanks
 -   Katie John and Leon Hubert, UK Cabinet Office
 -   Jorge Fernandes, Portugal Foundation for Science and Technology (FCT)
 -   Dagfinn Romen, Norway Agency for Public Management and eGovernment (Difi)
--   Lainey Feingold, LFLegal
+-   Lainey Feingold, <a href="http://lflegal.com/">lflegal.com</a>
 
 Contributing EOWG Participants
 ------------------------------
