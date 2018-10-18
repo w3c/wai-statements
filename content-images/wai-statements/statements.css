@@ -69,6 +69,17 @@ width: auto;
   padding: 0.5rem;
 }
 
+
+/* Preview */
+#accstatement .feedback.other-contact-methods
+{
+  margin-top: 0;
+  margin-left: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 #accstatement #accstmnt_standard_other_name
 {
   display: none;
