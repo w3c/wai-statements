@@ -36,7 +36,7 @@ external_css: /content-images/wai-statements/statements.css
       <form>
         {% include excol.html type="start" open="true" %}
         <h2 id="create-basic">Basic information</h2>
-        <p class="intro">In this section you can provide the minimal set of information recommended for an accessibility statement. This includes information about your organization, the accessibility standards you applied, and your contact information for feedback.</p>
+        <p class="intro">In this section you can provide the minimal set of information recommended for your accessibility statement. This includes information about your organization, the accessibility standards you applied, and your contact information for feedback.</p>
 
         {% include excol.html type="middle" %}
         <div class="group">
@@ -54,7 +54,7 @@ external_css: /content-images/wai-statements/statements.css
             </div>
 
             <div class="field">
-              <label for="accstmt_namesite">Name of your website or mobile application (Example: "Example App" or "Example Store")</label>
+              <label for="accstmt_namesite">Name of your website or mobile application (Example: "Example Store" or "Example App 1.2.3")</label>
               <input type="text" id="accstmt_namesite" />
             </div>
         </div>
@@ -161,7 +161,7 @@ external_css: /content-images/wai-statements/statements.css
 
         <div class="group">
             <h3 class="label">Date of publication <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
-            <div class="information" id="info_date" hidden><p>Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of a published accessibility statement should not exceed one year.</p></div>
+            <div class="information" id="info_date" hidden><p>Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained.</p></div>
 
             <div class="field">
               <label for="accstmt_date">Publication date of this accessibility statement</label>
@@ -318,8 +318,7 @@ external_css: /content-images/wai-statements/statements.css
         </fieldset>
 
         <h3 class="label">Known incompatibility <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
-        <div class="information" id="support_incompatible" hidden><p>Help users understand what versions of operating systems, web browsers, and assistive technologies are not (or no longer) supported. This helps user to determine if they can use your website or mobile application with their current environments.</p>
-        <p><strong>Example:</strong> Website: “We do not actively support web browsers older than 3 major versions”. Mobile application: “We do not actively support operating systems older than 5 years”.</p></div>
+        <div class="information" id="support_incompatible" hidden><p>Help users understand what versions of operating systems, web browsers, and assistive technologies are not (or no longer) supported. This helps user to determine if they can use your website or mobile application with their current environments.</p></div>
 
         <fieldset class="group" id="incompatible_tech">
           <legend class="visuallyhidden">Known incompatibility</legend>
@@ -341,7 +340,7 @@ external_css: /content-images/wai-statements/statements.css
         </fieldset>
 
         <h3 class="label">Technologies used <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
-        <div class="information" id="support_tech" hidden><p>You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure accessibility of your content. Communicating this expectation in the accessibility statement can help users to understand the reason for issues they may be observing. For example, the accessibility features may not work because the user has JavaScript disabled. See <a href="https://www.w3.org/TR/WCAG21/#cc4">WCAG 2 conformance requirement 4</a> on accessibility supported was of using technologies relied upon.</p></div>
+        <div class="information" id="support_tech" hidden><p>You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure accessibility of your content. Communicating this expectation in the accessibility statement can help users to understand the reason for issues they may be observing. For example, the accessibility features may not work because the user disabled JavaScript. The <a href="https://www.w3.org/TR/WCAG21/#cc4">WCAG 2 conformance requirement 4</a> on "<em>accessibility supported was of using technologies relied upon</em>" provides more background.</p></div>
 
         <p class="expl">Describe the technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported.</p>
 
@@ -389,7 +388,7 @@ external_css: /content-images/wai-statements/statements.css
 
         <fieldset class="group">
           <legend class="visuallyhidden">Assessment approach</legend>
-          <ul class="nolist field" id="effort-list">
+          <ul class="nolist field" id="assessment-list">
             <li class="radio-field">
               <input id="accstmnt_approach_1" type="checkbox" />
               <label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content
