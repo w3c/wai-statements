@@ -187,7 +187,10 @@ var page = {
 
     // statement: feedback
     (function() {
-      var items = document.querySelectorAll('#accstatement #form-feedback input:not(#accstmnt_contact_responsetime)');
+      var items = document.querySelectorAll(
+        '#accstatement #form-feedback input:not(#accstmnt_contact_responsetime)'
+        + ', #accstatement #form-feedback textarea'
+      );
       var list = result.querySelector('#statement-feedback');
       var html = '';
 
@@ -198,6 +201,8 @@ var page = {
             html += '<a href="mailto:'+items[i].value+'">'+items[i].value+'</a>';
           } else if(items[i].getAttribute('type') === 'url') {
             html += '<a href="'+items[i].value+'">'+items[i].value+'</a>';
+          } else if (items[i].nodeName === 'TEXTAREA') {
+            html += '<pre class="feedback other-contact-methods">' + items[i].value + '</pre>';
           } else {
             html += items[i].value;
           }
