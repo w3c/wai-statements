@@ -327,10 +327,13 @@ external_css: /content-images/wai-statements/statements.css
             <label for="accstmnt_asstech_2">Environment 2</label>
             <input type="text" id="accstmnt_asstech_2" placeholder="Example: Browser M with Assistive Technology N" />
           </div>
-          <div class="field line">
-            <label for="accstmnt_asstech_3">Environment 3</label>
-            <input type="text" id="accstmnt_asstech_3" placeholder="Example: Browser X with Assistive Technology Y" />
+
+          <div class="field proto">
+            <label for="accstmnt_asstech_[n]">Environment [n]</label>
+            <input type="text" id="accstmnt_asstech_[n]" />
           </div>
+
+          <button class="add-line" type="button">Add environment</button>
         </fieldset>
 
         <h3 class="label">Known incompatibility <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_incompatible"><span>i</span></button></h3>
