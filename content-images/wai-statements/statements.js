@@ -4,7 +4,6 @@ var page = {
     page.setPage();
     page.checkBoxGroups();
     page.addLine();
-    page.info();
     page.today();
 
     document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
@@ -209,7 +208,10 @@ var page = {
 
     // statement: feedback
     (function() {
-      var items = document.querySelectorAll('#accstatement #form-feedback input:not(#accstmnt_contact_responsetime)');
+      var items = document.querySelectorAll(
+        '#accstatement #form-feedback input:not(#accstmnt_contact_responsetime)'
+        + ', #accstatement #form-feedback textarea'
+      );
       var list = result.querySelector('#statement-feedback');
       var html = '';
 
@@ -220,6 +222,8 @@ var page = {
             html += '<a href="mailto:'+items[i].value+'">'+items[i].value+'</a>';
           } else if(items[i].getAttribute('type') === 'url') {
             html += '<a href="'+items[i].value+'">'+items[i].value+'</a>';
+          } else if (items[i].nodeName === 'TEXTAREA') {
+            html += '<pre class="feedback other-contact-methods">' + items[i].value + '</pre>';
           } else {
             html += items[i].value;
           }
@@ -334,22 +338,6 @@ var page = {
     }());
 
 
-  },
-  info: function() {
-    var buttons = document.querySelectorAll('#accstatement form button.info-open');
-    var i;
-
-    for(i = 0; i < buttons.length; i += 1) {
-      buttons[i].addEventListener('click', function() {
-        if(this.getAttribute('aria-expanded') === 'true') {
-          this.setAttribute('aria-expanded', 'false');
-          document.getElementById(this.getAttribute('aria-controls')).setAttribute('hidden', '');
-        } else {
-          this.setAttribute('aria-expanded', 'true');
-          document.getElementById(this.getAttribute('aria-controls')).removeAttribute('hidden');
-        }
-      });
-    }
   },
   savePreviewAs: function savePreviewAs(filetype) {
     console.log('Save preview as ' + filetype);

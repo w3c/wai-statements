@@ -27,9 +27,12 @@ external_css: /content-images/wai-statements/statements.css
       </ul>
   {% include_cached toc.html type="end" %}
 
-
-      {% include excol.html type="all" %}
-
+<div style="display: flex; align-items: center;">
+  {% include excol.html type="all" %}
+  <div style="text-align: right; flex:1">
+    <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Show all additional Information" data-hidetext="Hide all additional Infomation">Show all additional Information</button>
+  </div>
+</div>
       <form>
         {% include excol.html type="start" open="true" %}
         <h2 id="create-basic">Basic information</h2>
@@ -37,7 +40,7 @@ external_css: /content-images/wai-statements/statements.css
 
         {% include excol.html type="middle" %}
         <div class="group">
-            <h3 class="label">About your statement <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_about"><span>i</span></button></h3>
+            <h3 class="label">About your statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
             <div class="information" id="info_about" hidden><p>Provide the name of your organization, and the address and name of your website or mobile application. For mobile applications, include version information and the release date, to identify a specific version. This information will be used to customize the accessibility statement with the correct names and web address.</p></div>
 
             <div class="field">
@@ -57,7 +60,7 @@ external_css: /content-images/wai-statements/statements.css
         </div>
 
         <div class="group">
-          <h3 class="label">Accessibility standards applied <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_standards"><span>i</span></button></h3>
+          <h3 class="label">Accessibility standards applied <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
           <div class="information" id="info_standards" hidden><p>State the accessibility standard that you have been aiming to apply. Usually this is the WCAG 2.0 Level AA, but may also be the latest version WCAG 2.1 Level AA. The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a> introduces these standards and conformance levels.</p></div>
 
           <p class="expl">Which version and level of WCAG has been applied to the website?</p>
@@ -82,9 +85,8 @@ external_css: /content-images/wai-statements/statements.css
           </fieldset>
         </div>
 
-
         <div class="group">
-            <h3 class="label">Conformance status <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_conformance"><span>i</span></button></h3>
+            <h3 class="label">Conformance status <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_conformance" data-target="#info_conformance" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
             <div class="information" id="info_conformance" hidden><p>Indicate to what degree you conform to the accessibility standard stated in the previous section. In some cases there may be justifiable reasons to not fully conform throughout the entire content. You can indicate the parts that do not yet fully conform, including guidance on how to find help, in later sections of this form.</p></div>
 
             <fieldset class="field" id="conformance-status">
@@ -113,7 +115,7 @@ external_css: /content-images/wai-statements/statements.css
         </div>
 
         <div class="group">
-            <h3 class="label">Additional requirements <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_additional"><span>i</span></button></h3>
+            <h3 class="label">Additional requirements <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
             <div class="information" id="info_additional" hidden><p>Sometimes you may be applying requirements additional to those specified in the accessibility standards applied. For example, you may be providing sign language videos or real-time captioning for live media content. Describe these additional accessibility requirements that you have applied, to help users understand what they can expect.</p>
             <p><strong>Example:</strong> “Although our goal is level AA conformance, we have also applied some level AAA success criteria. For example, images of text are only used for decorative purposes. When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating. We added sign language in all our videos.”</p></div>
 
@@ -124,37 +126,32 @@ external_css: /content-images/wai-statements/statements.css
         </div>
 
         <div class="group">
-            <h3 class="label">Feedback options <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_feedback"><span>i</span></button></h3>
+            <h3 class="label">Feedback options <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
             <div class="information" id="info_feedback" hidden><p>Provide information about the ways in which users can get in touch with your organization to provide feedback or to seek help on accessibility aspects. Ideally you should provide more than one option. Also indicate the duration by which users can expect a response from your organization.</p></div>
 
             <fieldset class="group" id="form-feedback">
               <legend class="visuallyhidden">Feedback</legend>
-              <div class="field line">
+              <div class="field">
                 <label for="accstmnt_contact_phone">Phone us at</label>
                 <input type="tel" id="accstmnt_contact_phone" placeholder="Example: +12 34 567 89 00" />
               </div>
-              <div class="field line">
+              <div class="field">
                 <label for="accstmnt_contact_email">E-mail us at</label>
                 <input type="email" id="accstmnt_contact_email" placeholder="citylights@example.org" />
               </div>
-              <div class="field line">
+              <div class="field">
                 <label for="accstmnt_contact_visit">Visit us at</label>
                 <input type="text" id="accstmnt_contact_visit" placeholder="Main Street 1, 234 Example Ville, Earth" />
               </div>
-              <div class="field line">
+              <div class="field">
                 <label for="accstmnt_contact_write">Write us at</label>
                 <input type="text" id="accstmnt_contact_write" placeholder="PO Box 1, 234 Example Ville, Earth" />
               </div>
-              <div class="field line">
-                <label for="accstmnt_contact_social">Twitter at</label>
-                <input type="url" id="accstmnt_contact_social" placeholder="Example: @CitylightsIncBAD" />
-              </div>
 
-              <div class="field proto">
-                  <label for="accstmnt_feedback_other_contact_[n]">Contact [n]</label>
-                  <input type="text" id="accstmnt_feedback_other_contact_[n]" placeholder="Example: Facebook: www.facebook.com/CitylightsInc" />
+              <div class="field">
+                <label for="accstmnt_contact_other">Other contact options</label>
+                <textarea id="accstmnt_contact_other"></textarea>
               </div>
-              <button type="button" class="add-line">Add contact</button>
 
               <div class="field">
                 <label for="accstmnt_contact_responsetime">Typical duration for response</label>
@@ -165,7 +162,7 @@ external_css: /content-images/wai-statements/statements.css
         </div>
 
         <div class="group">
-            <h3 class="label">Date of statement <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_date"><span>i</span></button></h3>
+            <h3 class="label">Date of statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
             <div class="information" id="info_date" hidden><p>Provide a date for the accessibility statement. This is usually the date when the statement was first publish or last updated. This helps users to understand if the statement is being actively maintained or outdated. Ideally the date of a published statement should not exceed one year, otherwise it is commonly considered unmaintained and potentially outdated.</p></div>
 
             <div class="field">
@@ -180,7 +177,7 @@ external_css: /content-images/wai-statements/statements.css
         <p class="intro">In this section you can describe the efforts your organization takes to ensure accessibility. This helps users understand your sincerity and the validity of the claims you make in the statement.</p>
 
         {% include excol.html type="middle" %}
-        <h3 class="label">Organizational measures <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_measures"><span>i</span></button></h3>
+        <h3 class="label">Organizational measures <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_measures" data-target="#info_measures" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="info_measures" hidden><p>List the measures that your organization undertakes to achieve sustainable accessibility. This includes measures such as procurement actions, training, raising awareness, and quality assurance. Some of these measures are pre-defined for convenience but you can add more as needed.</p></div>
 
         <fieldset class="group">
@@ -239,7 +236,7 @@ external_css: /content-images/wai-statements/statements.css
         <p class="intro">In this section you can provide more technical details to help users understand any issues they may be observing. This includes information about compatibility with web browsers and assistive technologies.</p>
         {% include excol.html type="middle" %}
 
-        <h3 class="label">Limitations <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_limitations"><span>i</span></button></h3>
+        <h3 class="label">Limitations <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="info_limitations" hidden><p>There are many situations in which limitations to accessibility can occur, such as ensuring instant accessibility of user-generated content. Providing transparency on these situations helps users to understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web Accessibility Directive, public bodies are required to provide information on the parts of the content that do not conform, the reason for not conforming, and, if applicable, where to find accessible alternatives.</p>
           <p><strong>Example:</strong></p>
           <ul>
@@ -310,7 +307,7 @@ external_css: /content-images/wai-statements/statements.css
           </div>
         </fieldset>
 
-        <h3 class="label">Compatibility with user environment <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_asstech"><span>i</span></button></h3>
+        <h3 class="label">Compatibility with user environment <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="support_asstech" hidden><p>Despite best efforts, accessibility may not work well in every combination of operating system, web browser, and assistive technology. Developers typically test their websites and mobile applications with common user environments, to determine compatibility. WCAG defines requirements for accessibility features provided by content authors to be <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a>. Communicating this compatibility expectation helps user to determine if that is the cause for any issues they may be observing.</p>
         <p><strong>Example:</strong> "Browser X with Assistive Technology Y"</p></div>
 
@@ -323,17 +320,16 @@ external_css: /content-images/wai-statements/statements.css
             <label for="accstmnt_asstech_1">Environment 1</label>
             <input type="text" id="accstmnt_asstech_1" placeholder="Example: Browser A with Assistive Technology B" />
           </div>
-          <div class="field line">
-            <label for="accstmnt_asstech_2">Environment 2</label>
-            <input type="text" id="accstmnt_asstech_2" placeholder="Example: Browser M with Assistive Technology N" />
+
+          <div class="field proto">
+            <label for="accstmnt_asstech_[n]">Environment [n]</label>
+            <input type="text" id="accstmnt_asstech_[n]" />
           </div>
-          <div class="field line">
-            <label for="accstmnt_asstech_3">Environment 3</label>
-            <input type="text" id="accstmnt_asstech_3" placeholder="Example: Browser X with Assistive Technology Y" />
-          </div>
+
+          <button class="add-line" type="button">Add compatible environment</button>
         </fieldset>
 
-        <h3 class="label">Known incompatibility <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_incompatible"><span>i</span></button></h3>
+        <h3 class="label">Known incompatibility <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_incompatible" data-target="#support_incompatible" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="support_incompatible" hidden><p>Help users understand what versions of operating systems, web browsers, and assistive technologies are not (or no longer) supported. This helps determine if they can use your website or mobile application with their current environments.</p>
         <p><strong>Example:</strong> Website: “We do not actively support web browsers older than 3 major versions”. Mobile application: “We do not actively support operating systems older than 5 years”.</p></div>
 
@@ -354,11 +350,11 @@ external_css: /content-images/wai-statements/statements.css
           </div>
 
           <button type="button" class="add-line">
-            Add environment
+            Add incompatible environment
           </button>
         </fieldset>
 
-        <h3 class="label">Technologies used <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_tech"><span>i</span></button></h3>
+        <h3 class="label">Technologies used <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_tech" data-target="#support_tech" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="support_tech" hidden><p>You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure accessibility of your content. Communicating this expectation in the accessibility statement can help users to understand the reason for issues they may be observing. For example, the accessibility features may not work because the user has JavaScript turned off in their browser. See <a href="https://www.w3.org/TR/WCAG21/#cc4">WCAG 2 conformance requirement 4</a> on accessibility supported was of using technologies relied upon.</p></div>
 
         <p class="expl">Describe the technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported.</p>
@@ -402,7 +398,7 @@ external_css: /content-images/wai-statements/statements.css
           <button class="add-line" type="button">Add technology</button>
         </fieldset>
 
-        <h3 class="label">Related evidence <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="support_related"><span>i</span></button></h3>
+        <h3 class="label">Related evidence <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="support_related" hidden><p>To back the claims made in your accessibility statement and to provide transparency, you can provide links to the outcomes from accessibility evaluation. While the details of such evaluation reports and evaluation statements are generally more technical for the average user, they can help demonstrate good practice and confidence.</p></div>
 
         <div class="field">
@@ -417,7 +413,7 @@ external_css: /content-images/wai-statements/statements.css
         </div>
 
         <div class="field">
-          <label for="accstmnt_audit_wcagem">Link to evaluation statement <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_audit_statement"><span>i</span></button></label>
+          <label for="accstmnt_audit_wcagem">Link to evaluation statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></label>
 
           <div class="information" id="info_audit_statement" hidden><p>An evaluation statement summarizes the essential outcomes from formal audits, such as those carried out according to the <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a>. Requirements for a WCAG-EM evaluation statement are defined in <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a> of the process. This can be provided in place or in addition to the evaluation report provided above. Place the link to your evaluation statement here.</p></div>
 
@@ -431,7 +427,7 @@ external_css: /content-images/wai-statements/statements.css
         <p class="intro">In this section, you can add information about the formal approval of this accessibility statement and, if applicable, any complaints escalation procedure.</p>
         {% include excol.html type="middle" %}
 
-        <h3 class="label">Formal approval <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="org_approved"><span>i</span></button></h3>
+        <h3 class="label">Formal approval <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="org_approved" data-target="#org_approved" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="org_approved" hidden><p>Your organization may want to formally approve this accessibility statement, for example for internal purposes or to show users that this is part of the corporate policy.</p>
         <p><strong>Example:</strong></p>
           <ul>
@@ -454,7 +450,7 @@ external_css: /content-images/wai-statements/statements.css
           </div>
         </fieldset>
 
-        <h3 class="label">Formal complaints <button type="button" class="button-small info-open" aria-expanded="false" aria-controls="info_complaints"><span>i</span></button></h3>
+        <h3 class="label">Formal complaints <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_complaints" data-target="#info_complaints" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="info_complaints" hidden><p>In some situations, you want or be required to provide formal complaints procedures. For example, a quality management process within your organization may require you to establish a formal complaints procedure with clear escalation paths. The <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive {% include_cached external.html %}</a> foresees EU countries to have legal 'enforcement procedures' when users are not satisfied with the responses from public bodies. Inform users about any such formal complaints procedures. This may also motivate them to provide you with valuable feedback about the accessibility of your content.</p>
         <p><strong>Example:</strong> "We aim to respond to accessibility complaints within 2 working days, and to propose a solution within 10 working days. You are entitled to escalate a complaint to [organizational or legal entity], should you be dissatisfied with our response to you."</p></div>
 
