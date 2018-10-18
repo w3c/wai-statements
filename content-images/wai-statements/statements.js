@@ -329,6 +329,9 @@ var page = {
       });
     }
   },
+  savePreviewAs: function savePreviewAs(filetype) {
+    console.log('Save preview as ' + filetype);
+  },
   today: function() {
     var dateToday = new Date();
     var day = dateToday.getDate();
