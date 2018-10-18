@@ -1,5 +1,5 @@
 ---
-title: "Accessibility Statements Generator"
+title: "Create an Accessibility Statement"
 permalink: /planning/statements/generator/
 github:
   repository: w3c/wai-statements
@@ -15,7 +15,7 @@ external_css: /content-images/wai-statements/statements.css
     <div class="container">
 
   {% include box.html type="start" title="Summary" class="" %}
-      <p>The information you provide will be used to generate a sample statement that you can download and further refine. None of these fields are required for the tool to work. Also, none of the information your provide is stored outside your web browser.</p>
+      <p>The information that you provide below will generate an accessibility statement that you can download and further refine. None of the fields are required. None of the information you enter is stored outside your web browser.</p>
   {% include box.html type="end" %}
 
   {% include_cached toc.html type="start" title="Page Contents" class="full" %}
@@ -36,28 +36,30 @@ external_css: /content-images/wai-statements/statements.css
         <p class="intro">This section includes the minimal set of information recommended for an accessibility statement. It includes information about your organization, the accessibility standards you applied, and contact information for feedback.</p>
 
         {% include excol.html type="middle" %}
-        <h3 class="label">About your statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
-        <div class="information" id="info_about" hidden><p>Provide the name of your organization, and the address and name of your website or mobile application. For mobile applications, include version information and the release date, to identify a specific version. This information will be used to customize the accessibility statement with the correct names and web address.</p></div>
+        <div class="group">
+            <h3 class="label">About your statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_about" data-target="#info_about" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
+            <div class="information" id="info_about" hidden><p>Provide the name of your organization, and the address and name of your website or mobile application. For mobile applications, include version information and the release date, to identify a specific version. This information will be used to customize the accessibility statement with the correct names and web address.</p></div>
 
-        <div class="field">
-          <label for="accstmt_org">Name of your organization (Example: Citylights Inc.)</label>
-          <input type="text" id="accstmt_org" placeholder="Example: Citylights Inc."  />
+            <div class="field">
+              <label for="accstmt_org">Name of your organization (Example: Citylights Inc.)</label>
+              <input type="text" id="accstmt_org" placeholder="Example: Citylights Inc."  />
+            </div>
+
+            <div class="field">
+              <label for="accstmt_url">Address of your website or mobile application (Example: https://example.org)</label>
+              <input type="text" id="accstmt_url" placeholder="Example: https://www.w3.org/WAI/demos/bad/" />
+            </div>
+
+            <div class="field">
+              <label for="accstmt_namesite">Name of your website or mobile application (Example: Citylights App)</label>
+              <input type="text" id="accstmt_namesite" placeholder="Example: Citylights Website or Citylights App" />
+            </div>
         </div>
 
-        <div class="field">
-          <label for="accstmt_url">Address of your website or mobile application (Example: https://example.org)</label>
-          <input type="text" id="accstmt_url" placeholder="Example: https://www.w3.org/WAI/demos/bad/" />
-        </div>
+        <div class="group">
+          <h3 class="label">Accessibility standards applied <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
+          <div class="information" id="info_standards" hidden><p>State the accessibility standard that you have been aiming to apply. Usually this is the WCAG 2.0 Level AA, but may also be the latest version WCAG 2.1 Level AA. The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a> introduces these standards and conformance levels.</p></div>
 
-        <div class="field">
-          <label for="accstmt_namesite">Name of your website or mobile application (Example: Citylights App)</label>
-          <input type="text" id="accstmt_namesite" placeholder="Example: Citylights Website or Citylights App" />
-        </div>
-
-        <h3 class="label">Accessibility standards applied <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_standards" data-target="#info_standards" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
-        <div class="information" id="info_standards" hidden><p>State the accessibility standard that you have been aiming to apply. Usually this is the WCAG 2.0 Level AA, but may also be the latest version WCAG 2.1 Level AA. The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a> introduces these standards and conformance levels.</p></div>
-
-        <div class="field">
           <p class="expl">Which version and level of WCAG has been applied to the website?</p>
 
           <fieldset class="field" id="standard-applied">
@@ -80,87 +82,95 @@ external_css: /content-images/wai-statements/statements.css
           </fieldset>
         </div>
 
-        <h3 class="label">Conformance status <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_conformance" data-target="#info_conformance" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
-        <div class="information" id="info_conformance" hidden><p>Indicate to what degree you conform to the accessibility standard stated in the previous section. In some cases there may be justifiable reasons to not fully conform throughout the entire content. You can indicate the parts that do not yet fully conform, including guidance on how to find help, in later sections of this form.</p></div>
+        <div class="group">
+            <h3 class="label">Conformance status <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_conformance" data-target="#info_conformance" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
+            <div class="information" id="info_conformance" hidden><p>Indicate to what degree you conform to the accessibility standard stated in the previous section. In some cases there may be justifiable reasons to not fully conform throughout the entire content. You can indicate the parts that do not yet fully conform, including guidance on how to find help, in later sections of this form.</p></div>
 
-        <fieldset class="field" id="conformance-status">
-          <legend class="visuallyhidden">Conformance status</legend>
-          <div class="radio-field">
-            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" />
-            <label for="accstmnt_conformance_full"><span class="status">Fully conformant</span>: <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span></label>
-          </div>
-          <div class="radio-field">
-            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" />
-            <label for="accstmnt_conformance_partial"><span class="status">Partially conformant</span>: <span class="meaning">Some parts of the content do not fully conform to the accessibility standard</span> (you can indicate these parts in later sections of this form)</label>
-          </div>
-          <div class="radio-field">
-            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" />
-            <label for="accstmnt_conformance_nonconformant"><span class="status">Non conformant</span>: <span class="meaning">the content does not conform the accessibility standard</span></label>
-          </div>
-          <div class="radio-field">
-            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" />
-            <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: the content has not been assessed or the evaluation results are not available</label>
-          </div>
-          <div class="radio-field">
-            <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" checked />
-            <label for="accstmnt_conformance_inapplicable">None</label>
-          </div>
-        </fieldset>
-
-        <h3 class="label">Additional requirements <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
-        <div class="information" id="info_additional" hidden><p>Sometimes you may be applying requirements additional to those specified in the accessibility standards applied. For example, you may be providing sign language videos or real-time captioning for live media content. Describe these additional accessibility requirements that you have applied, to help users understand what they can expect.</p>
-        <p><strong>Example:</strong> “Although our goal is level AA conformance, we have also applied some level AAA success criteria. For example, images of text are only used for decorative purposes. When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating. We added sign language in all our videos.”</p></div>
-
-        <div class="field">
-          <label for="accstmt_additions">Additional accessibility requirements applied</label>
-          <textarea id="accstmt_additions" rows="3" placeholder="Example: Although our goal is level AA conformance, we have also applied some level AAA success criteria. For example, images of text are only used for decorative purposes. When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating. We added sign language in all our videos."></textarea>
+            <fieldset class="field" id="conformance-status">
+              <legend class="visuallyhidden">Conformance status</legend>
+              <div class="radio-field">
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" />
+                <label for="accstmnt_conformance_full"><span class="status">Fully conformant</span>: <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span></label>
+              </div>
+              <div class="radio-field">
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" />
+                <label for="accstmnt_conformance_partial"><span class="status">Partially conformant</span>: <span class="meaning">Some parts of the content do not fully conform to the accessibility standard</span> (you can indicate these parts in later sections of this form)</label>
+              </div>
+              <div class="radio-field">
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" />
+                <label for="accstmnt_conformance_nonconformant"><span class="status">Non conformant</span>: <span class="meaning">the content does not conform the accessibility standard</span></label>
+              </div>
+              <div class="radio-field">
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" />
+                <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: the content has not been assessed or the evaluation results are not available</label>
+              </div>
+              <div class="radio-field">
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" checked />
+                <label for="accstmnt_conformance_inapplicable">None</label>
+              </div>
+            </fieldset>
         </div>
 
-        <h3 class="label">Feedback options <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
-        <div class="information" id="info_feedback" hidden><p>Provide information about the ways in which users can get in touch with your organization to provide feedback or to seek help on accessibility aspects. Ideally you should provide more than one option. Also indicate the duration by which users can expect a response from your organization.</p></div>
+        <div class="group">
+            <h3 class="label">Additional requirements <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_additional" data-target="#info_additional" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
+            <div class="information" id="info_additional" hidden><p>Sometimes you may be applying requirements additional to those specified in the accessibility standards applied. For example, you may be providing sign language videos or real-time captioning for live media content. Describe these additional accessibility requirements that you have applied, to help users understand what they can expect.</p>
+            <p><strong>Example:</strong> “Although our goal is level AA conformance, we have also applied some level AAA success criteria. For example, images of text are only used for decorative purposes. When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating. We added sign language in all our videos.”</p></div>
 
-        <fieldset class="group" id="form-feedback">
-          <legend class="visuallyhidden">Feedback</legend>
-          <div class="field line">
-            <label for="accstmnt_contact_phone">Phone us at</label>
-            <input type="tel" id="accstmnt_contact_phone" placeholder="Example: +12 34 567 89 00" />
-          </div>
-          <div class="field line">
-            <label for="accstmnt_contact_email">E-mail us at</label>
-            <input type="email" id="accstmnt_contact_email" placeholder="citylights@example.org" />
-          </div>
-          <div class="field line">
-            <label for="accstmnt_contact_visit">Visit us at</label>
-            <input type="text" id="accstmnt_contact_visit" placeholder="Main Street 1, 234 Example Ville, Earth" />
-          </div>
-          <div class="field line">
-            <label for="accstmnt_contact_write">Write us at</label>
-            <input type="text" id="accstmnt_contact_write" placeholder="PO Box 1, 234 Example Ville, Earth" />
-          </div>
-          <div class="field line">
-            <label for="accstmnt_contact_social">Twitter at</label>
-            <input type="url" id="accstmnt_contact_social" placeholder="Example: @CitylightsIncBAD" />
-          </div>
+            <div class="field">
+              <label for="accstmt_additions">Additional accessibility requirements applied</label>
+              <textarea id="accstmt_additions" rows="3" placeholder="Example: Although our goal is level AA conformance, we have also applied some level AAA success criteria. For example, images of text are only used for decorative purposes. When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating. We added sign language in all our videos."></textarea>
+            </div>
+        </div>
 
-          <div class="field proto">
-              <label for="accstmnt_feedback_other_contact_[n]">Contact [n]</label>
-              <input type="text" id="accstmnt_feedback_other_contact_[n]" placeholder="Example: Facebook: www.facebook.com/CitylightsInc" />
-          </div>
-          <button type="button" class="add-line">Add contact</button>
+        <div class="group">
+            <h3 class="label">Feedback options <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
+            <div class="information" id="info_feedback" hidden><p>Provide information about the ways in which users can get in touch with your organization to provide feedback or to seek help on accessibility aspects. Ideally you should provide more than one option. Also indicate the duration by which users can expect a response from your organization.</p></div>
 
-          <div class="field">
-            <label for="accstmnt_contact_responsetime">Typical duration for response</label>
-            <input type="text" id="accstmnt_contact_responsetime" placeholder="Example: 2 work days" />
-          </div>
+            <fieldset class="group" id="form-feedback">
+              <legend class="visuallyhidden">Feedback</legend>
+              <div class="field line">
+                <label for="accstmnt_contact_phone">Phone us at</label>
+                <input type="tel" id="accstmnt_contact_phone" placeholder="Example: +12 34 567 89 00" />
+              </div>
+              <div class="field line">
+                <label for="accstmnt_contact_email">E-mail us at</label>
+                <input type="email" id="accstmnt_contact_email" placeholder="citylights@example.org" />
+              </div>
+              <div class="field line">
+                <label for="accstmnt_contact_visit">Visit us at</label>
+                <input type="text" id="accstmnt_contact_visit" placeholder="Main Street 1, 234 Example Ville, Earth" />
+              </div>
+              <div class="field line">
+                <label for="accstmnt_contact_write">Write us at</label>
+                <input type="text" id="accstmnt_contact_write" placeholder="PO Box 1, 234 Example Ville, Earth" />
+              </div>
+              <div class="field line">
+                <label for="accstmnt_contact_social">Twitter at</label>
+                <input type="url" id="accstmnt_contact_social" placeholder="Example: @CitylightsIncBAD" />
+              </div>
 
-        </fieldset>
+              <div class="field proto">
+                  <label for="accstmnt_feedback_other_contact_[n]">Contact [n]</label>
+                  <input type="text" id="accstmnt_feedback_other_contact_[n]" placeholder="Example: Facebook: www.facebook.com/CitylightsInc" />
+              </div>
+              <button type="button" class="add-line">Add contact</button>
 
-        <h3 class="label">Date of statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
-        <div class="information" id="info_date" hidden><p>Provide a date for the accessibility statement. This is usually the date when the statement was first publish or last updated. This helps users to understand if the statement is being actively maintained or outdated. Ideally the date of a published statement should not exceed one year, otherwise it is commonly considered unmaintained and potentially outdated.</p></div>
+              <div class="field">
+                <label for="accstmnt_contact_responsetime">Typical duration for response</label>
+                <input type="text" id="accstmnt_contact_responsetime" placeholder="Example: 2 work days" />
+              </div>
 
-        <div class="field">
-          <label for="accstmt_date">Date of this accessibility statement</label>
-          <input type="date" id="accstmt_date" class="today" />
+            </fieldset>
+        </div>
+
+        <div class="group">
+            <h3 class="label">Date of statement <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Show Info" data-hidetext="Hide Info"><span>Show Info</span></button></h3>
+            <div class="information" id="info_date" hidden><p>Provide a date for the accessibility statement. This is usually the date when the statement was first publish or last updated. This helps users to understand if the statement is being actively maintained or outdated. Ideally the date of a published statement should not exceed one year, otherwise it is commonly considered unmaintained and potentially outdated.</p></div>
+
+            <div class="field">
+              <label for="accstmt_date">Date of this accessibility statement</label>
+              <input type="date" id="accstmt_date" class="today" />
+            </div>
         </div>
         {% include excol.html type="end" %}
 
@@ -424,7 +434,6 @@ external_css: /content-images/wai-statements/statements.css
         <div class="information" id="org_approved" hidden><p>Your organization may want to formally approve this accessibility statement, for example for internal purposes or to show users that this is part of the corporate policy.</p>
         <p><strong>Example:</strong></p>
           <ul>
-            <li><strong>Organization:</strong> Citylights</li>
             <li><strong>Name / Department:</strong> Communication Department</li>
             <li><strong>Function:</strong> Director of communication</li>
           </ul>
@@ -432,11 +441,6 @@ external_css: /content-images/wai-statements/statements.css
 
         <fieldset class="group">
           <legend class="visuallyhidden">Approval</legend>
-
-          <div class="field">
-            <label for="accstmnt_orginfo_approved_org">Name of your organization</label>
-            <input type="text" id="accstmnt_orginfo_approved_org"  placeholder="Example: Citylights Inc" />
-          </div>
 
           <div class="field">
             <label for="accstmnt_orginfo_approved_name">Name of person or department</label>
@@ -462,7 +466,7 @@ external_css: /content-images/wai-statements/statements.css
 
         <div class="action">
           <button type="button" id="accstmnt_btn_preview">
-            Preview
+            Preview your accessibility statement
           </button>
         </div>
       </form>
@@ -543,7 +547,7 @@ external_css: /content-images/wai-statements/statements.css
         <h3>Formal approval of this accessibility statement</h3>
 
         <p>This Accessibility Statement is approved by:</p>
-        <p>[accstmnt_orginfo_approved_org]<br/>
+        <p>[accstmt_org]<br/>
           [accstmnt_orginfo_approved_name]<br/>
           [accstmnt_orginfo_approved_function]
         </p>
