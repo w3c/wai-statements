@@ -104,6 +104,28 @@ var page = {
     var inputs = document.querySelectorAll('#accstatement .page.create input, #accstatement .page.create textarea');
     var conditionals;
     var i;
+    var previewActionButtons = document.querySelector('#preview_actions');
+    previewActionButtons.addEventListener('click', function handlePreviewActionsClick(event) {
+      var target = event.target;
+      var id = target.id;
+
+      if (target.nodeName === "BUTTON") {
+        switch (id) {
+          case 'preview_save_as_html':
+            page.savePreviewAs('html');
+            break;
+
+          case 'preview_save_as_json':
+            page.savePreviewAs('json');
+            break;
+
+          default:
+            break;
+        }
+      }
+
+      event.stopPropagation();
+    })
 
     result.innerHTML = proto.innerHTML;
 
