@@ -476,6 +476,8 @@ external_css: /content-images/wai-statements/statements.css
 
   <section class="page preview" hidden>
     <div class="container proto" hidden>
+
+      {% include box.html type="start" title="Accessibility statement preview" class="" %}
       <h2>Accessibility Statement for [accstmt_namesite]</h2>
 
       <p>[accstmt_org] is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
@@ -562,10 +564,19 @@ external_css: /content-images/wai-statements/statements.css
       <hr noshade />
 
       <p>This statement was last updated on [accstmt_date].</p>
+      {% include box.html type="end" %}
+
     </div>
 
     <div class="container result"></div>
-  </section>
+    {% include_cached box.html type="start" title="Preview actions" class="full" %}
+      <div id="preview_actions" class="button-group">
+          <a class="button" href="javascript:window.history.back()">Continue with your statement</a>
+          <button id="preview_save_as_html" type="button">Save as HTML</button>
+          <button id="preview_save_as_json" type="button">Save as JSON</button>
+      </div>
+    {% include_cached box.html type="end" %}
+ </section>
 </div>
 
 <script src="{{ "/content-images/wai-statements/statements.js" | relative_url}}"></script>
