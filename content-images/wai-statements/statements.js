@@ -4,7 +4,6 @@ var page = {
     page.setPage();
     page.checkBoxGroups();
     page.addLine();
-    page.info();
     page.today();
 
     document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
@@ -312,22 +311,6 @@ var page = {
     }());
 
 
-  },
-  info: function() {
-    var buttons = document.querySelectorAll('#accstatement form button.info-open');
-    var i;
-
-    for(i = 0; i < buttons.length; i += 1) {
-      buttons[i].addEventListener('click', function() {
-        if(this.getAttribute('aria-expanded') === 'true') {
-          this.setAttribute('aria-expanded', 'false');
-          document.getElementById(this.getAttribute('aria-controls')).setAttribute('hidden', '');
-        } else {
-          this.setAttribute('aria-expanded', 'true');
-          document.getElementById(this.getAttribute('aria-controls')).removeAttribute('hidden');
-        }
-      });
-    }
   },
   today: function() {
     var dateToday = new Date();
