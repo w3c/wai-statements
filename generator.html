@@ -27,9 +27,12 @@ external_css: /content-images/wai-statements/statements.css
       </ul>
   {% include_cached toc.html type="end" %}
 
-
-      {% include excol.html type="all" %}
-
+<div style="display: flex; align-items: center;">
+  {% include excol.html type="all" %}
+  <div style="text-align: right; flex:1">
+    <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Show all additional Information" data-hidetext="Hide all additional Infomation">Show all additional Information</button>
+  </div>
+</div>
       <form>
         {% include excol.html type="start" open="true" %}
         <h2 id="create-basic">Basic information</h2>
