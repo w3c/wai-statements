@@ -249,6 +249,33 @@ var page = {
       }
     }());
 
+    // Technology: Assessment approach
+    (function() {
+      var assessmentInputs = document.querySelectorAll('#accstatement #accstmnt_assessment input:not(.proto)');
+      var assessmentTarget = result.querySelector('#statement-assessments');
+      var html = '';
+
+      Array.prototype.forEach.call(assessmentInputs, function addToList(input) {
+        var type = input.type;
+        var value = input.value || false;
+        var checked = input.checked || false;
+
+        if (
+          (type === 'checkbox' && checked)
+          || (type === 'text' && value)
+        ) {
+          html += '<li>' + value + '</li>';
+        }
+
+        if (html.length > 0) {
+          assessmentTarget.innerHTML = html;
+        } else {
+          assessmentTarget.parentNode.setAttribute('hidden', true);
+        }
+
+      });
+    }());
+
     // statement: assistive technologies
     (function() {
       var parent = result.querySelector('#statement-asstech');

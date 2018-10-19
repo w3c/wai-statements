@@ -386,15 +386,15 @@ external_css: /content-images/wai-statements/statements.css
         <h3 class="label">Assessment approach <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="accstmnt_approach" data-target="#accstmnt_approach" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="accstmnt_approach" hidden><p>How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.</p></div>
 
-        <fieldset class="group">
+        <fieldset id="accstmnt_assessment" class="group">
           <legend class="visuallyhidden">Assessment approach</legend>
-          <ul class="nolist field" id="assessment-list">
+          <ul class="nolist field">
             <li class="radio-field">
-              <input id="accstmnt_approach_1" type="checkbox" />
+              <input id="accstmnt_approach_1" type="checkbox" value="Self-evaluation" />
               <div><label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content</div>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_approach_2" type="checkbox" />
+              <input id="accstmnt_approach_2" type="checkbox" value="External evaluation" />
               <div><label for="accstmnt_approach_2">External evaluation</label>: the content was evaluated by an external entity not involved in the design and development process</div>
             </li>
           </ul>
@@ -551,6 +551,12 @@ external_css: /content-images/wai-statements/statements.css
 
         <p>Known limitations for [accstmt_namesite]:</p>
         <ul id="statement-limitations"></ul>
+      </div>
+
+      <div id="statement-assessment-block">
+          <h3>Assessment approach</h3>
+          <p>[accstmt_org] assessed the accessibility of [accstmt_namesite] by the following approaches:</p>
+          <ul id="statement-assessments"></ul>
       </div>
 
       <div class="conditional" data-if="accstmnt_audit_url">
