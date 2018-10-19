@@ -374,7 +374,7 @@ external_css: /content-images/wai-statements/statements.css
             </li>
 
             <li class="radio-field proto">
-                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" />
+                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" checked />
                 <span id="accstmnt_tech_other_label_[n]"><label for="accstmnt_tech_other_[n]">Other [n]</label><span class="visuallyhidden"> name</span></span>
                 <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" />
             </li>
@@ -406,7 +406,7 @@ external_css: /content-images/wai-statements/statements.css
               </div>
           </div>
         </fieldset>
-        
+
         <h3 class="label">Related evidence <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="support_related" hidden><p>Provide links to related background and evidence to support the claims you make in this accessibility, and to provide more transparency and credibility. This can include an evaluation report, an evaluation statement, or a certification.</p></div>
 
@@ -438,7 +438,7 @@ external_css: /content-images/wai-statements/statements.css
         <button type="button" class="add-line">
           Add another related evidence
         </button>
-        
+
         {% include excol.html type="end" %}
 
         {% include excol.html type="start" %}
