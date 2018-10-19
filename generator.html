@@ -33,7 +33,7 @@ external_css: /content-images/wai-statements/statements.css
     <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information" data-showtext="Show all additional Information" data-hidetext="Hide all additional Infomation">Show all additional Information</button>
   </div>
 </div>
-      <form>
+      <form name="create_accessibility_statement_form">
         {% include excol.html type="start" open="true" %}
         <h2 id="create-basic">Basic information</h2>
         <p class="intro">In this section you can provide the minimal set of information recommended for your accessibility statement. This includes information about your organization, the accessibility standards you applied, and your contact information for feedback.</p>
@@ -374,7 +374,7 @@ external_css: /content-images/wai-statements/statements.css
             </li>
 
             <li class="radio-field proto">
-                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" />
+                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" checked />
                 <span id="accstmnt_tech_other_label_[n]"><label for="accstmnt_tech_other_[n]">Other [n]</label><span class="visuallyhidden"> name</span></span>
                 <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" />
             </li>
@@ -391,54 +391,64 @@ external_css: /content-images/wai-statements/statements.css
           <ul class="nolist field" id="assessment-list">
             <li class="radio-field">
               <input id="accstmnt_approach_1" type="checkbox" />
-              <label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content
+              <div><label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content</div>
             </li>
             <li class="radio-field">
               <input id="accstmnt_approach_2" type="checkbox" />
-              <label for="accstmnt_approach_2">External evaluation</label>: the content was evaluated by an external entity not involved in the design and development process
+              <div><label for="accstmnt_approach_2">External evaluation</label>: the content was evaluated by an external entity not involved in the design and development process</div>
             </li>
           </ul>
 
-          <div id="accstmnt_approach_otherhead" class="group">
+          <div class="group">
               <div class="field line">
-                <label for="accstmnt_approach_other">Other approach</label> (Example: a formal quality assurance process throughout the design and development process
-                <input type="text" id="accstmnt_approach_other" />
+                <label for="accstmnt_approach_other_1">Other approach 1</label> (Example: a formal quality assurance process throughout the design and development process
+                <input type="text" id="accstmnt_approach_other_1" />
               </div>
+
+              <div class="field proto">
+                <label for="accstmnt_approach_other_[n]">Other approach [n]</label> (Example: a formal quality assurance process throughout the design and development process
+                <input type="text" id="accstmnt_approach_other_[n]" />
+              </div>
+
+              <button type="button" class="add-line">Add another approach</button>
           </div>
         </fieldset>
-        
+
         <h3 class="label">Related evidence <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="support_related" data-target="#support_related" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
         <div class="information" id="support_related" hidden><p>Provide links to related background and evidence to support the claims you make in this accessibility, and to provide more transparency and credibility. This can include an evaluation report, an evaluation statement, or a certification.</p></div>
 
-        <div class="field">
-          <label for="accstmnt_audit_url">Link to recent evaluation report (Example: "https://www.w3.org/WAI/demos/bad/after/reports/") <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></label>
+        <div class="group">
+            <div class="field">
+              <label for="accstmnt_audit_url">Link to recent evaluation report (Example: "https://www.w3.org/WAI/demos/bad/after/reports/") <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></label>
 
-          <div class="information" id="info_audit_url" hidden><p>An evaluation report provides details on which accessibility requirements are met, and which are not. While this is usually more technical of nature than the average user, it can help some users to understand issues they have been observing. You can use the <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a> to create an evaluation report. Place the link to the report here.</p></div>
+              <div class="information" id="info_audit_url" hidden><p>An evaluation report provides details on which accessibility requirements are met, and which are not. While this is usually more technical of nature than the average user, it can help some users to understand issues they have been observing. You can use the <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a> to create an evaluation report. Place the link to the report here.</p></div>
 
-          <input type="url" id="accstmnt_audit_url" />
+              <input type="url" id="accstmnt_audit_url" />
+            </div>
+
+            <div class="field">
+              <label for="accstmnt_audit_wcagem">Link to evaluation statement (Example: "https://www.w3.org/WAI/demos/bad/after/reports/") <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></label>
+
+              <div class="information" id="info_audit_statement" hidden><p>An evaluation statement summarizes the essential outcomes of an evaluation report. The <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a> defines requirements for evaluation statements in <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a> of the document. This can be provided instead of or in addition to an evaluation report provided above.</p></div>
+
+              <input type="url" id="accstmnt_audit_wcagem" />
+            </div>
+
+            <div class="field line">
+              <label for="accstmnt_audit_other_1">Other evidence 1 (Example: link to certification)</label>
+              <input type="text" id="accstmnt_audit_other_1" />
+            </div>
+
+            <div class="field proto">
+              <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: link to certification)</label>
+              <input type="text" id="accstmnt_audit_other_[n]" />
+            </div>
+
+            <button type="button" class="add-line">
+              Add another related evidence
+            </button>
         </div>
 
-        <div class="field">
-          <label for="accstmnt_audit_wcagem">Link to evaluation statement (Example: "https://www.w3.org/WAI/demos/bad/after/reports/") <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></label>
-
-          <div class="information" id="info_audit_statement" hidden><p>An evaluation statement summarizes the essential outcomes of an evaluation report. The <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a> defines requirements for evaluation statements in <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a> of the document. This can be provided instead of or in addition to an evaluation report provided above.</p></div>
-
-          <input type="url" id="accstmnt_audit_wcagem" />
-        </div>
-
-        <div class="field">
-          <label for="accstmnt_audit_other_3">Other evidence (Example: link to certification)</label>
-          <input type="text" id="accstmnt_audit_other_1" />
-        </div>
-        <div class="field proto">
-          <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: link to certification)</label>
-          <input type="text" id="accstmnt_audit_other_[n]" />
-        </div>
-
-        <button type="button" class="add-line">
-          Add another related evidence
-        </button>
-        
         {% include excol.html type="end" %}
 
         {% include excol.html type="start" %}
@@ -574,6 +584,9 @@ external_css: /content-images/wai-statements/statements.css
     </div>
 
     <div class="container result"></div>
+    {% include box.html type="start" class="" %}
+        <a class="button" href="#create">Continue with statement</a>
+    {% include box.html type="end" %}
   </section>
 </div>
 

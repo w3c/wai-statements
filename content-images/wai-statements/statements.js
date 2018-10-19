@@ -1,6 +1,18 @@
 var page = {
   init: function() {
+    var formChanged = false;
+    var statementForm = document.forms.create_accessibility_statement_form;
+    statementForm.addEventListener('change', function handleFormChange(event) {
+      formChanged = true;
+    })
+
     window.onhashchange = page.showPage;
+    window.onbeforeunload = function warnOnLeave(event) {
+      if (formChanged) {
+        return window.confirm();
+      }
+    }
+
     page.setPage();
     page.checkBoxGroups();
     page.addLine();
