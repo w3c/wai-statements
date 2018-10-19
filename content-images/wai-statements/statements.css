@@ -29,6 +29,10 @@
   padding: 0.5rem;
 }
 
+#accstatement form .radio-field label {
+  display: inline-block;
+}
+
 
 /* Preview */
 #accstatement .feedback.other-contact-methods
