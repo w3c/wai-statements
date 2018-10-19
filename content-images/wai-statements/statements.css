@@ -12,51 +12,11 @@
   }
 
 
-#accstatement form .radio-group
-{
-display: inline-block;
-margin-top: 0.5em;
-margin-right: 1em;
-overflow: hidden;
-width: auto;
-}
-#accstatement form .radio-group legend
-{
-  margin-bottom: 0.25em;
-}
-
 #accstatement form .field label,
 #accstatement form .field .label
 {
   font-size: 1rem;
   font-weight: normal;
-}
-#accstatement form .radio-group input
-{
-  height: 0;
-  width: 0;
-  opacity: 0;
-}
-#accstatement form .radio-group label
-{
-  float: left;
-  border: solid 1px #ccc;
-  padding: 8px 20px;
-  cursor: pointer;
-}
-#accstatement form .radio-group label:not(:last-child)
-{
-  border-right: 0;
-}
-#accstatement form .radio-group label:hover,
-#accstatement form .radio-group input:focus + label
-{
-  background-color: #eee;
-}
-#accstatement form .radio-group input:checked + label
-{
-  background-color: #2D6197;
-  color: #fff;
 }
 
 #accstatement form .radio-field input[type="text"]
