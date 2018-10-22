@@ -1,22 +1,78 @@
-var page = {
-  init: function() {
-    var formChanged = false;
-    var statementForm = document.forms.create_accessibility_statement_form;
-    statementForm.addEventListener('change', function handleFormChange(event) {
-      formChanged = true;
-    })
+/**
+ * ACCESSIBILITY STATEMENT GENERATOR
+ * ---
+ * [description]
+ * ---
+ */
+(function() {
+  'use strict';
 
-    window.onhashchange = page.showPage;
+  /**
+   * statementForm module
+   * ---
+   * Helper module to read and write formdata
+   * ---
+   * @return {module} Module methods object; see method for description
+   */
+  var statementForm = (function() {
+    'use strict';
+
+    var _formData = new Map();
+
+    var _formElement = document.forms.create_accessibility_statement_form;
+
+    var _formState = new Map()
+      .set('changed', false);
+
+    // Add change listener
+    _formElement.addEventListener('change', function handleFormChange(event) {
+      var formChanged = _formState.get('changed');
+      var target = event.target;
+      var allowedInputTypes = [
+        'INPUT',
+        'TEXTAREA',
+      ];
+      var input = target.nodeName;
+
+      if (allowedInputTypes.indexOf(target.nodeName) !== -1 && target.id) {
+
+        _formData.set(target.id, target.value);
+      }
+
+      if (!formChanged) {
+        _formState.set('changed', true);
+      }
+    });
+
+    return {
+      data: {
+        get: _formData.get,
+        set: _formData.set,
+      },
+      elelment: _formElement,
+      state: _formState,
+    };
+  }());
+
+  var ROUTES = [
+    'create',
+    'preview',
+  ];
+
+  function _init() {
+    var formChanged = statementForm.state.get('changed');
+
+    window.onhashchange = _showPage;
     window.onbeforeunload = function warnOnLeave(event) {
       if (formChanged) {
         return window.confirm();
       }
     }
 
-    page.setPage();
-    page.checkBoxGroups();
-    page.addLine();
-    page.today();
+    _setPage();
+    _checkBoxGroups();
+    _addLine();
+    _today();
 
     document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
       location.hash = 'preview';
@@ -25,41 +81,45 @@ var page = {
     // Set button-backtotop href
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
       el.addEventListener('click', function handleBackToTopClick(event) {
-        el.setAttribute('href', '#' + page.getCurrentPage() + '-top');
+        el.setAttribute('href', '#' + _getCurrentPage() + '-top');
       })
     })
-  },
-  routes: [
-    'create',
-    'preview',
-  ],
-  getCurrentPage: function getCurrentPage() {
-    return Array.prototype.filter.call(page.routes, function(route) {
+  }
+
+  /**
+   * Return current active page
+   * @return      {string} Current page hash
+   */
+  function _getCurrentPage() {
+    return Array.prototype.filter.call(ROUTES, function(route) {
       var hash = window.location.hash;
 
       return hash.indexOf(route) !== -1;
     })[0];
-  },
-  setPage: function() {
-    if(page.routes.indexOf(location.hash.substring(1)) < 0) {
-      location.hash = 'create';
+  }
+
+  // Set initial app route hash
+  function _setPage() {
+    if(ROUTES.indexOf(location.hash.substring(1)) < 0) {
+      window.location.hash = 'create';
     } else {
-      page.showPage();
+      _showPage();
     }
-  },
-  showPage: function() {
+  }
+
+  function _showPage() {
     var i;
     var pages = document.querySelectorAll('#accstatement .page');
-    var currentPage = page.getCurrentPage();
+    var currentPage = _getCurrentPage();
     var backToTop = document.querySelectorAll('a.button-backtotop');
 
     // Set back to top anchor href
     Array.prototype.forEach.call(backToTop, function setHref(el) {
-      el.setAttribute('href', '#' + page.getCurrentPage() + '-top');
+      el.setAttribute('href', '#' + _getCurrentPage() + '-top');
     })
 
     if(currentPage === 'preview') {
-      page.showPreview();
+      _showPreview();
     }
 
     // hide all pages
@@ -68,48 +128,12 @@ var page = {
     }
 
     // show current page
-    document.querySelector('#accstatement .page.'+currentPage).removeAttribute('hidden');
+    document.querySelector('#accstatement .page.' + currentPage).removeAttribute('hidden');
 
     window.scrollTo(0, 0);
-  },
-  checkBoxGroups: function() {
-    var i, j;
-    var inputs = document.querySelectorAll('#accstatement .radio-group input');
+  }
 
-    for(i = 0; i < inputs.length; i += 1) {
-      inputs[i].addEventListener('click', function() {
-        for(j = 0; j < inputs.length; j += 1) {
-          if(this.name === inputs[j].name
-          && this.id !== inputs[j].id) {
-            inputs[j].checked = false;
-          }
-        }
-      });
-    }
-  },
-  addLine: function() {
-    var i;
-    var buttons = document.querySelectorAll('#accstatement button.add-line');
-
-    for(i = 0; i < buttons.length; i += 1) {
-      buttons[i].addEventListener('click', function() {
-        var parent = this.parentNode;
-        var proto = parent.querySelector('.proto');
-        var lines = parent.querySelectorAll('.line');
-        var newLine = document.createElement('template');
-
-        newLine.innerHTML = proto.outerHTML;
-        newLine = newLine.content.firstChild;
-        newLine.classList.remove('proto');
-        newLine.classList.add('line');
-        newLine.innerHTML = newLine.innerHTML.split('[n]').join(lines.length + 1);
-
-        proto.parentNode.insertBefore(newLine, proto);
-        newLine.querySelector('input, textarea').focus();
-      });
-    }
-  },
-  showPreview: function() {
+  function _showPreview() {
     var proto = document.querySelector('#accstatement .page.preview .proto');
     var result = document.querySelector('#accstatement .page.preview .result');
     var inputs = document.querySelectorAll('#accstatement .page.create input, #accstatement .page.create textarea');
@@ -355,8 +379,49 @@ var page = {
     }());
 
 
-  },
-  today: function() {
+  };
+
+  function _addLine() {
+    var i;
+    var buttons = document.querySelectorAll('#accstatement button.add-line');
+
+    for(i = 0; i < buttons.length; i += 1) {
+      buttons[i].addEventListener('click', function() {
+        var parent = this.parentNode;
+        var proto = parent.querySelector('.proto');
+        var lines = parent.querySelectorAll('.line');
+        var newLine = document.createElement('template');
+
+        newLine.innerHTML = proto.outerHTML;
+        newLine = newLine.content.firstChild;
+        newLine.classList.remove('proto');
+        newLine.classList.add('line');
+        newLine.innerHTML = newLine.innerHTML.split('[n]').join(lines.length + 1);
+
+        proto.parentNode.insertBefore(newLine, proto);
+        newLine.querySelector('input, textarea').focus();
+      });
+    }
+  }
+
+  function _checkBoxGroups() {
+    var i, j;
+    var inputs = document.querySelectorAll('#accstatement .radio-group input');
+
+    // Set checked to false on radiogroup inputs... why?!
+    for(i = 0; i < inputs.length; i += 1) {
+      inputs[i].addEventListener('click', function() {
+        for(j = 0; j < inputs.length; j += 1) {
+          if(this.name === inputs[j].name
+          && this.id !== inputs[j].id) {
+            inputs[j].checked = false;
+          }
+        }
+      });
+    }
+  };
+
+  function _today() {
     var dateToday = new Date();
     var day = dateToday.getDate();
     var month = dateToday.getMonth() + 1;
@@ -376,12 +441,7 @@ var page = {
       }
     }
   }
-};
 
-(function (fn) {
-  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
-}(page.init));
+  _init();
+  // return {};
+}());
