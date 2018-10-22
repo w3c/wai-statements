@@ -212,40 +212,6 @@ var APP = (function() {
     // Print formdata into printables
     _printFormInput();
 
-    // replace all text inputs
-    // for(i = 0; i < inputs.length; i += 1) {
-    //   result.innerHTML = result.innerHTML.split('['+inputs[i].id+']').join(inputs[i].value);
-    // }
-
-    // statement: measures
-    (function() {
-      var block = result.querySelector('#statement-measures-block');
-      var list = result.querySelector('#statement-measures');
-      var inputPredefined = document.querySelectorAll('#accstatement .page.create #effort-list input:checked');
-      var inputOther = document.querySelectorAll('#accstatement .page.create #accstmnt_orginfo_othermeasures :not(.proto) > input');
-      var html = '';
-
-      // add from predefined
-      for(i = 0; i < inputPredefined.length; i += 1) {
-        if(inputPredefined[i].labels[0].innerText.length) {
-          html += '<li>'+inputPredefined[i].labels[0].innerText+'</li>';
-        }
-      }
-
-      // add from other
-      for(i = 0; i < inputOther.length; i += 1) {
-        if(inputOther[i].value.length) {
-          html += '<li>'+inputOther[i].value+'</li>';
-        }
-      }
-
-      if(html) {
-        list.innerHTML = html;
-      } else {
-        block.setAttribute('hidden', '');
-      }
-    }());
-
     // statement: conformance status
     (function() {
       var standardAppliedInput = document.querySelector('#accstatement #standard-applied input:checked');

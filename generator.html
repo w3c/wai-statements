@@ -182,31 +182,31 @@ external_css: /content-images/wai-statements/statements.css
           <legend class="visuallyhidden">Organizational measures</legend>
           <ul class="nolist field" id="effort-list">
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_1" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_1" name="accstmnt_orginfo_measures" type="checkbox" value="Include accessibility as part of our mission statement." />
               <label for="accstmnt_orginfo_measures_1">Include accessibility as part of our mission statement.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_2" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_2" name="accstmnt_orginfo_measures" type="checkbox" value="Include accessibility throughout our internal policies." />
               <label for="accstmnt_orginfo_measures_2">Include accessibility throughout our internal policies.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_3" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_3" name="accstmnt_orginfo_measures" type="checkbox" value="Integrate accessibility into our procurement practices." />
               <label for="accstmnt_orginfo_measures_3">Integrate accessibility into our procurement practices.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_4" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_4" name="accstmnt_orginfo_measures" type="checkbox" value="Appoint an accessibility officer and/or ombudsperson." />
               <label for="accstmnt_orginfo_measures_4">Appoint an accessibility officer and/or ombudsperson.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_5" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_5" name="accstmnt_orginfo_measures" type="checkbox" value="Provide continual accessibility training for our staff." />
               <label for="accstmnt_orginfo_measures_5">Provide continual accessibility training for our staff.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_6" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_6" name="accstmnt_orginfo_measures" type="checkbox" value="Assign clear accessibility targets and responsibilities." />
               <label for="accstmnt_orginfo_measures_6">Assign clear accessibility targets and responsibilities.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_7" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_7" name="accstmnt_orginfo_measures" type="checkbox" value="Employ formal accessibility quality assurance methods." />
               <label for="accstmnt_orginfo_measures_7">Employ formal accessibility quality assurance methods.</label>
             </li>
           </ul>
@@ -214,11 +214,11 @@ external_css: /content-images/wai-statements/statements.css
           <div id="accstmnt_orginfo_othermeasures" class="group">
               <div class="field line">
                 <label for="accstmnt_orginfo_othermeasures_1">Other measure 1 (Example: "Include people with disabilities in our design personas")</label>
-                <input type="text" id="accstmnt_orginfo_othermeasures_1" />
+                <input type="text" id="accstmnt_orginfo_othermeasures_1" name="accstmnt_orginfo_measures" />
               </div>
               <div class="field proto">
                 <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n] (Example: "Include people with disabilities in our usability testing")</label>
-                <input type="text" id="accstmnt_orginfo_othermeasures_[n]" />
+                <input type="text" id="accstmnt_orginfo_othermeasures_[n]" name="accstmnt_orginfo_measures" />
               </div>
           </div>
 
@@ -501,8 +501,8 @@ external_css: /content-images/wai-statements/statements.css
 
       <div id="statement-measures-block">
         <h3>Measures to support accessibility</h3>
-        <p>[accstmt_org] takes the following measures to ensure accessibility of [accstmt_namesite]:</p>
-        <ul id="statement-measures"></ul>
+        <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> takes the following measures to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
+        <ul id="statement-measures" data-print="accstmnt_orginfo_measures"></ul>
       </div>
 
       <div id="statement-conformance">
