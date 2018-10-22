@@ -209,10 +209,13 @@ var APP = (function() {
       }(conditionals[i]));
     }
 
+    // Print formdata into printables
+    _printFormInput();
+
     // replace all text inputs
-    for(i = 0; i < inputs.length; i += 1) {
-      result.innerHTML = result.innerHTML.split('['+inputs[i].id+']').join(inputs[i].value);
-    }
+    // for(i = 0; i < inputs.length; i += 1) {
+    //   result.innerHTML = result.innerHTML.split('['+inputs[i].id+']').join(inputs[i].value);
+    // }
 
     // statement: measures
     (function() {
