@@ -429,6 +429,31 @@ var APP = (function() {
 
   };
 
+  function _printFormInput() {
+    var getData = statementForm.data.get;
+    var printCollection = document.querySelectorAll('[data-print]');
+
+    Array.prototype.forEach.call(printCollection, function printInput(item) {
+      var nodeName = item.nodeName;
+      var target = item.dataset.print;
+      var printDefault = item.dataset.printdefault || '(no input)';
+      var printData = getData(target) || printDefault;
+      var dataList = Array.isArray(printData);
+
+      if (dataList && nodeName === 'UL' || nodeName === 'OL') {
+        item.innerHTML = printData
+          .map(function wrapInLi(item) {
+            return '<li>' + item + '</li>'
+          })
+          .join('');
+
+      } else {
+        item.innerText = printData;
+      }
+    })
+
+  }
+
   function _addLine() {
     var i;
     var buttons = document.querySelectorAll('#accstatement button.add-line');
