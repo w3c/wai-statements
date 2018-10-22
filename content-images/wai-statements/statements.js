@@ -4,7 +4,7 @@
  * [description]
  * ---
  */
-(function() {
+var APP = (function() {
   'use strict';
 
   /**
@@ -24,19 +24,67 @@
     var _formState = new Map()
       .set('changed', false);
 
+    function _getData(identifier) {
+      var data = {};
+
+      if (identifier && typeof identifier === 'string') {
+        return _formData.get(identifier);
+
+      } else if (!identifier) {
+        _formData.forEach(function returnData(value, key, map) {
+          data[key] = value;
+        });
+
+        return data;
+      }
+    }
+
     // Add change listener
     _formElement.addEventListener('change', function handleFormChange(event) {
       var formChanged = _formState.get('changed');
       var target = event.target;
-      var allowedInputTypes = [
+      var allowedInputs = [
         'INPUT',
         'TEXTAREA',
       ];
-      var input = target.nodeName;
 
-      if (allowedInputTypes.indexOf(target.nodeName) !== -1 && target.id) {
+      /**
+       * Transform input values into correct key value pairs
+       * Set single string value or array of string values to key
+       * @param       {HtmlFormElement} input
+       */
+      function _setFormData(input) {
+        var inputName = input.name || undefined;
+        var inputType = input.type || 'text';
+        var inputValue;
 
-        _formData.set(target.id, target.value);
+        if (inputName && inputType !== 'RADIO') {
+          inputValue = [];
+
+          _formElement.elements[inputName].forEach(function pushValue(item) {
+            if (
+              (item.type === 'checkbox' && item.checked)
+              || (item.type !== 'checkbox' && item.value)
+            ) {
+              inputValue.push(item.value);
+            }
+          });
+          _formData.set(inputName, inputValue);
+
+        } else if (inputName && inputType === 'RADIO') {
+          inputValue = _formElement.elements[inputName].value;
+          _formData.set(inputName, inputValue);
+
+        } else {
+          // Single string values
+          inputValue = input.value;
+          _formData.set(input.id, inputValue);
+        }
+
+      }
+
+      if (allowedInputs.indexOf(target.nodeName) !== -1 && target.id) {
+        _setFormData(target);
       }
 
       if (!formChanged) {
@@ -46,7 +94,7 @@
 
     return {
       data: {
-        get: _formData.get,
+        get: _getData,
         set: _formData.set,
       },
       elelment: _formElement,
@@ -443,5 +491,8 @@
   }
 
   _init();
-  // return {};
+
+  // return {
+  //   asgForm: statementForm,
+  // };
 }());
