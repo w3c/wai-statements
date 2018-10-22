@@ -66,17 +66,17 @@ external_css: /content-images/wai-statements/statements.css
           <fieldset class="field" id="standard-applied">
             <legend class="label">Accessibility standard followed:</legend>
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa" checked />
-                <label for="accstmnt_standard_wcag21aa">WCAG 2.1 Level AA</label>
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa" checked value="WCAG 2.1 level AA" />
+                <label for="accstmnt_standard_wcag21aa">WCAG 2.1 level AA</label>
             </div>
 
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" />
-                <label for="accstmnt_standard_wcag20aa">WCAG 2.0 Level AA</label>
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" value="WCAG 2.0 level AA" />
+                <label for="accstmnt_standard_wcag20aa">WCAG 2.0 level AA</label>
             </div>
 
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" />
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="Other" />
                 <label for="accstmnt_standard_other">Other</label>
                 <input aria-label="Other standard name" type="text" name="accstmnt_standard_other" id="accstmnt_standard_other_name">
             </div>
@@ -90,23 +90,23 @@ external_css: /content-images/wai-statements/statements.css
             <fieldset class="field" id="conformance-status">
               <legend class="visuallyhidden">Conformance status</legend>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Fully conformant" />
                 <label for="accstmnt_conformance_full"><span class="status">Fully conformant</span>: <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partially conformant" />
                 <label for="accstmnt_conformance_partial"><span class="status">Partially conformant</span>: <span class="meaning">some parts of the content do not fully conform to the accessibility standard</span> (you can indicate these parts in later sections of this form)</label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conformant" />
                 <label for="accstmnt_conformance_nonconformant"><span class="status">Non conformant</span>: <span class="meaning">the content does not conform the accessibility standard</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" value="Not assessed" />
                 <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: the content has not been evaluated or the evaluation results are not available</label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" checked />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="None" checked />
                 <label for="accstmnt_conformance_inapplicable">None</label>
               </div>
             </fieldset>
@@ -510,8 +510,8 @@ external_css: /content-images/wai-statements/statements.css
         <p>
             The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities.
             It defines three levels of conformance: Level A, Level AA, and Level AAA.
-            <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is <span data-print="conformance_status"></span> with <span data-print="accstmnt_standard_applied"></span>.
-            <span data-print="conformance_status"></span> means that <span data-print="conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</p>
+            <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is <span data-print="accstmnt_conformance"></span> with <span data-print="accstmnt_standard"></span>.
+            <span data-print="accstmnt_conformance"></span> means that <span data-print="conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</p>
       </div>
 
       <div id="statement-additions" class="conditional" data-if="accstmt_additions">
