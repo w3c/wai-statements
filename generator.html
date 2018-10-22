@@ -349,32 +349,32 @@ external_css: /content-images/wai-statements/statements.css
 
           <ul id="tech_relied" class="input-cols nolist">
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_html" />
+              <input type="checkbox" id="accstmnt_tech_html" name="accstmnt_tech" value="HTML" />
               <label for="accstmnt_tech_html">HTML</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_aria" />
+              <input type="checkbox" id="accstmnt_tech_aria" name="accstmnt_tech" value="WAI-ARIA" />
               <label for="accstmnt_tech_aria">WAI-ARIA</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_css" />
+              <input type="checkbox" id="accstmnt_tech_css" name="accstmnt_tech" value="CSS" />
               <label for="accstmnt_tech_css">CSS</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_js" />
+              <input type="checkbox" id="accstmnt_tech_js" name="accstmnt_tech" value="Javascript" />
               <label for="accstmnt_tech_js">Javascript</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_smil" />
+              <input type="checkbox" id="accstmnt_tech_smil" name="accstmnt_tech" value="SMIL" />
               <label for="accstmnt_tech_smil">SMIL</label>
             </li>
 
             <li class="radio-field proto">
-                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" checked />
+                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech" checked />
                 <span id="accstmnt_tech_other_label_[n]"><label for="accstmnt_tech_other_[n]">Other [n]</label><span class="visuallyhidden"> name</span></span>
                 <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" />
             </li>
@@ -383,18 +383,18 @@ external_css: /content-images/wai-statements/statements.css
           <button class="add-line" type="button">Add another technology</button>
         </fieldset>
 
-        <h3 class="label">Assessment approach <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="accstmnt_approach" data-target="#accstmnt_approach" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
-        <div class="information" id="accstmnt_approach" hidden><p>How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.</p></div>
+        <h3 class="label">Assessment approach <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#accstmnt_approach" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
+        <div class="information" id="info_accstmnt_approach" hidden><p>How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.</p></div>
 
         <fieldset id="accstmnt_assessment" class="group">
           <legend class="visuallyhidden">Assessment approach</legend>
           <ul class="nolist field">
             <li class="radio-field">
-              <input id="accstmnt_approach_1" type="checkbox" value="Self-evaluation" />
+              <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox" value="Self-evaluation" />
               <div><label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content</div>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_approach_2" type="checkbox" value="External evaluation" />
+              <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox" value="External evaluation" />
               <div><label for="accstmnt_approach_2">External evaluation</label>: the content was evaluated by an external entity not involved in the design and development process</div>
             </li>
           </ul>
@@ -402,12 +402,12 @@ external_css: /content-images/wai-statements/statements.css
           <div class="group">
               <div class="field line">
                 <label for="accstmnt_approach_other_1">Other approach 1</label> (Example: a formal quality assurance process throughout the design and development process
-                <input type="text" id="accstmnt_approach_other_1" />
+                <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach" />
               </div>
 
               <div class="field proto">
                 <label for="accstmnt_approach_other_[n]">Other approach [n]</label> (Example: a formal quality assurance process throughout the design and development process
-                <input type="text" id="accstmnt_approach_other_[n]" />
+                <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach" />
               </div>
 
               <button type="button" class="add-line">Add another approach</button>
