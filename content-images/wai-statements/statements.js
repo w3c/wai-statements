@@ -58,7 +58,7 @@ var APP = (function() {
         var inputType = input.type || 'text';
         var inputValue;
 
-        if (inputName && inputType !== 'RADIO') {
+        if (inputName && inputType !== 'radio') {
           inputValue = [];
 
           _formElement.elements[inputName].forEach(function pushValue(item) {
@@ -71,7 +71,7 @@ var APP = (function() {
           });
           _formData.set(inputName, inputValue);
 
-        } else if (inputName && inputType === 'RADIO') {
+        } else if (inputName && inputType === 'radio') {
           inputValue = _formElement.elements[inputName].value;
           _formData.set(inputName, inputValue);
 
