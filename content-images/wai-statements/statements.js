@@ -21,8 +21,8 @@
 
     var _formElement = document.forms.create_accessibility_statement_form;
 
-    var _formState = new Map()
-      .set('changed', false);
+    var _formState = new Map();
+    _formState.set('changed', false);
 
     // Do initial form data storage (defaultvalues)
     function _init() {
