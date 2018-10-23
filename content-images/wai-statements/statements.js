@@ -74,6 +74,31 @@
       }
     }
 
+    function _getFormGroup(groupName) {
+
+      if (groupName) {
+        return _formElement.elements[groupName];
+      }
+      return false;
+    }
+
+    function _getGroupValue(groupName) {
+      var group = _getFormGroup(groupName) || [];
+      var checkedMembers = Array.prototype.filter.call(group, function getChecked(member) {
+        var isText = member.type === 'text';
+
+        return member.checked || (isText && member.value);
+      });
+
+      if (checkedMembers.length > 0) {
+        return checkedMembers.map(function returnValue(member) {
+          return member.value;
+        });
+      }
+
+      return [];
+    }
+
     /**
      * Transform input values into correct key value pairs
      * Set single string value or array of string values to key
@@ -85,23 +110,23 @@
       var inputValue;
 
       if (inputName && inputType !== 'radio') {
-        inputValue = [];
+        inputValue = _getGroupValue(inputName) || [];
 
-        _formElement.elements[inputName].forEach(function pushValue(item) {
-          if (
-            (item.type === 'checkbox' && item.checked)
-            || (item.type !== 'checkbox' && item.value)
-          ) {
-            inputValue.push(item.value);
-          }
-        });
+        // _formElement.elements[inputName].forEach(function pushValue(item) {
+        //   if (
+        //     (item.type === 'checkbox' && item.checked)
+        //     || (item.type !== 'checkbox' && item.value)
+        //   ) {
+        //     inputValue.push(item.value);
+        //   }
+        // });
 
         if (inputValue.length > 0) {
           _formData.set(inputName, inputValue);
         }
 
       } else if (inputName && inputType === 'radio') {
-        inputValue = _formElement.elements[inputName].value;
+        inputValue = _getGroupValue(inputName)[0] || '';
 
         if (inputValue.length > 0) {
           _formData.set(inputName, inputValue);
