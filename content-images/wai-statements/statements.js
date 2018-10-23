@@ -112,15 +112,6 @@
       if (inputName && inputType !== 'radio') {
         inputValue = _getGroupValue(inputName) || [];
 
-        // _formElement.elements[inputName].forEach(function pushValue(item) {
-        //   if (
-        //     (item.type === 'checkbox' && item.checked)
-        //     || (item.type !== 'checkbox' && item.value)
-        //   ) {
-        //     inputValue.push(item.value);
-        //   }
-        // });
-
         if (inputValue.length > 0) {
           _formData.set(inputName, inputValue);
         }
@@ -376,26 +367,24 @@
   }
 
   function _addLine() {
-    var i;
     var buttons = document.querySelectorAll('#accstatement button.add-line');
 
-    for(i = 0; i < buttons.length; i += 1) {
-      buttons[i].addEventListener('click', function() {
-        var parent = this.parentNode;
-        var proto = parent.querySelector('.proto');
+    Array.prototype.forEach.call(buttons, function addClickListener(button) {
+      button.addEventListener('click', function(event) {
+        var parent = event.target.parentNode;
         var lines = parent.querySelectorAll('.line');
-        var newLine = document.createElement('template');
+        var proto = parent.querySelector('.proto');
+        var newLine = proto.cloneNode(true);
 
-        newLine.innerHTML = proto.outerHTML;
-        newLine = newLine.content.firstChild;
         newLine.classList.remove('proto');
         newLine.classList.add('line');
-        newLine.innerHTML = newLine.innerHTML.split('[n]').join(lines.length + 1);
+        newLine.innerHTML = newLine.innerHTML.replace(/\[n\]/g, lines.length + 1);
 
         proto.parentNode.insertBefore(newLine, proto);
+
         newLine.querySelector('input, textarea').focus();
       });
-    }
+    });
   }
 
   function _checkBoxGroups() {
