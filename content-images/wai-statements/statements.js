@@ -24,6 +24,20 @@ var APP = (function() {
     var _formState = new Map()
       .set('changed', false);
 
+    // Do initial form data storage (defaultvalues)
+    function _init() {
+      _today();
+
+      Array.prototype.forEach.call(_formElement.elements, function setinitialData(item) {
+        var nodeName = item.nodeName;
+        var isProto = item.parentNode && item.parentNode.classList.contains('proto');
+
+        if (['INPUT', 'TEXTAREA'].indexOf(nodeName) !== -1 && !isProto) {
+          _setFormData(item);
+        }
+      });
+    }
+
     function _getData(identifier) {
       var data = {};
 
