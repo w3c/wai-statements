@@ -499,7 +499,7 @@ external_css: /content-images/wai-statements/statements.css
 
       <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
 
-      <div id="statement-measures-block">
+      <div id="statement-measures-block" class="conditional" data-if="accstmnt_orginfo_measures">
         <h3>Measures to support accessibility</h3>
         <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> takes the following measures to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
         <ul id="statement-measures" data-print="accstmnt_orginfo_measures"></ul>
@@ -520,8 +520,10 @@ external_css: /content-images/wai-statements/statements.css
       </div>
 
       <h3>Feedback</h3>
-      <p>We welcome your feedback on the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>. Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:</p>
-
+      <p>
+        We welcome your feedback on the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>.
+        Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:
+      </p>
       <ul id="statement-feedback"></ul>
 
       <p class="conditional" data-if="accstmnt_contact_responsetime">We try to respond to feedback within <span data-print="accstmnt_contact_responsetime"></span>.</p>
