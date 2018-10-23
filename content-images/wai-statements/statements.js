@@ -283,47 +283,6 @@ var APP = (function() {
     // Print formdata into printables: [data-print]
     _printFormInput();
 
-    // statement: assistive technologies
-    (function() {
-      var parent = result.querySelector('#statement-asstech');
-      var compatible = result.querySelector('#statement-asstech-compatible-block');
-      var incompatible = result.querySelector('#statement-asstech-incompatible-block');
-      var compList = result.querySelector('#statement-asstech-compatible');
-      var incompList = result.querySelector('#statement-asstech-incompatible');
-      var inputCompatible = document.querySelectorAll('#accstatement #compatible_tech input');
-      var inputIncompatible = document.querySelectorAll('#accstatement #incompatible_tech input');
-      var compHtml = '';
-      var incompHtml = '';
-
-      for(i = 0; i < inputCompatible.length; i += 1) {
-        if(inputCompatible[i].value) {
-          compHtml += '<li>'+inputCompatible[i].value+'</li>';
-        }
-      }
-
-      for(i = 0; i < inputIncompatible.length; i += 1) {
-        if(inputIncompatible[i].value) {
-          incompHtml += '<li>'+inputIncompatible[i].value+'</li>';
-        }
-      }
-
-      if(compHtml || incompHtml) {
-        if(compHtml) {
-          compList.innerHTML = compHtml;
-        } else {
-          compatible.setAttribute('hidden', '');
-        }
-
-        if(incompHtml) {
-          incompList.innerHTML = incompHtml;
-        } else {
-          incompatible.setAttribute('hidden', '');
-        }
-      } else {
-        parent.setAttribute('hidden', '');
-      }
-    }());
-
     // statement: limitations & alternatives
     (function() {
       var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');

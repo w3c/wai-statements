@@ -306,13 +306,13 @@ external_css: /content-images/wai-statements/statements.css
           <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is expected to work with. These should be in-line with the WCAG definition of <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a> use of technologies.</p>
 
           <div class="field line">
-            <label for="accstmnt_asstech_1">Environment 1 (Example: "browser X with assistive technology Y on operating system Z")</label>
-            <input type="text" id="accstmnt_asstech_1" />
+            <label for="accstmnt_asstech_compatible_1">Environment 1 (Example: "browser X with assistive technology Y on operating system Z")</label>
+            <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible" />
           </div>
 
           <div class="field proto">
-            <label for="accstmnt_asstech_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
-            <input type="text" id="accstmnt_asstech_[n]" />
+            <label for="accstmnt_asstech_compatible_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
+            <input type="text" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible" />
           </div>
 
           <button class="add-line" type="button">Add another compatible environment</button>
@@ -327,12 +327,12 @@ external_css: /content-images/wai-statements/statements.css
           <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is not expected to work with.</p>
 
           <div class="field line">
-            <label for="accstmnt_incompatible_tech_1">Environment 1 (Example: "browsers older than 3 major versions" or "Mobile operating systems older than 5 years")</label>
-            <input type="text" id="accstmnt_incompatible_tech_1" />
+            <label for="accstmnt_asstech_incompatible_1">Environment 1 (Example: "browsers older than 3 major versions" or "Mobile operating systems older than 5 years")</label>
+            <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible" />
           </div>
           <div class="field proto">
-            <label for="accstmnt_incompatible_tech_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
-            <input type="text" id="accstmnt_incompatible_tech_[n]" />
+            <label for="accstmnt_asstech_incompatible_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
+            <input type="text" id="accstmnt_asstech_incompatible_[n]" name="accstmnt_asstech_incompatible" />
           </div>
 
           <button type="button" class="add-line">
@@ -538,12 +538,12 @@ external_css: /content-images/wai-statements/statements.css
         <h3>Compatibility with browsers and assistive technology</h3>
         <div id="statement-asstech-compatible-block">
           <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is designed to be compatible with the following assistive technologies:</p>
-          <ul id="statement-asstech-compatible"></ul>
+          <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
         </div>
 
-        <div id="statement-asstech-incompatible-block">
+        <div id="statement-asstech-incompatible-block" class="conditional" data-if="accstmnt_asstech_incompatible">
           <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is not compatible with:</p>
-          <ul id="statement-asstech-incompatible"></ul>
+          <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
         </div>
       </div>
 
