@@ -280,10 +280,11 @@
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
         var negate = 'negate' in elm.dataset;
+        // TODO: check array of data and filter ones out without data,
+        // hide conditional if no items in dataset
         var targetData = elm.dataset.if;
         var dataKey = targetData || undefined;
         var dataValue = dataKey && getData(dataKey) || false;
-
 
         if(negate) {
           dataValue = !dataValue;
