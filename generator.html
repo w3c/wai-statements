@@ -106,7 +106,7 @@ external_css: /content-images/wai-statements/statements.css
                 <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: <span class="meaning">the content has not been evaluated or the evaluation results are not available</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="None" checked />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="" checked />
                 <label for="accstmnt_conformance_inapplicable">None</label>
               </div>
               <input id="accstmnt_conformance_meaning" type="hidden" value="">
@@ -506,7 +506,7 @@ external_css: /content-images/wai-statements/statements.css
         <ul id="statement-measures" data-print="accstmnt_orginfo_measures"></ul>
       </div>
 
-      <div id="statement-conformance">
+      <div id="statement-conformance" class="conditional" data-if="accstmnt_conformance">
         <h3>Conformance status</h3>
         <p>
             The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities.
