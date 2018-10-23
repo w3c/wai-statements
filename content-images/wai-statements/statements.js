@@ -115,13 +115,28 @@ var APP = (function() {
 
     }
 
+    // Custom form data manipulation
+    function updateConformanceMeaning() {
+      var conformanceGroup = _formElement.elements.accstmnt_conformance;
+      var activeConformance = Array.prototype.filter.call(conformanceGroup, function getChecked(item) {
+        return item.checked;
+      })[0];
+      var meaningInput = _formElement.elements.accstmnt_conformance_meaning;
+      var meaningElement = activeConformance.parentNode.querySelector('.meaning');
+      var meaningValue = meaningElement && meaningElement.innerText || '';
+
+      if (meaningInput.value !== meaningValue) {
+        meaningInput.value = meaningValue;
+        _setFormData(meaningInput);
+      }
+    }
+
     /**
      * EXECUTE AREA
      */
     // Initiate statementForm
     _init();
 
-    // Add change listener
     _formElement.addEventListener('change', function handleFormChange(event) {
       var formChanged = _formState.get('changed');
       var target = event.target;
@@ -130,13 +145,18 @@ var APP = (function() {
         'TEXTAREA',
       ];
 
-      // Store formdata when changed
+      // Store formdata for changed input
       if (allowedInputs.indexOf(target.nodeName) !== -1 && target.id) {
         _setFormData(target);
       }
 
       if (!formChanged) {
         _formState.set('changed', true);
+      }
+
+      // Custom form manipulation
+      if (target.name && target.name === 'accstmnt_conformance') {
+        updateConformanceMeaning();
       }
     });
 
@@ -262,31 +282,6 @@ var APP = (function() {
 
     // Print formdata into printables
     _printFormInput();
-
-    // statement: conformance status
-    (function() {
-      var standardAppliedInput = document.querySelector('#accstatement #standard-applied input:checked');
-      var standardAppliedOtherInput = document.querySelector('#accstatement #standard-applied #accstmnt_standard_other_name');
-      var standardApplied = standardAppliedInput && standardAppliedInput.labels[0].innerText === 'Other'
-        ? standardAppliedOtherInput.value
-        : standardAppliedInput.labels[0].innerText;
-      var statusInput = document.querySelector('#accstatement #conformance-status input:checked');
-      var status = statusInput.labels[0].querySelector('.status');
-      var meaning = statusInput.labels[0].querySelector('.meaning');
-      var block = result.querySelector('#statement-conformance');
-      var html = block.innerHTML;
-      var additions = result.querySelector('#statement-additions');
-
-      if(standardApplied && status) {
-        html = html.replace('[accstmnt_standard_applied]', standardApplied);
-        html = html.split('[conformance_status]').join(status.innerText);
-        html = html.replace('[conformance_meaning]', meaning.innerText);
-        block.innerHTML = html;
-      } else {
-        block.setAttribute('hidden', '');
-        additions.setAttribute('hidden', '');
-      }
-    }());
 
     // statement: feedback
     (function() {

@@ -103,12 +103,13 @@ external_css: /content-images/wai-statements/statements.css
               </div>
               <div class="radio-field">
                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" value="Not assessed" />
-                <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: the content has not been evaluated or the evaluation results are not available</label>
+                <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: <span class="meaning">the content has not been evaluated or the evaluation results are not available</span></label>
               </div>
               <div class="radio-field">
                 <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="None" checked />
                 <label for="accstmnt_conformance_inapplicable">None</label>
               </div>
+              <input id="accstmnt_conformance_meaning" type="hidden" value="">
             </fieldset>
         </div>
 
@@ -511,7 +512,7 @@ external_css: /content-images/wai-statements/statements.css
             The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities.
             It defines three levels of conformance: Level A, Level AA, and Level AAA.
             <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is <span data-print="accstmnt_conformance"></span> with <span data-print="accstmnt_standard"></span>.
-            <span data-print="accstmnt_conformance"></span> means that <span data-print="conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</p>
+            <span class="conditional" data-if="accstmnt_conformance_meaning"><span data-print="accstmnt_conformance"></span> means that <span data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</span></p>
       </div>
 
       <div id="statement-additions" class="conditional" data-if="accstmt_additions">
