@@ -562,10 +562,10 @@ external_css: /content-images/wai-statements/statements.css
         <ul id="statement-limitations"></ul>
       </div>
 
-      <div id="statement-assessment-block">
+      <div id="statement-assessment-block" class="conditional" data-if="accstmnt_approach">
           <h3>Assessment approach</h3>
           <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> assessed the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> by the following approaches:</p>
-          <ul id="statement-assessments"></ul>
+          <ul id="statement-assessments" data-print="accstmnt_approach"></ul>
       </div>
 
       <div class="conditional" data-if="accstmnt_audit_url">
