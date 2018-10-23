@@ -53,6 +53,74 @@ var APP = (function() {
       }
     }
 
+    function _today() {
+      var dateToday = new Date();
+      var day = dateToday.getDate();
+      var month = dateToday.getMonth() + 1;
+      var year = dateToday.getFullYear();
+      var dateTodayString = ''
+        + day + '-'
+        + month + '-'
+        + year;
+      var dates = document.querySelectorAll('#accstatement input.today');
+      var i;
+
+      for(i = 0; i < dates.length; i += 1) {
+        try {
+          dates[i].valueAsDate = dateToday;
+        } catch (e) {
+          dates[i].value = dateTodayString;
+        }
+      }
+    }
+
+    /**
+     * Transform input values into correct key value pairs
+     * Set single string value or array of string values to key
+     * @param       {HtmlFormElement} input
+     */
+    function _setFormData(input) {
+      var inputName = input.name || undefined;
+      var inputType = input.type || 'text';
+      var inputValue;
+
+      if (inputName && inputType !== 'radio') {
+        inputValue = [];
+
+        _formElement.elements[inputName].forEach(function pushValue(item) {
+          if (
+            (item.type === 'checkbox' && item.checked)
+            || (item.type !== 'checkbox' && item.value)
+          ) {
+            inputValue.push(item.value);
+          }
+        });
+
+        if (inputValue.length > 0) {
+          _formData.set(inputName, inputValue);
+        }
+
+      } else if (inputName && inputType === 'radio') {
+        inputValue = _formElement.elements[inputName].value;
+
+        if (inputValue.length > 0) {
+          _formData.set(inputName, inputValue);
+        }
+
+      } else if (input.value) {
+        // Single string values
+        inputValue = input.value;
+        _formData.set(input.id, inputValue);
+      }
+
+    }
+
+    /**
+     * EXECUTE AREA
+     */
+    // Initiate statementForm
+    _init();
+
     // Add change listener
     _formElement.addEventListener('change', function handleFormChange(event) {
       var formChanged = _formState.get('changed');
@@ -62,41 +130,7 @@ var APP = (function() {
         'TEXTAREA',
       ];
 
-      /**
-       * Transform input values into correct key value pairs
-       * Set single string value or array of string values to key
-       * @param       {HtmlFormElement} input
-       */
-      function _setFormData(input) {
-        var inputName = input.name || undefined;
-        var inputType = input.type || 'text';
-        var inputValue;
-
-        if (inputName && inputType !== 'radio') {
-          inputValue = [];
-
-          _formElement.elements[inputName].forEach(function pushValue(item) {
-            if (
-              (item.type === 'checkbox' && item.checked)
-              || (item.type !== 'checkbox' && item.value)
-            ) {
-              inputValue.push(item.value);
-            }
-          });
-          _formData.set(inputName, inputValue);
-
-        } else if (inputName && inputType === 'radio') {
-          inputValue = _formElement.elements[inputName].value;
-          _formData.set(inputName, inputValue);
-
-        } else {
-          // Single string values
-          inputValue = input.value;
-          _formData.set(input.id, inputValue);
-        }
-
-      }
-
+      // Store formdata when changed
       if (allowedInputs.indexOf(target.nodeName) !== -1 && target.id) {
         _setFormData(target);
       }
@@ -134,7 +168,6 @@ var APP = (function() {
     _setPage();
     _checkBoxGroups();
     _addLine();
-    _today();
 
     document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
       location.hash = 'preview';
@@ -476,27 +509,6 @@ var APP = (function() {
       });
     }
   };
-
-  function _today() {
-    var dateToday = new Date();
-    var day = dateToday.getDate();
-    var month = dateToday.getMonth() + 1;
-    var year = dateToday.getFullYear();
-    var dateTodayString = ''
-      + day + '-'
-      + month + '-'
-      + year;
-    var dates = document.querySelectorAll('#accstatement input.today');
-    var i;
-
-    for(i = 0; i < dates.length; i += 1) {
-      try {
-        dates[i].valueAsDate = dateToday;
-      } catch (e) {
-        dates[i].value = dateTodayString;
-      }
-    }
-  }
 
   _init();
 
