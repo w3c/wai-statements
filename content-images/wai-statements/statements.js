@@ -283,34 +283,6 @@ var APP = (function() {
     // Print formdata into printables
     _printFormInput();
 
-    // statement: feedback
-    (function() {
-      var items = document.querySelectorAll(
-        '#accstatement #form-feedback input:not(#accstmnt_contact_responsetime)'
-        + ', #accstatement #form-feedback textarea'
-      );
-      var list = result.querySelector('#statement-feedback');
-      var html = '';
-
-      for(i = 0; i < items.length; i += 1) {
-        if(items[i].value) {
-          html += '<li>'+items[i].labels[0].innerText+': ';
-          if(items[i].getAttribute('type') === 'email') {
-            html += '<a href="mailto:'+items[i].value+'">'+items[i].value+'</a>';
-          } else if(items[i].getAttribute('type') === 'url') {
-            html += '<a href="'+items[i].value+'">'+items[i].value+'</a>';
-          } else if (items[i].nodeName === 'TEXTAREA') {
-            html += '<pre class="feedback other-contact-methods">' + items[i].value + '</pre>';
-          } else {
-            html += items[i].value;
-          }
-          html += '</li>';
-        }
-      }
-
-      list.innerHTML = html;
-    }());
-
     // statement: technologies for conformance
     (function() {
       var parent = result.querySelector('#statement-conftech');
@@ -463,7 +435,18 @@ var APP = (function() {
           .join('');
 
       } else {
-        item.innerText = printData;
+
+        switch (nodeName) {
+          case 'A':
+            var hrefPrefix = item.getAttribute('href');
+
+            item.setAttribute('href', hrefPrefix + printData);
+            item.innerText = printData;
+            break;
+
+          default:
+            item.innerText = printData;
+        }
       }
     })
 

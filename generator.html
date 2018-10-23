@@ -525,8 +525,13 @@ external_css: /content-images/wai-statements/statements.css
         We welcome your feedback on the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>.
         Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:
       </p>
-      <ul id="statement-feedback"></ul>
-
+      <ul>
+          <li class="conditional" data-if="accstmnt_contact_phone">Phone: <span data-print="accstmnt_contact_phone"></span></li>
+          <li class="conditional" data-if="accstmnt_contact_email">E-mail: <a data-print="accstmnt_contact_email" href="mailto:"></a></li>
+          <li class="conditional" data-if="accstmnt_contact_visit">Visitor address: <span data-print="accstmnt_contact_visit"></span></li>
+          <li class="conditional" data-if="accstmnt_contact_write">Postal address: <span data-print="accstmnt_contact_write"></span></li>
+          <li class="conditional" data-if="accstmnt_contact_other"><pre class="print-textarea" data-print="accstmnt_contact_other"></pre></li>
+      </ul>
       <p class="conditional" data-if="accstmnt_contact_responsetime">We try to respond to feedback within <span data-print="accstmnt_contact_responsetime"></span>.</p>
 
       <div id="statement-asstech">
