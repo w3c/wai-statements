@@ -547,13 +547,10 @@ external_css: /content-images/wai-statements/statements.css
         </div>
       </div>
 
-      <div id="statement-conftech">
+      <div id="statement-conftech" class="conditional" data-if="accstmnt_tech">
         <h3>Technical specifications</h3>
-
         <p>Accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
-
-        <ul id="statement-tech"></ul>
-
+        <ul id="statement-tech" data-print="accstmnt_tech"></ul>
         <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
       </div>
 

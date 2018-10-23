@@ -280,33 +280,8 @@ var APP = (function() {
       }(conditionals[i]));
     }
 
-    // Print formdata into printables
+    // Print formdata into printables: [data-print]
     _printFormInput();
-
-    // statement: technologies for conformance
-    (function() {
-      var parent = result.querySelector('#statement-conftech');
-      var relied_techs = document.querySelectorAll('#accstatement #tech_relied input:checked');
-      var list = result.querySelector('#statement-tech');
-      var html = '';
-
-      Array.prototype.forEach.call(relied_techs, function(tech) {
-        var isOtherTech = tech.name === 'accstmnt_tech_other';
-        var techValue = tech.labels[0].innerText;
-
-        if (isOtherTech) {
-          techValue = tech.parentNode.querySelector('[type="checkbox"] ~ [type="text"]').value;
-        }
-
-        html += '<li>'+techValue+'</li>';
-      });
-
-      if(html.length) {
-        list.innerHTML = html;
-      } else {
-        parent.setAttribute('hidden', '');
-      }
-    }());
 
     // Technology: Assessment approach
     (function() {
