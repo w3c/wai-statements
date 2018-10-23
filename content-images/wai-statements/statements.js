@@ -312,15 +312,6 @@ var APP = (function() {
       }
     }());
 
-    // statement: approval
-    (function() {
-      if(!document.getElementById('accstmnt_orginfo_approved_name').value
-      && !document.getElementById('accstmnt_orginfo_approved_function').value) {
-        result.querySelector('#statement-approval-block').setAttribute('hidden', '');
-      }
-    }());
-
-
   };
 
   function _printFormInput() {
