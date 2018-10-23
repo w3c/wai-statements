@@ -229,6 +229,7 @@ var APP = (function() {
   }
 
   function _showPreview() {
+    var getData = statementForm.data.get;
     var proto = document.querySelector('#accstatement .page.preview .proto');
     var result = document.querySelector('#accstatement .page.preview .result');
     var inputs = document.querySelectorAll('#accstatement .page.create input, #accstatement .page.create textarea');
@@ -241,14 +242,17 @@ var APP = (function() {
     conditionals = result.querySelectorAll('.conditional');
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
-        var input = document.getElementById(elm.dataset.if);
-        var value = (['radio', 'checkbox'].indexOf(input.getAttribute('type')) < 0) ? input.value : input.checked;
+        var negate = 'negate' in elm.dataset;
+        var targetData = elm.dataset.if;
+        var dataKey = targetData || undefined;
+        var dataValue = dataKey && getData(dataKey) || false;
 
-        if('negate' in elm.dataset) {
-          value = !value;
+
+        if(negate) {
+          dataValue = !dataValue;
         }
 
-        if(!value) {
+        if(!dataValue) {
           elm.setAttribute('hidden', '');
         } else {
           elm.removeAttribute('hidden');
