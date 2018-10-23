@@ -27,6 +27,7 @@
     // Do initial form data storage (defaultvalues)
     function _init() {
       _today();
+      updateConformanceMeaning();
 
       Array.prototype.forEach.call(_formElement.elements, function setinitialData(item) {
         var nodeName = item.nodeName;
