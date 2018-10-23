@@ -437,12 +437,12 @@ external_css: /content-images/wai-statements/statements.css
 
             <div class="field line">
               <label for="accstmnt_audit_other_1">Other evidence 1 (Example: link to certification)</label>
-              <input type="text" id="accstmnt_audit_other_1" />
+              <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other" />
             </div>
 
             <div class="field proto">
               <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: link to certification)</label>
-              <input type="text" id="accstmnt_audit_other_[n]" />
+              <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other" />
             </div>
 
             <button type="button" class="add-line">
@@ -578,7 +578,10 @@ external_css: /content-images/wai-statements/statements.css
         <p>An evaluation statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_wcagem"></a>.</p>
       </div>
 
-      <!-- Other evidence -->
+      <div class="conditional" data-if="accstmnt_audit_other">
+          <h3>Other evaluation documentation</h3>
+          <ul data-print="accstmnt_audit_other"></ul>
+      </div>
 
       <div id="statement-approval-block">
         <h3>Formal approval of this accessibility statement</h3>
