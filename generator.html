@@ -66,17 +66,17 @@ external_css: /content-images/wai-statements/statements.css
           <fieldset class="field" id="standard-applied">
             <legend class="label">Accessibility standard followed:</legend>
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa" checked />
-                <label for="accstmnt_standard_wcag21aa">WCAG 2.1 Level AA</label>
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa" checked value="WCAG 2.1 level AA" />
+                <label for="accstmnt_standard_wcag21aa">WCAG 2.1 level AA</label>
             </div>
 
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" />
-                <label for="accstmnt_standard_wcag20aa">WCAG 2.0 Level AA</label>
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag20aa" value="WCAG 2.0 level AA" />
+                <label for="accstmnt_standard_wcag20aa">WCAG 2.0 level AA</label>
             </div>
 
             <div class="radio-field">
-                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" />
+                <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="Other" />
                 <label for="accstmnt_standard_other">Other</label>
                 <input aria-label="Other standard name" type="text" name="accstmnt_standard_other" id="accstmnt_standard_other_name">
             </div>
@@ -90,25 +90,26 @@ external_css: /content-images/wai-statements/statements.css
             <fieldset class="field" id="conformance-status">
               <legend class="visuallyhidden">Conformance status</legend>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Fully conformant" />
                 <label for="accstmnt_conformance_full"><span class="status">Fully conformant</span>: <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partially conformant" />
                 <label for="accstmnt_conformance_partial"><span class="status">Partially conformant</span>: <span class="meaning">some parts of the content do not fully conform to the accessibility standard</span> (you can indicate these parts in later sections of this form)</label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conformant" />
                 <label for="accstmnt_conformance_nonconformant"><span class="status">Non conformant</span>: <span class="meaning">the content does not conform the accessibility standard</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" />
-                <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: the content has not been evaluated or the evaluation results are not available</label>
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" value="Not assessed" />
+                <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: <span class="meaning">the content has not been evaluated or the evaluation results are not available</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" checked />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="" checked />
                 <label for="accstmnt_conformance_inapplicable">None</label>
               </div>
+              <input id="accstmnt_conformance_meaning" type="hidden" value="">
             </fieldset>
         </div>
 
@@ -182,31 +183,31 @@ external_css: /content-images/wai-statements/statements.css
           <legend class="visuallyhidden">Organizational measures</legend>
           <ul class="nolist field" id="effort-list">
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_1" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_1" name="accstmnt_orginfo_measures" type="checkbox" value="Include accessibility as part of our mission statement." />
               <label for="accstmnt_orginfo_measures_1">Include accessibility as part of our mission statement.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_2" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_2" name="accstmnt_orginfo_measures" type="checkbox" value="Include accessibility throughout our internal policies." />
               <label for="accstmnt_orginfo_measures_2">Include accessibility throughout our internal policies.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_3" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_3" name="accstmnt_orginfo_measures" type="checkbox" value="Integrate accessibility into our procurement practices." />
               <label for="accstmnt_orginfo_measures_3">Integrate accessibility into our procurement practices.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_4" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_4" name="accstmnt_orginfo_measures" type="checkbox" value="Appoint an accessibility officer and/or ombudsperson." />
               <label for="accstmnt_orginfo_measures_4">Appoint an accessibility officer and/or ombudsperson.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_5" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_5" name="accstmnt_orginfo_measures" type="checkbox" value="Provide continual accessibility training for our staff." />
               <label for="accstmnt_orginfo_measures_5">Provide continual accessibility training for our staff.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_6" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_6" name="accstmnt_orginfo_measures" type="checkbox" value="Assign clear accessibility targets and responsibilities." />
               <label for="accstmnt_orginfo_measures_6">Assign clear accessibility targets and responsibilities.</label>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_orginfo_measures_7" type="checkbox" />
+              <input id="accstmnt_orginfo_measures_7" name="accstmnt_orginfo_measures" type="checkbox" value="Employ formal accessibility quality assurance methods." />
               <label for="accstmnt_orginfo_measures_7">Employ formal accessibility quality assurance methods.</label>
             </li>
           </ul>
@@ -214,11 +215,11 @@ external_css: /content-images/wai-statements/statements.css
           <div id="accstmnt_orginfo_othermeasures" class="group">
               <div class="field line">
                 <label for="accstmnt_orginfo_othermeasures_1">Other measure 1 (Example: "Include people with disabilities in our design personas")</label>
-                <input type="text" id="accstmnt_orginfo_othermeasures_1" />
+                <input type="text" id="accstmnt_orginfo_othermeasures_1" name="accstmnt_orginfo_measures" />
               </div>
               <div class="field proto">
                 <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n] (Example: "Include people with disabilities in our usability testing")</label>
-                <input type="text" id="accstmnt_orginfo_othermeasures_[n]" />
+                <input type="text" id="accstmnt_orginfo_othermeasures_[n]" name="accstmnt_orginfo_measures" />
               </div>
           </div>
 
@@ -305,13 +306,13 @@ external_css: /content-images/wai-statements/statements.css
           <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is expected to work with. These should be in-line with the WCAG definition of <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a> use of technologies.</p>
 
           <div class="field line">
-            <label for="accstmnt_asstech_1">Environment 1 (Example: "browser X with assistive technology Y on operating system Z")</label>
-            <input type="text" id="accstmnt_asstech_1" />
+            <label for="accstmnt_asstech_compatible_1">Environment 1 (Example: "browser X with assistive technology Y on operating system Z")</label>
+            <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible" />
           </div>
 
           <div class="field proto">
-            <label for="accstmnt_asstech_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
-            <input type="text" id="accstmnt_asstech_[n]" />
+            <label for="accstmnt_asstech_compatible_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
+            <input type="text" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible" />
           </div>
 
           <button class="add-line" type="button">Add another compatible environment</button>
@@ -326,12 +327,12 @@ external_css: /content-images/wai-statements/statements.css
           <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is not expected to work with.</p>
 
           <div class="field line">
-            <label for="accstmnt_incompatible_tech_1">Environment 1 (Example: "browsers older than 3 major versions" or "Mobile operating systems older than 5 years")</label>
-            <input type="text" id="accstmnt_incompatible_tech_1" />
+            <label for="accstmnt_asstech_incompatible_1">Environment 1 (Example: "browsers older than 3 major versions" or "Mobile operating systems older than 5 years")</label>
+            <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible" />
           </div>
           <div class="field proto">
-            <label for="accstmnt_incompatible_tech_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
-            <input type="text" id="accstmnt_incompatible_tech_[n]" />
+            <label for="accstmnt_asstech_incompatible_[n]">Environment [n] (Example: "browser X with assistive technology Y on operating system Z")</label>
+            <input type="text" id="accstmnt_asstech_incompatible_[n]" name="accstmnt_asstech_incompatible" />
           </div>
 
           <button type="button" class="add-line">
@@ -349,52 +350,52 @@ external_css: /content-images/wai-statements/statements.css
 
           <ul id="tech_relied" class="input-cols nolist">
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_html" />
+              <input type="checkbox" id="accstmnt_tech_html" name="accstmnt_tech" value="HTML" />
               <label for="accstmnt_tech_html">HTML</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_aria" />
+              <input type="checkbox" id="accstmnt_tech_aria" name="accstmnt_tech" value="WAI-ARIA" />
               <label for="accstmnt_tech_aria">WAI-ARIA</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_css" />
+              <input type="checkbox" id="accstmnt_tech_css" name="accstmnt_tech" value="CSS" />
               <label for="accstmnt_tech_css">CSS</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_js" />
+              <input type="checkbox" id="accstmnt_tech_js" name="accstmnt_tech" value="Javascript" />
               <label for="accstmnt_tech_js">Javascript</label>
             </li>
 
             <li class="radio-field line">
-              <input type="checkbox" id="accstmnt_tech_smil" />
+              <input type="checkbox" id="accstmnt_tech_smil" name="accstmnt_tech" value="SMIL" />
               <label for="accstmnt_tech_smil">SMIL</label>
             </li>
 
             <li class="radio-field proto">
-                <input type="checkbox" id="accstmnt_tech_other_[n]" name="accstmnt_tech_other" checked />
+                <input type="checkbox" id="accstmnt_tech_other_[n]" value="other" checked />
                 <span id="accstmnt_tech_other_label_[n]"><label for="accstmnt_tech_other_[n]">Other [n]</label><span class="visuallyhidden"> name</span></span>
-                <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" />
+                <input id="accstmnt_tech_other_[n]_value" type="text" aria-describedby="accstmnt_tech_other_label_[n]" name="accstmnt_tech" />
             </li>
           </ul>
 
           <button class="add-line" type="button">Add another technology</button>
         </fieldset>
 
-        <h3 class="label">Assessment approach <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="accstmnt_approach" data-target="#accstmnt_approach" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
-        <div class="information" id="accstmnt_approach" hidden><p>How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.</p></div>
+        <h3 class="label">Assessment approach <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_accstmnt_approach" data-target="#accstmnt_approach" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button></h3>
+        <div class="information" id="info_accstmnt_approach" hidden><p>How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.</p></div>
 
         <fieldset id="accstmnt_assessment" class="group">
           <legend class="visuallyhidden">Assessment approach</legend>
           <ul class="nolist field">
             <li class="radio-field">
-              <input id="accstmnt_approach_1" type="checkbox" value="Self-evaluation" />
+              <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox" value="Self-evaluation" />
               <div><label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content</div>
             </li>
             <li class="radio-field">
-              <input id="accstmnt_approach_2" type="checkbox" value="External evaluation" />
+              <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox" value="External evaluation" />
               <div><label for="accstmnt_approach_2">External evaluation</label>: the content was evaluated by an external entity not involved in the design and development process</div>
             </li>
           </ul>
@@ -402,12 +403,12 @@ external_css: /content-images/wai-statements/statements.css
           <div class="group">
               <div class="field line">
                 <label for="accstmnt_approach_other_1">Other approach 1</label> (Example: a formal quality assurance process throughout the design and development process
-                <input type="text" id="accstmnt_approach_other_1" />
+                <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach" />
               </div>
 
               <div class="field proto">
                 <label for="accstmnt_approach_other_[n]">Other approach [n]</label> (Example: a formal quality assurance process throughout the design and development process
-                <input type="text" id="accstmnt_approach_other_[n]" />
+                <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach" />
               </div>
 
               <button type="button" class="add-line">Add another approach</button>
@@ -436,12 +437,12 @@ external_css: /content-images/wai-statements/statements.css
 
             <div class="field line">
               <label for="accstmnt_audit_other_1">Other evidence 1 (Example: link to certification)</label>
-              <input type="text" id="accstmnt_audit_other_1" />
+              <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other" />
             </div>
 
             <div class="field proto">
               <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: link to certification)</label>
-              <input type="text" id="accstmnt_audit_other_[n]" />
+              <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other" />
             </div>
 
             <button type="button" class="add-line">
@@ -495,98 +496,111 @@ external_css: /content-images/wai-statements/statements.css
 
   <section class="page preview" hidden>
     <div class="container proto" hidden>
-      <h2>Accessibility Statement for [accstmt_namesite]</h2>
+      <h2>Accessibility Statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span></h2>
 
-      <p>[accstmt_org] is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
+      <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
 
-      <div id="statement-measures-block">
+      <div id="statement-measures-block" class="conditional" data-if="accstmnt_orginfo_measures">
         <h3>Measures to support accessibility</h3>
-        <p>[accstmt_org] takes the following measures to ensure accessibility of [accstmt_namesite]:</p>
-        <ul id="statement-measures"></ul>
+        <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> takes the following measures to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
+        <ul id="statement-measures" data-print="accstmnt_orginfo_measures"></ul>
       </div>
 
-      <div id="statement-conformance">
+      <div id="statement-conformance" class="conditional" data-if="accstmnt_conformance">
         <h3>Conformance status</h3>
-        <p>The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. [accstmt_namesite] is [conformance_status] with [accstmnt_standard_applied]. [conformance_status] means that [conformance_meaning].</p>
+        <p>
+            The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities.
+            It defines three levels of conformance: Level A, Level AA, and Level AAA.
+            <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is <span data-print="accstmnt_conformance"></span> with <span data-print="accstmnt_standard"></span>.
+            <span class="conditional" data-if="accstmnt_conformance_meaning"><span data-print="accstmnt_conformance"></span> means that <span data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</span></p>
       </div>
 
       <div id="statement-additions" class="conditional" data-if="accstmt_additions">
         <h4>Additional accessibility</h4>
-        <p>[accstmt_additions]</p>
+        <p data-print="accstmt_additions"></p>
       </div>
 
       <h3>Feedback</h3>
-      <p>We welcome your feedback on the accessibility of [accstmt_namesite]. Please let us know if you encounter accessibility barriers on [accstmt_namesite]:</p>
-
-      <ul id="statement-feedback"></ul>
-
-      <p class="conditional" data-if="accstmnt_contact_responsetime">We try to respond to feedback within [accstmnt_contact_responsetime].</p>
+      <p>
+        We welcome your feedback on the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>.
+        Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:
+      </p>
+      <ul>
+          <li class="conditional" data-if="accstmnt_contact_phone">Phone: <span data-print="accstmnt_contact_phone"></span></li>
+          <li class="conditional" data-if="accstmnt_contact_email">E-mail: <a data-print="accstmnt_contact_email" href="mailto:"></a></li>
+          <li class="conditional" data-if="accstmnt_contact_visit">Visitor address: <span data-print="accstmnt_contact_visit"></span></li>
+          <li class="conditional" data-if="accstmnt_contact_write">Postal address: <span data-print="accstmnt_contact_write"></span></li>
+          <li class="conditional" data-if="accstmnt_contact_other"><pre class="print-textarea" data-print="accstmnt_contact_other"></pre></li>
+      </ul>
+      <p class="conditional" data-if="accstmnt_contact_responsetime">We try to respond to feedback within <span data-print="accstmnt_contact_responsetime"></span>.</p>
 
       <div id="statement-asstech">
         <h3>Compatibility with browsers and assistive technology</h3>
         <div id="statement-asstech-compatible-block">
-          <p>[accstmt_namesite] is designed to be compatible with the following assistive technologies:</p>
-          <ul id="statement-asstech-compatible"></ul>
+          <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is designed to be compatible with the following assistive technologies:</p>
+          <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
         </div>
 
-        <div id="statement-asstech-incompatible-block">
-          <p>[accstmt_namesite] is not compatible with:</p>
-          <ul id="statement-asstech-incompatible"></ul>
+        <div id="statement-asstech-incompatible-block" class="conditional" data-if="accstmnt_asstech_incompatible">
+          <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is not compatible with:</p>
+          <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
         </div>
       </div>
 
-      <div id="statement-conftech">
+      <div id="statement-conftech" class="conditional" data-if="accstmnt_tech">
         <h3>Technical specifications</h3>
-
-        <p>Accessibility of [accstmt_namesite] relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
-
-        <ul id="statement-tech"></ul>
-
+        <p>Accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
+        <ul id="statement-tech" data-print="accstmnt_tech"></ul>
         <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
       </div>
 
       <div id="statement-limitations-block">
         <h3>Limitations and alternatives</h3>
-        <p>Despite our best efforts to ensure accessibility of [accstmt_namesite], there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.</p>
+        <p>Despite our best efforts to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>, there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.</p>
 
-        <p>Known limitations for [accstmt_namesite]:</p>
+        <p>Known limitations for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
         <ul id="statement-limitations"></ul>
       </div>
 
-      <div id="statement-assessment-block">
+      <div id="statement-assessment-block" class="conditional" data-if="accstmnt_approach">
           <h3>Assessment approach</h3>
-          <p>[accstmt_org] assessed the accessibility of [accstmt_namesite] by the following approaches:</p>
-          <ul id="statement-assessments"></ul>
+          <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> assessed the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> by the following approaches:</p>
+          <ul id="statement-assessments" data-print="accstmnt_approach"></ul>
       </div>
 
       <div class="conditional" data-if="accstmnt_audit_url">
         <h3>Evaluation report</h3>
-        <p>An evaluation report for [accstmt_namesite] is available at: <a href="[accstmnt_audit_url]">[accstmnt_audit_url]</a>.</p>
+        <p>An evaluation report for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_url"></a>.</p>
       </div>
 
       <div class="conditional" data-if="accstmnt_audit_wcagem">
         <h3>Evaluation statement</h3>
-        <p>An evaluation statement for [accstmt_namesite] is available at: <a href="[accstmnt_audit_wcagem]">[accstmnt_audit_wcagem]</a>.</p>
+        <p>An evaluation statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_wcagem"></a>.</p>
+      </div>
+
+      <div class="conditional" data-if="accstmnt_audit_other">
+          <h3>Other evaluation documentation</h3>
+          <ul data-print="accstmnt_audit_other"></ul>
       </div>
 
       <div id="statement-approval-block">
         <h3>Formal approval of this accessibility statement</h3>
 
         <p>This Accessibility Statement is approved by:</p>
-        <p>[accstmt_org]<br/>
-          [accstmnt_orginfo_approved_name]<br/>
-          [accstmnt_orginfo_approved_function]
+        <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span><br/>
+          <span data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
+          <span class="conditional" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
         </p>
       </div>
 
       <div class="conditional" data-if="accstmt_complaints">
         <h3>Formal Complaints</h3>
-        <p>[accstmt_complaints]</p>
+        <p data-print="accstmt_complaints"></p>
       </div>
 
       <hr noshade />
 
-      <p>This statement was created on [accstmt_date].</p>
+      <p>This statement was created on <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
     </div>
 
     <div class="container result"></div>
