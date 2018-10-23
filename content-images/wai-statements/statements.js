@@ -112,15 +112,6 @@
       if (inputName && inputType !== 'radio') {
         inputValue = _getGroupValue(inputName) || [];
 
-        // _formElement.elements[inputName].forEach(function pushValue(item) {
-        //   if (
-        //     (item.type === 'checkbox' && item.checked)
-        //     || (item.type !== 'checkbox' && item.value)
-        //   ) {
-        //     inputValue.push(item.value);
-        //   }
-        // });
-
         if (inputValue.length > 0) {
           _formData.set(inputName, inputValue);
         }
