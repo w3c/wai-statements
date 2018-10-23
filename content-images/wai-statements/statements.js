@@ -4,7 +4,7 @@
  * [description]
  * ---
  */
-var APP = (function() {
+(function() {
   'use strict';
 
   /**
@@ -391,8 +391,4 @@ var APP = (function() {
   };
 
   _init();
-
-  // return {
-  //   asgForm: statementForm,
-  // };
 }());
