@@ -156,10 +156,10 @@ var APP = (function() {
   ];
 
   function _init() {
-    var formChanged = statementForm.state.get('changed');
-
     window.onhashchange = _showPage;
     window.onbeforeunload = function warnOnLeave(event) {
+      var formChanged = statementForm.state.get('changed');
+
       if (formChanged) {
         return window.confirm();
       }
