@@ -280,20 +280,22 @@
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
         var negate = 'negate' in elm.dataset;
-        // TODO: check array of data and filter ones out without data,
-        // hide conditional if no items in dataset
-        var targetData = elm.dataset.if;
-        var dataKey = targetData || undefined;
-        var dataValue = dataKey && getData(dataKey) || false;
+        var dataList = elm.dataset.if.split(',').map(function trimString(string) {
+          return string.trim();
+        });
+        var dataListValues = dataList.filter(function withValue(key) {
+          return getData(key) !== undefined;
+        });
+        var conditionMet = dataListValues.length > 0;
 
         if(negate) {
-          dataValue = !dataValue;
+          conditionMet = !conditionMet;
         }
 
-        if(!dataValue) {
-          elm.setAttribute('hidden', '');
-        } else {
+        if(conditionMet) {
           elm.removeAttribute('hidden');
+        } else {
+          elm.setAttribute('hidden', '');
         }
       }(conditionals[i]));
     }
