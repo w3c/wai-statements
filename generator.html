@@ -94,7 +94,7 @@ external_css: /content-images/wai-statements/statements.css
                 <label for="accstmnt_conformance_full"><span class="status">Fully conformant</span>: <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partially conformant" />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partially conformant" checked />
                 <label for="accstmnt_conformance_partial"><span class="status">Partially conformant</span>: <span class="meaning">some parts of the content do not fully conform to the accessibility standard</span> (you can indicate these parts in later sections of this form)</label>
               </div>
               <div class="radio-field">
@@ -106,7 +106,7 @@ external_css: /content-images/wai-statements/statements.css
                 <label for="accstmnt_conformance_unknown"><span class="status">Not assessed</span>: <span class="meaning">the content has not been evaluated or the evaluation results are not available</span></label>
               </div>
               <div class="radio-field">
-                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="" checked />
+                <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value="" />
                 <label for="accstmnt_conformance_inapplicable">None</label>
               </div>
               <input id="accstmnt_conformance_meaning" type="hidden" value="">
@@ -526,15 +526,15 @@ external_css: /content-images/wai-statements/statements.css
         Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:
       </p>
       <ul>
-          <li class="conditional" data-if="accstmnt_contact_phone">Phone: <span data-print="accstmnt_contact_phone"></span></li>
-          <li class="conditional" data-if="accstmnt_contact_email">E-mail: <a data-print="accstmnt_contact_email" href="mailto:"></a></li>
+          <li>Phone: <span data-print="accstmnt_contact_phone" data-printdefault="PHONENUMBER"></span></li>
+          <li>E-mail: <a href="mailto:" data-print="accstmnt_contact_email" data-printdefault="EMAIL_ADRESS"></a></li>
           <li class="conditional" data-if="accstmnt_contact_visit">Visitor address: <span data-print="accstmnt_contact_visit"></span></li>
-          <li class="conditional" data-if="accstmnt_contact_write">Postal address: <span data-print="accstmnt_contact_write"></span></li>
+          <li>Postal address: <span data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span></li>
           <li class="conditional" data-if="accstmnt_contact_other"><pre class="print-textarea" data-print="accstmnt_contact_other"></pre></li>
       </ul>
-      <p class="conditional" data-if="accstmnt_contact_responsetime">We try to respond to feedback within <span data-print="accstmnt_contact_responsetime"></span>.</p>
+      <p>We try to respond to feedback within <span data-print="accstmnt_contact_responsetime" data-printdefault="FEEDBACK_RESPONSETIME"></span>.</p>
 
-      <div id="statement-asstech">
+      <div id="statement-asstech" class="conditional" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
         <h3>Compatibility with browsers and assistive technology</h3>
         <div id="statement-asstech-compatible-block">
           <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is designed to be compatible with the following assistive technologies:</p>
@@ -583,7 +583,7 @@ external_css: /content-images/wai-statements/statements.css
           <ul data-print="accstmnt_audit_other"></ul>
       </div>
 
-      <div id="statement-approval-block">
+      <div id="statement-approval-block" class="conditional" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
         <h3>Formal approval of this accessibility statement</h3>
 
         <p>This Accessibility Statement is approved by:</p>
