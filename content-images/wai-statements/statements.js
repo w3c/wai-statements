@@ -540,9 +540,14 @@
     });
 
     // Replace div with div.children
-    Array.prototype.forEach.call(generatedStatement.querySelectorAll('div:nth-child(n)'), function expandDivChildren(child) {
+    Array.prototype.forEach.call(generatedStatement.children, function expandDivChildren(child) {
       var nodeName = child.nodeName;
       var fragment = document.createDocumentFragment();
+      var childChildren = child.children;
+
+      if (childChildren) {
+        Array.prototype.forEach.call(childChildren, expandDivChildren);
+      }
 
       if (nodeName === 'DIV') {
         Array.prototype.forEach.call(child.children, function appendToFragment(childChild) {
@@ -551,8 +556,9 @@
           fragment.appendChild(element);
         });
 
-        generatedStatement.insertBefore(fragment, child);
-        generatedStatement.removeChild(child);
+        // Move div children before div and remove div
+        child.parentNode.insertBefore(fragment, child);
+        child.parentNode.removeChild(child);
       }
     });
 
