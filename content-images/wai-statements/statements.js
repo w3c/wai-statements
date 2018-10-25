@@ -187,6 +187,121 @@
     };
   }());
 
+  /**
+   * Saver module to save data as file
+   * @return {object} saver methods
+   */
+  var saver = (function() {
+    'use strict';
+
+    var DEFAULTS = {
+      MIMETYPE: 'text/plain',
+      ENCODING: 'utf-8',
+      FILENAME: 'accessibility-statement',
+      XMLNS: 'http://www.w3.org/1999/xhtml',
+    };
+
+    var MIME_TYPES = {
+      // csv: 'text/csv',
+      // tsv: 'text/tab-separated-values',
+      json: 'application/json',
+      text: 'text/plain',
+      html: 'text/html',
+    };
+
+    function _saveAs(data, mime) {
+
+      switch (mime) {
+        case 'html':
+          _saveAsHtml(data);
+          break;
+
+        default:
+          _saveAsText(data);
+      }
+    }
+
+    function _saveData(data, params) {
+      params = params || {};
+
+      var mime = MIME_TYPES[params.mime] || params.mime || DEFAULTS.MIMETYPE;
+
+      // Create file
+      var blob = _createBlob(data, mime, DEFAULTS.ENCODING);
+      var blobUrl = _createBlobURL(blob);
+      var date = new Date();
+      var dateString = [
+        date.getFullYear(),
+        date.getMonth().toString().length === 1 ? '0' + date.getMonth() : date.getMonth(),
+        date.getDate().toString().length === 1 ? '0' + date.getDate() : date.getDate(),
+      ].join('-');
+      var filename = DEFAULTS.FILENAME
+        + '_' + dateString
+        + '.' + params.mime;
+
+      // Saving the blob
+      _saveResource(
+        blobUrl,
+        {
+          filename: filename,
+          revoke: params.revoke || true
+        }
+      );
+    }
+
+    function _createBlob(data, mime, encoding) {
+      var mimetype = MIME_TYPES[mime] || mime || DEFAULTS.MIMETYPE;
+      encoding = encoding || DEFAULTS.ENCODING;
+
+      return new Blob(
+        [data],
+        {type: mimetype + ';charset=' + encoding}
+      );
+    }
+
+    function _createBlobURL(blob) {
+      var oURL = URL.createObjectURL(blob);
+      return oURL;
+    };
+
+    function _saveResource(href, params) {
+      var a = document.createElementNS(DEFAULTS.XMLNS, 'a');
+      a.href = href;
+      a.setAttribute('download', params.filename || '');
+
+      // Add, click and remove
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      a = null;
+
+      setTimeout(function() {
+        URL.revokeObjectURL(href);
+      }, 0);
+    }
+
+    function _saveAsText() {
+
+    }
+
+    function _saveAsHtml(data) {
+      var mime = 'html';
+      var header = '<!DOCTYPE html>\n';
+
+      _saveData(
+        header + data,
+        {
+          mime: mime,
+        },
+      );
+    };
+
+
+    return {
+      saveAs: _saveAs,
+    };
+  }());
+
   var ROUTES = [
     'create',
     'preview',
@@ -205,10 +320,7 @@
     _setPage();
     _checkBoxGroups();
     _addLine();
-
-    document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
-      location.hash = 'preview';
-    });
+    _enableStatementActions();
 
     // Set button-backtotop href
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
@@ -216,6 +328,33 @@
         el.setAttribute('href', '#' + _getCurrentPage() + '-top');
       })
     })
+  }
+
+  function _enableStatementActions() {
+    var actionButtonGroups = document.querySelectorAll('.statement-actions');
+
+    Array.prototype.forEach.call(actionButtonGroups, function addClickListener(buttonGroup) {
+      buttonGroup.addEventListener('click', function handleButtonGroupClick(event) {
+        var target = event.target;
+        var action = target.dataset.action;
+
+        if (target.nodeName === "BUTTON" && action) {
+          switch (action) {
+            case 'preview_save_as_html':
+              _savePreviewAs('html');
+              break;
+
+            case 'preview_save_as_json':
+              _savePreviewAs('json');
+              break;
+
+            default:
+              break;
+          }
+          event.stopPropagation();
+        }
+      });
+    });
   }
 
   /**
@@ -267,16 +406,12 @@
 
   function _showPreview() {
     var getData = statementForm.data.get;
-    var proto = document.querySelector('#accstatement .page.preview .proto');
-    var result = document.querySelector('#accstatement .page.preview .result');
-    var inputs = document.querySelectorAll('#accstatement .page.create input, #accstatement .page.create textarea');
+    var statementPreview = document.querySelector('#accstatement .page.preview');
     var conditionals;
     var i;
 
-    result.innerHTML = proto.innerHTML;
-
     // remove unmet conditionals
-    conditionals = result.querySelectorAll('.conditional');
+    conditionals = statementPreview.querySelectorAll('.conditional');
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
         var negate = 'negate' in elm.dataset;
@@ -306,8 +441,8 @@
     // statement: limitations & alternatives
     (function() {
       var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');
-      var block = result.querySelector('#statement-limitations-block');
-      var list = result.querySelector('#statement-limitations');
+      var block = statementPreview.querySelector('#statement-limitations-block');
+      var list = statementPreview.querySelector('#statement-limitations');
       var html = '';
 
       for(i = 0; i < limitations.length; i += 1) {
@@ -319,20 +454,27 @@
           var you = row.querySelector('input[name=you]').value;
 
           if(element || description || reason || us || you) {
-            html += '<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>';
+            html += '\t<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>\n';
           }
 
         }(limitations[i]));
       }
 
       if(html) {
-        list.innerHTML = html;
+        list.innerHTML = '\n' + html;
+        block.removeAttribute('hidden');
       } else {
         block.setAttribute('hidden', '');
       }
     }());
 
   };
+
+  function _savePreviewAs(filetype) {
+    var saver = saver || null;
+
+    saver.saveAs(data, filetype);
+  }
 
   function _printFormInput() {
     var getData = statementForm.data.get;
@@ -368,6 +510,78 @@
       }
     })
 
+  }
+
+  function _savePreviewAs(filetype) {
+
+    if (filetype) {
+      switch (filetype) {
+        case 'html':
+          // Prepare statement data
+          var generatedStatementMarkup = _getGeneratedStatement();
+          // Then use save function with data
+          saver.saveAs(generatedStatementMarkup, filetype);
+          break;
+        default:
+
+      }
+    }
+  }
+
+  function _getGeneratedStatement() {
+    var generatedStatement = document.getElementById('statement_generated').cloneNode(true);
+    var hiddenElements = generatedStatement.querySelectorAll('[hidden]');
+
+    // Remove all hidden nodes
+    Array.prototype.forEach.call(hiddenElements, function remove(hidden) {
+      hidden.parentNode.removeChild(hidden);
+    });
+
+    // Replace div with div.children
+    Array.prototype.forEach.call(generatedStatement.querySelectorAll('div:nth-child(n)'), function expandDivChildren(child) {
+      var nodeName = child.nodeName;
+      var fragment = document.createDocumentFragment();
+
+      if (nodeName === 'DIV') {
+        Array.prototype.forEach.call(child.children, function appendToFragment(childChild) {
+          var element = document.createElement(childChild.nodeName);
+          element.innerHTML = childChild.innerHTML;
+          fragment.appendChild(element);
+        });
+
+        generatedStatement.insertBefore(fragment, child);
+        generatedStatement.removeChild(child);
+      }
+    });
+
+    return Array.prototype.map.call(generatedStatement.children, function getCleanHTML(child) {
+      var childChildren = child.children || false;
+
+      function _cleanHtml(element) {
+        element.classList.remove('conditional');
+
+        if (element.classList.length === 0) {
+          element.removeAttribute('class');
+        }
+      }
+
+      _cleanHtml(child);
+
+      if (childChildren) {
+        Array.prototype.forEach.call(childChildren, function cleanHTML(childChild) {
+          _cleanHtml(childChild);
+        });
+      }
+
+      return child.outerHTML
+        .replace(/( data-if=")[^\"]*\"/g, '')
+        .replace(/( data-print=")[^\"]*\"/g, '')
+        .replace(/( data-printdefault=")[^\"]*\"/g, '')
+        .replace(/ {4,}/g, '\t')
+        .replace(/ {2,}/g, '');
+    }).join('\n')
+      .replace(/\t(<\/)/g, '</')
+      .replace(/\t\n/g, '');
   }
 
   function _addLine() {
