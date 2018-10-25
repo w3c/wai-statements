@@ -291,16 +291,12 @@
 
   function _showPreview() {
     var getData = statementForm.data.get;
-    var proto = document.querySelector('#accstatement .page.preview .proto');
-    var result = document.querySelector('#accstatement .page.preview .result');
-    var inputs = document.querySelectorAll('#accstatement .page.create input, #accstatement .page.create textarea');
+    var statementPreview = document.querySelector('#accstatement .page.preview');
     var conditionals;
     var i;
 
-    result.innerHTML = proto.innerHTML;
-
     // remove unmet conditionals
-    conditionals = result.querySelectorAll('.conditional');
+    conditionals = statementPreview.querySelectorAll('.conditional');
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
         var negate = 'negate' in elm.dataset;
@@ -330,8 +326,8 @@
     // statement: limitations & alternatives
     (function() {
       var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');
-      var block = result.querySelector('#statement-limitations-block');
-      var list = result.querySelector('#statement-limitations');
+      var block = statementPreview.querySelector('#statement-limitations-block');
+      var list = statementPreview.querySelector('#statement-limitations');
       var html = '';
 
       for(i = 0; i < limitations.length; i += 1) {

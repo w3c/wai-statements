@@ -497,117 +497,116 @@ external_css: /content-images/wai-statements/statements.css
   </section>
 
   <section class="page preview" hidden>
-    <div class="container proto" hidden>
+    <div id="statement_generated">
+        <div id="statement_header">
+            <h2>Accessibility Statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span></h2>
+            <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
+        </div>
 
-      <div id="statement_header">
-          <h2>Accessibility Statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span></h2>
-          <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.</p>
-      </div>
+        <div id="statement-measures-block" class="conditional" data-if="accstmnt_orginfo_measures">
+          <h3>Measures to support accessibility</h3>
+          <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> takes the following measures to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
+          <ul id="statement-measures" data-print="accstmnt_orginfo_measures"></ul>
+        </div>
 
-      <div id="statement-measures-block" class="conditional" data-if="accstmnt_orginfo_measures">
-        <h3>Measures to support accessibility</h3>
-        <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> takes the following measures to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
-        <ul id="statement-measures" data-print="accstmnt_orginfo_measures"></ul>
-      </div>
+        <div id="statement-conformance" class="conditional" data-if="accstmnt_conformance">
+          <h3>Conformance status</h3>
+          <p>
+              The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities.
+              It defines three levels of conformance: Level A, Level AA, and Level AAA.
+              <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is <span data-print="accstmnt_conformance"></span> with <span data-print="accstmnt_standard"></span>.
+              <span class="conditional" data-if="accstmnt_conformance_meaning"><span data-print="accstmnt_conformance"></span> means that <span data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</span>
+          </p>
+        </div>
 
-      <div id="statement-conformance" class="conditional" data-if="accstmnt_conformance">
-        <h3>Conformance status</h3>
+        <div id="statement-additions" class="conditional" data-if="accstmt_additions">
+          <h4>Additional accessibility</h4>
+          <p data-print="accstmt_additions"></p>
+        </div>
+
+        <h3>Feedback</h3>
         <p>
-            The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities.
-            It defines three levels of conformance: Level A, Level AA, and Level AAA.
-            <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is <span data-print="accstmnt_conformance"></span> with <span data-print="accstmnt_standard"></span>.
-            <span class="conditional" data-if="accstmnt_conformance_meaning"><span data-print="accstmnt_conformance"></span> means that <span data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.</span></p>
-      </div>
-
-      <div id="statement-additions" class="conditional" data-if="accstmt_additions">
-        <h4>Additional accessibility</h4>
-        <p data-print="accstmt_additions"></p>
-      </div>
-
-      <h3>Feedback</h3>
-      <p>
-        We welcome your feedback on the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>.
-        Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:
-      </p>
-      <ul>
-          <li>Phone: <span data-print="accstmnt_contact_phone" data-printdefault="PHONENUMBER"></span></li>
-          <li>E-mail: <a href="mailto:" data-print="accstmnt_contact_email" data-printdefault="EMAIL_ADRESS"></a></li>
-          <li class="conditional" data-if="accstmnt_contact_visit">Visitor address: <span data-print="accstmnt_contact_visit"></span></li>
-          <li>Postal address: <span data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span></li>
-          <li class="conditional" data-if="accstmnt_contact_other"><pre class="print-textarea" data-print="accstmnt_contact_other"></pre></li>
-      </ul>
-      <p>We try to respond to feedback within <span data-print="accstmnt_contact_responsetime" data-printdefault="FEEDBACK_RESPONSETIME"></span>.</p>
-
-      <div id="statement-asstech" class="conditional" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-        <h3>Compatibility with browsers and assistive technology</h3>
-        <div id="statement-asstech-compatible-block">
-          <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is designed to be compatible with the following assistive technologies:</p>
-          <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
-        </div>
-
-        <div id="statement-asstech-incompatible-block" class="conditional" data-if="accstmnt_asstech_incompatible">
-          <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is not compatible with:</p>
-          <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
-        </div>
-      </div>
-
-      <div id="statement-conftech" class="conditional" data-if="accstmnt_tech">
-        <h3>Technical specifications</h3>
-        <p>Accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
-        <ul id="statement-tech" data-print="accstmnt_tech"></ul>
-        <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
-      </div>
-
-      <div id="statement-limitations-block">
-        <h3>Limitations and alternatives</h3>
-        <p>Despite our best efforts to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>, there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.</p>
-
-        <p>Known limitations for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
-        <ul id="statement-limitations"></ul>
-      </div>
-
-      <div id="statement-assessment-block" class="conditional" data-if="accstmnt_approach">
-          <h3>Assessment approach</h3>
-          <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> assessed the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> by the following approaches:</p>
-          <ul id="statement-assessments" data-print="accstmnt_approach"></ul>
-      </div>
-
-      <div class="conditional" data-if="accstmnt_audit_url">
-        <h3>Evaluation report</h3>
-        <p>An evaluation report for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_url"></a>.</p>
-      </div>
-
-      <div class="conditional" data-if="accstmnt_audit_wcagem">
-        <h3>Evaluation statement</h3>
-        <p>An evaluation statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_wcagem"></a>.</p>
-      </div>
-
-      <div class="conditional" data-if="accstmnt_audit_other">
-          <h3>Other evaluation documentation</h3>
-          <ul data-print="accstmnt_audit_other"></ul>
-      </div>
-
-      <div id="statement-approval-block" class="conditional" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
-        <h3>Formal approval of this accessibility statement</h3>
-
-        <p>This Accessibility Statement is approved by:</p>
-        <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span><br/>
-          <span data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
-          <span class="conditional" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
+          We welcome your feedback on the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>.
+          Please let us know if you encounter accessibility barriers on <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">accstmt_namesite</span>:
         </p>
-      </div>
+        <ul>
+            <li>Phone: <span data-print="accstmnt_contact_phone" data-printdefault="PHONENUMBER"></span></li>
+            <li>E-mail: <a href="mailto:" data-print="accstmnt_contact_email" data-printdefault="EMAIL_ADRESS"></a></li>
+            <li class="conditional" data-if="accstmnt_contact_visit">Visitor address: <span data-print="accstmnt_contact_visit"></span></li>
+            <li>Postal address: <span data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span></li>
+            <li class="conditional" data-if="accstmnt_contact_other"><pre class="print-textarea" data-print="accstmnt_contact_other"></pre></li>
+        </ul>
+        <p>We try to respond to feedback within <span data-print="accstmnt_contact_responsetime" data-printdefault="FEEDBACK_RESPONSETIME"></span>.</p>
 
-      <div class="conditional" data-if="accstmt_complaints">
-        <h3>Formal Complaints</h3>
-        <p data-print="accstmt_complaints"></p>
-      </div>
+        <div id="statement-asstech" class="conditional" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
+          <h3>Compatibility with browsers and assistive technology</h3>
+          <div id="statement-asstech-compatible-block">
+            <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is designed to be compatible with the following assistive technologies:</p>
+            <ul id="statement-asstech-compatible" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
+          </div>
 
-      <hr noshade />
+          <div id="statement-asstech-incompatible-block" class="conditional" data-if="accstmnt_asstech_incompatible">
+            <p><span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is not compatible with:</p>
+            <ul id="statement-asstech-incompatible" data-print="accstmnt_asstech_incompatible"></ul>
+          </div>
+        </div>
 
-      <p>This statement was created on <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
+        <div id="statement-conftech" class="conditional" data-if="accstmnt_tech">
+          <h3>Technical specifications</h3>
+          <p>Accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
+          <ul id="statement-tech" data-print="accstmnt_tech"></ul>
+          <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
+        </div>
+
+        <div id="statement-limitations-block">
+          <h3>Limitations and alternatives</h3>
+          <p>Despite our best efforts to ensure accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>, there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.</p>
+
+          <p>Known limitations for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:</p>
+          <ul id="statement-limitations"></ul>
+        </div>
+
+        <div id="statement-assessment-block" class="conditional" data-if="accstmnt_approach">
+            <h3>Assessment approach</h3>
+            <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span> assessed the accessibility of <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> by the following approaches:</p>
+            <ul id="statement-assessments" data-print="accstmnt_approach"></ul>
+        </div>
+
+        <div class="conditional" data-if="accstmnt_audit_url">
+          <h3>Evaluation report</h3>
+          <p>An evaluation report for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_url"></a>.</p>
+        </div>
+
+        <div class="conditional" data-if="accstmnt_audit_wcagem">
+          <h3>Evaluation statement</h3>
+          <p>An evaluation statement for <span data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span> is available at: <a href="#" data-print="accstmnt_audit_wcagem"></a>.</p>
+        </div>
+
+        <div class="conditional" data-if="accstmnt_audit_other">
+            <h3>Other evaluation documentation</h3>
+            <ul data-print="accstmnt_audit_other"></ul>
+        </div>
+
+        <div id="statement-approval-block" class="conditional" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
+          <h3>Formal approval of this accessibility statement</h3>
+
+          <p>This Accessibility Statement is approved by:</p>
+          <p><span data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span><br/>
+            <span data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
+            <span class="conditional" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
+          </p>
+        </div>
+
+        <div class="conditional" data-if="accstmt_complaints">
+          <h3>Formal Complaints</h3>
+          <p data-print="accstmt_complaints"></p>
+        </div>
+
+        <hr noshade />
+
+        <p>This statement was created on <span data-print="accstmt_date" data-printdefault="DATE"></span>.</p>
     </div>
 
-    <div class="container result"></div>
     {% include box.html type="start" class="" %}
         <div class="button-group statement-actions">
             <a class="button" href="#create">Continue with statement</a>
