@@ -485,11 +485,13 @@ external_css: /content-images/wai-statements/statements.css
         </div>
         {% include excol.html type="end" %}
 
-        <div class="action">
-          <button type="button" id="accstmnt_btn_preview">
-            Preview your accessibility statement
-          </button>
-        </div>
+        {% include box.html type="start" class="" %}
+            <div class="statement-actions">
+                <a class="button" href="#preview" data-action="statement_preview">
+                  Preview your accessibility statement
+                </a>
+            </div>
+        {% include box.html type="end" %}
       </form>
     </div>
   </section>
@@ -605,9 +607,9 @@ external_css: /content-images/wai-statements/statements.css
 
     <div class="container result"></div>
     {% include box.html type="start" class="" %}
-        <div id="preview_actions" class="button-group">
+        <div class="button-group statement-actions">
             <a class="button" href="#create">Continue with statement</a>
-            <button id="preview_save_as_html" type="button">Save as HTML</button>
+            <button type="button" data-action="preview_save_as_html">Save as HTML</button>
         </div>
     {% include box.html type="end" %}
   </section>

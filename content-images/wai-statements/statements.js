@@ -205,10 +205,7 @@
     _setPage();
     _checkBoxGroups();
     _addLine();
-
-    document.getElementById('accstmnt_btn_preview').addEventListener('click', function() {
-      location.hash = 'preview';
-    });
+    _enableStatementActions();
 
     // Set button-backtotop href
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
@@ -216,6 +213,33 @@
         el.setAttribute('href', '#' + _getCurrentPage() + '-top');
       })
     })
+  }
+
+  function _enableStatementActions() {
+    var actionButtonGroups = document.querySelectorAll('.statement-actions');
+
+    Array.prototype.forEach.call(actionButtonGroups, function addClickListener(buttonGroup) {
+      buttonGroup.addEventListener('click', function handleButtonGroupClick(event) {
+        var target = event.target;
+        var action = target.dataset.action;
+
+        if (target.nodeName === "BUTTON" && action) {
+          switch (action) {
+            case 'preview_save_as_html':
+              _savePreviewAs('html');
+              break;
+
+            case 'preview_save_as_json':
+              _savePreviewAs('json');
+              break;
+
+            default:
+              break;
+          }
+          event.stopPropagation();
+        }
+      });
+    });
   }
 
   /**
@@ -272,27 +296,6 @@
     var inputs = document.querySelectorAll('#accstatement .page.create input, #accstatement .page.create textarea');
     var conditionals;
     var i;
-    var previewActionButtons = document.querySelector('#preview_actions');
-    previewActionButtons.addEventListener('click', function handlePreviewActionsClick(event) {
-      var target = event.target;
-      var id = target.id;
-
-      if (target.nodeName === "BUTTON") {
-        switch (id) {
-          case 'preview_save_as_html':
-            _savePreviewAs('html');
-            break;
-
-          case 'preview_save_as_json':
-            _savePreviewAs('json');
-            break;
-
-          default:
-            break;
-        }
-        event.stopPropagation();
-      }
-    })
 
     result.innerHTML = proto.innerHTML;
 
