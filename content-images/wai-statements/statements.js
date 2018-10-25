@@ -187,6 +187,23 @@
     };
   }());
 
+  /**
+   * Saver module to save data as file
+   * @return {object} saver methods
+   */
+  var saver = (function() {
+    'use strict';
+
+    function _saveAs(data, mime) {
+      console.log('Save data ', data);
+      console.log('as ', mime);
+    }
+
+    return {
+      saveAs: _saveAs,
+    };
+  }());
+
   var ROUTES = [
     'create',
     'preview',
@@ -398,7 +415,76 @@
   }
 
   function _savePreviewAs(filetype) {
-    console.log('Save preview as ' + filetype);
+
+    if (filetype) {
+      switch (filetype) {
+        case 'html':
+          // Prepare statement data
+          var generatedStatementMarkup = _getGeneratedStatement();
+          // Then use save function with data
+          saver.saveAs(generatedStatementMarkup, filetype);
+          break;
+        default:
+
+      }
+    }
+  }
+
+  function _getGeneratedStatement() {
+    console.log('Get statement markup');
+    var generatedStatement = document.getElementById('statement_generated').cloneNode(true);
+    var hiddenElements = generatedStatement.querySelectorAll('[hidden]');
+
+    // Remove all hidden nodes
+    Array.prototype.forEach.call(hiddenElements, function remove(hidden) {
+      hidden.parentNode.removeChild(hidden);
+    });
+
+    // Replace div with div.children
+    Array.prototype.forEach.call(generatedStatement.children, function expandDivChildren(child) {
+      var nodeName = child.nodeName;
+      var fragment = document.createDocumentFragment();
+
+      if (nodeName === 'DIV') {
+        Array.prototype.forEach.call(child.children, function appendToFragment(childChild) {
+          var element = document.createElement(childChild.nodeName);
+          element.innerHTML = childChild.innerHTML;
+          fragment.appendChild(element);
+        });
+
+        generatedStatement.insertBefore(fragment, child);
+        generatedStatement.removeChild(child);
+      }
+    });
+
+    return Array.prototype.map.call(generatedStatement.children, function getCleanHTML(child) {
+      var childChildren = child.children || false;
+
+      function _cleanHtml(element) {
+        element.classList.remove('conditional');
+
+        if (element.classList.length === 0) {
+          element.removeAttribute('class');
+        }
+      }
+
+      _cleanHtml(child);
+
+      if (childChildren) {
+        Array.prototype.forEach.call(childChildren, function cleanHTML(childChild) {
+          _cleanHtml(childChild);
+        });
+      }
+
+      return child.outerHTML
+        .replace(/( data-if=")[^\"]*\"/g, '')
+        .replace(/( data-print=")[^\"]*\"/g, '')
+        .replace(/( data-printdefault=")[^\"]*\"/g, '')
+        .replace(/ {4,}/g, '\t')
+        .replace(/ {2,}/g, '');
+    }).join('\n')
+      .replace(/\t(<\/)/g, '</')
+      .replace(/\t\n/g, '');
   }
 
   function _addLine() {
