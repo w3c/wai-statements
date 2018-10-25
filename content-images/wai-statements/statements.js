@@ -194,10 +194,110 @@
   var saver = (function() {
     'use strict';
 
+    var DEFAULTS = {
+      MIMETYPE: 'text/plain',
+      ENCODING: 'utf-8',
+      FILENAME: 'accessibility-statement',
+      XMLNS: 'http://www.w3.org/1999/xhtml',
+    };
+
+    var MIME_TYPES = {
+      // csv: 'text/csv',
+      // tsv: 'text/tab-separated-values',
+      json: 'application/json',
+      text: 'text/plain',
+      html: 'text/html',
+    };
+
     function _saveAs(data, mime) {
       console.log('Save data ', data);
       console.log('as ', mime);
+
+      switch (mime) {
+        case 'html':
+          _saveAsHtml(data);
+          break;
+
+        default:
+          _saveAsText(data);
+      }
     }
+
+    function _saveData(data, params) {
+      params = params || {};
+
+      var mime = MIME_TYPES[params.mime] || params.mime || DEFAULTS.MIMETYPE;
+
+      // Create file
+      var blob = _createBlob(data, mime, DEFAULTS.ENCODING);
+      var blobUrl = _createBlobURL(blob);
+      var date = new Date();
+      var dateString = [
+        date.getFullYear(),
+        date.getMonth().toString().length === 1 ? '0' + date.getMonth() : date.getMonth(),
+        date.getDate().toString().length === 1 ? '0' + date.getDate() : date.getDate(),
+      ].join('-');
+      var filename = DEFAULTS.FILENAME
+        + '_' + dateString
+        + '.' + params.mime;
+
+      // Saving the blob
+      _saveResource(
+        blobUrl,
+        {
+          filename: filename,
+          revoke: params.revoke || true
+        }
+      );
+    }
+
+    function _createBlob(data, mime, encoding) {
+      var mimetype = MIME_TYPES[mime] || mime || DEFAULTS.MIMETYPE;
+      encoding = encoding || DEFAULTS.ENCODING;
+
+      return new Blob(
+        [data],
+        {type: mimetype + ';charset=' + encoding}
+      );
+    }
+
+    function _createBlobURL(blob) {
+      var oURL = URL.createObjectURL(blob);
+      return oURL;
+    };
+
+    function _saveResource(href, params) {
+      var a = document.createElementNS(DEFAULTS.XMLNS, 'a');
+      a.href = href;
+      a.setAttribute('download', params.filename || '');
+
+      // Add, click and remove
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      a = null;
+
+      setTimeout(function() {
+        URL.revokeObjectURL(href);
+      }, 0);
+    }
+
+    function _saveAsText() {
+
+    }
+
+    function _saveAsHtml(data) {
+      var mime = 'html';
+      var header = '<!DOCTYPE html>\n';
+
+      _saveData(
+        header + data,
+        {
+          mime: mime,
+        },
+      );
+    };
+
 
     return {
       saveAs: _saveAs,
