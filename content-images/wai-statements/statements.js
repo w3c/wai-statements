@@ -355,6 +355,13 @@
 
   };
 
+  function _savePreviewAs(filetype) {
+    var saver = saver || null;
+
+    console.log('Save preview as ' + filetype);
+    saver.saveAs(data, filetype);
+  }
+
   function _printFormInput() {
     var getData = statementForm.data.get;
     var printCollection = document.querySelectorAll('[data-print]');
