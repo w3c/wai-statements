@@ -538,7 +538,7 @@
     });
 
     // Replace div with div.children
-    Array.prototype.forEach.call(generatedStatement.children, function expandDivChildren(child) {
+    Array.prototype.forEach.call(generatedStatement.querySelectorAll('div:nth-child(n)'), function expandDivChildren(child) {
       var nodeName = child.nodeName;
       var fragment = document.createDocumentFragment();
 
