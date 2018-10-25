@@ -21,12 +21,13 @@
 
     var _formElement = document.forms.create_accessibility_statement_form;
 
-    var _formState = new Map()
-      .set('changed', false);
+    var _formState = new Map();
+    _formState.set('changed', false);
 
     // Do initial form data storage (defaultvalues)
     function _init() {
       _today();
+      updateConformanceMeaning();
 
       Array.prototype.forEach.call(_formElement.elements, function setinitialData(item) {
         var nodeName = item.nodeName;
@@ -74,6 +75,31 @@
       }
     }
 
+    function _getFormGroup(groupName) {
+
+      if (groupName) {
+        return _formElement.elements[groupName];
+      }
+      return false;
+    }
+
+    function _getGroupValue(groupName) {
+      var group = _getFormGroup(groupName) || [];
+      var checkedMembers = Array.prototype.filter.call(group, function getChecked(member) {
+        var isText = member.type === 'text';
+
+        return member.checked || (isText && member.value);
+      });
+
+      if (checkedMembers.length > 0) {
+        return checkedMembers.map(function returnValue(member) {
+          return member.value;
+        });
+      }
+
+      return [];
+    }
+
     /**
      * Transform input values into correct key value pairs
      * Set single string value or array of string values to key
@@ -85,23 +111,14 @@
       var inputValue;
 
       if (inputName && inputType !== 'radio') {
-        inputValue = [];
-
-        _formElement.elements[inputName].forEach(function pushValue(item) {
-          if (
-            (item.type === 'checkbox' && item.checked)
-            || (item.type !== 'checkbox' && item.value)
-          ) {
-            inputValue.push(item.value);
-          }
-        });
+        inputValue = _getGroupValue(inputName) || [];
 
         if (inputValue.length > 0) {
           _formData.set(inputName, inputValue);
         }
 
       } else if (inputName && inputType === 'radio') {
-        inputValue = _formElement.elements[inputName].value;
+        inputValue = _getGroupValue(inputName)[0] || '';
 
         if (inputValue.length > 0) {
           _formData.set(inputName, inputValue);
@@ -284,19 +301,22 @@
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
         var negate = 'negate' in elm.dataset;
-        var targetData = elm.dataset.if;
-        var dataKey = targetData || undefined;
-        var dataValue = dataKey && getData(dataKey) || false;
-
+        var dataList = elm.dataset.if.split(',').map(function trimString(string) {
+          return string.trim();
+        });
+        var dataListValues = dataList.filter(function withValue(key) {
+          return getData(key) !== undefined;
+        });
+        var conditionMet = dataListValues.length > 0;
 
         if(negate) {
-          dataValue = !dataValue;
+          conditionMet = !conditionMet;
         }
 
-        if(!dataValue) {
-          elm.setAttribute('hidden', '');
-        } else {
+        if(conditionMet) {
           elm.removeAttribute('hidden');
+        } else {
+          elm.setAttribute('hidden', '');
         }
       }(conditionals[i]));
     }
@@ -376,26 +396,24 @@
   }
 
   function _addLine() {
-    var i;
     var buttons = document.querySelectorAll('#accstatement button.add-line');
 
-    for(i = 0; i < buttons.length; i += 1) {
-      buttons[i].addEventListener('click', function() {
-        var parent = this.parentNode;
-        var proto = parent.querySelector('.proto');
+    Array.prototype.forEach.call(buttons, function addClickListener(button) {
+      button.addEventListener('click', function(event) {
+        var parent = event.target.parentNode;
         var lines = parent.querySelectorAll('.line');
-        var newLine = document.createElement('template');
+        var proto = parent.querySelector('.proto');
+        var newLine = proto.cloneNode(true);
 
-        newLine.innerHTML = proto.outerHTML;
-        newLine = newLine.content.firstChild;
         newLine.classList.remove('proto');
         newLine.classList.add('line');
-        newLine.innerHTML = newLine.innerHTML.split('[n]').join(lines.length + 1);
+        newLine.innerHTML = newLine.innerHTML.replace(/\[n\]/g, lines.length + 1);
 
         proto.parentNode.insertBefore(newLine, proto);
+
         newLine.querySelector('input, textarea').focus();
       });
-    }
+    });
   }
 
   function _checkBoxGroups() {
