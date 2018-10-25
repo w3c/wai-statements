@@ -356,14 +356,15 @@
           var you = row.querySelector('input[name=you]').value;
 
           if(element || description || reason || us || you) {
-            html += '<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>';
+            html += '\t<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>\n';
           }
 
         }(limitations[i]));
       }
 
       if(html) {
-        list.innerHTML = html;
+        list.innerHTML = '\n' + html;
+        block.removeAttribute('hidden');
       } else {
         block.setAttribute('hidden', '');
       }
