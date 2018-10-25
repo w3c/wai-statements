@@ -210,8 +210,6 @@
     };
 
     function _saveAs(data, mime) {
-      console.log('Save data ', data);
-      console.log('as ', mime);
 
       switch (mime) {
         case 'html':
@@ -475,7 +473,6 @@
   function _savePreviewAs(filetype) {
     var saver = saver || null;
 
-    console.log('Save preview as ' + filetype);
     saver.saveAs(data, filetype);
   }
 
@@ -532,7 +529,6 @@
   }
 
   function _getGeneratedStatement() {
-    console.log('Get statement markup');
     var generatedStatement = document.getElementById('statement_generated').cloneNode(true);
     var hiddenElements = generatedStatement.querySelectorAll('[hidden]');
 
