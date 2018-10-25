@@ -419,9 +419,14 @@
           return string.trim();
         });
         var dataListValues = dataList.filter(function withValue(key) {
-          return getData(key) !== undefined;
+          var data = getData(key);
+          console.log('1', data);
+
+          return data !== undefined && data !== '';
         });
         var conditionMet = dataListValues.length > 0;
+
+        console.log('2', conditionMet);
 
         if(negate) {
           conditionMet = !conditionMet;
