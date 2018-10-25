@@ -10,71 +10,86 @@ footer: >
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="./acknowledgements/">Acknowledgements</a>.</p>
 external_css: /content-images/wai-statements/statements.css
 ---
+{% include box.html type="start" title="Summary" class="" %}
+<p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it. Read more below about accessibility statements or
+    <a href="{{ '/planning/statements/generator/' | relative_url }}#create">generate an accessibility statement</a>.</p>
+{% include box.html type="end" %}
 
-  {% include box.html type="start" title="Summary" class="" %}
-      <p>This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it. Read more below about accessibility statements or <a href="{{"/planning/statements/generator/" | relative_url }}#create">generate an accessibility statement</a>.</p>
-  {% include box.html type="end" %}
+{% include excol.html type="all" %}
 
-  {% include excol.html type="all" %}
+{% include excol.html type="start" %}
+<h2>Why provide an accessibility statement</h2>
 
-  {% include excol.html type="start" %}
-      <h2>Why provide an accessibility statement</h2>
+{% include excol.html type="middle" %}
+<p>Accessibility statements are important for several reasons:</p>
+<ul>
+    <li>Show your users that you care about accessibility and about them</li>
+    <li>Provide them with information about the accessibility of your content</li>
+    <li>Demonstrate commitment to accessibility, and to social responsibility</li>
+</ul>
+<p>In some situations, you may be required to provide an accessibility statement, such as public bodies in countries that implement the
+    <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive
+        {% include_cached external.html %}</a>. The W3C list of
+    <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a>
+    can help you identify policies applicable to you.
+</p>
+{% include excol.html type="end" %}
 
-  {% include excol.html type="middle" %}
-      <p>Accessibility statements are important for several reasons:</p>
-      <ul>
-        <li>Show your users that you care about accessibility and about them</li>
-        <li>Provide them with information about the accessibility of your content</li>
-        <li>Demonstrate commitment to accessibility, and to social responsibility</li>
-      </ul>
-      <p>In some situations, you may be required to provide an accessibility statement, such as public bodies in countries that implement the <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive {% include_cached external.html %}</a>. The W3C list of <a href="https://www.w3.org/WAI/policies/">Web Accessibility Laws &amp; Policies</a> can help you identify policies applicable to you. </p>
-  {% include excol.html type="end" %}
+{% include excol.html type="start" %}
+<h2>What to include in an accessibility statement</h2>
 
-  {% include excol.html type="start" %}
-      <h2>What to include in an accessibility statement</h2>
+{% include excol.html type="middle" %}
+<p>Accessibility statements should contain at least the following:</p>
+<ul>
+    <li>A commitment to accessibility for people with disabilities</li>
+    <li>The accessibility standard applied, such as
+        <a href="{{ '/standards-guidelines/wcag/' | relative_url }}">WCAG 2.1</a>
+    </li>
+    <li>Contact information in case users encounter problems</li>
+</ul>
+<p>It is also advisable to include the following information:</p>
+<ul>
+    <li>Any known limitations, to avoid frustration of your users</li>
+    <li>Measures taken by your organization to ensure accessibility</li>
+    <li>Technical prerequisites, such as supported web browsers</li>
+    <li>Environments in which the content has been tested to work</li>
+    <li>References to applicable national or local laws and policies</li>
+</ul>
+<p>Note that in some situations you may be required to provide particular content in your accessibility statements. For example, there are specific
+    <a href="https://eur-lex.europa.eu/eli/dec_impl/2018/1523/oj">requirements for accessibility statements in relation to the EU Web Accessibility Directive
+        {% include_cached external.html %}</a>.</p>
+{% include excol.html type="end" %}
 
-  {% include excol.html type="middle" %}
-      <p>Accessibility statements should contain at least the following:</p>
-      <ul>
-        <li>A commitment to accessibility for people with disabilities</li>
-        <li>The accessibility standard applied, such as <a href="{{ "/standards-guidelines/wcag/" | relative_url }}">WCAG 2.1</a></li>
-        <li>Contact information in case users encounter problems</li>
-      </ul>
-      <p>It is also advisable to include the following information:</p>
-      <ul>
-        <li>Any known limitations, to avoid frustration of your users</li>
-        <li>Measures taken by your organization to ensure accessibility</li>
-        <li>Technical prerequisites, such as supported web browsers</li>
-        <li>Environments in which the content has been tested to work</li>
-        <li>References to applicable national or local laws and policies</li>
-      </ul>
-      <p>Note that in some situations you may be required to provide particular content in your accessibility statements. For example, there are specific <a href="https://eur-lex.europa.eu/eli/dec_impl/2018/1523/oj">requirements for accessibility statements in relation to the EU Web Accessibility Directive {% include_cached external.html %}</a>.</p>
-  {% include excol.html type="end" %}
+{% include excol.html type="start" %}
+<h2>How to write an accessibility statement</h2>
 
-  {% include excol.html type="start" %}
-      <h2>How to write an accessibility statement</h2>
+{% include excol.html type="middle" %}
+<p>Accessibility statements are primarily for users of your content. Usually they will access the statements when they encounter problems. Technical and jurisdictional language will likely lead to confusion and increase the frustration rather than help your users. It is important to write in simple language, and to provide information that is useful to the users, rather than to the developers or the lawyers.</p>
+<p>In particular, accessibility statements should explain functionality and known limitations in common terms. For example, rather than to say “WCAG Success Criterion 1.2.2 was not met”, it is better to say “videos do not have captions”. Accessibility statements are not technical assessments or declarations of conformity, though they ideally refer to these to provide verification and increase credibility.</p>
+{% include excol.html type="end" %}
 
-  {% include excol.html type="middle" %}
-      <p>Accessibility statements are primarily for users of your content. Usually they will access the statements when they encounter problems. Technical and jurisdictional language will likely lead to confusion and increase the frustration rather than help your users. It is important to write in simple language, and to provide information that is useful to the users, rather than to the developers or the lawyers.</p>
-      <p>In particular, accessibility statements should explain functionality and known limitations in common terms. For example, rather than to say “WCAG Success Criterion 1.2.2 was not met”, it is better to say “videos do not have captions”. Accessibility statements are not technical assessments or declarations of conformity, though they ideally refer to these to provide verification and increase credibility.</p>
-  {% include excol.html type="end" %}
+{% include excol.html type="start" %}
+<h2>Where to put an accessibility statement</h2>
 
-  {% include excol.html type="start" %}
-      <h2>Where to put an accessibility statement</h2>
+{% include excol.html type="middle" %}
+<p>Accessibility statements should be easy to find. Linking them from several places, such as from the footer, help menu, sitemap, and others relevant content areas helps. Also linking and naming them consistently across the pages of your website, and across websites and mobile applications that share a common “look and feel”, supports findability.</p>
+{% include excol.html type="end" %}
 
-  {% include excol.html type="middle" %}
-      <p>Accessibility statements should be easy to find. Linking them from several places, such as from the footer, help menu, sitemap, and others relevant content areas helps. Also linking and naming them consistently across the pages of your website, and across websites and mobile applications that share a common “look and feel”, supports findability.</p>
-  {% include excol.html type="end" %}
+{% include excol.html type="start" %}
+<h2>Examples of accessibility statements</h2>
 
-  {% include excol.html type="start" %}
-      <h2>Examples of accessibility statements</h2>
+{% include excol.html type="middle" %}
+<p>The following examples were created using this accessibility statements generator:</p>
+<ul>
+    <li>
+        <a href="{{ '/planning/statements/minimal-example/' | relative_url }}">Example of Minimal Accessibility Statement</a>
+    </li>
+    <li>
+        <a href="{{ '/planning/statements/complete-example/' | relative_url }}">Example of Complete Accessibility Statement</a>
+    </li>
+</ul>
+{% include excol.html type="end" %}
 
-  {% include excol.html type="middle" %}
-      <p>The following examples were created using this accessibility statements generator:</p>
-      <ul>
-        <li><a href="{{"/planning/statements/minimal-example/" | relative_url }}">Example of Minimal Accessibility Statement</a></li>
-        <li><a href="{{"/planning/statements/complete-example/" | relative_url }}">Example of Complete Accessibility Statement</a></li>
-      </ul>
-  {% include excol.html type="end" %}
-
-      <p><a href="{{"/planning/statements/generator/" | relative_url }}#create" class="button" style="margin-top: 2rem;">Generate an accessibility statement</a></p>
+<p>
+    <a href="{{ '/planning/statements/generator/' | relative_url }}#create" class="button" style="margin-top: 2rem;">Generate an accessibility statement</a>
+</p>
