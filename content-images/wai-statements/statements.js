@@ -124,9 +124,9 @@
           _formData.set(inputName, inputValue);
         }
 
-      } else if (input.value) {
+      } else {
         // Single string values
-        inputValue = input.value;
+        inputValue = input.value || '';
         _formData.set(input.id, inputValue);
       }
 
