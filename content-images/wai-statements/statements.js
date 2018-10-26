@@ -244,7 +244,7 @@
         blobUrl,
         {
           filename: filename,
-          blol: blob,
+          blob: blob,
           revoke: params.revoke || true
         }
       );
