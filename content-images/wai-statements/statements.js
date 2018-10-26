@@ -270,8 +270,16 @@
       var blob = params.blob;
 
       // Directly save blob on IE or EDGE
-      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-        window.navigator.msSaveOrOpenBlob(blob);
+      if (
+        window.navigator
+        && window.navigator.msSaveOrOpenBlob
+        || window.navigator.msSaveBlob
+      ) {
+        try {
+          window.navigator.msSaveOrOpenBlob(blob, filename);
+        } catch (e) {
+          window.navigator.msSaveBlob(blob, filename);
+        }
 
       } else {
         a.href = href;
