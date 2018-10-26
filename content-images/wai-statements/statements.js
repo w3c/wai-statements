@@ -272,6 +272,9 @@
       // Add, click and remove
       document.body.appendChild(a);
       a.click();
+
+      // Release focus before removing
+      a.blur();
       document.body.removeChild(a);
       a = null;
 
