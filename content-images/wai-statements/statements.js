@@ -600,6 +600,9 @@
         Array.prototype.forEach.call(divNode.children, function appendToFragment(divChild) {
           var element = document.createElement(divChild.nodeName);
           element.innerHTML = divChild.innerHTML;
+          if (divChild.classList.length > 0) {
+            element.classList = divChild.classList;
+          }
           fragment.appendChild(element);
         });
 
