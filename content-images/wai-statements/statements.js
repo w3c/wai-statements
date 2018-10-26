@@ -481,18 +481,55 @@
   function _printFormInput() {
     var getData = statementForm.data.get;
     var printCollection = document.querySelectorAll('[data-print]');
+    var printFilters = {
+      lowercase: function toLowerCase(string) {
+        return string.toLowerCase();
+      },
+      capitalize: function capitalize(string) {
+        var firstChar = string.slice(0, 1).toUpperCase();
+        var rest = string.slice(1);
+
+        return firstChar + rest;
+      }
+    };
+
+    function applyFilters(data, filters) {
+      var newData = data;
+
+      if (!filters) {
+        return newData;
+      }
+
+      if (Array.isArray(data)) {
+        newData = data.map(applyFilters);
+
+      } else {
+        filters.forEach(function apply(filter) {
+          if (filter in printFilters) {
+            newData = printFilters[filter](data);
+          }
+        });
+      }
+
+      return newData;
+    }
 
     Array.prototype.forEach.call(printCollection, function printInput(item) {
       var nodeName = item.nodeName;
       var target = item.dataset.print;
+      var hasFilter = item.dataset.printfilter;
+      var printFilters = hasFilter && item.dataset.printfilter.split(',').map(function trim(string) {
+        return string.trim();
+      });
       var printDefault = item.dataset.printdefault || '(no input)';
-      var printData = getData(target) || printDefault;
+      var printData = applyFilters(getData(target), printFilters) || printDefault;
       var dataList = Array.isArray(printData);
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(item) {
-            return '<li>' + item + '</li>'
+          .map(function wrapInLi(data) {
+
+            return '<li>' + data + '</li>'
           })
           .join('');
 
@@ -540,7 +577,6 @@
     });
 
     function getDivChildNodes(node) {
-      console.log('Get Div children for ', node);
       return Array.prototype.filter.call(node.children, function (child) {
         return child.nodeName === 'DIV';
       });
