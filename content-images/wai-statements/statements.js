@@ -268,6 +268,7 @@
     function _saveResource(href, params) {
       var a = document.createElementNS(DEFAULTS.XMLNS, 'a');
       var blob = params.blob;
+      var filenam = params.filename;
 
       // Directly save blob on IE or EDGE
       if (
