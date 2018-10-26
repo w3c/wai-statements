@@ -411,7 +411,7 @@
     var i;
 
     // remove unmet conditionals
-    conditionals = statementPreview.querySelectorAll('.conditional');
+    conditionals = statementPreview.querySelectorAll('[data-if]');
     for(i = 0; i < conditionals.length; i += 1) {
       (function(elm) {
         var negate = 'negate' in elm.dataset;
@@ -481,18 +481,57 @@
   function _printFormInput() {
     var getData = statementForm.data.get;
     var printCollection = document.querySelectorAll('[data-print]');
+    var printFilters = {
+      lowercase: function toLowerCase(string) {
+        return string.toLowerCase();
+      },
+      capitalize: function capitalize(string) {
+        var firstChar = string.slice(0, 1).toUpperCase();
+        var rest = string.slice(1);
+
+        return firstChar + rest;
+      }
+    };
+
+    function applyFilters(data, filters) {
+      var newData = data;
+
+      if (!data || !filters || filters.length === 0) {
+        return data;
+      }
+
+      if (Array.isArray(data)) {
+        newData = data.map(function (item) {
+          return applyFilters(item, filters);
+        });
+
+      } else {
+        filters.forEach(function apply(filter) {
+          if (filter in printFilters) {
+            newData = printFilters[filter](data);
+          }
+        });
+      }
+
+      return newData;
+    }
 
     Array.prototype.forEach.call(printCollection, function printInput(item) {
       var nodeName = item.nodeName;
       var target = item.dataset.print;
+      var hasFilter = item.dataset.printfilter;
+      var printFilters = hasFilter && item.dataset.printfilter.split(',').map(function trim(string) {
+        return string.trim();
+      });
       var printDefault = item.dataset.printdefault || '(no input)';
-      var printData = getData(target) || printDefault;
+      var printData = applyFilters(getData(target), printFilters) || printDefault;
       var dataList = Array.isArray(printData);
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(item) {
-            return '<li>' + item + '</li>'
+          .map(function wrapInLi(data) {
+
+            return '<li>' + data + '</li>'
           })
           .join('');
 
@@ -539,47 +578,47 @@
       hidden.parentNode.removeChild(hidden);
     });
 
-    // Replace div with div.children
-    Array.prototype.forEach.call(generatedStatement.children, function expandDivChildren(child) {
-      var nodeName = child.nodeName;
+    function getDivChildNodes(node) {
+      return Array.prototype.filter.call(node.children, function (child) {
+        return child.nodeName === 'DIV';
+      });
+    }
+
+    function expandDivChildren(divNode) {
       var fragment = document.createDocumentFragment();
-      var childChildren = child.children;
+      var divChildren = getDivChildNodes(divNode);
 
-      if (childChildren) {
-        Array.prototype.forEach.call(childChildren, expandDivChildren);
-      }
+      if (divChildren.length > 0) {
+        Array.prototype.forEach.call(divChildren, function removeDiv(divChild) {
+          expandDivChildren(divChild);
+        });
 
-      if (nodeName === 'DIV') {
-        Array.prototype.forEach.call(child.children, function appendToFragment(childChild) {
-          var element = document.createElement(childChild.nodeName);
-          element.innerHTML = childChild.innerHTML;
+        // Run again on node after children
+        expandDivChildren(divNode);
+
+      } else {
+        Array.prototype.forEach.call(divNode.children, function appendToFragment(divChild) {
+          var element = document.createElement(divChild.nodeName);
+          element.innerHTML = divChild.innerHTML;
+          if (divChild.classList.length > 0) {
+            element.classList = divChild.classList;
+          }
           fragment.appendChild(element);
         });
 
         // Move div children before div and remove div
-        child.parentNode.insertBefore(fragment, child);
-        child.parentNode.removeChild(child);
+        divNode.parentNode.insertBefore(fragment, divNode);
+        divNode.parentNode.removeChild(divNode);
       }
+
+    }
+
+    // Replace div with div.children
+    Array.prototype.forEach.call(getDivChildNodes(generatedStatement), function removeDiv(child) {
+      expandDivChildren(child);
     });
 
     return Array.prototype.map.call(generatedStatement.children, function getCleanHTML(child) {
-      var childChildren = child.children || false;
-
-      function _cleanHtml(element) {
-        element.classList.remove('conditional');
-
-        if (element.classList.length === 0) {
-          element.removeAttribute('class');
-        }
-      }
-
-      _cleanHtml(child);
-
-      if (childChildren) {
-        Array.prototype.forEach.call(childChildren, function cleanHTML(childChild) {
-          _cleanHtml(childChild);
-        });
-      }
 
       return child.outerHTML
         .replace(/( data-if=")[^\"]*\"/g, '')
