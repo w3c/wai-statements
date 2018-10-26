@@ -496,12 +496,14 @@
     function applyFilters(data, filters) {
       var newData = data;
 
-      if (!filters) {
-        return newData;
+      if (!data || !filters || filters.length === 0) {
+        return false;
       }
 
       if (Array.isArray(data)) {
-        newData = data.map(applyFilters);
+        newData = data.map(function (item) {
+          return applyFilters(item, filters);
+        });
 
       } else {
         filters.forEach(function apply(filter) {
