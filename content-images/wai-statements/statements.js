@@ -497,7 +497,7 @@
       var newData = data;
 
       if (!data || !filters || filters.length === 0) {
-        return false;
+        return data;
       }
 
       if (Array.isArray(data)) {
