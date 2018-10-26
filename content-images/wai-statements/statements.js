@@ -292,7 +292,7 @@
         header + data,
         {
           mime: mime,
-        },
+        }
       );
     };
 
