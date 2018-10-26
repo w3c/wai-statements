@@ -624,7 +624,7 @@ external_css: /content-images/wai-statements/statements.css
                 </p>
             </div>
 
-            <div id="statement-measures-block" class="conditional" data-if="accstmnt_orginfo_measures">
+            <div id="statement-measures-block" data-if="accstmnt_orginfo_measures">
                 <h3>Measures to support accessibility</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION"></span>
@@ -634,7 +634,7 @@ external_css: /content-images/wai-statements/statements.css
                 <ul id="statement-measures" class="organizational-effort accessibillity-measures" data-print="accstmnt_orginfo_measures"></ul>
             </div>
 
-            <div id="statement-conformance" class="conditional" data-if="accstmnt_conformance">
+            <div id="statement-conformance" data-if="accstmnt_conformance">
                 <h3>Conformance status</h3>
                 <p>
                     The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
@@ -643,7 +643,7 @@ external_css: /content-images/wai-statements/statements.css
                     <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
                     with
                     <span class="basic-information conformance-standard" data-print="accstmnt_standard"></span>.
-                    <span class="conditional" data-if="accstmnt_conformance_meaning">
+                    <span data-if="accstmnt_conformance_meaning">
                         <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
                         means that
                         <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning" data-printdefault="CONFORMANCE_MEANING"></span>.
@@ -651,7 +651,7 @@ external_css: /content-images/wai-statements/statements.css
                 </p>
             </div>
 
-            <div id="statement-additions" class="conditional" data-if="accstmt_additions">
+            <div id="statement-additions" data-if="accstmt_additions">
                 <h4>Additional accessibility</h4>
                 <p class="basic-information conformance-additions" data-print="accstmt_additions"></p>
             </div>
@@ -672,7 +672,7 @@ external_css: /content-images/wai-statements/statements.css
                     E-mail:
                     <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email" data-printdefault="EMAIL_ADRESS"></a>
                 </li>
-                <li class="conditional" data-if="accstmnt_contact_visit">
+                <li data-if="accstmnt_contact_visit">
                     Visitor address:
                     <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
                 </li>
@@ -680,7 +680,7 @@ external_css: /content-images/wai-statements/statements.css
                     Postal address:
                     <span class="postal-address p-adr" data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span>
                 </li>
-                <li class="conditional" data-if="accstmnt_contact_other">
+                <li data-if="accstmnt_contact_other">
                     <p class="contact-other p-note" style="margin: 0; white-space: pre-wrap; line-height: 2em;" data-print="accstmnt_contact_other"></p>
                 </li>
             </ul>
@@ -689,7 +689,7 @@ external_css: /content-images/wai-statements/statements.css
                 <span class="feedback responsetime" data-print="accstmnt_contact_responsetime" data-printdefault="FEEDBACK_RESPONSETIME"></span>.
             </p>
 
-            <div id="statement-asstech" class="conditional" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
+            <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
                 <h3>Compatibility with browsers and assistive technology</h3>
                 <div id="statement-asstech-compatible-block">
                     <p>
@@ -699,7 +699,7 @@ external_css: /content-images/wai-statements/statements.css
                     <ul id="statement-asstech-compatible" class="technical-information compatible-environments" data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
                 </div>
 
-                <div id="statement-asstech-incompatible-block" class="conditional" data-if="accstmnt_asstech_incompatible">
+                <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>
                         is not compatible with:
@@ -708,7 +708,7 @@ external_css: /content-images/wai-statements/statements.css
                 </div>
             </div>
 
-            <div id="statement-conftech" class="conditional" data-if="accstmnt_tech">
+            <div id="statement-conftech" data-if="accstmnt_tech">
                 <h3>Technical specifications</h3>
                 <p>
                     Accessibility of
@@ -733,7 +733,7 @@ external_css: /content-images/wai-statements/statements.css
                 <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
             </div>
 
-            <div id="statement-assessment-block" class="conditional" data-if="accstmnt_approach">
+            <div id="statement-assessment-block" data-if="accstmnt_approach">
                 <h3>Assessment approach</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION">ORGANIZATION</span>
@@ -744,7 +744,7 @@ external_css: /content-images/wai-statements/statements.css
                 <ul id="statement-assessments" class="technical-information assessment-approaches" data-print="accstmnt_approach"></ul>
             </div>
 
-            <div class="conditional" data-if="accstmnt_audit_url">
+            <div data-if="accstmnt_audit_url">
                 <h3>Evaluation report</h3>
                 <p>
                     An evaluation report for
@@ -754,7 +754,7 @@ external_css: /content-images/wai-statements/statements.css
                 </p>
             </div>
 
-            <div class="conditional" data-if="accstmnt_audit_wcagem">
+            <div data-if="accstmnt_audit_wcagem">
                 <h3>Evaluation statement</h3>
                 <p>
                     An evaluation statement for
@@ -764,23 +764,23 @@ external_css: /content-images/wai-statements/statements.css
                 </p>
             </div>
 
-            <div class="conditional" data-if="accstmnt_audit_other">
+            <div data-if="accstmnt_audit_other">
                 <h3>Other evaluation documentation</h3>
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
 
-            <div id="statement-approval-block" class="conditional" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
+            <div id="statement-approval-block" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
                 <h3>Formal approval of this accessibility statement</h3>
 
                 <p>This Accessibility Statement is approved by:</p>
                 <p class="approval">
                     <span class="basic-information organization-name" data-print="accstmt_org" data-printdefault="ORGANIZATION"></span><br/>
                     <span class="approved-by" data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
-                    <span class="approved-by-jobtitle conditional" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
+                    <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
                 </p>
             </div>
 
-            <div class="conditional" data-if="accstmt_complaints">
+            <div data-if="accstmt_complaints">
                 <h3>Formal Complaints</h3>
                 <p class="complaints" data-print="accstmt_complaints"></p>
             </div>
