@@ -244,6 +244,7 @@
         blobUrl,
         {
           filename: filename,
+          blol: blob,
           revoke: params.revoke || true
         }
       );
@@ -266,15 +267,23 @@
 
     function _saveResource(href, params) {
       var a = document.createElementNS(DEFAULTS.XMLNS, 'a');
-      a.href = href;
-      a.setAttribute('download', params.filename || '');
+      var blob = params.blob;
 
-      // Add, click and remove
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      a = null;
+      // Directly save blob on IE or EDGE
+      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(blob);
 
+      } else {
+        a.href = href;
+        a.setAttribute('download', params.filename || '');
+
+        // Add, click and remove (download blob)
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+
+      a = undefined;
       setTimeout(function() {
         URL.revokeObjectURL(href);
       }, 0);
