@@ -14,7 +14,7 @@ external_css: /content-images/wai-statements/statements.css
     <section class="page create" hidden="hidden">
         <div class="container">
 
-            {% include box.html type="start" title="About this Generator Tool" class="" %}
+            {% include box.html type="start" title="How to use this generator tool" class="" %}
             <p>The information that you provide below will generate an accessibility statement that you can download and further refine. None of the fields are required. None of the information you enter is stored outside your web browser.</p>
             {% include box.html type="end" %}
 
@@ -510,7 +510,7 @@ external_css: /content-images/wai-statements/statements.css
 
                 <div class="group">
                     <div class="field">
-                        <label for="accstmnt_audit_url">Link to recent evaluation report (Example: "https://www.w3.org/WAI/demos/bad/after/reports/")
+                        <label for="accstmnt_audit_url">Link to recent evaluation report (Example: "https://example.org/accessibility-evaulation-report")
                             <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
                         </label>
 
@@ -524,7 +524,7 @@ external_css: /content-images/wai-statements/statements.css
                     </div>
 
                     <div class="field">
-                        <label for="accstmnt_audit_wcagem">Link to evaluation statement (Example: "https://www.w3.org/WAI/demos/bad/after/reports/")
+                        <label for="accstmnt_audit_wcagem">Link to evaluation statement (Example: "https://example.org/accessibility-evaulation-statement")
                             <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
                         </label>
 
@@ -540,12 +540,12 @@ external_css: /content-images/wai-statements/statements.css
                     </div>
 
                     <div class="field line">
-                        <label for="accstmnt_audit_other_1">Other evidence 1 (Example: link to certification)</label>
+                        <label for="accstmnt_audit_other_1">Other evidence 1 (Example: "https://example.org/accessibility-evaulation-certificate")</label>
                         <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other"/>
                     </div>
 
                     <div class="field proto">
-                        <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: link to certification)</label>
+                        <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: other background reference)</label>
                         <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other"/>
                     </div>
 
@@ -614,6 +614,7 @@ external_css: /content-images/wai-statements/statements.css
     </section>
 
     <section class="page preview" hidden="hidden">
+        {% include box.html type="start" title="Preview your accessibility statement" class="example" %}
         <div id="statement_generated">
             <div id="statement_header">
                 <h2>Accessibility Statement for <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span></h2>
@@ -793,13 +794,12 @@ external_css: /content-images/wai-statements/statements.css
                 <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span>.
             </p>
         </div>
-
-        {% include box.html type="start" class="" %}
-        <div class="button-group statement-actions">
-            <a class="button" href="#create">Continue with statement</a>
-            <button type="button" data-action="preview_save_as_html">Save as HTML</button>
-        </div>
         {% include box.html type="end" %}
+
+        <div class="button-group statement-actions">
+            <a class="button" href="#create">Back to generator tool</a>
+            <button type="button" data-action="preview_save_as_html">Download as HTML page</button>
+        </div>
     </section>
 </div>
 
