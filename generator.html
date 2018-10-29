@@ -632,7 +632,7 @@ external_css: /content-images/wai-statements/statements.css
                     takes the following measures to ensure accessibility of
                     <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>:
                 </p>
-                <ul id="statement-measures" class="organizational-effort accessibillity-measures" data-print="accstmnt_orginfo_measures" data-printfilter="capitalize"></ul>
+                <ul id="statement-measures" class="organizational-effort accessibility-measures" data-print="accstmnt_orginfo_measures" data-printfilter="capitalize"></ul>
             </div>
 
             <div id="statement-conformance" data-if="accstmnt_conformance">
@@ -681,9 +681,7 @@ external_css: /content-images/wai-statements/statements.css
                     Postal address:
                     <span class="postal-address p-adr" data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span>
                 </li>
-                <li data-if="accstmnt_contact_other">
-                    <p class="contact-other p-note" style="margin: 0; white-space: pre-wrap; line-height: 2em;" data-print="accstmnt_contact_other"></p>
-                </li>
+                <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
             </ul>
             <p>
                 We try to respond to feedback within
