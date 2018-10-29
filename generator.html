@@ -681,9 +681,7 @@ external_css: /content-images/wai-statements/statements.css
                     Postal address:
                     <span class="postal-address p-adr" data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span>
                 </li>
-                <li data-if="accstmnt_contact_other">
-                    <p class="contact-other p-note" data-print="accstmnt_contact_other"></p>
-                </li>
+                <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
             </ul>
             <p>
                 We try to respond to feedback within
