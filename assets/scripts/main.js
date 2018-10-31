@@ -87,7 +87,9 @@
 
 // Create an observer
 var observer = new MutationObserver(function (mutationsList, observer) {
-    var mutationsList = mutationsList.filter(mutation => mutation.type === 'attributes' && mutation.attributeName === 'hidden');
+    var mutationsList = mutationsList.filter(function(mutation) {
+      return ((mutation.type === 'attributes') && (mutation.attributeName === 'hidden'))
+    });
     // console.log(mutationsList);
     for(var mutation of mutationsList) {
       // console.log(mutation);
