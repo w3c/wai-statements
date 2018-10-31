@@ -339,7 +339,7 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
       var initialTarget = target;
 
       // if the first element is a details element, open it. Set target to its parent node so weâ€¦
-      if (target.nodeName.toLowerCase() == 'details') {
+      if (target && target.nodeName.toLowerCase() == 'details') {
         target.setAttribute('open', 'true');
         target = target.parentNode;
       }
