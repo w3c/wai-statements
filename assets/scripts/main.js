@@ -51,21 +51,30 @@
       button.addEventListener('click', function(event){
         var buttontarget = event.target.dataset.target;
         var buttonstatus = event.target.getAttribute('aria-expanded');
+        var targetelms   = document.querySelectorAll(buttontarget);
         if (buttonstatus == "true") { // buttonstatus=true => Expanded, so hide target
-          Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+          Array.prototype.forEach.call(targetelms, function(el, i){
             el.setAttribute('hidden', true);
           });
+          if(targetelms.length > 1) {
+            button.setAttribute('aria-expanded','false');
+            button.innerHTML = button.dataset.showtext;
+          }
           if (event.target.dataset.showhidebuttonid) {
             sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'hidden');
           }
         } else {
-          Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+          Array.prototype.forEach.call(targetelms, function(el, i){
             el.removeAttribute('hidden');
-            if (i === 0) {
+            if ((i === 0) && (targetelms.length === 1)) {
               el.setAttribute('tabindex', '-1');
               el.focus();
             }
           });
+          if(targetelms.length > 1) {
+            button.setAttribute('aria-expanded','true');
+            button.innerHTML = button.dataset.hidetext;
+          }
           if (event.target.dataset.showhidebuttonid) {
             sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'visible');
           }
