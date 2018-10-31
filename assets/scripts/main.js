@@ -91,7 +91,8 @@ var observer = new MutationObserver(function (mutationsList, observer) {
       return ((mutation.type === 'attributes') && (mutation.attributeName === 'hidden'))
     });
     // console.log(mutationsList);
-    for(var mutation of mutationsList) {
+    for (var i = mutationsList.length - 1; i >= 0; i--) {
+      var mutation = mutationsList[i];
       // console.log(mutation);
       var button = document.querySelector('button[data-target="#' + mutation.target.id +'"]');
       if (mutation.target.getAttribute('hidden')) {
