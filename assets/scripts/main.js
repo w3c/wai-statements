@@ -90,19 +90,18 @@ var observer = new MutationObserver(function (mutationsList, observer) {
     var mutationsList = mutationsList.filter(function(mutation) {
       return ((mutation.type === 'attributes') && (mutation.attributeName === 'hidden'))
     });
-    // console.log(mutationsList);
+
     for (var i = mutationsList.length - 1; i >= 0; i--) {
       var mutation = mutationsList[i];
-      // console.log(mutation);
       var button = document.querySelector('button[data-target="#' + mutation.target.id +'"]');
-      if (mutation.target.getAttribute('hidden')) {
+
+      if (button && mutation.target.getAttribute('hidden')) {
         button.setAttribute('aria-expanded','false');
         button.innerHTML = button.dataset.showtext;
-      } else {
+      } else if (button) {
         button.setAttribute('aria-expanded','true');
         button.innerHTML = button.dataset.hidetext;
       }
-      // console.log(`Target: ${mutation.target.id} is hidden: ${mutation.target.getAttribute('hidden') || false}`);
     }
 });
 
