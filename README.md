@@ -34,24 +34,9 @@ bundle exec jekyll serve
 
 ### Installation as stand-alone
 
-To use the accessibility statement generator tool as a stand-alone to include into your own site you just need the following files:
+To use the accessibility statement generator tool as a stand-alone to include into your own site you need to build the site once with Jekyll, see "[Installation as part of the WAI website](#installation-as-part-of-the-wai-website)".
 
-- `generator.html`
-
-    This file contains the markup for the create and preview page.
-
-- `content-images/wai-statements/generator.css`
-
-    This file contains application styling.
-
-- `content-images/wai-statements/generator.js`
-
-    This file handles / is the application script code.
-
-The only problem is that this will not work in a browser yet, because the `html` file is a Jekyll template inside the wai theme.
-
-To get the compiled files you need to follow the installation instructions for "[Installation as part of the WAI website](#installation-as-part-of-the-wai-website)" and instead of serving you build the site once:
-
+Build the site:
 ```
 bundle exec jekyll build
 ```
@@ -67,6 +52,13 @@ The complete site is build inside the `_site` folder and the generated files you
 - WAI theme assets: `assets/css/style.css` and `assets/scripts/main.js`
 
     This is required for the expanding and toggling of sections and information.
+
+For now you need to strip and modify all files manually to make it includeable into your own project.
+
+#### TODO for stand alone version
+
+- [ ] Add standalone version page `generator/standalone.html`
+
 
 
 ---
