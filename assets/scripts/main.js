@@ -23,7 +23,7 @@
   };
 
   var isVisible = function(el) {
-    return (el.offsetWidth > 0 && el.offsetHeight > 0);
+    return (el && el.offsetWidth > 0 && el.offsetHeight > 0);
   };
 
   /* Showhidebutton */
@@ -337,6 +337,13 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
     if (fragment.length) {
       var target = document.querySelector(fragment);
       var initialTarget = target;
+
+      // Exit target is undefined / null
+      if (!target) {
+        return;
+      } else {
+        console.log(target);
+      }
 
       // if the first element is a details element, open it. Set target to its parent node so weâ€¦
       if (target && target.nodeName.toLowerCase() == 'details') {
