@@ -665,27 +665,26 @@ external_css: /content-images/wai-statements/generator.css
                 <span class="basic-information website-name" data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span>:
             </p>
             <ul class="basic-information feedback h-card">
-                <li>
+                <li data-if="accstmnt_contact_phone">
                     Phone:
-                    <span class="phone-number p-tel" data-print="accstmnt_contact_phone" data-printdefault="PHONENUMBER"></span>
+                    <span class="phone-number p-tel" data-print="accstmnt_contact_phone"></span>
                 </li>
-                <li>
+                <li data-if="accstmnt_contact_email">
                     E-mail:
-                    <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email" data-printdefault="EMAIL_ADRESS"></a>
+                    <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
                 </li>
                 <li data-if="accstmnt_contact_visit">
                     Visitor address:
                     <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
                 </li>
-                <li>
+                <li data-if="accstmnt_contact_write">
                     Postal address:
-                    <span class="postal-address p-adr" data-print="accstmnt_contact_write" data-printdefault="POSTAL_ADRESS"></span>
+                    <span class="postal-address p-adr" data-print="accstmnt_contact_write"></span>
                 </li>
                 <li class="contact-other p-note" data-if="accstmnt_contact_other" data-print="accstmnt_contact_other"></li>
             </ul>
-            <p>
-                We try to respond to feedback within
-                <span class="feedback responsetime" data-print="accstmnt_contact_responsetime" data-printdefault="FEEDBACK_RESPONSETIME"></span>.
+            <p data-if="accstmnt_contact_responsetime">
+                We try to respond to feedback within <span class="feedback responsetime" data-print="accstmnt_contact_responsetime"></span>.
             </p>
 
             <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
