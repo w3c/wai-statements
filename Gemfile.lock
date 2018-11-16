@@ -239,6 +239,8 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
+    wai-website-theme (0.1.6)
+      jekyll (~> 3.6)
 
 PLATFORMS
   ruby
@@ -253,6 +255,7 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
+  wai-website-theme
 
 BUNDLED WITH
-   1.16.6
+   1.17.1
