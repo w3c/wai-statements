@@ -112,24 +112,17 @@
 
       if (inputName && inputType !== 'radio') {
         inputValue = _getGroupValue(inputName) || [];
-
-        if (inputValue.length > 0) {
-          _formData.set(inputName, inputValue);
-        }
+        _formData.set(inputName, inputValue);
 
       } else if (inputName && inputType === 'radio') {
         inputValue = _getGroupValue(inputName)[0] || '';
-
-        if (inputValue.length > 0) {
-          _formData.set(inputName, inputValue);
-        }
+        _formData.set(inputName, inputValue);
 
       } else {
         // Single string values
         inputValue = input.value || '';
         _formData.set(input.id, inputValue);
       }
-
     }
 
     // Custom form data manipulation
@@ -456,7 +449,10 @@
         var dataListValues = dataList.filter(function withValue(key) {
           var data = getData(key);
 
-          return data !== undefined && data !== '';
+          return (
+            data !== undefined
+            && data.length > 0
+          );
         });
         var conditionMet = dataListValues.length > 0;
 
