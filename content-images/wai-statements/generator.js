@@ -451,7 +451,6 @@
 
           return (
             data !== undefined
-            && data !== ''
             && data.length > 0
           );
         });
