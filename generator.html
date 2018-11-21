@@ -94,7 +94,7 @@ external_css: /content-images/wai-statements/generator.css
                         </div>
 
                         <div class="radio-field">
-                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="Other"/>
+                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_other" value="another standard"/>
                             <label for="accstmnt_standard_other">Other</label>
                             <input aria-label="Other standard name" type="text" id="accstmnt_standard_other_name">
                         </div>
@@ -643,10 +643,7 @@ external_css: /content-images/wai-statements/generator.css
                     is
                     <span class="basic-information conformance-status" data-print="accstmnt_conformance" data-printfilter="lowercase"></span>
                     with
-                    <span class="basic-information conformance-standard">
-                        <span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span>
-                        <span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span>.
-                    </span>
+                    <span class="basic-information conformance-standard"><span data-print="accstmnt_standard" data-if="accstmnt_standard_other_name" data-negate></span><span data-print="accstmnt_standard_other_name" data-if="accstmnt_standard_other_name"></span>.</span>
                     <span data-if="accstmnt_conformance_meaning">
                         <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
                         means that
