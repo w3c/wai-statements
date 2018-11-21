@@ -449,7 +449,11 @@
         var dataListValues = dataList.filter(function withValue(key) {
           var data = getData(key);
 
-          return data !== undefined && data !== '';
+          return (
+            data !== undefined
+            && data !== ''
+            && data.length > 0
+          );
         });
         var conditionMet = dataListValues.length > 0;
 
