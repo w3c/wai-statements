@@ -148,6 +148,13 @@
       }
     }
 
+    function resetOtherStandard() {
+      var otherStandardInput = document.getElementById('accstmnt_standard_other_name');
+
+      otherStandardInput.value = '';
+      _setFormData(otherStandardInput);
+    }
+
     /**
      * EXECUTE AREA
      */
@@ -172,8 +179,18 @@
       }
 
       // Custom form manipulation
+      // Setting conformance meaning
       if (target.name && target.name === 'accstmnt_conformance') {
         updateConformanceMeaning();
+      }
+
+      // (Re)Setting other standard applied
+      if (
+        target.name
+        && target.name === 'accstmnt_standard'
+        && target.id !== 'accstmnt_standard_other'
+      ) {
+        resetOtherStandard();
       }
     });
 
