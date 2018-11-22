@@ -533,9 +533,13 @@
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(data) {
+          .map(function wrapInLi(data, index) {
 
-            return '<li>' + data + '</li>'
+            if (index === 0) {
+              return '\n\t<li>' + data + '</li>\n';
+            }
+
+            return '\t<li>' + data + '</li>\n';
           })
           .join('');
 
