@@ -434,42 +434,10 @@
   }
 
   function _showPreview() {
-    var getData = statementForm.data.get;
     var statementPreview = document.querySelector('#accstatement .page.preview');
-    var conditionals = statementPreview.querySelectorAll('[data-if]');
 
     // Apply conditionals
-    Array.prototype.forEach.call(conditionals, function apply(conditional) {
-      var negate = 'negate' in conditional.dataset;
-
-      // Get required data for condition
-      var dataList = conditional.dataset.if.split(',')
-        .map(function trimString(string) {
-          return string.trim();
-        });
-
-      // Get filtered datalist with values
-      var dataListValues = dataList.filter(function withValue(key) {
-        var data = getData(key);
-
-        return (
-          data !== undefined
-          && data.length > 0
-        );
-      });
-      var conditionMet = dataListValues.length > 0;
-
-      if(negate) {
-        conditionMet = !conditionMet;
-      }
-
-      if(conditionMet) {
-        conditional.removeAttribute('hidden');
-      } else {
-        conditional.setAttribute('hidden', '');
-      }
-
-    });
+    _applyConditionals();
 
     // Print formdata into printables: [data-print]
     _printFormInput();
@@ -685,6 +653,42 @@
 
         newLine.querySelector('input, textarea').focus();
       });
+    });
+  }
+
+  function _applyConditionals() {
+    var getData = statementForm.data.get;
+    var conditionals = document.querySelectorAll('[data-if]');
+
+    Array.prototype.forEach.call(conditionals, function apply(conditional) {
+      var negate = 'negate' in conditional.dataset;
+
+      // Get required data for condition
+      var dataList = conditional.dataset.if.split(',')
+        .map(function trimString(string) {
+          return string.trim();
+        });
+
+      // Get filtered datalist with values
+      var dataListValues = dataList.filter(function withValue(key) {
+        var data = getData(key);
+
+        return (
+          data !== undefined
+          && data.length > 0
+        );
+      });
+      var conditionMet = dataListValues.length > 0;
+
+      if(negate) {
+        conditionMet = !conditionMet;
+      }
+
+      if(conditionMet) {
+        conditional.removeAttribute('hidden');
+      } else {
+        conditional.setAttribute('hidden', '');
+      }
     });
   }
 
