@@ -346,7 +346,6 @@
     }
 
     _setPage();
-    _checkBoxGroups();
     _addLine();
     _enableStatementActions();
 
@@ -683,23 +682,6 @@
       });
     });
   }
-
-  function _checkBoxGroups() {
-    var i, j;
-    var inputs = document.querySelectorAll('#accstatement .radio-group input');
-
-    // Set checked to false on radiogroup inputs... why?!
-    for(i = 0; i < inputs.length; i += 1) {
-      inputs[i].addEventListener('click', function() {
-        for(j = 0; j < inputs.length; j += 1) {
-          if(this.name === inputs[j].name
-          && this.id !== inputs[j].id) {
-            inputs[j].checked = false;
-          }
-        }
-      });
-    }
-  };
 
   _init();
 }());
