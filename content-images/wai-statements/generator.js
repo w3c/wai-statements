@@ -551,10 +551,11 @@
       var nodeName = item.nodeName;
       var target = item.dataset.print;
       var hasFilter = item.dataset.printfilter;
-      var printFilters = hasFilter && item.dataset.printfilter.split(',').map(function trim(string) {
-        return string.trim();
-      });
-      var printDefault = item.dataset.printdefault || '(no input)';
+      var printFilters = hasFilter && item.dataset.printfilter.split(',')
+        .map(function trim(string) {
+          return string.trim();
+        });
+      var printDefault = item.dataset.printdefault || '';
       var printData = applyFilters(getData(target), printFilters) || printDefault;
       var dataList = Array.isArray(printData);
 
