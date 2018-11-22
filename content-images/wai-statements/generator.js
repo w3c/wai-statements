@@ -73,14 +73,13 @@
     }
 
     function _today() {
+      var monthnames = DATA.MONTH_NAMES;
       var dateToday = new Date();
       var day = dateToday.getDate();
       var month = dateToday.getMonth() + 1;
+      var monthFull = monthnames[month - 1];
       var year = dateToday.getFullYear();
-      var dateTodayString = ''
-        + day + '-'
-        + month + '-'
-        + year;
+      var dateTodayString = '' + day + ' ' + monthFull + ' ' + year;
       var dates = document.querySelectorAll('#accstatement input.today');
       var i;
 
