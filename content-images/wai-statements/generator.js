@@ -353,8 +353,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
       el.addEventListener('click', function handleBackToTopClick(event) {
         el.setAttribute('href', '#' + _getCurrentPage() + '-top');
-      })
-    })
+      });
+    });
   }
 
   function _enableStatementActions() {
