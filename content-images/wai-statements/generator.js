@@ -7,6 +7,24 @@
 (function() {
   'use strict';
 
+  // Editable contents
+  var DATA = {
+    MONTH_NAMES: [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ],
+  };
+
   /**
    * statementForm module
    * ---
