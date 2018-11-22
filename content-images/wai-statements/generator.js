@@ -330,6 +330,9 @@
     };
   }());
 
+  /**
+   * App starts here
+   */
   var ROUTES = [
     'create',
     'preview',
@@ -406,7 +409,6 @@
   }
 
   function _showPage() {
-    var i;
     var pages = document.querySelectorAll('#accstatement .page');
     var currentPage = _getCurrentPage();
     var backToTop = document.querySelectorAll('a.button-backtotop');
@@ -421,9 +423,9 @@
     }
 
     // hide all pages
-    for(i = 0; i < pages.length; i += 1) {
-      pages[i].setAttribute('hidden', '');
-    }
+    Array.prototype.forEach.call(pages, function hide(page) {
+      page.setAttribute('hidden', '');
+    });
 
     // show current page
     document.querySelector('#accstatement .page.' + currentPage).removeAttribute('hidden');
@@ -434,63 +436,66 @@
   function _showPreview() {
     var getData = statementForm.data.get;
     var statementPreview = document.querySelector('#accstatement .page.preview');
-    var conditionals;
-    var i;
+    var conditionals = statementPreview.querySelectorAll('[data-if]');
 
-    // remove unmet conditionals
-    conditionals = statementPreview.querySelectorAll('[data-if]');
-    for(i = 0; i < conditionals.length; i += 1) {
-      (function(elm) {
-        var negate = 'negate' in elm.dataset;
-        var dataList = elm.dataset.if.split(',').map(function trimString(string) {
+    // Apply conditionals
+    Array.prototype.forEach.call(conditionals, function apply(conditional) {
+      var negate = 'negate' in conditional.dataset;
+
+      // Get required data for condition
+      var dataList = conditional.dataset.if.split(',')
+        .map(function trimString(string) {
           return string.trim();
         });
-        var dataListValues = dataList.filter(function withValue(key) {
-          var data = getData(key);
 
-          return (
-            data !== undefined
-            && data.length > 0
-          );
-        });
-        var conditionMet = dataListValues.length > 0;
+      // Get filtered datalist with values
+      var dataListValues = dataList.filter(function withValue(key) {
+        var data = getData(key);
 
-        if(negate) {
-          conditionMet = !conditionMet;
-        }
+        return (
+          data !== undefined
+          && data.length > 0
+        );
+      });
+      var conditionMet = dataListValues.length > 0;
 
-        if(conditionMet) {
-          elm.removeAttribute('hidden');
-        } else {
-          elm.setAttribute('hidden', '');
-        }
-      }(conditionals[i]));
-    }
+      if(negate) {
+        conditionMet = !conditionMet;
+      }
+
+      if(conditionMet) {
+        conditional.removeAttribute('hidden');
+      } else {
+        conditional.setAttribute('hidden', '');
+      }
+
+    });
 
     // Print formdata into printables: [data-print]
     _printFormInput();
 
-    // statement: limitations & alternatives
+    // Custom statement print: limitations & alternatives
     (function() {
       var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');
       var block = statementPreview.querySelector('#statement-limitations-block');
       var list = statementPreview.querySelector('#statement-limitations');
       var html = '';
 
-      for(i = 0; i < limitations.length; i += 1) {
-        (function(row) {
-          var element = row.querySelector('input[name=element]').value;
-          var description = row.querySelector('input[name=description]').value;
-          var reason = row.querySelector('input[name=reason]').value;
-          var us = row.querySelector('input[name=us]').value;
-          var you = row.querySelector('input[name=you]').value;
+      Array.prototype.forEach.call(limitations, function print(limitation) {
+        var element = limitation.querySelector('input[name=element]').value;
+        var description = limitation.querySelector('input[name=description]').value;
+        var reason = limitation.querySelector('input[name=reason]').value;
+        var us = limitation.querySelector('input[name=us]').value;
+        var you = limitation.querySelector('input[name=you]').value;
 
-          if(element || description || reason || us || you) {
-            html += '\t<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>\n';
-          }
-
-        }(limitations[i]));
-      }
+        if(element || description || reason || us || you) {
+          html += '\t<li>'
+            + '<strong>' + element + '</strong>: '
+            + description + ' because '
+            + reason + '. ' + us + '. ' + you
+            + '.</li>\n';
+        }
+      });
 
       if(html) {
         list.innerHTML = '\n' + html;
