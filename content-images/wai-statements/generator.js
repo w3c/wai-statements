@@ -330,6 +330,9 @@
     };
   }());
 
+  /**
+   * App starts here
+   */
   var ROUTES = [
     'create',
     'preview',
@@ -346,7 +349,6 @@
     }
 
     _setPage();
-    _checkBoxGroups();
     _addLine();
     _enableStatementActions();
 
@@ -354,8 +356,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
       el.addEventListener('click', function handleBackToTopClick(event) {
         el.setAttribute('href', '#' + _getCurrentPage() + '-top');
-      })
-    })
+      });
+    });
   }
 
   function _enableStatementActions() {
@@ -407,7 +409,6 @@
   }
 
   function _showPage() {
-    var i;
     var pages = document.querySelectorAll('#accstatement .page');
     var currentPage = _getCurrentPage();
     var backToTop = document.querySelectorAll('a.button-backtotop');
@@ -422,9 +423,9 @@
     }
 
     // hide all pages
-    for(i = 0; i < pages.length; i += 1) {
-      pages[i].setAttribute('hidden', '');
-    }
+    Array.prototype.forEach.call(pages, function hide(page) {
+      page.setAttribute('hidden', '');
+    });
 
     // show current page
     document.querySelector('#accstatement .page.' + currentPage).removeAttribute('hidden');
@@ -433,65 +434,36 @@
   }
 
   function _showPreview() {
-    var getData = statementForm.data.get;
     var statementPreview = document.querySelector('#accstatement .page.preview');
-    var conditionals;
-    var i;
 
-    // remove unmet conditionals
-    conditionals = statementPreview.querySelectorAll('[data-if]');
-    for(i = 0; i < conditionals.length; i += 1) {
-      (function(elm) {
-        var negate = 'negate' in elm.dataset;
-        var dataList = elm.dataset.if.split(',').map(function trimString(string) {
-          return string.trim();
-        });
-        var dataListValues = dataList.filter(function withValue(key) {
-          var data = getData(key);
-
-          return (
-            data !== undefined
-            && data.length > 0
-          );
-        });
-        var conditionMet = dataListValues.length > 0;
-
-        if(negate) {
-          conditionMet = !conditionMet;
-        }
-
-        if(conditionMet) {
-          elm.removeAttribute('hidden');
-        } else {
-          elm.setAttribute('hidden', '');
-        }
-      }(conditionals[i]));
-    }
+    // Apply conditionals
+    _applyConditionals();
 
     // Print formdata into printables: [data-print]
     _printFormInput();
 
-    // statement: limitations & alternatives
+    // Custom statement print: limitations & alternatives
     (function() {
       var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');
       var block = statementPreview.querySelector('#statement-limitations-block');
       var list = statementPreview.querySelector('#statement-limitations');
       var html = '';
 
-      for(i = 0; i < limitations.length; i += 1) {
-        (function(row) {
-          var element = row.querySelector('input[name=element]').value;
-          var description = row.querySelector('input[name=description]').value;
-          var reason = row.querySelector('input[name=reason]').value;
-          var us = row.querySelector('input[name=us]').value;
-          var you = row.querySelector('input[name=you]').value;
+      Array.prototype.forEach.call(limitations, function print(limitation) {
+        var element = limitation.querySelector('input[name=element]').value;
+        var description = limitation.querySelector('input[name=description]').value;
+        var reason = limitation.querySelector('input[name=reason]').value;
+        var us = limitation.querySelector('input[name=us]').value;
+        var you = limitation.querySelector('input[name=you]').value;
 
-          if(element || description || reason || us || you) {
-            html += '\t<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>\n';
-          }
-
-        }(limitations[i]));
-      }
+        if(element || description || reason || us || you) {
+          html += '\t<li>'
+            + '<strong>' + element + '</strong>: '
+            + description + ' because '
+            + reason + '. ' + us + '. ' + you
+            + '.</li>\n';
+        }
+      });
 
       if(html) {
         list.innerHTML = '\n' + html;
@@ -551,18 +523,23 @@
       var nodeName = item.nodeName;
       var target = item.dataset.print;
       var hasFilter = item.dataset.printfilter;
-      var printFilters = hasFilter && item.dataset.printfilter.split(',').map(function trim(string) {
-        return string.trim();
-      });
-      var printDefault = item.dataset.printdefault || '(no input)';
+      var printFilters = hasFilter && item.dataset.printfilter.split(',')
+        .map(function trim(string) {
+          return string.trim();
+        });
+      var printDefault = item.dataset.printdefault || '';
       var printData = applyFilters(getData(target), printFilters) || printDefault;
       var dataList = Array.isArray(printData);
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(data) {
+          .map(function wrapInLi(data, index) {
 
-            return '<li>' + data + '</li>'
+            if (index === 0) {
+              return '\n\t<li>' + data + '</li>\n';
+            }
+
+            return '\t<li>' + data + '</li>\n';
           })
           .join('');
 
@@ -683,22 +660,41 @@
     });
   }
 
-  function _checkBoxGroups() {
-    var i, j;
-    var inputs = document.querySelectorAll('#accstatement .radio-group input');
+  function _applyConditionals() {
+    var getData = statementForm.data.get;
+    var conditionals = document.querySelectorAll('[data-if]');
 
-    // Set checked to false on radiogroup inputs... why?!
-    for(i = 0; i < inputs.length; i += 1) {
-      inputs[i].addEventListener('click', function() {
-        for(j = 0; j < inputs.length; j += 1) {
-          if(this.name === inputs[j].name
-          && this.id !== inputs[j].id) {
-            inputs[j].checked = false;
-          }
-        }
+    Array.prototype.forEach.call(conditionals, function apply(conditional) {
+      var negate = 'negate' in conditional.dataset;
+
+      // Get required data for condition
+      var dataList = conditional.dataset.if.split(',')
+        .map(function trimString(string) {
+          return string.trim();
+        });
+
+      // Get filtered datalist with values
+      var dataListValues = dataList.filter(function withValue(key) {
+        var data = getData(key);
+
+        return (
+          data !== undefined
+          && data.length > 0
+        );
       });
-    }
-  };
+      var conditionMet = dataListValues.length > 0;
+
+      if(negate) {
+        conditionMet = !conditionMet;
+      }
+
+      if(conditionMet) {
+        conditional.removeAttribute('hidden');
+      } else {
+        conditional.setAttribute('hidden', '');
+      }
+    });
+  }
 
   _init();
 }());
