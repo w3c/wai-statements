@@ -103,6 +103,30 @@
     /**
      * Transform input values into correct key value pairs
      * Set single string value or array of string values to key
+     * as ID or input group NAME.
+     * ---
+     * @example single values
+     * <input id="myid">
+     * stores input value under myid; myid: input.value
+     *
+     * @example Radio group value
+     * <input type="radio" id="myid" name="radiogroup">
+     * stores input value of checked radio under radiogroup; radiogroup: input.value
+     *
+     * @example Grouped values (!radio)
+     * <input id="myid" name="mygroup">
+     * stores input values under mygroup; mygroup: [group input values]
+     *
+     * @example Complex Object like grouped values
+     * <fieldset name="mygroup">
+     *     <input id="myid1" name="mysubgroup1">
+     *     <input id="myotherid1" name="mysubgroup1">
+     *     ...
+     * <fieldset name="mygroup">
+     * ...
+     * stores subgrouped input values under mygroup as collection;
+     * mygroup: [[mysubgroup1], [mysubgroup2], ..., [mysubgroupN]]
+     * ---
      * @param       {HtmlFormElement} input
      */
     function _setFormData(input) {
