@@ -56,17 +56,20 @@ external_css: /content-images/wai-statements/generator.css
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_org">Name of your organization (Example: “Example Inc.”)</label>
+                        <label for="accstmt_org">Name of your organization</label>
+                        <em>(Example: “Example Inc.”)</em>
                         <input type="text" id="accstmt_org"/>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_url">Address of your website or mobile application (Example: “https://example.org”)</label>
+                        <label for="accstmt_url">Address of your website or mobile application</label>
+                        <em>(Example: “https://example.org”)</em>
                         <input type="text" id="accstmt_url"/>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_namesite">Name of your website or mobile application (Example: “Example Store” or “Example App 1.2.3”)</label>
+                        <label for="accstmt_namesite">Name of your website or mobile application</label>
+                        <em>(Example: “Example Store” or “Example App 1.2.3”)</em>
                         <input type="text" id="accstmt_namesite"/>
                     </div>
                 </div>
@@ -115,26 +118,30 @@ external_css: /content-images/wai-statements/generator.css
                             <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_full" value="Fully conformant"/>
                             <label for="accstmnt_conformance_full">
                                 <span class="status">Fully conformant</span>:
-                                <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span></label>
+                                <span class="meaning">the content fully conforms to the accessibility standard without any exceptions</span>
+                            </label>
                         </div>
                         <div class="radio-field">
                             <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_partial" value="Partially conformant" checked="checked"/>
                             <label for="accstmnt_conformance_partial">
                                 <span class="status">Partially conformant</span>:
                                 <span class="meaning">some parts of the content do not fully conform to the accessibility standard</span>
-                                (you can indicate these parts in later sections of this form)</label>
+                                <span>(you can indicate these parts in later sections of this form)</span>
+                            </label>
                         </div>
                         <div class="radio-field">
                             <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_nonconformant" value="Non conformant"/>
                             <label for="accstmnt_conformance_nonconformant">
                                 <span class="status">Non conformant</span>:
-                                <span class="meaning">the content does not conform the accessibility standard</span></label>
+                                <span class="meaning">the content does not conform the accessibility standard</span>
+                            </label>
                         </div>
                         <div class="radio-field">
                             <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_unknown" value="Not assessed"/>
                             <label for="accstmnt_conformance_unknown">
                                 <span class="status">Not assessed</span>:
-                                <span class="meaning">the content has not been evaluated or the evaluation results are not available</span></label>
+                                <span class="meaning">the content has not been evaluated or the evaluation results are not available</span>
+                            </label>
                         </div>
                         <div class="radio-field">
                             <input type="radio" name="accstmnt_conformance" id="accstmnt_conformance_inapplicable" value=""/>
@@ -172,29 +179,35 @@ external_css: /content-images/wai-statements/generator.css
                     <fieldset class="group" id="form-feedback">
                         <legend class="visuallyhidden">Feedback options</legend>
                         <div class="field">
-                            <label for="accstmnt_contact_phone">Phone (Example: “+12 34 567 89 00”)</label>
+                            <label for="accstmnt_contact_phone">Phone</label>
+                            <em>(Example: “+12 34 567 89 00”)</em>
                             <input type="tel" id="accstmnt_contact_phone"/>
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_email">E-mail (Example: “accessibility@example.org”)</label>
+                            <label for="accstmnt_contact_email">E-mail</label>
+                            <em>(Example: “accessibility@example.org”)</em>
                             <input type="email" id="accstmnt_contact_email"/>
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_visit">Visitor Address (Example: “Main Street 1, 234 Example Ville”)</label>
+                            <label for="accstmnt_contact_visit">Visitor Address</label>
+                            <em>(Example: “Main Street 1, 234 Example Ville”)</em>
                             <input type="text" id="accstmnt_contact_visit"/>
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_write">Postal Address (Example: “PO Box 1, 234 Example Ville”)</label>
+                            <label for="accstmnt_contact_write">Postal address</label>
+                            <em>(Example: “PO Box 1, 234 Example Ville”)</em>
                             <input type="text" id="accstmnt_contact_write"/>
                         </div>
 
                         <div class="field">
-                            <label for="accstmnt_contact_other">Other contact options (Example: social media)</label>
+                            <label for="accstmnt_contact_other">Other contact options</label>
+                            <em>(Example: on social media; Twitter: @ExampleUser)</em>
                             <textarea id="accstmnt_contact_other"></textarea>
                         </div>
 
                         <div class="field">
-                            <label for="accstmnt_contact_responsetime">Typical duration for response (Example: “2 business days”)</label>
+                            <label for="accstmnt_contact_responsetime">Typical duration for response</label>
+                            <em>(Example: “2 business days”)</em>
                             <input type="text" id="accstmnt_contact_responsetime"/>
                         </div>
 
@@ -206,12 +219,12 @@ external_css: /content-images/wai-statements/generator.css
                         <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_date" data-target="#info_date" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
                     </h3>
                     <div class="information" id="info_date" hidden="hidden">
-                        <p>Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained.</p>
+                        <p>Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained. Writing out the month makes the date clearer internationally (eg. "1 February 2019" rather than "01/02/2019", which is ambiguous).</p>
                     </div>
 
                     <div class="field">
                         <label for="accstmt_date">Publication date of this accessibility statement</label>
-                        <input type="date" id="accstmt_date" class="today"/>
+                        <input type="text" id="accstmt_date" class="today"/>
                     </div>
                 </div>
                 {% include excol.html type="end" %}
@@ -263,11 +276,12 @@ external_css: /content-images/wai-statements/generator.css
 
                     <div id="accstmnt_orginfo_othermeasures" class="group">
                         <div class="field line">
-                            <label for="accstmnt_orginfo_othermeasures_1">Other measure 1 (Example: “Include people with disabilities in our design personas”)</label>
+                            <label for="accstmnt_orginfo_othermeasures_1">Other measure 1</label>
+                            <em>(Example: “Include people with disabilities in our design personas”)</em>
                             <input type="text" id="accstmnt_orginfo_othermeasures_1" name="accstmnt_orginfo_measures"/>
                         </div>
                         <div class="field proto">
-                            <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n] (Example: “Include people with disabilities in our usability testing”)</label>
+                            <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n]</label>
                             <input type="text" id="accstmnt_orginfo_othermeasures_[n]" name="accstmnt_orginfo_measures"/>
                         </div>
                     </div>
@@ -304,23 +318,28 @@ external_css: /content-images/wai-statements/generator.css
                         <fieldset id="accstmnt_limitation_1" class="group line">
                             <legend>Accessibility limitation 1</legend>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_element">Content part (Example: “Comments from users”)</label>
+                                <label for="accstmnt_limitation_1_element">Content part</label>
+                                <em>(Example: “Comments from users”)</em>
                                 <input type="text" id="accstmnt_limitation_1_element" name="element"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_description">Description of the issue (Example: “Uploaded images may not have text alternatives”)</label>
+                                <label for="accstmnt_limitation_1_description">Description of the issue</label>
+                                <em>(Example: “Uploaded images may not have text alternatives”)</em>
                                 <input type="text" id="accstmnt_limitation_1_description" name="description"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_reason">Why the issue occurs (Example: “We cannot ensure the quality of contributions”)</label>
+                                <label for="accstmnt_limitation_1_reason">Why the issue occurs</label>
+                                <em>(Example: “We cannot ensure the quality of contributions”)</em>
                                 <input type="text" id="accstmnt_limitation_1_reason" name="reason"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_us">What we are doing about it (Example: “We monitor user comments and typically repair issues within 2 business days”)</label>
+                                <label for="accstmnt_limitation_1_us">What we are doing about it</label>
+                                <em>(Example: “We monitor user comments and typically repair issues within 2 business days”)</em>
                                 <input type="text" id="accstmnt_limitation_1_us" name="us"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_you">What to do in the meantime (Example: “Please use the ‘report issue’ button if you encounter an issue”)</label>
+                                <label for="accstmnt_limitation_1_you">What to do in the meantime</label>
+                                <em>(Example: “Please use the ‘report issue’ button if you encounter an issue”)</em>
                                 <input type="text" id="accstmnt_limitation_1_you" name="you"/>
                             </div>
                         </fieldset>
@@ -328,23 +347,23 @@ external_css: /content-images/wai-statements/generator.css
                         <fieldset id="accstmnt_limitation_[n]" class="group proto">
                             <legend>Accessibility limitation [n]</legend>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_element">Content part (Example: “Archived documents”)</label>
+                                <label for="accstmnt_limitation_[n]_element">Content part</label>
                                 <input type="text" id="accstmnt_limitation_[n]_element" name="element"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_description">Description of the issue (Example: “Might not work with current assistive technologies”)</label>
+                                <label for="accstmnt_limitation_[n]_description">Description of the issue</label>
                                 <input type="text" id="accstmnt_limitation_[n]_description" name="description"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_reason">Why the issue occurs (Example: “Use outdated technologies that do not support accessibility”)</label>
+                                <label for="accstmnt_limitation_[n]_reason">Why the issue occurs</label>
                                 <input type="text" id="accstmnt_limitation_[n]_reason" name="reason"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_us">What we are doing about it (Example: “We convert documents to new formats upon request within 5 business days”)</label>
+                                <label for="accstmnt_limitation_[n]_us">What we are doing about it</label>
                                 <input type="text" id="accstmnt_limitation_[n]_us" name="us"/>
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_you">What to do in the meantime (Example: “Please contact documents@example.org for support”)</label>
+                                <label for="accstmnt_limitation_[n]_you">What to do in the meantime</label>
                                 <input type="text" id="accstmnt_limitation_[n]_you" name="you"/>
                             </div>
                         </fieldset>
@@ -371,12 +390,13 @@ external_css: /content-images/wai-statements/generator.css
                         use of technologies.</p>
 
                     <div class="field line">
-                        <label for="accstmnt_asstech_compatible_1">Environment 1 (Example: “browser X with assistive technology Y on operating system Z”)</label>
+                        <label for="accstmnt_asstech_compatible_1">Environment 1</label>
+                        <em>(Example: “browser X with assistive technology Y on operating system Z”)</em>
                         <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible"/>
                     </div>
 
                     <div class="field proto">
-                        <label for="accstmnt_asstech_compatible_[n]">Environment [n] (Example: “browser X with assistive technology Y on operating system Z”)</label>
+                        <label for="accstmnt_asstech_compatible_[n]">Environment [n]</label>
                         <input type="text" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible"/>
                     </div>
 
@@ -396,11 +416,12 @@ external_css: /content-images/wai-statements/generator.css
                     <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is not expected to work with.</p>
 
                     <div class="field line">
-                        <label for="accstmnt_asstech_incompatible_1">Environment 1 (Example: “browsers older than 3 major versions” or “Mobile operating systems older than 5 years”)</label>
+                        <label for="accstmnt_asstech_incompatible_1">Environment 1</label>
+                        <em>(Example: “browsers older than 3 major versions” or “Mobile operating systems older than 5 years”)</em>
                         <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible"/>
                     </div>
                     <div class="field proto">
-                        <label for="accstmnt_asstech_incompatible_[n]">Environment [n] (Example: “browser X with assistive technology Y on operating system Z”)</label>
+                        <label for="accstmnt_asstech_incompatible_[n]">Environment [n]</label>
                         <input type="text" id="accstmnt_asstech_incompatible_[n]" name="accstmnt_asstech_incompatible"/>
                     </div>
 
@@ -423,7 +444,7 @@ external_css: /content-images/wai-statements/generator.css
                 <fieldset class="field">
                     <legend class="label">Technologies:</legend>
 
-                    <ul id="tech_relied" class="input-cols nolist">
+                    <ul id="tech_relied" class="nolist">
                         <li class="radio-field">
                             <input type="checkbox" id="accstmnt_tech_html" name="accstmnt_tech" value="HTML"/>
                             <label for="accstmnt_tech_html">HTML</label>
@@ -471,29 +492,26 @@ external_css: /content-images/wai-statements/generator.css
 
                 <fieldset id="accstmnt_assessment" class="group">
                     <legend class="visuallyhidden">Assessment approach</legend>
-                    <ul class="nolist field">
+                    <ul class="nolist">
                         <li class="radio-field">
                             <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox" value="Self-evaluation"/>
-                            <div>
-                                <label for="accstmnt_approach_1">Self-evaluation</label>: the content was evaluated by your own organization or the developer of the content</div>
+                            <label for="accstmnt_approach_1">Self-evaluation: the content was evaluated by your own organization or the developer of the content</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox" value="External evaluation"/>
-                            <div>
-                                <label for="accstmnt_approach_2">External evaluation</label>: the content was evaluated by an external entity not involved in the design and development process</div>
+                            <label for="accstmnt_approach_2">External evaluation: the content was evaluated by an external entity not involved in the design and development process</label>
                         </li>
                     </ul>
 
                     <div class="group">
                         <div class="field line">
                             <label for="accstmnt_approach_other_1">Other approach 1</label>
-                            (Example: a formal quality assurance process throughout the design and development process)
+                            <em>(Example: a formal quality assurance process throughout the design and development process)</em>
                             <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach"/>
                         </div>
 
                         <div class="field proto">
                             <label for="accstmnt_approach_other_[n]">Other approach [n]</label>
-                            (Example: a formal quality assurance process throughout the design and development process)
                             <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach"/>
                         </div>
 
@@ -510,9 +528,10 @@ external_css: /content-images/wai-statements/generator.css
 
                 <div class="group">
                     <div class="field">
-                        <label for="accstmnt_audit_url">Link to recent evaluation report (Example: “https://example.org/accessibility-evaulation-report”)
+                        <label for="accstmnt_audit_url">Link to recent evaluation report
                             <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
                         </label>
+                        <em>(Example: “https://example.org/accessibility-evaulation-report”)</em>
 
                         <div class="information" id="info_audit_url" hidden="hidden">
                             <p>An evaluation report provides details on which accessibility requirements are met, and which are not. While this is usually more technical of nature than the average user, it can help some users to understand issues they have been observing. You can use the
@@ -524,9 +543,10 @@ external_css: /content-images/wai-statements/generator.css
                     </div>
 
                     <div class="field">
-                        <label for="accstmnt_audit_wcagem">Link to evaluation statement (Example: “https://example.org/accessibility-evaulation-statement”)
+                        <label for="accstmnt_audit_wcagem">Link to evaluation statement
                             <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_audit_statement" data-target="#info_audit_statement" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
                         </label>
+                        <em>(Example: “https://example.org/accessibility-evaulation-statement”)</em>
 
                         <div class="information" id="info_audit_statement" hidden="hidden">
                             <p>An evaluation statement summarizes the essential outcomes of an evaluation report. The
@@ -540,12 +560,13 @@ external_css: /content-images/wai-statements/generator.css
                     </div>
 
                     <div class="field line">
-                        <label for="accstmnt_audit_other_1">Other evidence 1 (Example: “https://example.org/accessibility-evaulation-certificate”)</label>
+                        <label for="accstmnt_audit_other_1">Other evidence 1</label>
+                        <em>(Example: “https://example.org/accessibility-evaulation-certificate”)</em>
                         <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other"/>
                     </div>
 
                     <div class="field proto">
-                        <label for="accstmnt_audit_other_[n]">Other evidence [n] (Example: other background reference)</label>
+                        <label for="accstmnt_audit_other_[n]">Other evidence [n]</label>
                         <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other"/>
                     </div>
 
@@ -572,12 +593,14 @@ external_css: /content-images/wai-statements/generator.css
                     <legend class="visuallyhidden">Approval</legend>
 
                     <div class="field">
-                        <label for="accstmnt_orginfo_approved_name">Name of person or department (Example: “Communication Department”)</label>
+                        <label for="accstmnt_orginfo_approved_name">Name of person or department</label>
+                        <em>(Example: “Communication Department”)</em>
                         <input type="text" id="accstmnt_orginfo_approved_name"/>
                     </div>
 
                     <div class="field">
-                        <label for="accstmnt_orginfo_approved_function">Function (Example: “Director of Communication”)</label>
+                        <label for="accstmnt_orginfo_approved_function">Function</label>
+                        <em>(Example: “Director of Communication”)</em>
                         <input type="text" id="accstmnt_orginfo_approved_function"/>
                     </div>
                 </fieldset>
@@ -597,7 +620,6 @@ external_css: /content-images/wai-statements/generator.css
 
                 <div class="field">
                     <label for="accstmt_complaints">Describe any formal complaints procedures</label>
-
                     <textarea id="accstmt_complaints" rows="3"></textarea>
                 </div>
                 {% include excol.html type="end" %}
@@ -790,7 +812,8 @@ external_css: /content-images/wai-statements/generator.css
 
             <p>
                 This statement was created on
-                <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span>.
+                <span class="basic-information statement-created-date" data-print="accstmt_date" data-printdefault="DATE"></span>
+                using the <a href="{{ page.url | absolute_url }}">W3C Accessibility Statement Generator Tool</a>.
             </p>
         </div>
         {% include box.html type="end" %}
