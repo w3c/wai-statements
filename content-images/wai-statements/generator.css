@@ -6,11 +6,11 @@
   border: solid 1px #2D6197;
   margin-bottom: 1em;
 }
-  #accstatement form .information a
-  {
-    font-weight: bold;
-  }
 
+#accstatement form .information a
+{
+  font-weight: bold;
+}
 
 #accstatement form .field label,
 #accstatement form .field .label
@@ -33,7 +33,6 @@
   display: inline-block;
 }
 
-
 /* Preview */
 #accstatement .print-textarea
 {
@@ -49,9 +48,17 @@
   display: none;
 }
 
-#accstatement #accstmnt_standard_other:checked~#accstmnt_standard_other_name
+#accstatement #accstmnt_standard_other:checked + label
+{
+  flex-basis: auto;
+  width: auto;
+}
+
+#accstatement #accstmnt_standard_other:checked ~ #accstmnt_standard_other_name
 {
   display: block;
+  flex-basis: auto;
+  width: 100%;
 }
 
 #accstatement #accstmnt_issues > fieldset > legend

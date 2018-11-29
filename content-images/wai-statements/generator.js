@@ -7,6 +7,24 @@
 (function() {
   'use strict';
 
+  // Editable contents
+  var DATA = {
+    MONTH_NAMES: [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ],
+  };
+
   /**
    * statementForm module
    * ---
@@ -55,14 +73,13 @@
     }
 
     function _today() {
+      var monthnames = DATA.MONTH_NAMES;
       var dateToday = new Date();
       var day = dateToday.getDate();
       var month = dateToday.getMonth() + 1;
+      var monthFull = monthnames[month - 1];
       var year = dateToday.getFullYear();
-      var dateTodayString = ''
-        + day + '-'
-        + month + '-'
-        + year;
+      var dateTodayString = '' + day + ' ' + monthFull + ' ' + year;
       var dates = document.querySelectorAll('#accstatement input.today');
       var i;
 
@@ -112,24 +129,17 @@
 
       if (inputName && inputType !== 'radio') {
         inputValue = _getGroupValue(inputName) || [];
-
-        if (inputValue.length > 0) {
-          _formData.set(inputName, inputValue);
-        }
+        _formData.set(inputName, inputValue);
 
       } else if (inputName && inputType === 'radio') {
         inputValue = _getGroupValue(inputName)[0] || '';
-
-        if (inputValue.length > 0) {
-          _formData.set(inputName, inputValue);
-        }
+        _formData.set(inputName, inputValue);
 
       } else {
         // Single string values
         inputValue = input.value || '';
         _formData.set(input.id, inputValue);
       }
-
     }
 
     // Custom form data manipulation
@@ -146,6 +156,13 @@
         meaningInput.value = meaningValue;
         _setFormData(meaningInput);
       }
+    }
+
+    function resetOtherStandard() {
+      var otherStandardInput = document.getElementById('accstmnt_standard_other_name');
+
+      otherStandardInput.value = '';
+      _setFormData(otherStandardInput);
     }
 
     /**
@@ -172,8 +189,18 @@
       }
 
       // Custom form manipulation
+      // Setting conformance meaning
       if (target.name && target.name === 'accstmnt_conformance') {
         updateConformanceMeaning();
+      }
+
+      // (Re)Setting other standard applied
+      if (
+        target.name
+        && target.name === 'accstmnt_standard'
+        && target.id !== 'accstmnt_standard_other'
+      ) {
+        resetOtherStandard();
       }
     });
 
@@ -320,6 +347,9 @@
     };
   }());
 
+  /**
+   * App starts here
+   */
   var ROUTES = [
     'create',
     'preview',
@@ -336,7 +366,6 @@
     }
 
     _setPage();
-    _checkBoxGroups();
     _addLine();
     _enableStatementActions();
 
@@ -344,8 +373,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('a[href="#top"]'), function setTopHref(el) {
       el.addEventListener('click', function handleBackToTopClick(event) {
         el.setAttribute('href', '#' + _getCurrentPage() + '-top');
-      })
-    })
+      });
+    });
   }
 
   function _enableStatementActions() {
@@ -397,7 +426,6 @@
   }
 
   function _showPage() {
-    var i;
     var pages = document.querySelectorAll('#accstatement .page');
     var currentPage = _getCurrentPage();
     var backToTop = document.querySelectorAll('a.button-backtotop');
@@ -412,9 +440,9 @@
     }
 
     // hide all pages
-    for(i = 0; i < pages.length; i += 1) {
-      pages[i].setAttribute('hidden', '');
-    }
+    Array.prototype.forEach.call(pages, function hide(page) {
+      page.setAttribute('hidden', '');
+    });
 
     // show current page
     document.querySelector('#accstatement .page.' + currentPage).removeAttribute('hidden');
@@ -423,62 +451,36 @@
   }
 
   function _showPreview() {
-    var getData = statementForm.data.get;
     var statementPreview = document.querySelector('#accstatement .page.preview');
-    var conditionals;
-    var i;
 
-    // remove unmet conditionals
-    conditionals = statementPreview.querySelectorAll('[data-if]');
-    for(i = 0; i < conditionals.length; i += 1) {
-      (function(elm) {
-        var negate = 'negate' in elm.dataset;
-        var dataList = elm.dataset.if.split(',').map(function trimString(string) {
-          return string.trim();
-        });
-        var dataListValues = dataList.filter(function withValue(key) {
-          var data = getData(key);
-
-          return data !== undefined && data !== '';
-        });
-        var conditionMet = dataListValues.length > 0;
-
-        if(negate) {
-          conditionMet = !conditionMet;
-        }
-
-        if(conditionMet) {
-          elm.removeAttribute('hidden');
-        } else {
-          elm.setAttribute('hidden', '');
-        }
-      }(conditionals[i]));
-    }
+    // Apply conditionals
+    _applyConditionals();
 
     // Print formdata into printables: [data-print]
     _printFormInput();
 
-    // statement: limitations & alternatives
+    // Custom statement print: limitations & alternatives
     (function() {
       var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');
       var block = statementPreview.querySelector('#statement-limitations-block');
       var list = statementPreview.querySelector('#statement-limitations');
       var html = '';
 
-      for(i = 0; i < limitations.length; i += 1) {
-        (function(row) {
-          var element = row.querySelector('input[name=element]').value;
-          var description = row.querySelector('input[name=description]').value;
-          var reason = row.querySelector('input[name=reason]').value;
-          var us = row.querySelector('input[name=us]').value;
-          var you = row.querySelector('input[name=you]').value;
+      Array.prototype.forEach.call(limitations, function print(limitation) {
+        var element = limitation.querySelector('input[name=element]').value;
+        var description = limitation.querySelector('input[name=description]').value;
+        var reason = limitation.querySelector('input[name=reason]').value;
+        var us = limitation.querySelector('input[name=us]').value;
+        var you = limitation.querySelector('input[name=you]').value;
 
-          if(element || description || reason || us || you) {
-            html += '\t<li><strong>'+element+'</strong>'+': '+description+' because '+reason+'. '+us+'. '+you+'.</li>\n';
-          }
-
-        }(limitations[i]));
-      }
+        if(element || description || reason || us || you) {
+          html += '\t<li>'
+            + '<strong>' + element + '</strong>: '
+            + description + ' because '
+            + reason + '. ' + us + '. ' + you
+            + '.</li>\n';
+        }
+      });
 
       if(html) {
         list.innerHTML = '\n' + html;
@@ -538,18 +540,23 @@
       var nodeName = item.nodeName;
       var target = item.dataset.print;
       var hasFilter = item.dataset.printfilter;
-      var printFilters = hasFilter && item.dataset.printfilter.split(',').map(function trim(string) {
-        return string.trim();
-      });
-      var printDefault = item.dataset.printdefault || '(no input)';
+      var printFilters = hasFilter && item.dataset.printfilter.split(',')
+        .map(function trim(string) {
+          return string.trim();
+        });
+      var printDefault = item.dataset.printdefault || '';
       var printData = applyFilters(getData(target), printFilters) || printDefault;
       var dataList = Array.isArray(printData);
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(data) {
+          .map(function wrapInLi(data, index) {
 
-            return '<li>' + data + '</li>'
+            if (index === 0) {
+              return '\n\t<li>' + data + '</li>\n';
+            }
+
+            return '\t<li>' + data + '</li>\n';
           })
           .join('');
 
@@ -670,22 +677,41 @@
     });
   }
 
-  function _checkBoxGroups() {
-    var i, j;
-    var inputs = document.querySelectorAll('#accstatement .radio-group input');
+  function _applyConditionals() {
+    var getData = statementForm.data.get;
+    var conditionals = document.querySelectorAll('[data-if]');
 
-    // Set checked to false on radiogroup inputs... why?!
-    for(i = 0; i < inputs.length; i += 1) {
-      inputs[i].addEventListener('click', function() {
-        for(j = 0; j < inputs.length; j += 1) {
-          if(this.name === inputs[j].name
-          && this.id !== inputs[j].id) {
-            inputs[j].checked = false;
-          }
-        }
+    Array.prototype.forEach.call(conditionals, function apply(conditional) {
+      var negate = 'negate' in conditional.dataset;
+
+      // Get required data for condition
+      var dataList = conditional.dataset.if.split(',')
+        .map(function trimString(string) {
+          return string.trim();
+        });
+
+      // Get filtered datalist with values
+      var dataListValues = dataList.filter(function withValue(key) {
+        var data = getData(key);
+
+        return (
+          data !== undefined
+          && data.length > 0
+        );
       });
-    }
-  };
+      var conditionMet = dataListValues.length > 0;
+
+      if(negate) {
+        conditionMet = !conditionMet;
+      }
+
+      if(conditionMet) {
+        conditional.removeAttribute('hidden');
+      } else {
+        conditional.setAttribute('hidden', '');
+      }
+    });
+  }
 
   _init();
 }());
