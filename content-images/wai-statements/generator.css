@@ -6,11 +6,11 @@
   border: solid 1px #2D6197;
   margin-bottom: 1em;
 }
-  #accstatement form .information a
-  {
-    font-weight: bold;
-  }
 
+#accstatement form .information a
+{
+  font-weight: bold;
+}
 
 #accstatement form .field label,
 #accstatement form .field .label
@@ -32,7 +32,6 @@
 #accstatement form .radio-field label {
   display: inline-block;
 }
-
 
 /* Preview */
 #accstatement .print-textarea
