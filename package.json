@@ -4,7 +4,7 @@
   "description": "Web Accessibility Initiative accessibility statement generator",
   "scripts": {
     "start": "webpack --mode development --watch",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
