@@ -17,6 +17,10 @@ twitter:
 author: w3c_wai
 exclude:
   - "_external"
+  - "node_modules"
+  - "package.json"
+  - "package-lock.json"
+  - "webpack.config.js"
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"

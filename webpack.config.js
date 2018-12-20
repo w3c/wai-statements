@@ -8,11 +8,11 @@ const OUTPATH = path.resolve(__dirname, 'assets', 'generator');
 
 module.exports = (env, argv) => ({
   entry: {
-    main: './_src/index.js'
+    main: './_webpack/index.js'
   },
   output: {
     path: OUTPATH,
-    filename: '[name].js'
+    filename: 'generator.bundle.js'
   },
   module: {
     rules: [

@@ -3,8 +3,13 @@
   "version": "2.0.0",
   "description": "Web Accessibility Initiative accessibility statement generator",
   "scripts": {
-    "start": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "start": "npm run start:webpack & npm run start:jekyll",
+    "start:jekyll": "bundle exec jekyll serve",
+    "start:webpack": "webpack --mode development --watch",
+    "build": "npm run build:webpack & npm run build:jekyll",
+    "build:jekyll": "bundle exec jekyll build",
+    "build:webpack": "webpack --mode production",
+    "install": "bundle install"
   },
   "repository": {
     "type": "git",
