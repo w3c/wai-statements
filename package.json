@@ -1,0 +1,25 @@
+{
+  "name": "wai-statements",
+  "version": "2.0.0",
+  "description": "Web Accessibility Initiative accessibility statement generator",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3c/wai-statements.git"
+  },
+  "keywords": [
+    "wai",
+    "accessibility",
+    "statement",
+    "generator"
+  ],
+  "author": "acknowledgements.md",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w3c/wai-statements/issues"
+  },
+  "homepage": "https://github.com/w3c/wai-statements#readme",
+  "devDependencies": {
+  }
+}
