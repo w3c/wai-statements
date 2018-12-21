@@ -1,0 +1,9 @@
+assets_base: "http://localhost:8100/"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      external_css: "http://localhost:8100/generator.css"

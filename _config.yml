@@ -56,6 +56,8 @@ defaults:
       path: ""
     values:
       layout: "default"
+      external_css: "/content-images/wai-statements/generator.css"
+
 #  -
 #    scope:
 #      path: "_business-case"

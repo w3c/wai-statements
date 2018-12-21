@@ -1,7 +1,7 @@
 const path = require('path');
 
 // Webpack plugins
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Webpack environment vars
 const OUTPATH = path.resolve(__dirname, 'content-images', 'wai-statements');
@@ -13,6 +13,10 @@ module.exports = (env, argv) => ({
   output: {
     path: OUTPATH,
     filename: 'generator.bundle.js'
+  },
+  devServer: {
+    contentBase: OUTPATH,
+    port: 8100
   },
   module: {
     rules: [
