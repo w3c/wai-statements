@@ -4,62 +4,65 @@ Accessibility Statement generator tool pages are a part of the WAI website and t
 
 - Github page: https://w3c.github.io/wai-statements/planning/statements/
 
-- [Requirements](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
+- [Accessibility Statements Requirements](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
 
 ---
 
 ## Installation and local development
 
+### Requirements
+
+This site is build with Jekyll, [follow Jekyll's installation guide](https://jekyllrb.com/docs/). This is build on Ruby.
+
+Statement generator asset management is done with [Webpack](https://webpack.js.org/guides/getting-started/). For this to work you need basic knowledge of [nodejs](https://nodejs.org/en/).
+
+
 ### Installation as part of the WAI website
 
-This site is build with Jekyll, [follow Jekyll's installation guide](https://jekyllrb.com/docs/) first.
+Open up your command line interface,
 
-Then clone this repository:
+Clone this repository (this will create a folder “wai-statements”):
 ```
 git clone https://github.com/w3c/wai-statements.git
+
+# And cd into it
+cd wai-statements
 ```
 
-If you have installed ruby and jekyll, cd into the project and install dependencies defined inside the `Gemfile`:
-
+If you have installed all [requirements](#requirements):
 ```
-bundle install
+npm install
 ```
 
 Now you can start development with:
-
 ```
-bundle exec jekyll serve
+npm start
 ```
 
 
 ### Installation as stand-alone
 
-To use the accessibility statement generator tool as a stand-alone to include into your own site you need to build the site once with Jekyll, see "[Installation as part of the WAI website](#installation-as-part-of-the-wai-website)".
+To use the accessibility statement generator tool as a stand-alone to include into your own site you need to build / develop the site without Jekyll (use once to build compiled html page).
 
-Build the site:
+Build or develop the site just with webpack:
+
+> *TODO*: Create a standalone build and development command which generates assets in e.g. `_accessibility_statement_generator` folder with html.
+
 ```
-bundle exec jekyll build
+# Build
+npm run build:webpack
+
+# Development
+npm run start:webpack
 ```
 
-The complete site is build inside the `_site` folder and the generated files you need will be:
+Statement generator source files (development) can be found inside the `_webpack` folder.
 
-- HTML: `planning/statements/generator/index.html`
+Compiled css and js files (production) in `content-images/wai-statements/`.
 
-    You will need all contents of `<div id="accstatement">` and link to required css and javascript below. The rest is all WAI website material.
+The (temporary) required generator html is build (with Jekyll) at `_site/planning/statements/generator/index.html`. You will need at least all contents of `<div id="accstatement">` and link to required css and javascript (webpack generated files). The rest is all WAI website material.
 
-- CSS: `content-images/wai-statements/generator.css`
-- JS: `content-images/wai-statements/generator.js`
-- WAI theme assets: `assets/css/style.css` and `assets/scripts/main.js`
-
-    This is required for the expanding and toggling of sections and information.
-
-For now you need to strip and modify all files manually to make it includeable into your own project.
-
-#### TODO for stand alone version
-
-- [ ] Add standalone version page `generator/standalone.html`
-
-
+For now you need to strip and modify all files manually to include the statement generator into your own project.
 
 ---
 
