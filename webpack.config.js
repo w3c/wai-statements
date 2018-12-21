@@ -2,6 +2,7 @@ const path = require('path');
 
 // Webpack plugins
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Webpack environment vars
 const OUTPATH = path.resolve(__dirname, 'content-images', 'wai-statements');
@@ -29,6 +30,13 @@ module.exports = (env, argv) => ({
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       }
     ]
   },
@@ -37,5 +45,11 @@ module.exports = (env, argv) => ({
     // argv.mode === 'production'
     //   ? new CleanWebpackPlugin(OUTPATH, {})
     //   : () => {}
+    // Used to save a css file
+    new MiniCssExtractPlugin({
+      filename: 'generator.bundle.css',
+      disable: false,
+      allChunks: true
+    })
   ]
 });

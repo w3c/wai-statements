@@ -56,7 +56,7 @@ defaults:
       path: ""
     values:
       layout: "default"
-      external_css: "/content-images/wai-statements/generator.css"
+      external_css: "/content-images/wai-statements/generator.bundle.css"
 
 #  -
 #    scope:

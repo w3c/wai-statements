@@ -6,4 +6,4 @@ defaults:
       path: ""
     values:
       layout: "default"
-      external_css: "http://localhost:8100/generator.css"
+      external_css: "http://localhost:8100/generator.bundle.css"
