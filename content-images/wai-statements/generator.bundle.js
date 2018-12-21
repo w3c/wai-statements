@@ -1,0 +1,125 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./_webpack/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./_webpack/components/Generator/index.js":
+/*!************************************************!*\
+  !*** ./_webpack/components/Generator/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/**\n * ACCESSIBILITY STATEMENT GENERATOR\n * ---\n * [description]\n * ---\n */\nvar Generator = function Generator() {\n  'use strict'; // Editable contents\n\n  var DATA = {\n    MONTH_NAMES: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']\n  };\n  /**\n   * statementForm module\n   * ---\n   * Helper module to read and write formdata\n   * ---\n   * @return {module} Module methods object; see method for description\n   */\n\n  var statementForm = function () {\n    'use strict';\n\n    var _formData = new Map();\n\n    var _formElement = document.forms.create_accessibility_statement_form;\n\n    var _formState = new Map();\n\n    _formState.set('changed', false); // Do initial form data storage (defaultvalues)\n\n\n    function _init() {\n      _today();\n\n      updateConformanceMeaning();\n      Array.prototype.forEach.call(_formElement.elements, function setinitialData(item) {\n        var nodeName = item.nodeName;\n        var isProto = item.parentNode && item.parentNode.classList.contains('proto');\n\n        if (['INPUT', 'TEXTAREA'].indexOf(nodeName) !== -1 && !isProto) {\n          _setFormData(item);\n        }\n      });\n    }\n\n    function _getData(identifier) {\n      var data = {};\n\n      if (identifier && typeof identifier === 'string') {\n        return _formData.get(identifier);\n      } else if (!identifier) {\n        _formData.forEach(function returnData(value, key, map) {\n          data[key] = value;\n        });\n\n        return data;\n      }\n    }\n\n    function _today() {\n      var monthnames = DATA.MONTH_NAMES;\n      var dateToday = new Date();\n      var day = dateToday.getDate();\n      var month = dateToday.getMonth() + 1;\n      var monthFull = monthnames[month - 1];\n      var year = dateToday.getFullYear();\n      var dateTodayString = '' + day + ' ' + monthFull + ' ' + year;\n      var dates = document.querySelectorAll('#accstatement input.today');\n      var i;\n\n      for (i = 0; i < dates.length; i += 1) {\n        try {\n          dates[i].valueAsDate = dateToday;\n        } catch (e) {\n          dates[i].value = dateTodayString;\n        }\n      }\n    }\n\n    function _getFormGroup(groupName) {\n      if (groupName) {\n        return _formElement.elements[groupName];\n      }\n\n      return false;\n    }\n\n    function _getGroupValue(groupName) {\n      var group = _getFormGroup(groupName) || [];\n      var checkedMembers = Array.prototype.filter.call(group, function getChecked(member) {\n        var isText = member.type === 'text';\n        return member.checked || isText && member.value;\n      });\n\n      if (checkedMembers.length > 0) {\n        return checkedMembers.map(function returnValue(member) {\n          return member.value;\n        });\n      }\n\n      return [];\n    }\n    /**\n     * Transform input values into correct key value pairs\n     * Set single string value or array of string values to key\n     * @param       {HtmlFormElement} input\n     */\n\n\n    function _setFormData(input) {\n      var inputName = input.name || undefined;\n      var inputType = input.type || 'text';\n      var inputValue;\n\n      if (inputName && inputType !== 'radio') {\n        inputValue = _getGroupValue(inputName) || [];\n\n        _formData.set(inputName, inputValue);\n      } else if (inputName && inputType === 'radio') {\n        inputValue = _getGroupValue(inputName)[0] || '';\n\n        _formData.set(inputName, inputValue);\n      } else {\n        // Single string values\n        inputValue = input.value || '';\n\n        _formData.set(input.id, inputValue);\n      }\n    } // Custom form data manipulation\n\n\n    function updateConformanceMeaning() {\n      var conformanceGroup = _formElement.elements.accstmnt_conformance;\n      var activeConformance = Array.prototype.filter.call(conformanceGroup, function getChecked(item) {\n        return item.checked;\n      })[0];\n      var meaningInput = _formElement.elements.accstmnt_conformance_meaning;\n      var meaningElement = activeConformance.parentNode.querySelector('.meaning');\n      var meaningValue = meaningElement && meaningElement.innerText || '';\n\n      if (meaningInput.value !== meaningValue) {\n        meaningInput.value = meaningValue;\n\n        _setFormData(meaningInput);\n      }\n    }\n\n    function resetOtherStandard() {\n      var otherStandardInput = document.getElementById('accstmnt_standard_other_name');\n      otherStandardInput.value = '';\n\n      _setFormData(otherStandardInput);\n    }\n    /**\n     * EXECUTE AREA\n     */\n    // Initiate statementForm\n\n\n    _init();\n\n    _formElement.addEventListener('change', function handleFormChange(event) {\n      var formChanged = _formState.get('changed');\n\n      var target = event.target;\n      var allowedInputs = ['INPUT', 'TEXTAREA']; // Store formdata for changed input\n\n      if (allowedInputs.indexOf(target.nodeName) !== -1 && target.id) {\n        _setFormData(target);\n      }\n\n      if (!formChanged) {\n        _formState.set('changed', true);\n      } // Custom form manipulation\n      // Setting conformance meaning\n\n\n      if (target.name && target.name === 'accstmnt_conformance') {\n        updateConformanceMeaning();\n      } // (Re)Setting other standard applied\n\n\n      if (target.name && target.name === 'accstmnt_standard' && target.id !== 'accstmnt_standard_other') {\n        resetOtherStandard();\n      }\n    });\n\n    return {\n      data: {\n        get: _getData,\n        set: _formData.set\n      },\n      elelment: _formElement,\n      state: _formState\n    };\n  }();\n  /**\n   * Saver module to save data as file\n   * @return {object} saver methods\n   */\n\n\n  var saver = function () {\n    'use strict';\n\n    var DEFAULTS = {\n      MIMETYPE: 'text/plain',\n      ENCODING: 'utf-8',\n      FILENAME: 'accessibility-statement',\n      XMLNS: 'http://www.w3.org/1999/xhtml'\n    };\n    var MIME_TYPES = {\n      // csv: 'text/csv',\n      // tsv: 'text/tab-separated-values',\n      json: 'application/json',\n      text: 'text/plain',\n      html: 'text/html'\n    };\n\n    function _saveAs(data, mime) {\n      switch (mime) {\n        case 'html':\n          _saveAsHtml(data);\n\n          break;\n\n        default:\n          _saveAsText(data);\n\n      }\n    }\n\n    function _saveData(data, params) {\n      params = params || {};\n      var mime = MIME_TYPES[params.mime] || params.mime || DEFAULTS.MIMETYPE; // Create file\n\n      var blob = _createBlob(data, mime, DEFAULTS.ENCODING);\n\n      var blobUrl = _createBlobURL(blob);\n\n      var date = new Date();\n      var dateString = [date.getFullYear(), date.getMonth().toString().length === 1 ? '0' + date.getMonth() : date.getMonth(), date.getDate().toString().length === 1 ? '0' + date.getDate() : date.getDate()].join('-');\n      var filename = DEFAULTS.FILENAME + '_' + dateString + '.' + params.mime; // Saving the blob\n\n      _saveResource(blobUrl, {\n        filename: filename,\n        blob: blob,\n        revoke: params.revoke || true\n      });\n    }\n\n    function _createBlob(data, mime, encoding) {\n      var mimetype = MIME_TYPES[mime] || mime || DEFAULTS.MIMETYPE;\n      encoding = encoding || DEFAULTS.ENCODING;\n      return new Blob([data], {\n        type: mimetype + ';charset=' + encoding\n      });\n    }\n\n    function _createBlobURL(blob) {\n      var oURL = URL.createObjectURL(blob);\n      return oURL;\n    }\n\n    ;\n\n    function _saveResource(href, params) {\n      var a = document.createElementNS(DEFAULTS.XMLNS, 'a');\n      var blob = params.blob;\n      var filename = params.filename; // Directly save blob on IE or EDGE\n\n      if (window.navigator && window.navigator.msSaveOrOpenBlob || window.navigator.msSaveBlob) {\n        try {\n          window.navigator.msSaveOrOpenBlob(blob, filename);\n        } catch (e) {\n          window.navigator.msSaveBlob(blob, filename);\n        }\n      } else {\n        a.href = href;\n        a.setAttribute('download', params.filename || ''); // Add, click and remove (download blob)\n\n        document.body.appendChild(a);\n        a.click();\n        document.body.removeChild(a);\n      }\n\n      a = undefined;\n      setTimeout(function () {\n        URL.revokeObjectURL(href);\n      }, 0);\n    }\n\n    function _saveAsText() {}\n\n    function _saveAsHtml(data) {\n      var mime = 'html';\n      var header = '<!DOCTYPE html>\\n';\n\n      _saveData(header + data, {\n        mime: mime\n      });\n    }\n\n    ;\n    return {\n      saveAs: _saveAs\n    };\n  }();\n  /**\n   * App starts here\n   */\n\n\n  var ROUTES = ['create', 'preview'];\n\n  function _init() {\n    window.onhashchange = _showPage;\n\n    window.onbeforeunload = function warnOnLeave(event) {\n      var formChanged = statementForm.state.get('changed');\n\n      if (formChanged) {\n        return window.confirm();\n      }\n    };\n\n    _setPage();\n\n    _addLine();\n\n    _enableStatementActions(); // Set button-backtotop href\n\n\n    Array.prototype.forEach.call(document.querySelectorAll('a[href=\"#top\"]'), function setTopHref(el) {\n      el.addEventListener('click', function handleBackToTopClick(event) {\n        el.setAttribute('href', '#' + _getCurrentPage() + '-top');\n      });\n    });\n  }\n\n  function _enableStatementActions() {\n    var actionButtonGroups = document.querySelectorAll('.statement-actions');\n    Array.prototype.forEach.call(actionButtonGroups, function addClickListener(buttonGroup) {\n      buttonGroup.addEventListener('click', function handleButtonGroupClick(event) {\n        var target = event.target;\n        var action = target.dataset.action;\n\n        if (target.nodeName === \"BUTTON\" && action) {\n          switch (action) {\n            case 'preview_save_as_html':\n              _savePreviewAs('html');\n\n              break;\n\n            case 'preview_save_as_json':\n              _savePreviewAs('json');\n\n              break;\n\n            default:\n              break;\n          }\n\n          event.stopPropagation();\n        }\n      });\n    });\n  }\n  /**\n   * Return current active page\n   * @return      {string} Current page hash\n   */\n\n\n  function _getCurrentPage() {\n    return Array.prototype.filter.call(ROUTES, function (route) {\n      var hash = window.location.hash;\n      return hash.indexOf(route) !== -1;\n    })[0];\n  } // Set initial app route hash\n\n\n  function _setPage() {\n    if (ROUTES.indexOf(location.hash.substring(1)) < 0) {\n      window.location.hash = 'create';\n    } else {\n      _showPage();\n    }\n  }\n\n  function _showPage() {\n    var pages = document.querySelectorAll('#accstatement .page');\n\n    var currentPage = _getCurrentPage();\n\n    var backToTop = document.querySelectorAll('a.button-backtotop'); // Set back to top anchor href\n\n    Array.prototype.forEach.call(backToTop, function setHref(el) {\n      el.setAttribute('href', '#' + _getCurrentPage() + '-top');\n    });\n\n    if (currentPage === 'preview') {\n      _showPreview();\n    } // hide all pages\n\n\n    Array.prototype.forEach.call(pages, function hide(page) {\n      page.setAttribute('hidden', '');\n    }); // show current page\n\n    document.querySelector('#accstatement .page.' + currentPage).removeAttribute('hidden');\n    window.scrollTo(0, 0);\n  }\n\n  function _showPreview() {\n    var statementPreview = document.querySelector('#accstatement .page.preview'); // Apply conditionals\n\n    _applyConditionals(); // Print formdata into printables: [data-print]\n\n\n    _printFormInput(); // Custom statement print: limitations & alternatives\n\n\n    (function () {\n      var limitations = document.querySelectorAll('#accstmnt_issues fieldset:not(.proto)');\n      var block = statementPreview.querySelector('#statement-limitations-block');\n      var list = statementPreview.querySelector('#statement-limitations');\n      var html = '';\n      Array.prototype.forEach.call(limitations, function print(limitation) {\n        var element = limitation.querySelector('input[name=element]').value;\n        var description = limitation.querySelector('input[name=description]').value;\n        var reason = limitation.querySelector('input[name=reason]').value;\n        var us = limitation.querySelector('input[name=us]').value;\n        var you = limitation.querySelector('input[name=you]').value;\n\n        if (element || description || reason || us || you) {\n          html += '\\t<li>' + '<strong>' + element + '</strong>: ' + description + ' because ' + reason + '. ' + us + '. ' + you + '.</li>\\n';\n        }\n      });\n\n      if (html) {\n        list.innerHTML = '\\n' + html;\n        block.removeAttribute('hidden');\n      } else {\n        block.setAttribute('hidden', '');\n      }\n    })();\n  }\n\n  ;\n\n  function _savePreviewAs(filetype) {\n    var saver = saver || null;\n    saver.saveAs(data, filetype);\n  }\n\n  function _printFormInput() {\n    var getData = statementForm.data.get;\n    var printCollection = document.querySelectorAll('[data-print]');\n    var printFilters = {\n      lowercase: function toLowerCase(string) {\n        return string.toLowerCase();\n      },\n      capitalize: function capitalize(string) {\n        var firstChar = string.slice(0, 1).toUpperCase();\n        var rest = string.slice(1);\n        return firstChar + rest;\n      }\n    };\n\n    function applyFilters(data, filters) {\n      var newData = data;\n\n      if (!data || !filters || filters.length === 0) {\n        return data;\n      }\n\n      if (Array.isArray(data)) {\n        newData = data.map(function (item) {\n          return applyFilters(item, filters);\n        });\n      } else {\n        filters.forEach(function apply(filter) {\n          if (filter in printFilters) {\n            newData = printFilters[filter](data);\n          }\n        });\n      }\n\n      return newData;\n    }\n\n    Array.prototype.forEach.call(printCollection, function printInput(item) {\n      var nodeName = item.nodeName;\n      var target = item.dataset.print;\n      var hasFilter = item.dataset.printfilter;\n      var printFilters = hasFilter && item.dataset.printfilter.split(',').map(function trim(string) {\n        return string.trim();\n      });\n      var printDefault = item.dataset.printdefault || '';\n      var printData = applyFilters(getData(target), printFilters) || printDefault;\n      var dataList = Array.isArray(printData);\n\n      if (dataList && nodeName === 'UL' || nodeName === 'OL') {\n        item.innerHTML = printData.map(function wrapInLi(data, index) {\n          if (index === 0) {\n            return '\\n\\t<li>' + data + '</li>\\n';\n          }\n\n          return '\\t<li>' + data + '</li>\\n';\n        }).join('');\n      } else {\n        switch (nodeName) {\n          case 'A':\n            var hrefPrefix = item.getAttribute('href');\n            item.setAttribute('href', hrefPrefix + printData);\n            item.innerText = printData;\n            break;\n\n          default:\n            item.innerText = printData;\n        }\n      }\n    });\n  }\n\n  function _savePreviewAs(filetype) {\n    if (filetype) {\n      switch (filetype) {\n        case 'html':\n          // Prepare statement data\n          var generatedStatementMarkup = _getGeneratedStatement(); // Then use save function with data\n\n\n          saver.saveAs(generatedStatementMarkup, filetype);\n          break;\n\n        default:\n      }\n    }\n  }\n\n  function _getGeneratedStatement() {\n    var generatedStatement = document.getElementById('statement_generated').cloneNode(true);\n    var hiddenElements = generatedStatement.querySelectorAll('[hidden]'); // Remove all hidden nodes\n\n    Array.prototype.forEach.call(hiddenElements, function remove(hidden) {\n      hidden.parentNode.removeChild(hidden);\n    });\n\n    function getDivChildNodes(node) {\n      return Array.prototype.filter.call(node.children, function (child) {\n        return child.nodeName === 'DIV';\n      });\n    }\n\n    function expandDivChildren(divNode) {\n      var fragment = document.createDocumentFragment();\n      var divChildren = getDivChildNodes(divNode);\n\n      if (divChildren.length > 0) {\n        Array.prototype.forEach.call(divChildren, function removeDiv(divChild) {\n          expandDivChildren(divChild);\n        }); // Run again on node after children\n\n        expandDivChildren(divNode);\n      } else {\n        Array.prototype.forEach.call(divNode.children, function appendToFragment(divChild) {\n          var element = document.createElement(divChild.nodeName);\n          element.innerHTML = divChild.innerHTML;\n\n          if (divChild.classList.length > 0) {\n            element.classList = divChild.classList;\n          }\n\n          fragment.appendChild(element);\n        }); // Move div children before div and remove div\n\n        divNode.parentNode.insertBefore(fragment, divNode);\n        divNode.parentNode.removeChild(divNode);\n      }\n    } // Replace div with div.children\n\n\n    Array.prototype.forEach.call(getDivChildNodes(generatedStatement), function removeDiv(child) {\n      expandDivChildren(child);\n    });\n    return Array.prototype.map.call(generatedStatement.children, function getCleanHTML(child) {\n      return child.outerHTML.replace(/( data-if=\")[^\\\"]*\\\"/g, '').replace(/( data-print=\")[^\\\"]*\\\"/g, '').replace(/( data-printdefault=\")[^\\\"]*\\\"/g, '').replace(/ {4,}/g, '\\t').replace(/ {2,}/g, '');\n    }).join('\\n').replace(/\\t(<\\/)/g, '</').replace(/\\t\\n/g, '');\n  }\n\n  function _addLine() {\n    var buttons = document.querySelectorAll('#accstatement button.add-line');\n    Array.prototype.forEach.call(buttons, function addClickListener(button) {\n      button.addEventListener('click', function (event) {\n        var parent = event.target.parentNode;\n        var lines = parent.querySelectorAll('.line');\n        var proto = parent.querySelector('.proto');\n        var newLine = proto.cloneNode(true);\n        newLine.classList.remove('proto');\n        newLine.classList.add('line');\n        newLine.innerHTML = newLine.innerHTML.replace(/\\[n\\]/g, lines.length + 1);\n        proto.parentNode.insertBefore(newLine, proto);\n        newLine.querySelector('input, textarea').focus();\n      });\n    });\n  }\n\n  function _applyConditionals() {\n    var getData = statementForm.data.get;\n    var conditionals = document.querySelectorAll('[data-if]');\n    Array.prototype.forEach.call(conditionals, function apply(conditional) {\n      var negate = 'negate' in conditional.dataset; // Get required data for condition\n\n      var dataList = conditional.dataset.if.split(',').map(function trimString(string) {\n        return string.trim();\n      }); // Get filtered datalist with values\n\n      var dataListValues = dataList.filter(function withValue(key) {\n        var data = getData(key);\n        return data !== undefined && data.length > 0;\n      });\n      var conditionMet = dataListValues.length > 0;\n\n      if (negate) {\n        conditionMet = !conditionMet;\n      }\n\n      if (conditionMet) {\n        conditional.removeAttribute('hidden');\n      } else {\n        conditional.setAttribute('hidden', '');\n      }\n    });\n  }\n\n  _init();\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Generator);\n\n//# sourceURL=webpack:///./_webpack/components/Generator/index.js?");
+
+/***/ }),
+
+/***/ "./_webpack/components/index.js":
+/*!**************************************!*\
+  !*** ./_webpack/components/index.js ***!
+  \**************************************/
+/*! exports provided: Generator */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Generator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Generator */ \"./_webpack/components/Generator/index.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Generator\", function() { return _Generator__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack:///./_webpack/components/index.js?");
+
+/***/ }),
+
+/***/ "./_webpack/index.js":
+/*!***************************!*\
+  !*** ./_webpack/index.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components */ \"./_webpack/components/index.js\");\n\nObject(_components__WEBPACK_IMPORTED_MODULE_0__[\"Generator\"])();\n\n//# sourceURL=webpack:///./_webpack/index.js?");
+
+/***/ })
+
+/******/ });
