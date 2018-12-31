@@ -5,11 +5,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Webpack environment vars
+const SRC_PATH = path.resolve(__dirname, '_generator', 'src');
 const OUTPATH = path.resolve(__dirname, 'content-images', 'wai-statements');
 
 module.exports = (env, argv) => ({
   entry: {
-    main: './_webpack/index.js'
+    main: path.resolve(SRC_PATH, 'index.js')
   },
   output: {
     path: OUTPATH,
