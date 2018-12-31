@@ -38,6 +38,16 @@ Now you can start development with:
 ```
 npm start
 ```
+The generator lives on url `http://127.0.0.1:4000/wai-statements/planning/statements/` in your browser
+
+
+If you are done with development and made changes to the generator files, build and commit the new build to make changes to production.
+
+> *TODO*: Create a precommit hook?
+
+```
+npm build:webpack
+```
 
 
 ### Installation as stand-alone
