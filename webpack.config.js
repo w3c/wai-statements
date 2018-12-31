@@ -7,15 +7,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SRC_PATH = path.resolve(__dirname, '_generator', 'src');
 const OUTPATH = path.resolve(__dirname, 'content-images', 'wai-statements');
 
-console.log(SRC_PATH);
-
 module.exports = () => ({
   entry: {
-    main: path.resolve(SRC_PATH, 'index.js')
+    generator: path.resolve(SRC_PATH, 'index.js')
   },
   output: {
     path: OUTPATH,
-    filename: 'generator.bundle.js'
+    filename: '[name].bundle.js'
   },
   devServer: {
     contentBase: OUTPATH,
@@ -45,7 +43,7 @@ module.exports = () => ({
   plugins: [
     // Used to save a css file
     new MiniCssExtractPlugin({
-      filename: 'generator.bundle.css',
+      filename: '[name].bundle.css',
       disable: false,
       allChunks: true
     })
