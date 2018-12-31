@@ -66,7 +66,7 @@ npm run build:webpack
 npm run start:webpack
 ```
 
-Statement generator source files (development) can be found inside the `_webpack` folder.
+Statement generator source files (development) can be found inside the `_generator` folder.
 
 Compiled css and js files (production) in `content-images/wai-statements/`.
 
