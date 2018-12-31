@@ -1,14 +1,15 @@
 const path = require('path');
 
 // Webpack plugins
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Webpack environment vars
 const SRC_PATH = path.resolve(__dirname, '_generator', 'src');
 const OUTPATH = path.resolve(__dirname, 'content-images', 'wai-statements');
 
-module.exports = (env, argv) => ({
+console.log(SRC_PATH);
+
+module.exports = () => ({
   entry: {
     main: path.resolve(SRC_PATH, 'index.js')
   },
@@ -42,10 +43,6 @@ module.exports = (env, argv) => ({
     ]
   },
   plugins: [
-    // Used for cleaning dist folder
-    // argv.mode === 'production'
-    //   ? new CleanWebpackPlugin(OUTPATH, {})
-    //   : () => {}
     // Used to save a css file
     new MiniCssExtractPlugin({
       filename: 'generator.bundle.css',
