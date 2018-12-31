@@ -1,0 +1,41 @@
+{
+  "name": "wai-statements",
+  "version": "2.0.0",
+  "description": "Web Accessibility Initiative accessibility statement generator",
+  "scripts": {
+    "start": "npm run start:webpack & npm run start:jekyll",
+    "start:jekyll": "bundle exec jekyll serve --config _config.yml,_config.dev.yml --livereload",
+    "start:webpack": "webpack-dev-server --mode development",
+    "build": "npm run build:webpack & npm run build:jekyll",
+    "build:jekyll": "bundle exec jekyll build",
+    "build:webpack": "webpack --mode production",
+    "install": "bundle install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3c/wai-statements.git"
+  },
+  "keywords": [
+    "wai",
+    "accessibility",
+    "statement",
+    "generator"
+  ],
+  "author": "acknowledgements.md",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/w3c/wai-statements/issues"
+  },
+  "homepage": "https://github.com/w3c/wai-statements#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.0.2",
+    "mini-css-extract-plugin": "^0.5.0",
+    "webpack": "^4.28.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
