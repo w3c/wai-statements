@@ -51,7 +51,7 @@
         var nodeName = item.nodeName;
         var isProto = item.parentNode && item.parentNode.classList.contains('proto');
 
-        if (['INPUT', 'TEXTAREA'].indexOf(nodeName) !== -1 && !isProto) {
+        if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(nodeName) !== -1 && !isProto) {
           _setFormData(item);
         }
       });
@@ -177,6 +177,7 @@
       var allowedInputs = [
         'INPUT',
         'TEXTAREA',
+        'SELECT'
       ];
 
       // Store formdata for changed input
