@@ -103,7 +103,8 @@
     function _getGroupValue(groupName) {
       var group = _getFormGroup(groupName) || [];
       var checkedMembers = Array.prototype.filter.call(group, function getChecked(member) {
-        var isText = member.type === 'text';
+        var isText = member.type !== 'radio'
+          || member.type !== 'checkbox';
 
         return member.checked || (isText && member.value);
       });
