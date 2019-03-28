@@ -3,12 +3,12 @@
   "version": "2.0.0",
   "description": "Web Accessibility Initiative accessibility statement generator",
   "scripts": {
-    "start": "npm run start:webpack & npm run start:jekyll",
+    "start": "npm run start:generator & npm run start:jekyll",
     "start:jekyll": "bundle exec jekyll serve --config _config.yml,_config.dev.yml --livereload",
-    "start:webpack": "webpack-dev-server --mode development",
-    "build": "npm run build:webpack & npm run build:jekyll",
+    "start:generator": "webpack-dev-server --mode development",
+    "build": "npm run build:generator & npm run build:jekyll",
     "build:jekyll": "bundle exec jekyll build",
-    "build:webpack": "webpack --mode production",
+    "build:generator": "webpack --mode production",
     "install": "bundle install"
   },
   "repository": {
