@@ -73,6 +73,20 @@ The generator tool is setup in such a way that content is seperated from functio
 
 The create statement contents are wrapped inside `<section class="page create">`. Just simply add or remove the html markup to edit the form.
 
+Supported form elements are:
+- input
+
+  NOTE: Input types of type radio and checkbox require the value attribute set, for example:
+
+  ```html
+  <input type="radio" name="radiogroup" value="option 1">
+  <input type="radio" name="radiogroup" value="option 2">
+  <input type="radio" name="radiogroup" value="option x">
+  ```
+
+- textarea
+- select
+
 There is one extra functionality available to dynamically add extra line to grouped form input; add-line. To use this there are several practical examples inside the form. Required for add-line to work is this basic setup:
 
 ```html

@@ -51,7 +51,7 @@
         var nodeName = item.nodeName;
         var isProto = item.parentNode && item.parentNode.classList.contains('proto');
 
-        if (['INPUT', 'TEXTAREA'].indexOf(nodeName) !== -1 && !isProto) {
+        if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(nodeName) !== -1 && !isProto) {
           _setFormData(item);
         }
       });
@@ -103,7 +103,8 @@
     function _getGroupValue(groupName) {
       var group = _getFormGroup(groupName) || [];
       var checkedMembers = Array.prototype.filter.call(group, function getChecked(member) {
-        var isText = member.type === 'text';
+        var isText = member.type !== 'radio'
+          || member.type !== 'checkbox';
 
         return member.checked || (isText && member.value);
       });
@@ -177,6 +178,7 @@
       var allowedInputs = [
         'INPUT',
         'TEXTAREA',
+        'SELECT'
       ];
 
       // Store formdata for changed input
