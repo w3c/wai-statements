@@ -12,7 +12,7 @@ Accessibility Statement generator tool pages are a part of the WAI website and t
 
 ### Installation as part of the WAI website
 
-This site is build with Jekyll, [follow Jekyll's installation guide](https://jekyllrb.com/docs/) first.
+This site is built with Jekyll, [follow Jekyll's installation guide](https://jekyllrb.com/docs/) first.
 
 Then clone this repository:
 ```
@@ -34,18 +34,18 @@ bundle exec jekyll serve
 
 ### Installation as stand-alone
 
-To use the accessibility statement generator tool as a stand-alone to include into your own site you need to build the site once with Jekyll, see "[Installation as part of the WAI website](#installation-as-part-of-the-wai-website)".
+To use the accessibility statement generator tool as a stand-alone to include in your own site you need to build the site once with Jekyll, see "[Installation as part of the WAI website](#installation-as-part-of-the-wai-website)".
 
 Build the site:
 ```
 bundle exec jekyll build
 ```
 
-The complete site is build inside the `_site` folder and the generated files you need will be:
+The complete site is built inside the `_site` folder and the generated files you need will be:
 
 - HTML: `planning/statements/generator/index.html`
 
-    You will need all contents of `<div id="accstatement">` and link to required css and javascript below. The rest is all WAI website material.
+    You will need all the contents of `<div id="accstatement">` and links to required css and javascript below. The rest is all WAI website material.
 
 - CSS: `content-images/wai-statements/generator.css`
 - JS: `content-images/wai-statements/generator.js`
@@ -53,7 +53,7 @@ The complete site is build inside the `_site` folder and the generated files you
 
     This is required for the expanding and toggling of sections and information.
 
-For now you need to strip and modify all files manually to make it includeable into your own project.
+For now you need to strip and modify all files manually to make it includeable in your own project.
 
 #### TODO for stand alone version
 
@@ -130,14 +130,14 @@ Same as with [editing the statement create form](#editing-the-statement-create-f
 
 To print the form data into the statement preview there is some additional functionality available:
 
-- Printing formdata with `data-print` attribute:
+- Printing form data with `data-print` attribute:
 
     Example print usage:
     ```html
     <!--
         Single input data
         data-print          REQUIRED    input id to print
-        data-printdefault   OPTIONAL    defaultvalue if data is missing or empty
+        data-printdefault   OPTIONAL    default value if data is missing or empty
         data-printfilter    OPTIONAL    Output transformation; one of [lowercase, capitalize]
     -->
     <span data-print="forminput_id" data-printdefault="MY_FORM_DATA" data-printfilter="lowercase, capitalize"></span>
@@ -190,7 +190,7 @@ Currently custom handled statement parts are:
 - Conformance meaning data (Updates to hidden input #accstmnt_conformance_meaning)
 - Limitations section (Still reading directly from DOM)
 
-When changes are required here edits on generator.js are necessary.
+When changes are required here edits to generator.js are necessary.
 
 
 ### Internationalization
