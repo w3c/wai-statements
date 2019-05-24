@@ -45,7 +45,7 @@ The complete site is built inside the `_site` folder and the generated files you
 
 - HTML: `planning/statements/generator/index.html`
 
-    You will need all the contents of `<div id="accstatement">` and links to required css and javascript below. The rest is all WAI website material.
+    You will need all the contents of `<div id="accstatement">` and link to required css and javascript below. The rest is all WAI website material.
 
 - CSS: `content-images/wai-statements/generator.css`
 - JS: `content-images/wai-statements/generator.js`
