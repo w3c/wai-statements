@@ -2,7 +2,7 @@
 
 Accessibility Statement generator tool pages are a part of the WAI website and therefore makes use of the [wai-website-theme](https://github.com/w3c/wai-website-theme) as dependency. Both make use of [Jekyll static site generator](https://jekyllrb.com/) to create the pages.
 
-- Github page: https://w3c.github.io/wai-statements/planning/statements/
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ab8755c7-85c1-465b-ad34-38fc72c3c958/deploy-status)](https://app.netlify.com/sites/wai-statements/deploys)
 
 - [Requirements](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
 
