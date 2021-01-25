@@ -60,6 +60,28 @@
                                         <input type="text" id="accstmt_{{ field.title | slugify }}" />
                                     </div>
                                 {% endfor %}
+                                <!-- input_radiobuttons type -->
+                                {% elsif question.input_radiobuttons %}
+                                    <fieldset class="field" id="accstmt_{{ question.title | slugify }}">
+                                    {% if question.label %}
+                                        <legend class="label">{{ question.label }}</legend>
+                                    {% endif %}
+                                    {% for radio in question.input_radiobuttons %}
+                                        <div class="radio-field">
+                                            <input type="radio" name="accstmt_{{ question.title | slugify }}" id="accstmt_{{ radio.title | slugify }}" checked="checked"
+                                                value="{{ radio.title }}" />
+                                            <label for="accstmt_{{ radio.title | slugify }}">{{ radio.title }}</label>
+                                        </div>
+                                    {% endfor %}
+                                    {% if question.allow_other %}
+                                        <div class="radio-field">
+                                            <input type="radio" name="accstmt_{{ question.title | slugify }}" id="accstmt_{{ question.title | slugify }}_other"
+                                                checked="checked" value="{{ question.other_text }}" />
+                                            <label for="accstmt_{{ question.title | slugify }}_other">{{ question.other_text }}</label>
+                                            <input aria-label="{{ question.other_text }}" type="text" id="accstmt_{{ question.title | slugify }}_other_field">
+                                        </div>
+                                    {% endif %}
+                                    </fieldset>
                                 {% endif %}
                             </div>
                         {% endfor %}

@@ -57,6 +57,7 @@ sections:
           - title: WCAG 2.1 level AA
           - title: WCAG 2.0 level AA
         allow_other: true # "allow_other" controls whether there is an "Other" option at the bottom
+        other_text: Other
       
       - title: Conformance status
         info: To what degree do you conform to the accessibility standard stated in the previous section? Sometimes there are justifiable reasons to not fully conform. You can indicate parts that do not yet fully conform, including guidance on how users can find help, in later sections of this form.
@@ -127,4 +128,5 @@ sections:
 
 ---
 
+[//]: # Don't change the following include:
 {% include_relative /generator_layout.html %}
