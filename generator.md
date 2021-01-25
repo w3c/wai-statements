@@ -12,8 +12,13 @@ contributors: #Add one -name: line for every contributor
   - name: Roel Antonisse
   - name: Leon Baauw
   - name: Bas de Bruin
-permalink: /planning/statements/generator/   # Add the language shortcode to the end; for example /fundamentals/accessibility-intro/nl
-
+permalink: /planning/statements/generator/en/   # Add the language shortcode to the end; for example /planning/statements/generator/nl/
+layout: default
+parent_path: /planning/statements/generator/
+github:
+    repository: w3c/wai-statements
+    path: "generator.html"
+external_css: /content-images/wai-statements/generator.css
 
 # --- MAIN CONTENT ---
 # this section is where all text content is stored, edit it just as described above
@@ -51,7 +56,7 @@ sections:
         input_radiobuttons:
           - title: WCAG 2.1 level AA
           - title: WCAG 2.0 level AA
-          allow_other: true # "allow_other" controls whether there is an "Other" option at the bottom
+        allow_other: true # "allow_other" controls whether there is an "Other" option at the bottom
       
       - title: Conformance status
         info: To what degree do you conform to the accessibility standard stated in the previous section? Sometimes there are justifiable reasons to not fully conform. You can indicate parts that do not yet fully conform, including guidance on how users can find help, in later sections of this form.
@@ -89,7 +94,6 @@ sections:
         info: Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained. Writing out the month makes the date clearer internationally (eg. "1 February 2019" rather than "01/02/2019", which is ambiguous).
         input_fields:
           - title: Publication date of this accessibility statement
-            def
             class: today # The class "today" automatically adds current date to input field
 
 
@@ -121,8 +125,6 @@ sections:
 
 
 
-
-
-
 ---
 
+{% include_relative /generator_layout.html %}

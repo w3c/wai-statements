@@ -1,0 +1,73 @@
+<!-- Generator -->
+
+<div id="accstatement">
+    <section class="page create" disable-hidden="hidden">
+        <div class="container">
+            <!-- Intro -->
+            {% include box.html type="start" title="How to use this generator tool" class="" %}
+                <p>{{ page.introduction }}</p>
+            {% include box.html type="end" %}
+
+            <!-- Section List -->
+            {% include_cached toc.html type="start" title="Page Contents" class="full" %}
+                <ul>
+                    {% for section in page.sections %}
+                        <li> 
+                            <a href="#{{ section.title | slugify }}">{{ section.title }}</a> 
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% include_cached toc.html type="end" %}
+
+            <!-- Show and Collapse button -->
+            <div style="display: flex; align-items: center;">
+                {% include excol.html type="all" %}
+                <div style="text-align: right; flex:1">
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" data-target=".information"
+                        data-showtext="Show all additional Information" data-hidetext="Hide all additional Infomation">Show all
+                        additional Information</button>
+                </div>
+            </div>
+
+            <!-- MAIN FORM -->
+            <form name="create_accessibility_statement_form">
+                <!-- for each section -->
+                {% for section in page.sections %}
+                    <!--{% include excol.html type="start" open="true" %}-->
+                        <!-- Section intro -->
+                        <h2 id="{{ section.title | slugify }}">{{ section.title }}</h2>
+                        <p class="intro">{{ section.discription }}</p>
+                    <!--{% include excol.html type="middle" %}-->
+                        <!-- Section questions -->
+                        {% for question in section.questions %}
+                            <div class="group">
+                                <h3 class="label"> {{ question.title }} 
+                                    <button type="button" class="showhidebutton     button-small" aria-expanded="false" aria-controls="info_{{question.title | slugify}}" data-target="#info_{{question.title | slugify}}" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                                </h3>
+                                <div class="information" id="info_{{question.title | slugify}}" hidden="hidden">
+                                    <p>{{ question.info }}</p>
+                                </div>
+                                
+                                <!-- Question content types -->
+                                <!-- input_fields type -->
+                                {% if question.input_fields %}
+                                {% for field in question.input_fields %}
+                                    <div class="field">
+                                        <label for="accstmt_{{ field.title | slugify }}">{{ field.title }}</label>
+                                        {% if field.example %}
+                                            <em>(Example: “{{ field.example }}”)</em>
+                                        {% endif %}
+                                        <input type="text" id="accstmt_{{ field.title | slugify }}" />
+                                    </div>
+                                {% endfor %}
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    <!--{% include excol.html type="end" %}-->
+                {% endfor %}
+            </form>
+        </div>
+    </section>
+</div>
+
+<script src="{{ '/content-images/wai-statements/generator.js' | relative_url}}"></script>
