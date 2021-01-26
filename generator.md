@@ -104,6 +104,18 @@ sections:
     questions:
       - title: Organizational measures
         info: List the measures that your organization undertakes to achieve sustainable accessibility. This includes measures such as procurement actions, training, raising awareness, and quality assurance. Some of these measures are pre-defined for your convenience but you can add more as needed.
+        input_checkboxes: 
+          - title: Include accessibility as part of our mission statement.
+          - title: Include accessibility throughout our internal policies.
+          - title: Integrate accessibility into our procurement practices.
+          - title: Appoint an accessibility officer and/or ombudsperson.
+          - title: Provide continual accessibility training for our staff.
+          - title: Assign clear accessibility targets and responsibilities.
+          - title: Employ formal accessibility quality assurance methods.
+        allow_other: true
+        other_text: Other measure
+        button_text: Add another measure
+        # example: Include people with disabilities in our design personas
   
   
   - title: Technical Information
@@ -113,6 +125,8 @@ sections:
     questions:
       - title: Accessibility limitations
         info: There are many situations in which limitations to accessibility can occur. For example, you may not be able ensure instant accessibility of user-generated content. Providing transparency on such situations helps users to understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web Accessibility Directive, public bodies are required to provide information on the parts of the content that do not conform, the reason for not conforming, and, if applicable, where to find accessible alternatives.
+        label: List the <em>content parts</em> that have accessibility limitations, a <em>description of the issue</em> that may be observed by users, a brief explanation of <em>why the issue occurs</em>, and <em>what to do in the mean time</em>, such as who to contact or where to find accessibility alternatives where appropriate.
+
         # input type: input item list, allows adding more of the same type of item
         input_item_list:
           title: Accessibility limitation
@@ -123,6 +137,14 @@ sections:
               example: Comments from users
             - title: Discription of the issue
               example: Uploaded images may not have text alternatives
+            - title: Why the issue occurs
+              example: We cannot ensure the quality of contributions
+            - title: What we are doing about it
+              example: We monitor user comments and typically repair issues within 2 business days
+            - title: What to do in the meantime
+              example: Please use the ‘report issue’ button if you encounter an issue
+        
+        button_text: Add another limitation
 
 
 

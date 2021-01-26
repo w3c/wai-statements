@@ -82,6 +82,84 @@
                                         </div>
                                     {% endif %}
                                     </fieldset>
+                                <!-- input_checkboxes type -->
+                                {% elsif question.input_checkboxes %}
+                                    <fieldset class="group">
+                                        <legend class="visuallyhidden">{{ question.title }}</legend>
+                                        {% if question.label %}
+                                            <p class="expl">{{ question.label }}</p>
+                                        {% endif %}
+                                        <ul class="nolist field" id="{{question.title}}-list">
+                                        {% for checkbox in question.input_checkboxes %}
+                                            <li class="radio-field">
+                                                <input id="accstmt_{{question.title | append: forloop.index | slugify}}" name="{{question.title | slugify}}" type="checkbox" value="{{checkbox.title}}" />
+                                                <label for="accstmt_{{question.title | append: forloop.index | slugify}}">{{ checkbox.title }}</label>
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                        <!-- Other -->
+                                        {% if question.allow_other %}
+                                        <div id="accstmt_{{question.title | slugify}}_other" class="group">
+                                            <div class="field line">
+                                                <label for="accstmt_{{question.title | slugify}}_other_1">{{ question.other_text }} 1</label>
+                                                {% if question.example %}
+                                                    <em>(Example: "{{ question.example }}")</em>
+                                                {% endif %}
+                                                <input type="text" id="accstmt_{{question.title | slugify}}_other_1" name="accstmt_{{question.title | slugify}}_other"/>
+                                            </div>
+                                            <!-- Prototype -->
+                                            <div class="field proto">
+                                                <label for="accstmt_{{question.title | slugify}}_other_[n]">{{ question.other_text }} [n]</label>
+                                                <input type="text" id="accstmt_{{question.title | slugify}}_other_[n]" name="accstmt_{{question.title | slugify}}_other" />
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="add-line">
+                                            {{ question.button_text }}
+                                        </button>
+                                        {% endif %}
+                                    </fieldset>
+                                <!-- input_item_list type -->
+                                {% elsif question.input_item_list %}
+                                    <fieldset class="group">
+                                        <legend class="visuallyhidden">{{ question.title }}</legend>
+                                        {% if question.label %}
+                                            <p class="expl">{{ question.label }}</p>
+                                        {% endif %}
+
+                                        <div id="accstmt_{{question.title | slugify}}">
+                                            <fieldset id="accstmt_{{question.title | slugify}}_1" class="group line">
+                                                <legend>{{ question.input_item_list.title }} 1</legend>
+                                                {% for field in question.input_item_list.input_fields %}
+                                                    <div class="field">
+                                                        <label for="accstmt_{{question.title | slugify}}_1_{{field.title | slugify}}">{{ field.title }}</label>
+                                                        {% if field.example %}
+                                                            <em>(Example: "{{ field.example }}")</em>
+                                                        {% endif %}
+                                                        <input type="text" id="accstmt_{{question.title | slugify}}_1_{{field.title | slugify}}" name="{{field.name | slugify}}"/>
+                                                    </div>
+                                                {% endfor %}
+                                            </fieldset>
+                                            <!-- Prototype -->
+                                            <fieldset id="accstmt_{{question.title | slugify}}_[n]" class="group proto">
+                                                <legend>{{ question.input_item_list.title }} [n]</legend>
+                                                {% for field in question.input_item_list.input_fields %}
+                                                <div class="field">
+                                                    <label for="accstmt_{{question.title | slugify}}_[n]_{{field.title | slugify}}">{{ field.title }}</label>
+                                                    {% if field.example %}
+                                                    <em>(Example: "{{ field.example }}")</em>
+                                                    {% endif %}
+                                                    <input type="text" id="accstmt_{{question.title | slugify}}_[n]_{{field.title | slugify}}"
+                                                        name="{{field.name | slugify}}" />
+                                                </div>
+                                                {% endfor %}
+                                            </fieldset>
+
+                                            <button type="button" class="add-line">
+                                                {{ question.button_text }}
+                                            </button>
+                                        </div>
+                                    </fieldset>
                                 {% endif %}
                             </div>
                         {% endfor %}
