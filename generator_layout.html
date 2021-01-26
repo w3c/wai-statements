@@ -57,7 +57,7 @@
                                         {% if field.example %}
                                             <em>(Example: “{{ field.example }}”)</em>
                                         {% endif %}
-                                        <input type="text" id="accstmt_{{ field.title | slugify }}" />
+                                        <input type="text" id="accstmt_{{ field.title | slugify }}" class="{{field.class}}"/>
                                     </div>
                                 {% endfor %}
                                 <!-- input_radiobuttons type -->
