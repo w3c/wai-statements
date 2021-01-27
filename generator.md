@@ -89,6 +89,36 @@ basic_info:
   # Additional accessibility considerations
   considerations:
     title: Additional accessibility considerations
+    info: "Sometimes you may be applying more accessibility requirements than those specified in the accessibility standard stated above. For example, you may be providing sign language videos or real-time captioning for live media. Here you can list these additional accessibility requirements.</p> <br>
+    <p> <strong>Example:</strong> “Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA Success Criteria: Images of text are only used for decorative purposes. Re-authentication after a session expires does not cause loss of data. Some videos have sign language interpretation.”"
+    requirements: Additional accessibility requirements applied
+  # Feedback Options
+  feedback:
+    title: Feedback options
+    info: In which ways can users can get in touch with your organization when they encounter an accessibility barrier? Ideally you should provide more than one option. Also indicate the duration after which users can expect a response from your organization.
+    phone: 
+      title: Phone
+      example: "(Example: “+12 34 567 89 00”)"
+    email:
+      title: E-mail
+      example: "(Example: “accessibility@example.org”)"
+    visitor_address:
+      title: Visitor Address
+      example: "(Example: “Main Street 1, 234 Example Ville”)"
+    postal_address:
+      title: Postal Address
+      example: "(Example: “PO Box 1, 234 Example Ville”)"
+    other:
+      title: Other contact options
+      example: "(Example: on social media; Twitter: @ExampleUser)"
+    response:
+      title: Typical duration for response
+      example: "(Example: “2 business days”)"
+  # Date of publication
+  date:
+    title: Date of publication
+    info: Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained. Writing out the month makes the date clearer internationally (eg. "1 February 2019" rather than "01/02/2019", which is ambiguous).
+    publication_date: Publication date of this accessibility statement
     
 
 # Your Efforts

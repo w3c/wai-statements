@@ -170,69 +170,57 @@
                             data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                     </h3>
                     <div class="information" id="info_additional" hidden="hidden">
-                        <p>Sometimes you may be applying more accessibility requirements than those specified in the
-                            accessibility standard stated above. For example, you may be providing sign language videos
-                            or real-time captioning for live media. Here you can list these additional accessibility
-                            requirements.</p>
-                        <p>
-                            <strong>Example:</strong>
-                            “Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA
-                            Success Criteria: Images of text are only used for decorative purposes. Re-authentication
-                            after a session expires does not cause loss of data. Some videos have sign language
-                            interpretation.”
-                        </p>
+                        <p>{{ page.basic_info.considerations.info }}</p>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_additions">Additional accessibility requirements applied</label>
+                        <label for="accstmt_additions">{{ page.basic_info.considerations.requirements }}</label>
                         <textarea id="accstmt_additions" rows="3"></textarea>
                     </div>
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Feedback options
+                    <h3 class="label">{{ page.basic_info.feedback.title }}
                         <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                            aria-controls="info_feedback" data-target="#info_feedback" data-showtext="Show Info"
-                            data-hidetext="Hide Info">Show Info</button>
+                            aria-controls="info_feedback" data-target="#info_feedback" data-showtext="{{ page.show_info }}"
+                            data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                     </h3>
                     <div class="information" id="info_feedback" hidden="hidden">
-                        <p>In which ways can users can get in touch with your organization when they encounter an
-                            accessibility barrier? Ideally you should provide more than one option. Also indicate the
-                            duration after which users can expect a response from your organization.</p>
+                        <p>{{ page.basic_info.feedback.info }}</p>
                     </div>
 
                     <fieldset class="group" id="form-feedback">
-                        <legend class="visuallyhidden">Feedback options</legend>
+                        <legend class="visuallyhidden">{{ page.basic_info.feedback.title }}</legend>
                         <div class="field">
-                            <label for="accstmnt_contact_phone">Phone</label>
-                            <em>(Example: “+12 34 567 89 00”)</em>
+                            <label for="accstmnt_contact_phone">{{ page.basic_info.feedback.phone.title }}</label>
+                            <em>{{ page.basic_info.feedback.phone.example }}</em>
                             <input type="tel" id="accstmnt_contact_phone" />
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_email">E-mail</label>
-                            <em>(Example: “accessibility@example.org”)</em>
+                            <label for="accstmnt_contact_email">{{ page.basic_info.feedback.email.title }}</label>
+                            <em>{{ page.basic_info.feedback.email.example }}</em>
                             <input type="email" id="accstmnt_contact_email" />
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_visit">Visitor Address</label>
-                            <em>(Example: “Main Street 1, 234 Example Ville”)</em>
+                            <label for="accstmnt_contact_visit">{{ page.basic_info.feedback.visitor_address.title }}</label>
+                            <em>{{ page.basic_info.feedback.visitor_address.example }}</em>
                             <input type="text" id="accstmnt_contact_visit" />
                         </div>
                         <div class="field">
-                            <label for="accstmnt_contact_write">Postal address</label>
-                            <em>(Example: “PO Box 1, 234 Example Ville”)</em>
+                            <label for="accstmnt_contact_write">{{ page.basic_info.feedback.postal_address.title }}</label>
+                            <em>{{ page.basic_info.feedback.postal_address.example }}</em>
                             <input type="text" id="accstmnt_contact_write" />
                         </div>
 
                         <div class="field">
-                            <label for="accstmnt_contact_other">Other contact options</label>
-                            <em>(Example: on social media; Twitter: @ExampleUser)</em>
+                            <label for="accstmnt_contact_other">{{ page.basic_info.feedback.other.title }}</label>
+                            <em>{{ page.basic_info.feedback.other.example }}</em>
                             <textarea id="accstmnt_contact_other"></textarea>
                         </div>
 
                         <div class="field">
-                            <label for="accstmnt_contact_responsetime">Typical duration for response</label>
-                            <em>(Example: “2 business days”)</em>
+                            <label for="accstmnt_contact_responsetime">{{ page.basic_info.feedback.response.title }}</label>
+                            <em>{{ page.basic_info.feedback.response.example }}</em>
                             <input type="text" id="accstmnt_contact_responsetime" />
                         </div>
 
@@ -240,20 +228,17 @@
                 </div>
 
                 <div class="group">
-                    <h3 class="label">Date of publication
+                    <h3 class="label">{{ page.basic_info.date.title }}
                         <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                            aria-controls="info_date" data-target="#info_date" data-showtext="Show Info"
-                            data-hidetext="Hide Info">Show Info</button>
+                            aria-controls="info_date" data-target="#info_date" data-showtext="{{ page.show_info }}"
+                            data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                     </h3>
                     <div class="information" id="info_date" hidden="hidden">
-                        <p>Providing a date helps users to understand if the accessibility statement is being actively
-                            maintained or outdated. Ideally the date of an accessibility statement should not exceed one
-                            year, or it may be considered unmaintained. Writing out the month makes the date clearer
-                            internationally (eg. "1 February 2019" rather than "01/02/2019", which is ambiguous).</p>
+                        <p>{{ page.basic_info.date.info }}</p>
                     </div>
 
                     <div class="field">
-                        <label for="accstmt_date">Publication date of this accessibility statement</label>
+                        <label for="accstmt_date">{{ page.basic_info.date.publication_date }}</label>
                         <input type="text" id="accstmt_date" class="today" />
                     </div>
                 </div>
