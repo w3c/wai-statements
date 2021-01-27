@@ -44,7 +44,7 @@ other: Other
 # Basic Information
 basic_info: 
   title: Basic information
-  discription: In this section you can provide the minimal set of information recommended for your accessibility statement. This includes information about your organization, the accessibility standards you applied, and your contact information for feedback.
+  info: In this section you can provide the minimal set of information recommended for your accessibility statement. This includes information about your organization, the accessibility standards you applied, and your contact information for feedback.
   # Questions
   # About your statement
   about_statement:
@@ -143,11 +143,62 @@ your_efforts:
 # Technical Information
 technical_info:
   title: Technical information
+  info: In this section you can provide more technical details to help users understand any issues they may be observing. This includes information about compatibility with web browsers and assistive technologies.
+  # Accessibility limitations
+  limitations:
+    title: Accessibility limitations
+    singular: Accessibility limitation
+    info: "There are many situations in which limitations to accessibility can occur. For example, you may not be able
+    ensure instant accessibility of user-generated content. Providing transparency on such situations helps users to
+    understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web
+    Accessibility Directive, public bodies are
+    required to provide information on the parts of the content that do not conform, the reason for
+    not conforming, and, if applicable, where to find accessible alternatives."
+    label: "List the
+    <em>content parts</em>
+    that have accessibility limitations, a
+    <em>description of the issue</em>
+    that may be observed by users, a brief explanation of
+    <em>why the issue occurs</em>, and
+    <em>what to do in the mean time</em>, such as who to contact or where to find accessibility
+    alternatives where appropriate."
+    content: 
+      title: Content part
+      example: "(Example: “Comments from users”)"
+    discription:
+      title: Description of the issue
+      example: "(Example: “Uploaded images may not have text alternatives”)"
+    reason:
+      title: Why the issue occurs
+      example: "(Example: “We cannot ensure the quality of contributions”)"
+    us:
+      title: What we are doing about it
+      example: "(Example: “We monitor user comments and typically repair issues within 2 business days”)"
+    you:
+      title: What to do in the meantime
+      example: "(Example: “Please use the ‘report issue’ button if you encounter an issue”)" 
+    
+    add_button_text: Add another limitation
+  # Compatibility with user environment
+  user:
+    title: Compatibility with user environment
+    info: Despite best efforts, accessibility may not work well in every combination of operating system, web browser, and assistive technology. Developers typically test their websites and mobile applications with common user environments, to determine compatibility. WCAG defines requirements for accessibility features provided by content authors to be <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a>. Communicating this compatibility expectation helps user to determine if that is the cause for any issues they may be observing.
+    label: Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is expected to work with. These should be in-line with the  WCAG definition of <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a> use of technologies.
+    enviroment:
+      title: Environment
+      example: "(Example: “browser X with assistive technology Y on operating system Z”)"
+    add_button_text: Add another compatible environment
+  # Known incompatibility
+  incompatible:
+    title: Known incompatibility
+    info: Help users understand what versions of operating systems, web browsers, and assistive technologies are not (or no longer) supported. This helps user to determine if they can use your website or mobile application with their current environments.
+    label: Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is not expected to work with.
+    example: "(Example: “browsers older than 3 major versions” or “Mobile operating systems older than 5 years”)"
+    add_button_text: Add another incompatible environment
 
 # Approval and complaints process 
 approval_and_complaints:
   title: Approval and complaints process
-
 
 ---
 

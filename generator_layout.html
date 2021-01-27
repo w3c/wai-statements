@@ -44,7 +44,7 @@
             <form name="create_accessibility_statement_form">
                 {% include excol.html type="start" open="true" %}
                 <h2 id="create-basic">{{ page.basic_info.title }}</h2>
-                <p class="intro">{{ page.basic_info.discription }}</p>
+                <p class="intro">{{ page.basic_info.info }}</p>
 
                 {% include excol.html type="middle" %}
                 <div class="group">
@@ -317,171 +317,142 @@
                 </fieldset>
                 {% include excol.html type="end" %}
 
-                {% include excol.html type="start" %}
-                <h2 id="create-technical">Technical information</h2>
-                <p class="intro">In this section you can provide more technical details to help users understand any
-                    issues they may be observing. This includes information about compatibility with web browsers and
-                    assistive technologies.</p>
+            {% include excol.html type="start" %}
+            <h2 id="create-technical">{{ page.technical_info.title }}</h2>
+                <p class="intro">{{ page.technical_info.info }}</p>
+
                 {% include excol.html type="middle" %}
 
-                <h3 class="label">Accessibility limitations
+                <h3 class="label">{{ page.technical_info.limitations.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="info_limitations" data-target="#info_limitations" data-showtext="{{ page.show_info }}"
                         data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_limitations" hidden="hidden">
-                    <p>There are many situations in which limitations to accessibility can occur. For example, you may
-                        not be able ensure instant accessibility of user-generated content. Providing transparency on
-                        such situations helps users to understand any issue they may be observing, and to find
-                        alternatives where applicable. Under the EU Web Accessibility Directive, public bodies are
-                        required to provide information on the parts of the content that do not conform, the reason for
-                        not conforming, and, if applicable, where to find accessible alternatives.</p>
+                    <p>{{ page.technical_info.limitations.info }}</p>
                 </div>
 
                 <fieldset class="group">
-                    <legend class="visuallyhidden">Accessibility limitations</legend>
-                    <p class="expl">List the
-                        <em>content parts</em>
-                        that have accessibility limitations, a
-                        <em>description of the issue</em>
-                        that may be observed by users, a brief explanation of
-                        <em>why the issue occurs</em>, and
-                        <em>what to do in the mean time</em>, such as who to contact or where to find accessibility
-                        alternatives where appropriate.
+                    <legend class="visuallyhidden">{{ page.technical_info.limitations.title }}</legend>
+                    <p class="expl">{{ page.technical_info.limitations.label }}
                     </p>
 
                     <div id="accstmnt_issues">
                         <fieldset id="accstmnt_limitation_1" class="group line">
-                            <legend>Accessibility limitation 1</legend>
+                            <legend>{{ page.technical_info.limitations.singular }} 1</legend>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_element">Content part</label>
-                                <em>(Example: “Comments from users”)</em>
+                                <label for="accstmnt_limitation_1_element">{{ page.technical_info.limitations.content.title }}</label>
+                                <em>{{ page.technical_info.limitations.content.example }}</em>
                                 <input type="text" id="accstmnt_limitation_1_element" name="element" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_description">Description of the issue</label>
-                                <em>(Example: “Uploaded images may not have text alternatives”)</em>
+                                <label for="accstmnt_limitation_1_description">{{ page.technical_info.limitations.discription.title }}</label>
+                                <em>{{ page.technical_info.limitations.discription.example }}</em>
                                 <input type="text" id="accstmnt_limitation_1_description" name="description" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_reason">Why the issue occurs</label>
-                                <em>(Example: “We cannot ensure the quality of contributions”)</em>
+                                <label for="accstmnt_limitation_1_reason">{{ page.technical_info.limitations.reason.title }}</label>
+                                <em>{{ page.technical_info.limitations.reason.example }}</em>
                                 <input type="text" id="accstmnt_limitation_1_reason" name="reason" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_us">What we are doing about it</label>
-                                <em>(Example: “We monitor user comments and typically repair issues within 2 business
-                                    days”)</em>
+                                <label for="accstmnt_limitation_1_us">{{ page.technical_info.limitations.us.title }}</label>
+                                <em>{{ page.technical_info.limitations.us.example }}</em>
                                 <input type="text" id="accstmnt_limitation_1_us" name="us" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_1_you">What to do in the meantime</label>
-                                <em>(Example: “Please use the ‘report issue’ button if you encounter an issue”)</em>
+                                <label for="accstmnt_limitation_1_you">{{ page.technical_info.limitations.you.title }}</label>
+                                <em>{{ page.technical_info.limitations.you.example }}</em>
                                 <input type="text" id="accstmnt_limitation_1_you" name="you" />
                             </div>
                         </fieldset>
 
                         <fieldset id="accstmnt_limitation_[n]" class="group proto">
-                            <legend>Accessibility limitation [n]</legend>
+                            <legend>{{ page.technical_info.limitations.singular }} [n]</legend>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_element">Content part</label>
+                                <label for="accstmnt_limitation_[n]_element">{{ page.technical_info.limitations.content.title }}</label>
                                 <input type="text" id="accstmnt_limitation_[n]_element" name="element" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_description">Description of the issue</label>
+                                <label for="accstmnt_limitation_[n]_description">{{ page.technical_info.limitations.discription.title }}</label>
                                 <input type="text" id="accstmnt_limitation_[n]_description" name="description" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_reason">Why the issue occurs</label>
+                                <label for="accstmnt_limitation_[n]_reason">{{ page.technical_info.limitations.reason.title }}</label>
                                 <input type="text" id="accstmnt_limitation_[n]_reason" name="reason" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_us">What we are doing about it</label>
+                                <label for="accstmnt_limitation_[n]_us">{{ page.technical_info.limitations.us.title }}</label>
                                 <input type="text" id="accstmnt_limitation_[n]_us" name="us" />
                             </div>
                             <div class="field">
-                                <label for="accstmnt_limitation_[n]_you">What to do in the meantime</label>
+                                <label for="accstmnt_limitation_[n]_you">{{ page.technical_info.limitations.you.title }}</label>
                                 <input type="text" id="accstmnt_limitation_[n]_you" name="you" />
                             </div>
                         </fieldset>
 
                         <button type="button" class="add-line">
-                            Add another limitation
+                            {{ page.technical_info.limitations.add_button_text }}
                         </button>
                     </div>
                 </fieldset>
 
-                <h3 class="label">Compatibility with user environment
+                <h3 class="label">{{ page.technical_info.user.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="support_asstech" data-target="#support_asstech" data-showtext="{{ page.show_info }}"
                         data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_asstech" hidden="hidden">
-                    <p>Despite best efforts, accessibility may not work well in every combination of operating system,
-                        web browser, and assistive technology. Developers typically test their websites and mobile
-                        applications with common user environments, to determine compatibility. WCAG defines
-                        requirements for accessibility features provided by content authors to be
-                        <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a>.
-                        Communicating this compatibility expectation helps user to determine if that is the cause for
-                        any issues they may be observing.
-                    </p>
+                    <p>{{ page.technical_info.user.info }}</p>
                 </div>
 
                 <fieldset class="group" id="compatible_tech">
-                    <legend class="visuallyhidden">Compatibility with user environment</legend>
+                    <legend class="visuallyhidden">{{ page.technical_info.user.title }}</legend>
 
-                    <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and
-                        operating systems) that the content is expected to work with. These should be in-line with the
-                        WCAG definition of
-                        <a href="https://www.w3.org/TR/WCAG21/#dfn-accessibility-supported">accessibility supported</a>
-                        use of technologies.
+                    <p class="expl">{{ page.technical_info.user.label }}
                     </p>
 
                     <div class="field line">
-                        <label for="accstmnt_asstech_compatible_1">Environment 1</label>
-                        <em>(Example: “browser X with assistive technology Y on operating system Z”)</em>
+                        <label for="accstmnt_asstech_compatible_1">{{ page.technical_info.user.enviroment.title }} 1</label>
+                        <em>{{ page.technical_info.user.enviroment.example }}</em>
                         <input type="text" id="accstmnt_asstech_compatible_1" name="accstmnt_asstech_compatible" />
                     </div>
 
                     <div class="field proto">
-                        <label for="accstmnt_asstech_compatible_[n]">Environment [n]</label>
+                        <label for="accstmnt_asstech_compatible_[n]">{{ page.technical_info.user.enviroment.title }} [n]</label>
                         <input type="text" id="accstmnt_asstech_compatible_[n]" name="accstmnt_asstech_compatible" />
                     </div>
 
-                    <button class="add-line" type="button">Add another compatible environment</button>
+                    <button class="add-line" type="button">{{ page.technical_info.user.add_button_text }}</button>
                 </fieldset>
 
-                <h3 class="label">Known incompatibility
+                <h3 class="label">{{ page.technical_info.incompatible.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="support_incompatible" data-target="#support_incompatible"
                         data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_incompatible" hidden="hidden">
-                    <p>Help users understand what versions of operating systems, web browsers, and assistive
-                        technologies are not (or no longer) supported. This helps user to determine if they can use your
-                        website or mobile application with their current environments.</p>
+                    <p>{{ page.technical_info.incompatible.info }}</p>
                 </div>
 
                 <fieldset class="group" id="incompatible_tech">
-                    <legend class="visuallyhidden">Known incompatibility</legend>
+                    <legend class="visuallyhidden">{{ page.technical_info.incompatible.title }}</legend>
 
-                    <p class="expl">Describe the environments (combinations of web browsers, assistive technologies, and
-                        operating systems) that the content is not expected to work with.</p>
+                    <p class="expl">{{ page.technical_info.incompatible.label }}</p>
 
                     <div class="field line">
-                        <label for="accstmnt_asstech_incompatible_1">Environment 1</label>
-                        <em>(Example: “browsers older than 3 major versions” or “Mobile operating systems older than 5
-                            years”)</em>
+                        <label for="accstmnt_asstech_incompatible_1">{{ page.technical_info.user.enviroment.title }} 1</label>
+                        <em>{{ page.technical_info.incompatible.example }}</em>
                         <input type="text" id="accstmnt_asstech_incompatible_1" name="accstmnt_asstech_incompatible" />
                     </div>
                     <div class="field proto">
-                        <label for="accstmnt_asstech_incompatible_[n]">Environment [n]</label>
+                        <label for="accstmnt_asstech_incompatible_[n]">{{ page.technical_info.user.enviroment.title }} [n]</label>
                         <input type="text" id="accstmnt_asstech_incompatible_[n]"
                             name="accstmnt_asstech_incompatible" />
                     </div>
 
                     <button type="button" class="add-line">
-                        Add another incompatible environment
+                        {{ page.technical_info.incompatible.add_button_text }}
                     </button>
                 </fieldset>
 
