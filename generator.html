@@ -583,6 +583,19 @@ external_css: /content-images/wai-statements/generator.css
                 <p class="intro">In this section you can add information about the formal approval of this accessibility statement and, if applicable, any complaints escalation procedure.</p>
                 {% include excol.html type="middle" %}
 
+                <h3 class="label">Formal complaints
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_complaints" data-target="#info_complaints" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                </h3>
+                <div class="information" id="info_complaints" hidden="hidden">
+                    <p>In some situations you may want to or may be required to provide information about a formal complaints procedures. For example, a quality management process within your organization may require you to establish a formal complaints procedure with clear escalation paths. The
+                        <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive
+                            {% include_cached external.html %}</a>
+                        foresees EU countries to have legal “enforcement procedures” when users are not satisfied with the responses from public bodies. Inform users about any such formal complaints procedures. This may also motivate them to provide you with valuable feedback about the accessibility of your content.</p>
+                    <p>
+                        <strong>Example:</strong>
+                        “We aim to respond to accessibility feedback within 2 business days, and to propose a solution within 10 business days. You are entitled to escalate a complaint to [organizational or legal entity], should you be dissatisfied with our response to you.”</p>
+                </div>
+
                 <h3 class="label">Formal approval
                     <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="org_approved" data-target="#org_approved" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
                 </h3>
@@ -605,19 +618,6 @@ external_css: /content-images/wai-statements/generator.css
                         <input type="text" id="accstmnt_orginfo_approved_function"/>
                     </div>
                 </fieldset>
-
-                <h3 class="label">Formal complaints
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="info_complaints" data-target="#info_complaints" data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
-                </h3>
-                <div class="information" id="info_complaints" hidden="hidden">
-                    <p>In some situations you may want to or may be required to provide information about a formal complaints procedures. For example, a quality management process within your organization may require you to establish a formal complaints procedure with clear escalation paths. The
-                        <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive
-                            {% include_cached external.html %}</a>
-                        foresees EU countries to have legal “enforcement procedures” when users are not satisfied with the responses from public bodies. Inform users about any such formal complaints procedures. This may also motivate them to provide you with valuable feedback about the accessibility of your content.</p>
-                    <p>
-                        <strong>Example:</strong>
-                        “We aim to respond to accessibility feedback within 2 business days, and to propose a solution within 10 business days. You are entitled to escalate a complaint to [organizational or legal entity], should you be dissatisfied with our response to you.”</p>
-                </div>
 
                 <div class="field">
                     <label for="accstmt_complaints">Describe any formal complaints procedures</label>
