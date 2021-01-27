@@ -34,8 +34,8 @@ introduction: The information that you provide below will generate an accessibil
 intro_explaination: How to use this generator tool
 page_contents: Page Contents
 # Controls
-show_all_info: Show all additional Information
-hide_all_info: Hide all additional Infomation
+show_all_info: Show all additional information
+hide_all_info: Hide all additional information
 show_info: Show Info
 hide_info: Hide Info
 other: Other
@@ -119,11 +119,26 @@ basic_info:
     title: Date of publication
     info: Providing a date helps users to understand if the accessibility statement is being actively maintained or outdated. Ideally the date of an accessibility statement should not exceed one year, or it may be considered unmaintained. Writing out the month makes the date clearer internationally (eg. "1 February 2019" rather than "01/02/2019", which is ambiguous).
     publication_date: Publication date of this accessibility statement
-    
 
 # Your Efforts
 your_efforts:
   title: Your efforts
+  info: In this section you can describe the efforts your organization takes to ensure accessibility. This helps users to understand your sincerity and the validity of the claims you make in your accessibility statement.
+  # Organizational measures
+  measures: 
+    title: Organizational measures
+    info: List the measures that your organization undertakes to achieve sustainable accessibility. This includes measures such as procurement actions, training, raising awareness, and quality assurance. Some of these measures are pre-defined for your convenience but you can add more as needed.
+    mission_statement: Include accessibility as part of our mission statement.
+    internal_policies: Include accessibility throughout our internal policies.
+    procurement_practices: Integrate accessibility into our procurement practices.
+    accessibility_officer: Appoint an accessibility officer and/or ombudsperson.
+    training: Provide continual accessibility training for our staff.
+    targets: Assign clear accessibility targets and responsibilities.
+    methods: Employ formal accessibility quality assurance methods.
+    # Adding other measures
+    other_text: Other measure
+    other_example: "(Example: “Include people with disabilities in our design personas”)"
+    other_button_text: Add another measure
 
 # Technical Information
 technical_info:

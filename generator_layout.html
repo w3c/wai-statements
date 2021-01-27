@@ -245,86 +245,74 @@
                 {% include excol.html type="end" %}
 
                 {% include excol.html type="start" %}
-                <h2 id="create-efforts">Your efforts</h2>
-                <p class="intro">In this section you can describe the efforts your organization takes to ensure
-                    accessibility. This helps users to understand your sincerity and the validity of the claims you make
-                    in your accessibility statement.</p>
+                <h2 id="create-efforts">{{ page.your_efforts.title }}</h2>
+                <p class="intro">{{ page.your_efforts.info }}</p>
 
                 {% include excol.html type="middle" %}
-                <h3 class="label">Organizational measures
+                <h3 class="label">{{ page.your_efforts.measures.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="info_measures" data-target="#info_measures" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="info_measures" data-target="#info_measures" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_measures" hidden="hidden">
-                    <p>List the measures that your organization undertakes to achieve sustainable accessibility. This
-                        includes measures such as procurement actions, training, raising awareness, and quality
-                        assurance. Some of these measures are pre-defined for your convenience but you can add more as
-                        needed.</p>
+                    <p>{{ page.your_efforts.info }}</p>
                 </div>
 
                 <fieldset class="group">
-                    <legend class="visuallyhidden">Organizational measures</legend>
+                    <legend class="visuallyhidden">{{ page.your_efforts.measures.title }}</legend>
                     <ul class="nolist field" id="effort-list">
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_1" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Include accessibility as part of our mission statement." />
-                            <label for="accstmnt_orginfo_measures_1">Include accessibility as part of our mission
-                                statement.</label>
+                                value="{{ page.your_efforts.measures.mission_statement }}" />
+                            <label for="accstmnt_orginfo_measures_1">{{ page.your_efforts.measures.mission_statement }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_2" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Include accessibility throughout our internal policies." />
-                            <label for="accstmnt_orginfo_measures_2">Include accessibility throughout our internal
-                                policies.</label>
+                                value="{{ page.your_efforts.measures.internal_policies }}" />
+                            <label for="accstmnt_orginfo_measures_2">{{ page.your_efforts.measures.internal_policies }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_3" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Integrate accessibility into our procurement practices." />
-                            <label for="accstmnt_orginfo_measures_3">Integrate accessibility into our procurement
-                                practices.</label>
+                                value="{{ page.your_efforts.measures.procurement_practices }}" />
+                            <label for="accstmnt_orginfo_measures_3">{{ page.your_efforts.measures.procurement_practices }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_4" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Appoint an accessibility officer and/or ombudsperson." />
-                            <label for="accstmnt_orginfo_measures_4">Appoint an accessibility officer and/or
-                                ombudsperson.</label>
+                                value="{{ page.your_efforts.measures.accessibility_officer }}" />
+                            <label for="accstmnt_orginfo_measures_4">{{ page.your_efforts.measures.accessibility_officer }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_5" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Provide continual accessibility training for our staff." />
-                            <label for="accstmnt_orginfo_measures_5">Provide continual accessibility training for our
-                                staff.</label>
+                                value="{{ page.your_efforts.measures.training }}" />
+                            <label for="accstmnt_orginfo_measures_5">{{ page.your_efforts.measures.training }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_6" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Assign clear accessibility targets and responsibilities." />
-                            <label for="accstmnt_orginfo_measures_6">Assign clear accessibility targets and
-                                responsibilities.</label>
+                                value="{{ page.your_efforts.measures.targets }}" />
+                            <label for="accstmnt_orginfo_measures_6">{{ page.your_efforts.measures.targets }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_orginfo_measures_7" name="accstmnt_orginfo_measures" type="checkbox"
-                                value="Employ formal accessibility quality assurance methods." />
-                            <label for="accstmnt_orginfo_measures_7">Employ formal accessibility quality assurance
-                                methods.</label>
+                                value="{{ page.your_efforts.measures.methods }}" />
+                            <label for="accstmnt_orginfo_measures_7">{{ page.your_efforts.measures.methods }}</label>
                         </li>
                     </ul>
 
                     <div id="accstmnt_orginfo_othermeasures" class="group">
                         <div class="field line">
-                            <label for="accstmnt_orginfo_othermeasures_1">Other measure 1</label>
-                            <em>(Example: “Include people with disabilities in our design personas”)</em>
+                            <label for="accstmnt_orginfo_othermeasures_1">{{ page.your_efforts.measures.other_text }} 1</label>
+                            <em>{{ page.your_efforts.measures.other_example }}</em>
                             <input type="text" id="accstmnt_orginfo_othermeasures_1" name="accstmnt_orginfo_measures" />
                         </div>
                         <div class="field proto">
-                            <label for="accstmnt_orginfo_othermeasures_[n]">Other measure [n]</label>
+                            <label for="accstmnt_orginfo_othermeasures_[n]">{{ page.your_efforts.measures.other_text }} [n]</label>
                             <input type="text" id="accstmnt_orginfo_othermeasures_[n]"
                                 name="accstmnt_orginfo_measures" />
                         </div>
                     </div>
 
                     <button type="button" class="add-line">
-                        Add another measure
+                        {{ page.your_efforts.measures.other_button_text }}
                     </button>
                 </fieldset>
                 {% include excol.html type="end" %}
@@ -338,8 +326,8 @@
 
                 <h3 class="label">Accessibility limitations
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="info_limitations" data-target="#info_limitations" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="info_limitations" data-target="#info_limitations" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_limitations" hidden="hidden">
                     <p>There are many situations in which limitations to accessibility can occur. For example, you may
@@ -425,8 +413,8 @@
 
                 <h3 class="label">Compatibility with user environment
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="support_asstech" data-target="#support_asstech" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="support_asstech" data-target="#support_asstech" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_asstech" hidden="hidden">
                     <p>Despite best efforts, accessibility may not work well in every combination of operating system,
@@ -466,7 +454,7 @@
                 <h3 class="label">Known incompatibility
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="support_incompatible" data-target="#support_incompatible"
-                        data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                        data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_incompatible" hidden="hidden">
                     <p>Help users understand what versions of operating systems, web browsers, and assistive
@@ -499,8 +487,8 @@
 
                 <h3 class="label">Technologies used
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="support_tech" data-target="#support_tech" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="support_tech" data-target="#support_tech" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_tech" hidden="hidden">
                     <p>You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure
@@ -562,7 +550,7 @@
                 <h3 class="label">Assessment approach
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach"
-                        data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                        data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_accstmnt_approach" hidden="hidden">
                     <p>How did you assess your website or mobile application, to determine the information provided in
@@ -606,8 +594,8 @@
 
                 <h3 class="label">Related evidence
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="support_related" data-target="#support_related" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="support_related" data-target="#support_related" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_related" hidden="hidden">
                     <p>Provide links to related background and evidence to support the claims you make in this
@@ -619,8 +607,8 @@
                     <div class="field">
                         <label for="accstmnt_audit_url">Link to recent evaluation report
                             <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                                aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="Show Info"
-                                data-hidetext="Hide Info">Show Info</button>
+                                aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="{{ page.show_info }}"
+                                data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                         </label>
                         <em>(Example: “https://example.org/accessibility-evaulation-report”)</em>
 
@@ -640,7 +628,7 @@
                         <label for="accstmnt_audit_wcagem">Link to evaluation statement
                             <button type="button" class="showhidebutton button-small" aria-expanded="false"
                                 aria-controls="info_audit_statement" data-target="#info_audit_statement"
-                                data-showtext="Show Info" data-hidetext="Hide Info">Show Info</button>
+                                data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                         </label>
                         <em>(Example: “https://example.org/accessibility-evaulation-statement”)</em>
 
@@ -684,8 +672,8 @@
 
                 <h3 class="label">Formal approval
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="org_approved" data-target="#org_approved" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="org_approved" data-target="#org_approved" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="org_approved" hidden="hidden">
                     <p>Your organization may want to formally approve this accessibility statement, for example for
@@ -710,8 +698,8 @@
 
                 <h3 class="label">Formal complaints
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="info_complaints" data-target="#info_complaints" data-showtext="Show Info"
-                        data-hidetext="Hide Info">Show Info</button>
+                        aria-controls="info_complaints" data-target="#info_complaints" data-showtext="{{ page.show_info }}"
+                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_complaints" hidden="hidden">
                     <p>In some situations you may want to or may be required to provide information about a formal
