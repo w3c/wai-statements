@@ -793,6 +793,11 @@ external_css: /content-images/wai-statements/generator.css
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
 
+            <div data-if="accstmt_complaints">
+                <h3>Formal complaints</h3>
+                <p class="complaints" data-print="accstmt_complaints"></p>
+            </div>
+
             <div id="statement-approval-block" data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
                 <h3>Formal approval of this accessibility statement</h3>
 
@@ -802,11 +807,6 @@ external_css: /content-images/wai-statements/generator.css
                     <span class="approved-by" data-print="accstmnt_orginfo_approved_name" data-printdefault="APPROVED_BY"></span><br/>
                     <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function" data-if="accstmnt_orginfo_approved_function"></span>
                 </p>
-            </div>
-
-            <div data-if="accstmt_complaints">
-                <h3>Formal complaints</h3>
-                <p class="complaints" data-print="accstmt_complaints"></p>
             </div>
 
             <hr noshade="noshade"/>
