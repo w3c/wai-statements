@@ -610,63 +610,46 @@
                 {% include excol.html type="end" %}
 
                 {% include excol.html type="start" %}
-                <h2 id="create-approval">Approval and complaints process</h2>
-                <p class="intro">In this section you can add information about the formal approval of this accessibility
-                    statement and, if applicable, any complaints escalation procedure.</p>
+                <h2 id="create-approval">{{ page.approval_and_complaints.title }}</h2>
+                <p class="intro">{{ page.approval_and_complaints.info }}</p>
                 {% include excol.html type="middle" %}
 
-                <h3 class="label">Formal approval
+                <h3 class="label">{{ page.approval_and_complaints.approval.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="org_approved" data-target="#org_approved" data-showtext="{{ page.show_info }}"
                         data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="org_approved" hidden="hidden">
-                    <p>Your organization may want to formally approve this accessibility statement, for example for
-                        internal purposes or to show users that this is part of the corporate policy.</p>
+                    <p>{{ page.approval_and_complaints.approval.info }}</p>
                 </div>
 
                 <fieldset class="group">
-                    <legend class="visuallyhidden">Approval</legend>
+                    <legend class="visuallyhidden">{{ page.approval_and_complaints.approval.title }}</legend>
 
                     <div class="field">
-                        <label for="accstmnt_orginfo_approved_name">Name of person or department</label>
-                        <em>(Example: “Communication Department”)</em>
+                        <label for="accstmnt_orginfo_approved_name">{{ page.approval_and_complaints.approval.name.title }}</label>
+                        <em>{{ page.approval_and_complaints.approval.name.example }}</em>
                         <input type="text" id="accstmnt_orginfo_approved_name" />
                     </div>
 
                     <div class="field">
-                        <label for="accstmnt_orginfo_approved_function">Function</label>
-                        <em>(Example: “Director of Communication”)</em>
+                        <label for="accstmnt_orginfo_approved_function">{{ page.approval_and_complaints.approval.function.title }}</label>
+                        <em>{{ page.approval_and_complaints.approval.function.example }}</em>
                         <input type="text" id="accstmnt_orginfo_approved_function" />
                     </div>
                 </fieldset>
 
-                <h3 class="label">Formal complaints
+                <h3 class="label">{{ page.approval_and_complaints.complaints.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="info_complaints" data-target="#info_complaints" data-showtext="{{ page.show_info }}"
                         data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_complaints" hidden="hidden">
-                    <p>In some situations you may want to or may be required to provide information about a formal
-                        complaints procedures. For example, a quality management process within your organization may
-                        require you to establish a formal complaints procedure with clear escalation paths. The
-                        <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive
-                            {% include_cached external.html %}</a>
-                        foresees EU countries to have legal “enforcement procedures” when users are not satisfied with
-                        the responses from public bodies. Inform users about any such formal complaints procedures. This
-                        may also motivate them to provide you with valuable feedback about the accessibility of your
-                        content.
-                    </p>
-                    <p>
-                        <strong>Example:</strong>
-                        “We aim to respond to accessibility feedback within 2 business days, and to propose a solution
-                        within 10 business days. You are entitled to escalate a complaint to [organizational or legal
-                        entity], should you be dissatisfied with our response to you.”
-                    </p>
+                    <p>{{ page.approval_and_complaints.complaints.info }}</p>
                 </div>
 
                 <div class="field">
-                    <label for="accstmt_complaints">Describe any formal complaints procedures</label>
+                    <label for="accstmt_complaints">{{ page.approval_and_complaints.complaints.label }}</label>
                     <textarea id="accstmt_complaints" rows="3"></textarea>
                 </div>
                 {% include excol.html type="end" %}
@@ -674,7 +657,7 @@
                 {% include box.html type="start" class="" %}
                 <div class="statement-actions">
                     <a class="button" href="#preview" data-action="statement_preview">
-                        Preview your accessibility statement
+                        {{ page.preview_statement }}
                     </a>
                 </div>
                 {% include box.html type="end" %}
@@ -682,15 +665,21 @@
         </div>
     </section>
 
+
+
+   <!-- ###  PREVIEW  ###  -->
+
+
+
     <section class="page preview" hidden="hidden">
-        {% include box.html type="start" title="Preview your accessibility statement" class="example" %}
+        {% include box.html type="start" title=page.preview_statement class="example" %}
         <div id="statement_generated">
             <div id="statement_header">
                 <h2>Accessibility Statement for <span class="basic-information website-name"
-                        data-print="accstmt_namesite" data-printdefault="WEBSITE_NAME"></span></h2>
+                        data-print="accstmt_namesite" data-printdefault="{{defaults.WEBSITE_NAME}}"></span></h2>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="ORGANIZATION"></span>
+                        data-printdefault="{{defaults.ORGANIZATION}}"></span>
                     is committed to ensuring digital accessibility for people with disabilities.
                     We are continually improving the user experience for everyone, and applying the relevant
                     accessibility standards.
@@ -701,10 +690,10 @@
                 <h3>Measures to support accessibility</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="ORGANIZATION"></span>
+                        data-printdefault="{{defaults.ORGANIZATION}}"></span>
                     takes the following measures to ensure accessibility of
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME"></span>:
+                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>:
                 </p>
                 <ul id="statement-measures" class="organizational-effort accessibility-measures"
                     data-print="accstmnt_orginfo_measures" data-printfilter="capitalize"></ul>
@@ -717,7 +706,7 @@
                         (WCAG)</a> defines requirements for designers and developers to improve accessibility for people
                     with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
                     is
                     <span class="basic-information conformance-status" data-print="accstmnt_conformance"
                         data-printfilter="lowercase"></span>
@@ -747,10 +736,10 @@
                 <p>
                     We welcome your feedback on the accessibility of
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME"></span>.
+                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>.
                     Please let us know if you encounter accessibility barriers on
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME"></span>:
+                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>:
                 </p>
                 <ul class="basic-information feedback h-card">
                     <li data-if="accstmnt_contact_phone">
@@ -783,17 +772,17 @@
                 <div id="statement-asstech-compatible-block">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite"
-                            data-printdefault="WEBSITE_NAME"></span>
+                            data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
                         is designed to be compatible with the following assistive technologies:
                     </p>
                     <ul id="statement-asstech-compatible" class="technical-information compatible-environments"
-                        data-print="accstmnt_asstech_compatible" data-printdefault="COMPATIBLE_LIST"></ul>
+                        data-print="accstmnt_asstech_compatible" data-printdefault="{{defaults.COMPATIBLE_LIST}}"></ul>
                 </div>
 
                 <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite"
-                            data-printdefault="WEBSITE_NAME"></span>
+                            data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
                         is not compatible with:
                     </p>
                     <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments"
@@ -806,7 +795,7 @@
                 <p>
                     Accessibility of
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME"></span>
+                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
                     relies on the following technologies to work with the particular combination of web browser and any
                     assistive technologies or plugins installed on your computer:
                 </p>
@@ -819,7 +808,7 @@
                 <p>
                     Despite our best efforts to ensure accessibility of
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>, there may be some limitations. Below is a
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>, there may be some limitations. Below is a
                     description of known limitations, and potential solutions. Please contact us if you observe an issue
                     not listed below.
                 </p>
@@ -827,7 +816,7 @@
                 <p>
                     Known limitations for
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>:
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>:
                 </p>
                 <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
             </div>
@@ -836,10 +825,10 @@
                 <h3>Assessment approach</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="ORGANIZATION">ORGANIZATION</span>
+                        data-printdefault="{{defaults.ORGANIZATION}}">{{defaults.ORGANIZATION}}</span>
                     assessed the accessibility of
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
                     by the following approaches:
                 </p>
                 <ul id="statement-assessments" class="technical-information assessment-approaches"
@@ -851,7 +840,7 @@
                 <p>
                     An evaluation report for
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
                     is available at:
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
                 </p>
@@ -862,7 +851,7 @@
                 <p>
                     An evaluation statement for
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME">WEBSITE_NAME</span>
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
                     is available at:
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
                 </p>
@@ -871,7 +860,7 @@
             <div data-if="accstmnt_audit_other">
                 <h3>Other evidence</h3>
                 <p>Other related evidence for <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="WEBSITE_NAME"></span> is available at:</p>
+                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span> is available at:</p>
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
 
@@ -882,7 +871,7 @@
                 <p>This Accessibility Statement is approved by:</p>
                 <p class="approval">
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="ORGANIZATION"></span><br />
+                        data-printdefault="{{defaults.ORGANIZATION}}"></span><br />
                     <span class="approved-by" data-print="accstmnt_orginfo_approved_name"
                         data-printdefault="APPROVED_BY"></span><br />
                     <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function"
@@ -900,7 +889,7 @@
             <p>
                 This statement was created on
                 <span class="basic-information statement-created-date" data-print="accstmt_date"
-                    data-printdefault="DATE"></span>
+                    data-printdefault="{{defaults.DATE}}"></span>
                 using the <a href="{{ page.parent_path | absolute_url }}">W3C Accessibility Statement Generator
                     Tool</a>.
             </p>

@@ -33,13 +33,16 @@ footer: >
 introduction: The information that you provide below will generate an accessibility statement that you can download and further refine. None of the fields are required. None of the information you enter is stored outside your web browser.
 intro_explaination: How to use this generator tool
 page_contents: Page Contents
-# Controls
+
+# -- Controls
+# used throughout the page
 show_all_info: Show all additional information
 hide_all_info: Hide all additional information
 show_info: Show Info
 hide_info: Hide Info
 other: Other
 name: name
+preview_statement: Preview your accessibility statement
 
 # -- Sections
 # Basic Information
@@ -234,6 +237,36 @@ technical_info:
 # Approval and complaints process 
 approval_and_complaints:
   title: Approval and complaints process
+  info: In this section you can add information about the formal approval of this accessibility statement and, if applicable, any complaints escalation procedure.
+  # Formal approval
+  approval: 
+    title: Formal approval
+    info: Your organization may want to formally approve this accessibility statement, for example for internal purposes or to show users that this is part of the corporate policy.
+    name:
+      title: Name of person or department
+      example: "(Example: “Communication Department”)"
+    function: 
+      title: Function
+      example: "(Example: “Director of Communication”)"
+  # Formal complaints
+  complaints: 
+    title: Formal complaints
+    info: 'In some situations you may want to or may be required to provide information about a formal complaints procedures. For example, a quality management process within your organization may require you to establish a formal complaints procedure with clear escalation paths. The  <a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">EU Web Accessibility Directive </a> foresees EU countries to have legal “enforcement procedures” when users are not satisfied with the responses from public bodies. Inform users about any such formal complaints procedures. This may also motivate them to provide you with valuable feedback about the accessibility of your content. <br>
+    <strong>Example:</strong> “We aim to respond to accessibility feedback within 2 business days, and to propose a solution within 10 business days.  entity], should you be dissatisfied with our response to you.”'
+    label: Describe any formal complaints procedures
+
+# --- PREVIEW SECTION ---
+# the following text is used in the preview of the statement:
+
+defaults: # defaults are used when no data is entered
+  WEBSITE_NAME: WEBSITE_NAME
+  ORGANIZATION: ORGANIZATION
+  COMPATIBLE_LIST: COMPATIBLE_LIST
+  DATE: DATE
+
+preview:
+  
+
 
 ---
 
