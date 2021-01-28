@@ -210,7 +210,7 @@ This application supports easy translation. Translations for the Generator Tool 
 
 #### To create a new translation
 
-Just copy one of the `generator.md` files and start translating, make sure to follow the instruction inside these files.
+Just copy one of the `generator.md` files and start translating, make sure to follow the instructions inside these files.
 
 ##### Some important things to note:
 
