@@ -7,23 +7,19 @@
 (function() {
   'use strict';
 
-  // Editable contents
-  var DATA = {
-    MONTH_NAMES: [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ],
-  };
+  // Load in text data from #DATA element
+  // to be using in script
+  var DATA = {};
+  (function(){
+    var dataElements = document.getElementById('DATA').children;
+    for (var i = 0; i < dataElements.length; i++)  {
+      var elem = dataElements[i];
+      var key = elem.getAttribute('data-key');
+      var val = elem.getAttribute('data-value').split(" ");
+      if (val.length === 0) val = val[0];
+      DATA[key] = val;
+    }
+  }());
 
   /**
    * statementForm module
@@ -478,7 +474,7 @@
         if(element || description || reason || us || you) {
           html += '\t<li>'
             + '<strong>' + element + '</strong>: '
-            + description + ' because '
+            + description + ' ' + DATA.BECAUSE + ' '
             + reason + '. ' + us + '. ' + you
             + '.</li>\n';
         }

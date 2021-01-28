@@ -667,8 +667,14 @@
 
 
 
-   <!-- ###  PREVIEW  ###  -->
+    <!-- Data transfer between html and js -->
+    <div id="DATA" hidden="hidden">
+        <span data-key="MONTH_NAMES" data-value="{% for month in page.month_names %}{{ month }} {% endfor %}"></span>
+        <span data-key="BECAUSE" data-value="{{ page.preview.because }}"></span>
+    </div>
 
+
+    <!-- ###  PREVIEW  ###  -->
 
 
     <section class="page preview" hidden="hidden">

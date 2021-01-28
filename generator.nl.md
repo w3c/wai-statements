@@ -15,6 +15,7 @@ contributors: #Add one -name: line for every contributor
 permalink: /planning/statements/generator/nl/   # Add the language shortcode to the end; for example /planning/statements/generator/nl/
 layout: default
 parent_path: /planning/statements/
+ref: /planning/statements/generator/
 github:
     repository: w3c/wai-statements
     path: "generator.nl.md"
@@ -43,6 +44,8 @@ hide_info: Verberg info
 other: Overig
 name: naam
 preview_statement: Bekijk uw toegankelijkheidsverklaring 
+# Months of the year
+month_names: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December'] # make sure not to change any of the quotes, comma's or brackets
 
 # -- Sections
 # Basic Information
@@ -320,8 +323,9 @@ preview:
     text_1: This statement was created on # DATE
     text_2: using the
     text_3: W3C Accessibility Statement Generator Tool
-  back: Back to generator tool
-  download: Download as HTML page
+  back: Terug naar Generator
+  download: Download als HTML pagina
+  because: omdat
 
 
 

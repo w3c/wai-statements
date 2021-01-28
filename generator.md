@@ -43,6 +43,8 @@ hide_info: Hide Info
 other: Other
 name: name
 preview_statement: Preview your accessibility statement
+# Months of the year
+month_names: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] # make sure not to change any of the quotes, comma's or brackets
 
 # -- Sections
 # Basic Information
@@ -322,6 +324,7 @@ preview:
     text_3: W3C Accessibility Statement Generator Tool
   back: Back to generator tool
   download: Download as HTML page
+  because: because
 
 
 
