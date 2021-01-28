@@ -1,6 +1,6 @@
 ---
 # Translation instructions are after the "#" character in this first section. (They are comments that do not show up in the web page.)
-title: Generate an Accessibility Statement   # Do not translate "title:". Do translate the text after "title:".
+title: Generate an Accessibility Statement DEV # Do not translate "title:". Do translate the text after "title:".
 lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 last_updated: 2020-01-25   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 # translators: #Add one -name: line for every translator
@@ -39,6 +39,7 @@ hide_all_info: Hide all additional information
 show_info: Show Info
 hide_info: Hide Info
 other: Other
+name: name
 
 # -- Sections
 # Basic Information
@@ -52,7 +53,7 @@ basic_info:
     info: Here you can enter the name of your organization, and the web address and name of your website or mobile application. For mobile applications, include version information and the release date, to identify a specific version.
     name: 
       title: Name of your organization
-      example: "(Example: “Example Inc.”)"
+      example: "(Example: “Example Inc.”)" # Make sure you surround your text with quotes if you're using special characters like: “':[]{}<>
     address:
       title: Address of your website or mobile application
       example: "(Example: “https://example.org”)"
@@ -195,6 +196,40 @@ technical_info:
     label: Describe the environments (combinations of web browsers, assistive technologies, and operating systems) that the content is not expected to work with.
     example: "(Example: “browsers older than 3 major versions” or “Mobile operating systems older than 5 years”)"
     add_button_text: Add another incompatible environment
+  # Technologies Used
+  technologies:
+    title: Technologies used
+    info: You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure accessibility of your content. Communicating this expectation in the accessibility statement can help users to understand the reason for issues they may be observing. For example, the accessibility features may not work because the user disabled JavaScript. The <a href="https://www.w3.org/TR/WCAG21/#cc4">WCAG 2 conformance requirement 4</a> on "<em>accessibility supported was of using technologies relied upon</em>" provides more background.
+    label: Describe the technologies that are relied upon for conformance. The content would not conform if that technology is turned off or is not supported.
+    add_button_text: Add another technology
+  # Assessment approach
+  assessment:
+    title: Assessment approach
+    info: How did you assess your website or mobile application, to determine the information provided in the previous sections? This helps users understand your quality assurance process and the background for the claims you make in your accessibility statement.
+    self:
+      title: Self-evaluation
+      meaning: the content was evaluated by your own organization or the developer of the content
+    external: 
+      title: External evaluation
+      meaning: the content was evaluated by an external entity not involved in the design and development process
+    other_text: Other approach
+    other_example: "(Example: a formal quality assurance process throughout the design and development process)"
+    add_button_text: Add another approach
+  # Related evidence
+  evidence:
+    title: Related evidence
+    info: Provide links to related background and evidence to support the claims you make in this accessibility, and to provide more transparency and credibility. This can include an evaluation report, an evaluation statement, or a certification.
+    report:
+      title: Link to recent evaluation report
+      info: An evaluation report provides details on which accessibility requirements are met, and which are not. While this is usually more technical of nature than the average user, it can help some users to understand issues they have been observing. You can use the <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a> to create an evaluation report. Place the link to the report here.
+      example: "(Example: “https://example.org/accessibility-evaulation-report”)"
+    statement:
+      title: Link to evaluation statement
+      info: An evaluation statement summarizes the essential outcomes of an evaluation report. The <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a> defines requirements for evaluation statements in <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a> of the document. This can be provided instead of or in addition to an evaluation report provided above.
+      example: "(Example: “https://example.org/accessibility-evaulation-statement”)"
+    other_text: Other evidence
+    other_example: "(Example: “https://example.org/accessibility-evaulation-certificate”)"
+    add_button_text: Add another related evidence
 
 # Approval and complaints process 
 approval_and_complaints:

@@ -456,27 +456,20 @@
                     </button>
                 </fieldset>
 
-                <h3 class="label">Technologies used
+                <h3 class="label">{{ page.technical_info.technologies.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="support_tech" data-target="#support_tech" data-showtext="{{ page.show_info }}"
                         data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_tech" hidden="hidden">
-                    <p>You may be relying on specific web technologies, such as JavaScript, WAI-ARIA, or SVG to ensure
-                        accessibility of your content. Communicating this expectation in the accessibility statement can
-                        help users to understand the reason for issues they may be observing. For example, the
-                        accessibility features may not work because the user disabled JavaScript. The
-                        <a href="https://www.w3.org/TR/WCAG21/#cc4">WCAG 2 conformance requirement 4</a>
-                        on "<em>accessibility supported was of using technologies relied upon</em>" provides more
-                        background.
+                    <p>{{ page.technical_info.technologies.info }}
                     </p>
                 </div>
 
-                <p class="expl">Describe the technologies that are relied upon for conformance. The content would not
-                    conform if that technology is turned off or is not supported.</p>
+                <p class="expl">{{ page.technical_info.technologies.label }}</p>
 
                 <fieldset class="field">
-                    <legend class="label">Technologies:</legend>
+                    <legend class="label">{{ page.technical_info.technologies.title }}:</legend>
 
                     <ul id="tech_relied" class="nolist">
                         <li class="radio-field">
@@ -507,129 +500,110 @@
                         <li class="radio-field proto">
                             <input type="checkbox" id="accstmnt_tech_other_[n]" value="other" checked="checked" />
                             <span id="accstmnt_tech_other_label_[n]">
-                                <label for="accstmnt_tech_other_[n]">Other [n]</label>
+                                <label for="accstmnt_tech_other_[n]">{{ page.other }} [n]</label>
                                 <span class="visuallyhidden">
-                                    name</span></span>
+                                    {{ page.name }}</span></span>
                             <input id="accstmnt_tech_other_[n]_value" type="text"
                                 aria-describedby="accstmnt_tech_other_label_[n]" name="accstmnt_tech" />
                         </li>
                     </ul>
 
-                    <button class="add-line" type="button">Add another technology</button>
+                    <button class="add-line" type="button">{{ page.technical_info.technologies.add_button_text }}</button>
                 </fieldset>
 
-                <h3 class="label">Assessment approach
+                <h3 class="label">{{ page.technical_info.assessment.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="info_accstmnt_approach" data-target="#info_accstmnt_approach"
                         data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="info_accstmnt_approach" hidden="hidden">
-                    <p>How did you assess your website or mobile application, to determine the information provided in
-                        the previous sections? This helps users understand your quality assurance process and the
-                        background for the claims you make in your accessibility statement.</p>
+                    <p>{{ page.technical_info.assessment.info }}</p>
                 </div>
 
                 <fieldset id="accstmnt_assessment" class="group">
-                    <legend class="visuallyhidden">Assessment approach</legend>
+                    <legend class="visuallyhidden">{{ page.technical_info.assessment.title }}</legend>
                     <ul class="nolist">
                         <li class="radio-field">
                             <input id="accstmnt_approach_1" name="accstmnt_approach" type="checkbox"
-                                value="Self-evaluation" />
-                            <label for="accstmnt_approach_1">Self-evaluation: the content was evaluated by your own
-                                organization or the developer of the content</label>
+                                value="{{ page.technical_info.assessment.self.title }}" />
+                            <label for="accstmnt_approach_1">{{ page.technical_info.assessment.self.title }}: {{ page.technical_info.assessment.self.meaning }}</label>
                         </li>
                         <li class="radio-field">
                             <input id="accstmnt_approach_2" name="accstmnt_approach" type="checkbox"
-                                value="External evaluation" />
-                            <label for="accstmnt_approach_2">External evaluation: the content was evaluated by an
-                                external entity not involved in the design and development process</label>
+                                value="{{ page.technical_info.assessment.external.title }}" />
+                            <label for="accstmnt_approach_2">{{ page.technical_info.assessment.external.title }}: {{ page.technical_info.assessment.external.meaning }}</label>
                         </li>
                     </ul>
 
                     <div class="group">
                         <div class="field line">
-                            <label for="accstmnt_approach_other_1">Other approach 1</label>
-                            <em>(Example: a formal quality assurance process throughout the design and development
-                                process)</em>
+                            <label for="accstmnt_approach_other_1">{{ page.technical_info.assessment.other_text }} 1</label>
+                            <em>{{ page.technical_info.assessment.other_example }}</em>
                             <input type="text" id="accstmnt_approach_other_1" name="accstmnt_approach" />
                         </div>
 
                         <div class="field proto">
-                            <label for="accstmnt_approach_other_[n]">Other approach [n]</label>
+                            <label for="accstmnt_approach_other_[n]">{{ page.technical_info.assessment.other_text }} [n]</label>
                             <input type="text" id="accstmnt_approach_other_[n]" name="accstmnt_approach" />
                         </div>
 
-                        <button type="button" class="add-line">Add another approach</button>
+                        <button type="button" class="add-line">{{ page.technical_info.assessment.other_text }}</button>
                     </div>
                 </fieldset>
 
-                <h3 class="label">Related evidence
+                <h3 class="label">{{ page.technical_info.evidence.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="support_related" data-target="#support_related" data-showtext="{{ page.show_info }}"
                         data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                 </h3>
                 <div class="information" id="support_related" hidden="hidden">
-                    <p>Provide links to related background and evidence to support the claims you make in this
-                        accessibility, and to provide more transparency and credibility. This can include an evaluation
-                        report, an evaluation statement, or a certification.</p>
+                    <p>{{ page.technical_info.evidence.info }}</p>
                 </div>
 
                 <div class="group">
                     <div class="field">
-                        <label for="accstmnt_audit_url">Link to recent evaluation report
+                        <label for="accstmnt_audit_url">{{ page.technical_info.evidence.report.title }}
                             <button type="button" class="showhidebutton button-small" aria-expanded="false"
                                 aria-controls="info_audit_url" data-target="#info_audit_url" data-showtext="{{ page.show_info }}"
                                 data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                         </label>
-                        <em>(Example: “https://example.org/accessibility-evaulation-report”)</em>
+                        <em>{{ page.technical_info.evidence.report.example }}</em>
 
                         <div class="information" id="info_audit_url" hidden="hidden">
-                            <p>An evaluation report provides details on which accessibility requirements are met, and
-                                which are not. While this is usually more technical of nature than the average user, it
-                                can help some users to understand issues they have been observing. You can use the
-                                <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a>
-                                to create an evaluation report. Place the link to the report here.
-                            </p>
+                            <p>{{ page.technical_info.evidence.report.info }}</p>
                         </div>
 
                         <input type="url" id="accstmnt_audit_url" />
                     </div>
 
                     <div class="field">
-                        <label for="accstmnt_audit_wcagem">Link to evaluation statement
+                        <label for="accstmnt_audit_wcagem">{{ page.technical_info.evidence.statement.title }}
                             <button type="button" class="showhidebutton button-small" aria-expanded="false"
                                 aria-controls="info_audit_statement" data-target="#info_audit_statement"
                                 data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
                         </label>
-                        <em>(Example: “https://example.org/accessibility-evaulation-statement”)</em>
+                        <em>{{ page.technical_info.evidence.statement.example }}</em>
 
                         <div class="information" id="info_audit_statement" hidden="hidden">
-                            <p>An evaluation statement summarizes the essential outcomes of an evaluation report. The
-                                <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation
-                                    Methodology (WCAG-EM)</a>
-                                defines requirements for evaluation statements in
-                                <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a>
-                                of the document. This can be provided instead of or in addition to an evaluation report
-                                provided above.
-                            </p>
+                            <p>{{ page.technical_info.evidence.statement.info }}</p>
                         </div>
 
                         <input type="url" id="accstmnt_audit_wcagem" />
                     </div>
 
                     <div class="field line">
-                        <label for="accstmnt_audit_other_1">Other evidence 1</label>
-                        <em>(Example: “https://example.org/accessibility-evaulation-certificate”)</em>
+                        <label for="accstmnt_audit_other_1">{{ page.technical_info.evidence.other_text }} 1</label>
+                        <em>{{ page.technical_info.evidence.other_example }}</em>
                         <input type="text" id="accstmnt_audit_other_1" name="accstmnt_audit_other" />
                     </div>
 
                     <div class="field proto">
-                        <label for="accstmnt_audit_other_[n]">Other evidence [n]</label>
+                        <label for="accstmnt_audit_other_[n]">{{ page.technical_info.evidence.other_text }} [n]</label>
                         <input type="text" id="accstmnt_audit_other_[n]" name="accstmnt_audit_other" />
                     </div>
 
                     <button type="button" class="add-line">
-                        Add another related evidence
+                        {{ page.technical_info.evidence.add_button_text }}
                     </button>
                 </div>
 
