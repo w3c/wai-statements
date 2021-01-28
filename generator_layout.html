@@ -682,10 +682,10 @@
         <div id="statement_generated">
             <div id="statement_header">
                 <h2>{{ page.preview.title }} <span class="basic-information website-name"
-                        data-print="accstmt_namesite" data-printdefault="{{defaults.WEBSITE_NAME}}"></span></h2>
+                        data-print="accstmt_namesite" data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span></h2>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="{{defaults.ORGANIZATION}}"></span>
+                        data-printdefault="{{page.defaults.ORGANIZATION}}"></span>
                     {{ page.preview.intro }}
                 </p>
             </div>
@@ -694,10 +694,10 @@
                 <h3>{{ page.preview.measures.title }}</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="{{defaults.ORGANIZATION}}"></span>
+                        data-printdefault="{{page.defaults.ORGANIZATION}}"></span>
                     {{ page.preview.measures.label }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>:
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span>:
                 </p>
                 <ul id="statement-measures" class="organizational-effort accessibility-measures"
                     data-print="accstmnt_orginfo_measures" data-printfilter="capitalize"></ul>
@@ -708,7 +708,7 @@
                 <p>
                     {{ page.preview.conformance.definition }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}">{{page.defaults.WEBSITE_NAME}}</span>
                     {{ page.preview.conformance.text_1 }}
                     <span class="basic-information conformance-status" data-print="accstmnt_conformance"
                         data-printfilter="lowercase"></span>
@@ -721,7 +721,7 @@
                         <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
                         {{ page.preview.conformance.text_3 }}
                         <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning"
-                            data-printdefault="{{defaults.CONFORMANCE_MEANING}}"></span>.
+                            data-printdefault="{{page.defaults.CONFORMANCE_MEANING}}"></span>.
                     </span>
                 </p>
             </div>
@@ -738,10 +738,10 @@
                 <p>
                     {{ page.preview.feedback.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>.
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span>.
                     {{ page.preview.feedback.label_2 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>:
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span>:
                 </p>
                 <ul class="basic-information feedback h-card">
                     <li data-if="accstmnt_contact_phone">
@@ -774,17 +774,17 @@
                 <div id="statement-asstech-compatible-block">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite"
-                            data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
+                            data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span>
                         {{ page.preview.compatibility.label }}:
                     </p>
                     <ul id="statement-asstech-compatible" class="technical-information compatible-environments"
-                        data-print="accstmnt_asstech_compatible" data-printdefault="{{defaults.COMPATIBLE_LIST}}"></ul>
+                        data-print="accstmnt_asstech_compatible" data-printdefault="{{page.defaults.COMPATIBLE_LIST}}"></ul>
                 </div>
 
                 <div id="statement-asstech-incompatible-block" data-if="accstmnt_asstech_incompatible">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite"
-                            data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
+                            data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span>
                         {{ page.preview.compatibility.label_not }}:
                     </p>
                     <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments"
@@ -797,7 +797,7 @@
                 <p>
                     {{ page.preview.tech.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span>
                     {{ page.preview.tech.label_2 }}:
                 </p>
                 <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
@@ -809,13 +809,13 @@
                 <p>
                     {{ page.preview.limitations.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span> {{ page.preview.limitations.label_2 }}
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}">{{page.defaults.WEBSITE_NAME}}</span> {{ page.preview.limitations.label_2 }}
                 </p>
 
                 <p>
                     {{ page.preview.limitations.label_3 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>:
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}">{{page.defaults.WEBSITE_NAME}}</span>:
                 </p>
                 <ol id="statement-limitations" class="technical-information accessibility-limitations"></ol>
             </div>
@@ -824,10 +824,10 @@
                 <h3>{{ page.technical_info.assessment.title }}</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="{{defaults.ORGANIZATION}}">{{defaults.ORGANIZATION}}</span>
+                        data-printdefault="{{page.defaults.ORGANIZATION}}">{{page.defaults.ORGANIZATION}}</span>
                     {{ page.preview.assessment.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}">{{page.defaults.WEBSITE_NAME}}</span>
                     {{ page.preview.assessment.label_2 }}:
                 </p>
                 <ul id="statement-assessments" class="technical-information assessment-approaches"
@@ -839,7 +839,7 @@
                 <p>
                     {{ page.preview.evaluation.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}">{{page.defaults.WEBSITE_NAME}}</span>
                     {{ page.preview.evaluation.label_2 }}:
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
                 </p>
@@ -850,7 +850,7 @@
                 <p>
                     {{ page.preview.evaluation.label_3 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}">{{page.defaults.WEBSITE_NAME}}</span>
                     {{ page.preview.evaluation.label_2 }}:
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
                 </p>
@@ -859,7 +859,7 @@
             <div data-if="accstmnt_audit_other">
                 <h3>{{ page.preview.evaluation.other_evidence }}</h3>
                 <p>{{ page.preview.evaluation.label_4 }} <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span> {{ page.preview.evaluation.label_2 }}:</p>
+                        data-printdefault="{{page.defaults.WEBSITE_NAME}}"></span> {{ page.preview.evaluation.label_2 }}:</p>
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
 
@@ -870,7 +870,7 @@
                 <p>{{ page.preview.approval.label }}:</p>
                 <p class="approval">
                     <span class="basic-information organization-name" data-print="accstmt_org"
-                        data-printdefault="{{defaults.ORGANIZATION}}"></span><br />
+                        data-printdefault="{{page.defaults.ORGANIZATION}}"></span><br />
                     <span class="approved-by" data-print="accstmnt_orginfo_approved_name"
                         data-printdefault="APPROVED_BY"></span><br />
                     <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function"
@@ -888,7 +888,7 @@
             <p>
                 {{ page.preview.created_with.text_1 }}
                 <span class="basic-information statement-created-date" data-print="accstmt_date"
-                    data-printdefault="{{defaults.DATE}}"></span>
+                    data-printdefault="{{page.defaults.DATE}}"></span>
                 {{ page.preview.created_with.text_2 }} <a href="{{ page.parent_path | absolute_url }}">{{ page.preview.created_with.text_3 }}</a>.
             </p>
         </div>

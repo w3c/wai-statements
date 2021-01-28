@@ -130,27 +130,27 @@ basic_info:
 # Your Efforts
 your_efforts:
   title: Uw inspanningen
-  info: In this section you can describe the efforts your organization takes to ensure accessibility. This helps users to understand your sincerity and the validity of the claims you make in your accessibility statement.
+  info: In deze sectie kan u de inspanningen beschrijven die uw organisatie doet om toegankelijkheid te verzekeren. Dit helpt gebruikers uw eerlijkheid en de waarheid van de beloftes begrijpen die u maakt in uw toegankelijkheidsverklaring
   # Organizational measures
   measures: 
-    title: Organizational measures
-    info: List the measures that your organization undertakes to achieve sustainable accessibility. This includes measures such as procurement actions, training, raising awareness, and quality assurance. Some of these measures are pre-defined for your convenience but you can add more as needed.
-    mission_statement: Include accessibility as part of our mission statement.
-    internal_policies: Include accessibility throughout our internal policies.
-    procurement_practices: Integrate accessibility into our procurement practices.
-    accessibility_officer: Appoint an accessibility officer and/or ombudsperson.
-    training: Provide continual accessibility training for our staff.
-    targets: Assign clear accessibility targets and responsibilities.
-    methods: Employ formal accessibility quality assurance methods.
+    title: Organisatorische maatregelen 
+    info: Maak een lijst van de maatregelen die uw organisatie neemt om tot een duurzame toegankelijkheid te komen. Dit omvat maatregelen zoals aanbestedingsacties, training, bewustmaking en kwaliteitsborging. Sommige van deze maatregelen zijn voor uw gemak vooraf gedefinieerd, maar u kunt indien nodig meer toevoegen. 
+    mission_statement: Toegankelijkheid opnemen als onderdeel van onze missie.
+    internal_policies: Toegankelijkheid opnemen in ons interne beleid
+    procurement_practices: Toegankelijkheid integreren in onze aanneempraktijken.
+    accessibility_officer: Een toegankelijkheids persoon of ombudsman aanwijzen.
+    training: Continu toegankelijkheidstrainingen aanbieden aan ons personeel.
+    targets: Duidelijke toegankelijkheidsdoeleinden en verantwoordelijkheden.
+    methods: Gebruik van formele methoden voor kwaliteitsborging van toegankelijkheid.
     # Adding other measures
-    other_text: Other measure
-    other_example: "(Voorbeeld: “Include people with disabilities in our design personas”)"
-    other_button_text: Add another measure
+    other_text: Andere methode
+    other_example: "(Voorbeeld: “Mensen met een beperking toevoegen aan onze persona's”)"
+    other_button_text: Voeg een andere methode toe
 
 # Technical Information
 technical_info:
   title: Technische informatie
-  info: In this section you can provide more technical details to help users understand any issues they may be observing. This includes information about compatibility with web browsers and assistive technologies.
+  info: In dit gedeelte kunt u meer technische details geven om gebruikers te helpen eventuele problemen te begrijpen. Dit omvat informatie over compatibiliteit met webbrowsers en ondersteunende technologieën.
   # Accessibility limitations
   limitations:
     title: Accessibility limitations
