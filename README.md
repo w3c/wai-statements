@@ -8,6 +8,13 @@ Accessibility Statement generator tool pages are a part of the WAI website and t
 
 ---
 
+## Table of Contents
+1. [Installation and local development](#installatio-and-local-development)
+2. [Customizing the generator tool](#customizing-the-generator-tool)
+3. [Internationalization](#internationalization)
+
+---
+
 ## Installation and local development
 
 ### Installation as part of the WAI website
@@ -67,7 +74,11 @@ For now you need to strip and modify all files manually to make it includeable i
 
 ### Add, remove and update content
 
-The generator tool is setup in such a way that content is seperated from function. In this way, adding and removing form or preview content is easy to do. Addition is only required inside the `generator.html` file.
+The generator tool is setup in such a way that content is seperated from function. In this way, adding and removing form or preview content is easy to do. Addition is only required inside the `generator_layout.html` file.
+
+When adding new content make sure to update the translation files, these are named `generator.LANGUAGE.md` and contain all the text data that's used in `generator_layout.html`.
+
+If you only want to change the text content of the generator, that can be done in the `generator.md` files, without having to edit `generator_layout.html`.
 
 #### Editing the statement create form
 
@@ -193,8 +204,20 @@ Currently custom handled statement parts are:
 When changes are required here edits to generator.js are necessary.
 
 
-### Internationalization
+## Internationalization
 
-Currently this application does not support easy translation. For now you need to duplicate the `generator.html` file and rename both something like `generator_en.html` and `generator_fr.html`. Then just edit the contents manually.
+This application supports easy translation. Translations for the Generator Tool can be found in the `generator.LANGUAGE_CODE.md` files, with LANGUAGE_CODE being the shotcode described in the [Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
-Contents for the create page (form) are wrapped in `<section class="page create">`, preview inside `<section class="page preview">`.
+#### To create a new translation
+
+Just copy one of the `generator.md` files and start translating, make sure to follow the instruction inside these files.
+
+##### Some important things to note:
+
+When editing one of the variables in the `generator.md` like this example: 
+```yaml
+title: Basic information
+```
+Make sure to translate only the "Basic information" part and not the "title:" part.
+
+Comments in the translation files are indicated with a `#`, comments don't show up in the final code and are just there for convenience, you don't have to translate the comments.
