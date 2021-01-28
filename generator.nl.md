@@ -31,7 +31,7 @@ footer: >
 # -- Introduction
 # Reminder: Do not translate "introduction". Do translate the text after "introduction:"
 introduction: De informatie die u hieronder verstrekt, genereert een toegankelijkheidsverklaring die u kunt downloaden en verder kunt verfijnen. Geen van de velden is verplicht. Geen van de informatie die u invoert, wordt buiten uw webbrowser opgeslagen.
-intro_explaination: Hoe je deze generator moet gebruiken
+intro_explaination: Hoe deze generator te gebruiken
 page_contents: Pagina-inhoud
 
 # -- Controls
