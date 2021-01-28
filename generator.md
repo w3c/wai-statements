@@ -1,6 +1,6 @@
 ---
 # Translation instructions are after the "#" character in this first section. (They are comments that do not show up in the web page.)
-title: Generate an Accessibility Statement DEV # Do not translate "title:". Do translate the text after "title:".
+title: Generate an Accessibility Statement # Do not translate "title:". Do translate the text after "title:".
 lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 last_updated: 2020-01-25   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 # translators: #Add one -name: line for every translator
@@ -21,7 +21,7 @@ github:
 external_css: /content-images/wai-statements/generator.css
 footer: >
   <p><strong>Date:</strong> Published 29 November 2018.</p>
-  <p><strong>Editors:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Leon Baauw.</p>
+  <p><strong>Editors:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, Leon Baauw and Bas de Bruin.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="../acknowledgements/">Acknowledgements</a>.</p>
 
 
