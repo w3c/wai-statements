@@ -675,23 +675,21 @@
         {% include box.html type="start" title=page.preview_statement class="example" %}
         <div id="statement_generated">
             <div id="statement_header">
-                <h2>Accessibility Statement for <span class="basic-information website-name"
+                <h2>{{ page.preview.title }} <span class="basic-information website-name"
                         data-print="accstmt_namesite" data-printdefault="{{defaults.WEBSITE_NAME}}"></span></h2>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
                         data-printdefault="{{defaults.ORGANIZATION}}"></span>
-                    is committed to ensuring digital accessibility for people with disabilities.
-                    We are continually improving the user experience for everyone, and applying the relevant
-                    accessibility standards.
+                    {{ page.preview.intro }}
                 </p>
             </div>
 
             <div id="statement-measures-block" data-if="accstmnt_orginfo_measures">
-                <h3>Measures to support accessibility</h3>
+                <h3>{{ page.preview.measures.title }}</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
                         data-printdefault="{{defaults.ORGANIZATION}}"></span>
-                    takes the following measures to ensure accessibility of
+                    {{ page.preview.measures.label }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}"></span>:
                 </p>
@@ -700,80 +698,78 @@
             </div>
 
             <div id="statement-conformance" data-if="accstmnt_conformance">
-                <h3>Conformance status</h3>
+                <h3>{{ page.basic_info.conformance.title }}</h3>
                 <p>
-                    The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines
-                        (WCAG)</a> defines requirements for designers and developers to improve accessibility for people
-                    with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
+                    {{ page.preview.conformance.definition }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
-                    is
+                    {{ page.preview.conformance.text_1 }}
                     <span class="basic-information conformance-status" data-print="accstmnt_conformance"
                         data-printfilter="lowercase"></span>
-                    with
+                    {{ page.preview.conformance.text_2 }}
                     <span class="basic-information conformance-standard"><span data-print="accstmnt_standard"
                             data-if="accstmnt_standard_other_name" data-negate></span><span
                             data-print="accstmnt_standard_other_name"
                             data-if="accstmnt_standard_other_name"></span>.</span>
                     <span data-if="accstmnt_conformance_meaning">
                         <span class="basic-information conformance-status" data-print="accstmnt_conformance"></span>
-                        means that
+                        {{ page.preview.conformance.text_3 }}
                         <span class="basic-information conformance-meaning" data-print="accstmnt_conformance_meaning"
-                            data-printdefault="CONFORMANCE_MEANING"></span>.
+                            data-printdefault="{{defaults.CONFORMANCE_MEANING}}"></span>.
                     </span>
                 </p>
             </div>
 
             <div id="statement-additions" data-if="accstmt_additions">
-                <h4>Additional accessibility considerations</h4>
+                <h4>{{ page.basic_info.considerations.title }}</h4>
                 <p class="basic-information conformance-additions" data-print="accstmt_additions"
                     data-printfilter="capitalize"></p>
             </div>
 
             <div
                 data-if="accstmnt_contact_phone, accstmnt_contact_email, accstmnt_contact_visit, accstmnt_contact_write, accstmnt_contact_other">
-                <h3>Feedback</h3>
+                <h3>{{ page.preview.feedback.title }}</h3>
                 <p>
-                    We welcome your feedback on the accessibility of
+                    {{ page.preview.feedback.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}"></span>.
-                    Please let us know if you encounter accessibility barriers on
+                    {{ page.preview.feedback.label_2 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}"></span>:
                 </p>
                 <ul class="basic-information feedback h-card">
                     <li data-if="accstmnt_contact_phone">
-                        Phone:
+                        {{ page.basic_info.feedback.phone.title }}:
                         <span class="phone-number p-tel" data-print="accstmnt_contact_phone"></span>
                     </li>
                     <li data-if="accstmnt_contact_email">
-                        E-mail:
+                        {{ page.basic_info.feedback.email.title }}:
                         <a class="email u-email" href="mailto:" data-print="accstmnt_contact_email"></a>
                     </li>
                     <li data-if="accstmnt_contact_visit">
-                        Visitor address:
+                        {{ page.basic_info.feedback.visitor_address.title }}:
                         <span class="visitor-address p-extended-address" data-print="accstmnt_contact_visit"></span>
                     </li>
                     <li data-if="accstmnt_contact_write">
-                        Postal address:
+                        {{ page.basic_info.feedback.postal_address.title }}:
                         <span class="postal-address p-adr" data-print="accstmnt_contact_write"></span>
                     </li>
                     <li class="contact-other p-note" data-if="accstmnt_contact_other"
                         data-print="accstmnt_contact_other"></li>
                 </ul>
                 <p data-if="accstmnt_contact_responsetime">
-                    We try to respond to feedback within <span class="feedback responsetime"
+                    {{ page.preview.feedback.response }} <span class="feedback responsetime"
                         data-print="accstmnt_contact_responsetime"></span>.
                 </p>
             </div>
 
             <div id="statement-asstech" data-if="accstmnt_asstech_compatible, accstmnt_asstech_incompatible">
-                <h3>Compatibility with browsers and assistive technology</h3>
+                <h3>{{ page.preview.compatibility.title }}</h3>
                 <div id="statement-asstech-compatible-block">
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite"
                             data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
-                        is designed to be compatible with the following assistive technologies:
+                        {{ page.preview.compatibility.label }}:
                     </p>
                     <ul id="statement-asstech-compatible" class="technical-information compatible-environments"
                         data-print="accstmnt_asstech_compatible" data-printdefault="{{defaults.COMPATIBLE_LIST}}"></ul>
@@ -783,7 +779,7 @@
                     <p>
                         <span class="basic-information website-name" data-print="accstmt_namesite"
                             data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
-                        is not compatible with:
+                        {{ page.preview.compatibility.label_not }}:
                     </p>
                     <ul id="statement-asstech-incompatible" class="technical-information incompatible-environments"
                         data-print="accstmnt_asstech_incompatible"></ul>
@@ -791,30 +787,27 @@
             </div>
 
             <div id="statement-conftech" data-if="accstmnt_tech">
-                <h3>Technical specifications</h3>
+                <h3>{{ page.preview.tech.title }}</h3>
                 <p>
-                    Accessibility of
+                    {{ page.preview.tech.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}"></span>
-                    relies on the following technologies to work with the particular combination of web browser and any
-                    assistive technologies or plugins installed on your computer:
+                    {{ page.preview.tech.label_2 }}:
                 </p>
                 <ul id="statement-tech" class="technical-information technologies-used" data-print="accstmnt_tech"></ul>
-                <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
+                <p>{{ page.preview.tech.label_3 }}</p>
             </div>
 
             <div id="statement-limitations-block">
-                <h3>Limitations and alternatives</h3>
+                <h3>{{ page.preview.limitations.title }}</h3>
                 <p>
-                    Despite our best efforts to ensure accessibility of
+                    {{ page.preview.limitations.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>, there may be some limitations. Below is a
-                    description of known limitations, and potential solutions. Please contact us if you observe an issue
-                    not listed below.
+                        data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span> {{ page.preview.limitations.label_2 }}
                 </p>
 
                 <p>
-                    Known limitations for
+                    {{ page.preview.limitations.label_3 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>:
                 </p>
@@ -822,53 +815,53 @@
             </div>
 
             <div id="statement-assessment-block" data-if="accstmnt_approach">
-                <h3>Assessment approach</h3>
+                <h3>{{ page.technical_info.assessment.title }}</h3>
                 <p>
                     <span class="basic-information organization-name" data-print="accstmt_org"
                         data-printdefault="{{defaults.ORGANIZATION}}">{{defaults.ORGANIZATION}}</span>
-                    assessed the accessibility of
+                    {{ page.preview.assessment.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
-                    by the following approaches:
+                    {{ page.preview.assessment.label_2 }}:
                 </p>
                 <ul id="statement-assessments" class="technical-information assessment-approaches"
                     data-print="accstmnt_approach"></ul>
             </div>
 
             <div data-if="accstmnt_audit_url">
-                <h3>Evaluation report</h3>
+                <h3>{{ page.preview.evaluation.report }}</h3>
                 <p>
-                    An evaluation report for
+                    {{ page.preview.evaluation.label_1 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
-                    is available at:
+                    {{ page.preview.evaluation.label_2 }}:
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_url"></a>.
                 </p>
             </div>
 
             <div data-if="accstmnt_audit_wcagem">
-                <h3>Evaluation statement</h3>
+                <h3>{{ page.preview.evaluation.report }}</h3>
                 <p>
-                    An evaluation statement for
+                    {{ page.preview.evaluation.label_3 }}
                     <span class="basic-information website-name" data-print="accstmt_namesite"
                         data-printdefault="{{defaults.WEBSITE_NAME}}">{{defaults.WEBSITE_NAME}}</span>
-                    is available at:
+                    {{ page.preview.evaluation.label_2 }}:
                     <a class="technical-information related-evidence" href="" data-print="accstmnt_audit_wcagem"></a>.
                 </p>
             </div>
 
             <div data-if="accstmnt_audit_other">
-                <h3>Other evidence</h3>
-                <p>Other related evidence for <span class="basic-information website-name" data-print="accstmt_namesite"
-                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span> is available at:</p>
+                <h3>{{ page.preview.evaluation.other_evidence }}</h3>
+                <p>{{ page.preview.evaluation.label_4 }} <span class="basic-information website-name" data-print="accstmt_namesite"
+                        data-printdefault="{{defaults.WEBSITE_NAME}}"></span> {{ page.preview.evaluation.label_2 }}:</p>
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
 
             <div id="statement-approval-block"
                 data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
-                <h3>Formal approval of this accessibility statement</h3>
+                <h3>{{ page.preview.approval.title }}</h3>
 
-                <p>This Accessibility Statement is approved by:</p>
+                <p>{{ page.preview.approval.label }}:</p>
                 <p class="approval">
                     <span class="basic-information organization-name" data-print="accstmt_org"
                         data-printdefault="{{defaults.ORGANIZATION}}"></span><br />
@@ -880,25 +873,24 @@
             </div>
 
             <div data-if="accstmt_complaints">
-                <h3>Formal complaints</h3>
+                <h3>{{ page.approval_and_complaints.complaints.title }}</h3>
                 <p class="complaints" data-print="accstmt_complaints"></p>
             </div>
 
             <hr noshade="noshade" />
 
             <p>
-                This statement was created on
+                {{ page.preview.created_with.text_1 }}
                 <span class="basic-information statement-created-date" data-print="accstmt_date"
                     data-printdefault="{{defaults.DATE}}"></span>
-                using the <a href="{{ page.parent_path | absolute_url }}">W3C Accessibility Statement Generator
-                    Tool</a>.
+                {{ page.preview.created_with.text_2 }} <a href="{{ page.parent_path | absolute_url }}">{{ page.preview.created_with.text_3 }}</a>.
             </p>
         </div>
         {% include box.html type="end" %}
 
         <div class="button-group statement-actions">
-            <a class="button" href="#create">Back to generator tool</a>
-            <button type="button" data-action="preview_save_as_html">Download as HTML page</button>
+            <a class="button" href="#create">{{ page.preview.back }}</a>
+            <button type="button" data-action="preview_save_as_html">{{ page.preview.download }}</button>
         </div>
     </section>
 </div>

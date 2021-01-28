@@ -257,15 +257,73 @@ approval_and_complaints:
 
 # --- PREVIEW SECTION ---
 # the following text is used in the preview of the statement:
+# texts after "#" are comments, these are not used by the website, you don't have to translate these but you could if you think it would help future contributors
 
 defaults: # defaults are used when no data is entered
   WEBSITE_NAME: WEBSITE_NAME
   ORGANIZATION: ORGANIZATION
   COMPATIBLE_LIST: COMPATIBLE_LIST
+  CONFORMANCE_MEANING: CONFORMANCE_MEANING
   DATE: DATE
 
 preview:
-  
+  title: Accessibility Statement for # ORGANIZATION
+  intro: is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+  measures:
+    title: Measures to support accessibility
+    label: takes the following measures to ensure accessibility of
+  conformance:
+    # Conformance Status
+    definition: 'The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.' 
+    # WEBSITE_NAME
+    text_1: is
+    # conformance
+    text_2: with
+    # standard
+    text_3: means that
+    # meaning
+  feedback:
+    title: Feedback
+    label_1: We welcome your feedback on the accessibility of # WEBSITE_NAME
+    label_2: Please let us know if you encounter accessibility barriers on # WEBSITE_NAME
+    response: We try to respond to feedback within
+  compatibility:
+    title: Compatibility with browsers and assistive technology
+    label: is designed to be compatible with the following assistive technologies
+    label_not: is not compatible with
+  tech:
+    title: Technical specifications
+    label_1: Accessibility of # WEBSITE_NAME
+    label_2: relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer
+    label_3: These technologies are relied upon for conformance with the accessibility standards used.
+  limitations:
+    title: Limitations and alternatives
+    label_1: Despite our best efforts to ensure accessibility of # WEBSITE_NAME
+    label_2: ", there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below."
+    label_3: Known limitations for # WEBSITE_NAME
+  assessment:
+    # Assessment Approach
+    label_1: assessed the accessibility of
+    label_2: by the following approaches
+  evaluation: 
+    report: Evaluation report
+    statement: Evaluation statement
+    other_evidence: Other evidence
+    label_1: An evaluation report for # WEBSITE_NAME
+    label_2: is available at
+    label_3: An evaluation statement for # WEBSITE_NAME
+    label_4: Other related evidence for
+  approval:
+    title: Formal approval of this accessibility statement
+    label: This Accessibility Statement is approved by
+  created_with:
+    text_1: This statement was created on # DATE
+    text_2: using the
+    text_3: W3C Accessibility Statement Generator Tool
+  back: Back to generator tool
+  download: Download as HTML page
+
+
 
 
 ---
