@@ -206,13 +206,13 @@ When changes are required here edits to generator.js are necessary.
 
 ## Internationalization
 
-This application supports easy translation. Translations for the Generator Tool can be found in the `generator.LANGUAGE_CODE.md` files, with LANGUAGE_CODE being the shotcode described in the [Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+This application supports easy translation. Translations for the Generator Tool can be found in the `generator.LANGUAGE_CODE.md` files, with LANGUAGE_CODE being the shortcode described in the [Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
-#### To create a new translation
+### To create a new translation
 
 Just copy one of the `generator.md` files and start translating, make sure to follow the instructions inside these files.
 
-##### Some important things to note:
+### Some important things to note:
 
 When editing one of the variables in the `generator.md` like this example: 
 ```yaml
