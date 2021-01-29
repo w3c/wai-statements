@@ -59,7 +59,7 @@ basic_info:
     info: Hier kunt u de naam van uw organisatie invoeren, het webadres en de naam van uw website of mobiele applicatie. Voeg voor mobiele applicaties versie-informatie en de releasedatum toe om een ​​specifieke versie te identificeren.
     name: 
       title: Naam van uw organisatie
-      example: "(Voorbeeld: Voorbeeld B.V.”)" # Make sure you surround your text with quotes if you're using special characters like: “':[]{}<>
+      example: "(Voorbeeld: Voorbeeld B.V.”)" # Make sure you surround your text with quotes if you're using special characters like: “ ' : [] {} <> ,
     address:
       title: Adres van uw website of mobiele applicatie
       example: "(Voorbeeld: “https://voorbeeld.org”)"
@@ -153,39 +153,33 @@ technical_info:
   info: In dit gedeelte kunt u meer technische details geven om gebruikers te helpen eventuele problemen te begrijpen. Dit omvat informatie over compatibiliteit met webbrowsers en ondersteunende technologieën.
   # Accessibility limitations
   limitations:
-    title: Accessibility limitations
-    singular: Accessibility limitation
-    info: "There are many situations in which limitations to accessibility can occur. For example, you may not be able
-    ensure instant accessibility of user-generated content. Providing transparency on such situations helps users to
-    understand any issue they may be observing, and to find alternatives where applicable. Under the EU Web
-    Accessibility Directive, public bodies are
-    required to provide information on the parts of the content that do not conform, the reason for
-    not conforming, and, if applicable, where to find accessible alternatives."
-    label: "List the
-    <em>content parts</em>
-    that have accessibility limitations, a
-    <em>description of the issue</em>
-    that may be observed by users, a brief explanation of
-    <em>why the issue occurs</em>, and
-    <em>what to do in the mean time</em>, such as who to contact or where to find accessibility
-    alternatives where appropriate."
+    title: Toegankelijkheid beperkingen
+    singular: Toegankelijkheid beperking
+    info: "Er zijn veel situaties waarin de beperkingen van de toegankelijkheid kunnen optreden. U kunt bijvoorbeeld niet zorgen voor directe toegankelijkheid van door gebruikers gegenereerde inhoud. Door transparantie te bieden in dergelijke situaties, kunt u gebruikers helpen elk probleem dat ze waarnemen te begrijpen en om alternatieven te vinden waar nodig. Onder de EU Web Toegankelijkheidsrichtlijn, zijn overheidsinstanties verplicht om informatie te verstrekken over de delen van de inhoud die niet voldoen, de reden voor niet conform zijn en, indien van toepassing, waar toegankelijke alternatieven te vinden zijn. "
+    label: "Benoem de 
+    <em>onderdelen</em>
+    die toegankelijkheidsbeperkingen hebben, een
+    <em>beschrijving van het probleem</em>
+    dat zichtbaar is voor de gebruikers, een korte uitleg over
+    <em>waarom het probleem zich voordoet</em>, en
+    <em>wat te doen in de tussentijd</em>, zoals wie ze moeten contacteren over toegankelijkheidsproblemen en waar alternatieven te vinden zijn."
     content: 
-      title: Content part
-      example: "(Voorbeeld: “Comments from users”)"
+      title: Onderdelen
+      example: "(Voorbeeld: “Reacties van gebruikers”)"
     discription:
-      title: Description of the issue
-      example: "(Voorbeeld: “Uploaded images may not have text alternatives”)"
+      title: Beschrijving van het probleem
+      example: "(Voorbeeld: “Geuploaden afbeeldingen kunnen geen alternatieve-tekst bevatten”)"
     reason:
-      title: Why the issue occurs
-      example: "(Voorbeeld: “We cannot ensure the quality of contributions”)"
+      title: Waarom het probleem zich voordoet
+      example: "(Voorbeeld: “We kunnen de kwaliteit van de reacties niet waarborgen”)"
     us:
-      title: What we are doing about it
-      example: "(Voorbeeld: “We monitor user comments and typically repair issues within 2 business days”)"
+      title: Wat we er aan doen
+      example: "(Voorbeeld: “We houden gebruiker reacties in de gaten en lossen problemen meestal binnen 2 werkdagen op”)"
     you:
-      title: What to do in the meantime
-      example: "(Voorbeeld: “Please use the ‘report issue’ button if you encounter an issue”)" 
+      title: Wat te doen in de tussentijd
+      example: "(Voorbeeld: “Gebruik a.u.b. de 'Probleem melden' knop om een probleem door te geven”)" 
     
-    add_button_text: Add another limitation
+    add_button_text: Voeg een andere beperking toe
   # Compatibility with user environment
   user:
     title: Compatibility with user environment
