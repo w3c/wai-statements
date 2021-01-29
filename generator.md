@@ -318,7 +318,8 @@ preview:
   approval:
     title: Formal approval of this accessibility statement
     label: This Accessibility Statement is approved by
-  created_with:
+  date:
+    title: Date
     text_1: This statement was created on # DATE
     text_2: using the
     text_3: W3C Accessibility Statement Generator Tool

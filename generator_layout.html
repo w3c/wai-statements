@@ -885,11 +885,12 @@
 
             <hr noshade="noshade" />
 
+            <h3>{{ page.preview.date.title }}</h3>
             <p>
-                {{ page.preview.created_with.text_1 }}
+                {{ page.preview.date.text_1 }}
                 <span class="basic-information statement-created-date" data-print="accstmt_date"
                     data-printdefault="{{page.defaults.DATE}}"></span>
-                {{ page.preview.created_with.text_2 }} <a href="{{ page.parent_path | absolute_url }}">{{ page.preview.created_with.text_3 }}</a>.
+                {{ page.preview.date.text_2 }} <a href="{{ page.parent_path | absolute_url }}">{{ page.preview.date.text_3 }}</a>.
             </p>
         </div>
         {% include box.html type="end" %}
