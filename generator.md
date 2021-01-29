@@ -139,7 +139,7 @@ your_efforts:
     procurement_practices: Integrate accessibility into our procurement practices.
     accessibility_officer: Appoint an accessibility officer and/or ombudsperson.
     training: Provide continual accessibility training for our staff.
-    targets: Assign clear accessibility targets and responsibilities.
+    targets: Assign clear accessibility goals and responsibilities.
     methods: Employ formal accessibility quality assurance methods.
     # Adding other measures
     other_text: Other measure
