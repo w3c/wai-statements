@@ -265,7 +265,7 @@ defaults: # defaults are used when no data is entered
 
 preview:
   title: Toegankelijkheidsverklaring van # ORGANIZATION
-  intro: is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+  intro: zet zich in voor digitale toegankelijkheid voor mensen met een beperking. We verbeteren continu de gebruikerservaring voor iedereen en passen de relevante toegankelijkheidsnormen toe.
   measures:
     title: Measures to support accessibility
     label: takes the following measures to ensure accessibility of
@@ -313,9 +313,10 @@ preview:
   approval:
     title: Formal approval of this accessibility statement
     label: This Accessibility Statement is approved by
-  created_with:
-    text_1: This statement was created on # DATE
-    text_2: using the
+  date:
+    title: Datum
+    text_1: Deze verklaring is gemaakt op # DATE
+    text_2: met de
     text_3: W3C Accessibility Statement Generator Tool
   back: Terug naar Generator
   download: Download als HTML pagina
