@@ -614,31 +614,6 @@
                 <p class="intro">{{ page.approval_and_complaints.info }}</p>
                 {% include excol.html type="middle" %}
 
-                <h3 class="label">{{ page.approval_and_complaints.approval.title }}
-                    <button type="button" class="showhidebutton button-small" aria-expanded="false"
-                        aria-controls="org_approved" data-target="#org_approved" data-showtext="{{ page.show_info }}"
-                        data-hidetext="{{ page.hide_info }}">{{ page.show_info }}</button>
-                </h3>
-                <div class="information" id="org_approved" hidden="hidden">
-                    <p>{{ page.approval_and_complaints.approval.info }}</p>
-                </div>
-
-                <fieldset class="group">
-                    <legend class="visuallyhidden">{{ page.approval_and_complaints.approval.title }}</legend>
-
-                    <div class="field">
-                        <label for="accstmnt_orginfo_approved_name">{{ page.approval_and_complaints.approval.name.title }}</label>
-                        <em>{{ page.approval_and_complaints.approval.name.example }}</em>
-                        <input type="text" id="accstmnt_orginfo_approved_name" />
-                    </div>
-
-                    <div class="field">
-                        <label for="accstmnt_orginfo_approved_function">{{ page.approval_and_complaints.approval.function.title }}</label>
-                        <em>{{ page.approval_and_complaints.approval.function.example }}</em>
-                        <input type="text" id="accstmnt_orginfo_approved_function" />
-                    </div>
-                </fieldset>
-
                 <h3 class="label">{{ page.approval_and_complaints.complaints.title }}
                     <button type="button" class="showhidebutton button-small" aria-expanded="false"
                         aria-controls="info_complaints" data-target="#info_complaints" data-showtext="{{ page.show_info }}"
@@ -652,6 +627,34 @@
                     <label for="accstmt_complaints">{{ page.approval_and_complaints.complaints.label }}</label>
                     <textarea id="accstmt_complaints" rows="3"></textarea>
                 </div>
+
+                <h3 class="label">{{ page.approval_and_complaints.approval.title }}
+                    <button type="button" class="showhidebutton button-small" aria-expanded="false" aria-controls="org_approved"
+                        data-target="#org_approved" data-showtext="{{ page.show_info }}" data-hidetext="{{ page.hide_info }}">{{
+                        page.show_info }}</button>
+                </h3>
+                <div class="information" id="org_approved" hidden="hidden">
+                    <p>{{ page.approval_and_complaints.approval.info }}</p>
+                </div>
+                
+                <fieldset class="group">
+                    <legend class="visuallyhidden">{{ page.approval_and_complaints.approval.title }}</legend>
+                
+                    <div class="field">
+                        <label for="accstmnt_orginfo_approved_name">{{ page.approval_and_complaints.approval.name.title }}</label>
+                        <em>{{ page.approval_and_complaints.approval.name.example }}</em>
+                        <input type="text" id="accstmnt_orginfo_approved_name" />
+                    </div>
+                
+                    <div class="field">
+                        <label for="accstmnt_orginfo_approved_function">{{ page.approval_and_complaints.approval.function.title
+                            }}</label>
+                        <em>{{ page.approval_and_complaints.approval.function.example }}</em>
+                        <input type="text" id="accstmnt_orginfo_approved_function" />
+                    </div>
+                </fieldset>
+
+
                 {% include excol.html type="end" %}
 
                 {% include box.html type="start" class="" %}
@@ -861,6 +864,11 @@
                 <ul data-print="accstmnt_audit_other" class="technical-information related-evidence-other"></ul>
             </div>
 
+            <div data-if="accstmt_complaints">
+                <h3>{{ page.approval_and_complaints.complaints.title }}</h3>
+                <p class="complaints" data-print="accstmt_complaints"></p>
+            </div>
+
             <div id="statement-approval-block"
                 data-if="accstmnt_orginfo_approved_name, accstmnt_orginfo_approved_function">
                 <h3>{{ page.preview.approval.title }}</h3>
@@ -874,11 +882,6 @@
                     <span class="approved-by-jobtitle" data-print="accstmnt_orginfo_approved_function"
                         data-if="accstmnt_orginfo_approved_function"></span>
                 </p>
-            </div>
-
-            <div data-if="accstmt_complaints">
-                <h3>{{ page.approval_and_complaints.complaints.title }}</h3>
-                <p class="complaints" data-print="accstmt_complaints"></p>
             </div>
 
             <hr noshade="noshade" />
