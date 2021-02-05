@@ -1,6 +1,15 @@
 (function () {
   'use strict';
 
+  // translate function, copied from wai-website-theme/main.js
+  var t = function(enstring) {
+    if (translationStrings[enstring]) {
+      return translationStrings[enstring];
+    } else {
+      return enstring;
+    }
+  }
+
   var addclass = function(el, className) {
     if (el.classList)
       el.classList.add(className);
@@ -308,7 +317,7 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
     });
 
     Array.prototype.forEach.call(excolAll, function(el, i){
-      el.innerHTML = '<button class="expand button button-secondary button-small">+ Expand All Sections</button> <button class="collapse button button-secondary button-small">&minus; Collapse All Sections</button>';
+      el.innerHTML = '<button class="expand button button-secondary button-small">+ ' + t('Expand All Sections') + '</button> <button class="collapse button button-secondary button-small">&minus; ' + t('Collapse All Sections') + '</button>';
     });
 
     Array.prototype.forEach.call(document.querySelectorAll('.excol-all'), function(el, i){
