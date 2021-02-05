@@ -9,7 +9,7 @@ Accessibility Statement generator tool pages are a part of the WAI website and t
 ---
 
 ## Table of Contents
-1. [Installation and local development](#installatio-and-local-development)
+1. [Installation and local development](#installation-and-local-development)
 2. [Customizing the generator tool](#customizing-the-generator-tool)
 3. [Internationalization](#internationalization)
 
@@ -74,7 +74,7 @@ For now you need to strip and modify all files manually to make it includeable i
 
 ### Add, remove and update content
 
-The generator tool is setup in such a way that content is seperated from function. In this way, adding and removing form or preview content is easy to do. Addition is only required inside the `generator_layout.html` file.
+The generator tool is setup in such a way that content is separated from function. In this way, adding and removing form or preview content is easy to do. Addition is only required inside the `generator_layout.html` file.
 
 When adding new content make sure to update the translation files, these are named `generator.LANGUAGE.md` and contain all the text data that's used in `generator_layout.html`.
 
