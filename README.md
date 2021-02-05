@@ -9,7 +9,7 @@ Accessibility Statement generator tool pages are a part of the WAI website and t
 ---
 
 ## Table of Contents
-1. [Installation and local development](#installatio-and-local-development)
+1. [Installation and local development](#installation-and-local-development)
 2. [Customizing the generator tool](#customizing-the-generator-tool)
 3. [Internationalization](#internationalization)
 
