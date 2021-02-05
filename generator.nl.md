@@ -265,7 +265,7 @@ defaults: # defaults are used when no data is entered
 
 preview:
   title: Toegankelijkheidsverklaring van # ORGANIZATION
-  intro: zet zich in voor digitale toegankelijkheid voor mensen met een beperking. We verbeteren continu de gebruikerservaring voor iedereen en passen de relevante toegankelijkheidsnormen toe.
+  intro: Dit is een toegankelijkheidsverklaring van # ORGANISATION
   measures:
     title: Measures to support accessibility
     label: takes the following measures to ensure accessibility of

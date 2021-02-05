@@ -270,7 +270,7 @@ defaults: # defaults are used when no data is entered
 
 preview:
   title: Accessibility Statement for # ORGANIZATION
-  intro: is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+  intro: This is an accessibility statement from #ORGANIZATION
   measures:
     title: Measures to support accessibility
     label: takes the following measures to ensure accessibility of
