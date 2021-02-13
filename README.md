@@ -221,3 +221,11 @@ title: Basic information
 Make sure to translate only the "Basic information" part and not the "title:" part.
 
 Comments in the translation files are indicated with a `#`, comments don't show up in the final code and are just there for convenience, you don't have to translate the comments.
+
+### Tools to use when translating
+
+The markdown files used for translation are very sensitive to things like indentation, comma's, quotes and special characters. When translating we reccommend you use a simple text editor and not a document editor like Microsoft Word, which has a tendency to change quotes and indentation. 
+
+You could use a simple text editor (like TextEdit on Mac or Notepad on Windows).
+
+Or a code editor (like Visual Studio Code, Atom, Sublime Text and many others).

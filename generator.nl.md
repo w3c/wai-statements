@@ -276,8 +276,8 @@ preview:
     # WEBSITE_NAME
     text_1: is
     # conformance
-    text_2: met
-    # standard
+    text_2: met #conformance standard.
+    # Standard,
     text_3: betekent dat
     # meaning
   feedback:
