@@ -272,6 +272,7 @@ preview:
   title: Accessibility Statement for # ORGANIZATION
   intro: This is an accessibility statement from #ORGANIZATION
   measures:
+    # Measures to support accessibility
     title: Measures to support accessibility
     label: takes the following measures to ensure accessibility of
   conformance:
@@ -280,25 +281,29 @@ preview:
     # WEBSITE_NAME
     text_1: is
     # conformance
-    text_2: with
-    # standard
+    text_2: with # conformance standard.
+    # Standard,
     text_3: means that
     # meaning
   feedback:
+    # Feedback
     title: Feedback
     label_1: We welcome your feedback on the accessibility of # WEBSITE_NAME
     label_2: Please let us know if you encounter accessibility barriers on # WEBSITE_NAME
     response: We try to respond to feedback within
   compatibility:
+    # Compatibility with browsers and assistive technology
     title: Compatibility with browsers and assistive technology
     label: is designed to be compatible with the following assistive technologies
     label_not: is not compatible with
   tech:
+    # Technical specifications
     title: Technical specifications
     label_1: Accessibility of # WEBSITE_NAME
     label_2: relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer
     label_3: These technologies are relied upon for conformance with the accessibility standards used.
   limitations:
+    # Limitations and alternatives
     title: Limitations and alternatives
     label_1: Despite our best efforts to ensure accessibility of # WEBSITE_NAME
     label_2: ", there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below."
@@ -308,17 +313,20 @@ preview:
     label_1: assessed the accessibility of
     label_2: by the following approaches
   evaluation: 
+    # Evaluation
     report: Evaluation report
     statement: Evaluation statement
     other_evidence: Other evidence
     label_1: An evaluation report for # WEBSITE_NAME
     label_2: is available at
     label_3: An evaluation statement for # WEBSITE_NAME
-    label_4: Other related evidence for
+    label_4: Other related evidence for # WEBSITE_NAME
   approval:
+    # Formal approval
     title: Formal approval of this accessibility statement
     label: This Accessibility Statement is approved by
   date:
+    # Date footer
     title: Date
     text_1: This statement was created on # DATE
     text_2: using the

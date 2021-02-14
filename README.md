@@ -224,7 +224,7 @@ Comments in the translation files are indicated with a `#`, comments don't show 
 
 ### Tools to use when translating
 
-The markdown files used for translation are very sensitive to things like indentation, comma's, quotes and special characters. When translating we reccommend you use a simple text editor and not a document editor like Microsoft Word, which has a tendency to change quotes and indentation. 
+The markdown files used for translation are very sensitive to indentation, comma's, quotes and special characters. When translating we reccommend you use a simple text editor and not a document editor like Microsoft Word, which has a tendency to change quotes and indentation. 
 
 You could use a simple text editor (like TextEdit on Mac or Notepad on Windows).
 

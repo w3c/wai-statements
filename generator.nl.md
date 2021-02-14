@@ -268,6 +268,7 @@ preview:
   title: Toegankelijkheidsverklaring van # ORGANIZATION
   intro: Dit is een toegankelijkheidsverklaring van # ORGANISATION
   measures:
+    # Measures to support accessibility
     title: Maatregelen om toegankelijkheid te ondersteunen
     label: neemt de volgende maatregelen om de toegankelijkheid te borgen van
   conformance:
@@ -276,25 +277,29 @@ preview:
     # WEBSITE_NAME
     text_1: is
     # conformance
-    text_2: met #conformance standard.
+    text_2: met # conformance standard.
     # Standard,
     text_3: betekent dat
     # meaning
   feedback:
+    # Feedback  
     title: Feedback
     label_1: We ontvangen graag je feedback op de toegankelijk heid van # WEBSITE_NAME
     label_2: Laat ons a.u.b. weten als u toegankelijkheidsproblemen tegenkomt op # WEBSITE_NAME
     response: We proberen op feedback te reageren binnen
   compatibility:
+    # Compatibility with browsers and assistive technology
     title: Compatibiliteit met browsers en hulptechnologie
     label: is ontworpen om compatible te zijn met de volgende hulp technologieën
     label_not: is niet compatible met
   tech:
+    # Technical specifications
     title: Technische specificaties
     label_1: Toegankelijkheid van # WEBSITE_NAME
     label_2: heeft de volgende technologieën nodig om te werken met de specifieke combinatie van web browser en andere hulp technologieën of plug-ins die op uw computer zijn geïnstalleerd 
     label_3: Op deze technologieën wordt vertrouwd voor conformiteit met de gebruikte toegankelijkheidsstandaarden. 
   limitations:
+    # Limitations and alternatives
     title: Toegankelijkheidsbeperkingen en alternatieven
     label_1: Ondanks onze beste inspanningen ten behoeve van de toegankelijkheid van # WEBSITE_NAME
     label_2: ", kunnen er toegankelijkheidsbeperkingen zijn. Hieronder staat een beschrijving van de ons bekende toegankelijkheidsbeperkingen en de mogelijke oplossingen. Neem gerust contact met ons op als u een toegankelijkheidsprobleem tegenkomt dat nog niet in de onderstaande lijst voorkomt."
@@ -304,6 +309,7 @@ preview:
     label_1: heeft de toegankelijkheid onderzocht van
     label_2: middels de volgende aanpak
   evaluation: 
+    # Evaluation
     report: Evaluatie rapport
     statement: Evaluatie verklaring
     other_evidence: Andere bewijsstukken
@@ -312,9 +318,11 @@ preview:
     label_3: Een evaluatie verklaring voor # WEBSITE_NAME
     label_4: Ander gerelateerd bewijs voor # WEBSITE_NAME
   approval:
+    # Formal approval
     title: Formele goedkeuring van deze toegankelijkheidsverklaring
     label: Deze toegankelijkheidsverklaring is goedgekeurd door 
   date:
+    # Date footer
     title: Datum
     text_1: Deze verklaring is gemaakt op # DATE
     text_2: met de
