@@ -18,7 +18,7 @@ To get started with translation, see:
 The main file for translation is:
 * https://github.com/w3c/wai-statements/blob/master/generator.md
 
-Read carefully the [Important Translation Guidanc](https://www.w3.org/wiki/WAI/Translation_Instructions#Important_Translation_Guidance) and note:
+Read carefully the [Important Translation Guidance](https://www.w3.org/wiki/WAI/Translation_Instructions#Important_Translation_Guidance) and note:
 * For the generator to work, you need to be careful not to change indentation, commas, quotes, and special characters. We recommend that you use a markdown editor or a simple text editor — and not a document editor like Microsoft Word that often changes quotes and indentation.
 * The file for translation includes words used for the code that need to stay in English. And words for you to translate. The words before colons stay in English. Translate the words after the colons.<br> For example, in:
 ```yaml
