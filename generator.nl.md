@@ -13,7 +13,7 @@ contributors: #Add one -name: line for every contributor
   - name: Roel Antonisse
   - name: Leon Baauw
   - name: Bas de Bruin
-permalink: /planning/statements/generator/nl/   # Add the language shortcode to the end; for example /planning/statements/generator/nl/
+permalink: /planning/statements/generator/nl   # Add the language shortcode to the end; for example /planning/statements/generator/nl/
 layout: default
 parent_path: /planning/statements/
 ref: /planning/statements/generator/
