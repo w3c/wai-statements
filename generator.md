@@ -1,35 +1,34 @@
 ---
 # Translation instructions are after the "#" character in this first section. (They are comments that do not show up in the web page.)
-title: Generate an Accessibility Statement # Do not translate "title:". Do translate the text after "title:".
+
+title: Generate an Accessibility Statement   # Do not translate "title:". Do translate the text after "title:".
+
 lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-last_updated: 2020-01-25   # Put the date of this translation YYYY-MM-DD (with month in the middle)
-# translators: #Add one -name: line for every translator
-# - name: "Translator Name Here"
-contributors: #Add one -name: line for every contributor 
-  - name: Shadi Abou-Zahra
-  - name: Eric Velleman
-  - name: Sanne Eendebak
-  - name: Roel Antonisse
-  - name: Leon Baauw
-  - name: Bas de Bruin
-permalink: /planning/statements/generator/   # Add the language shortcode to the end; for example /planning/statements/generator/nl/
+permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
+
+last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+# translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and one space)
+#   - name: "Translator Name Here"
+#   - name: "Translator Name Here" # To list multiple translators, delete the # at the beginning of this line. You can add more translator name lines.
+# contributors: # To list translation contributors, delete the # at the beginning of this line and the next line. You can add more contributors’ names.
+#   - name: "Translation Contributor Name Here"
+
 layout: default
 parent_path: /planning/statements/
 github:
     repository: w3c/wai-statements
-    path: "generator.md"
+    path: "generator.md"   # Add the language shortcode to the middle of the filename, for example: generator.nl.md
 external_css: /content-images/wai-statements/generator.css
-footer: >
-  <p><strong>Date:</strong> Published 29 November 2018.</p>
-  <p><strong>Editors:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, Leon Baauw and Bas de Bruin.</p>
-  <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission. <a href="../acknowledgements/">Acknowledgements</a>.</p>
 
+footer: > # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
+  <p><strong>Date:</strong> Updated underlying code (not the content) @@ February 2021. First published November 2018.</p>
+  <p><strong>Editors:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, Leon Baauw, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
+  <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 
 # --- MAIN CONTENT ---
-# this section is where all text content is stored, edit it just as described above
+# Do not translate the initial text with colons: "introduction:", "intro_explaination:", "page_contents:", "show_all_info:", etc. Do translate the text after the colons (:).
 
 # -- Introduction
-# Reminder: Do not translate "introduction". Do translate the text after "introduction:"
 introduction: The information that you provide below will generate an accessibility statement that you can download and further refine. None of the fields are required. None of the information you enter is stored outside your web browser.
 intro_explaination: How to use this generator tool
 page_contents: Page Contents
@@ -43,8 +42,9 @@ hide_info: Hide Info
 other: Other
 name: name
 preview_statement: Preview your accessibility statement
-# Months of the year
-month_names: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] # make sure not to change any of the quotes, comma's or brackets
+# Translate the months of the year. Do not change any of the quotes, commas, or brackets
+
+month_names: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 # -- Sections
 # Basic Information
