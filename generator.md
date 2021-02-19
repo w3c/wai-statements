@@ -95,7 +95,7 @@ basic_info:
   # Additional accessibility considerations
   considerations:
     title: Additional accessibility considerations
-    info: "Sometimes you may be applying more accessibility requirements than those specified in the accessibility standard stated above. For example, you may be providing sign language videos or real-time captioning for live media. Here you can list these additional accessibility requirements.</p> <br>
+    info: "Sometimes you may be applying more accessibility requirements than those specified in the accessibility standard stated above. For example, you may be providing sign language videos or context-sensitive help for functionality. Here you can list these additional accessibility requirements.</p> <br>
     <p> <strong>Example:</strong> “Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA Success Criteria: Images of text are only used for decorative purposes. Re-authentication after a session expires does not cause loss of data. Some videos have sign language interpretation.”"
     requirements: Additional accessibility requirements applied
   # Feedback Options
