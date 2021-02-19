@@ -1,17 +1,32 @@
 # wai-statements
 
-Accessibility Statement generator tool pages are a part of the WAI website and therefore makes use of the [wai-website-theme](https://github.com/w3c/wai-website-theme) as dependency. Both make use of [Jekyll static site generator](https://jekyllrb.com/) to create the pages.
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ab8755c7-85c1-465b-ad34-38fc72c3c958/deploy-status)](https://app.netlify.com/sites/wai-statements/deploys)
 
-- [Requirements](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
+Page Contents:
+* [Translation Notes](#translation-notes)
+* [Installation and local development](#installation-and-local-development)
+* [Customizing the generator tool](#customizing-the-generator-tool)
+* [On the W3C WAI site](#on-the-w3c-wai-site)
 
 ---
 
-## Table of Contents
-1. [Installation and local development](#installation-and-local-development)
-2. [Customizing the generator tool](#customizing-the-generator-tool)
-3. [Internationalization](#internationalization)
+## Translation Notes
+
+To get started with translation, see:
+* [Translating WAI Resources](https://www.w3.org/WAI/about/translating/)
+
+The main file for translation is:
+* https://github.com/w3c/wai-statements/blob/master/generator.md
+
+Read carefully the [Important Translation Guidance](https://www.w3.org/wiki/WAI/Translation_Instructions#Important_Translation_Guidance) and note:
+* For the generator to work, you need to be careful not to change indentation, commas, quotes, and special characters. We recommend that you use a markdown editor or a simple text editor — and not a document editor like Microsoft Word that often changes quotes and indentation.
+* The file for translation includes words used for the code that need to stay in English. And words for you to translate. The words before colons stay in English. Translate the words after the colons.<br> For example, in:
+```yaml
+title: Basic information
+```
+Do not translate "title". Do translate "Basic information".
+
+Comments in the file start with #. You do not need to translate the comments.
 
 ---
 
@@ -203,29 +218,11 @@ Currently custom handled statement parts are:
 
 When changes are required here edits to generator.js are necessary.
 
+---
 
-## Internationalization
+## On the W3C WAI site
 
-This application supports easy translation. Translations for the Generator Tool can be found in the `generator.LANGUAGE_CODE.md` files, with LANGUAGE_CODE being the shortcode described in the [Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+Accessibility Statement generator tool pages are a part of the WAI website and use the [wai-website-theme](https://github.com/w3c/wai-website-theme) as dependency. Both use [Jekyll static site generator](https://jekyllrb.com/) to create the pages.
 
-### To create a new translation
+Background: [Requirements Analysis](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
 
-Just copy one of the `generator.md` files and start translating, make sure to follow the instructions inside these files.
-
-### Some important things to note:
-
-When editing one of the variables in the `generator.md` like this example: 
-```yaml
-title: Basic information
-```
-Make sure to translate only the "Basic information" part and not the "title:" part.
-
-Comments in the translation files are indicated with a `#`, comments don't show up in the final code and are just there for convenience, you don't have to translate the comments.
-
-### Tools to use when translating
-
-The markdown files used for translation are very sensitive to indentation, comma's, quotes and special characters. When translating we reccommend you use a simple text editor and not a document editor like Microsoft Word, which has a tendency to change quotes and indentation. 
-
-You could use a simple text editor (like TextEdit on Mac or Notepad on Windows).
-
-Or a code editor (like Visual Studio Code, Atom, Sublime Text and many others).
