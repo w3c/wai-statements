@@ -75,3 +75,7 @@
 {
   margin-left: 36px;
 }
+
+#accstatement .button-group button:hover {
+  cursor: pointer;
+}

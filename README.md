@@ -1,10 +1,32 @@
 # wai-statements
 
-Accessibility Statement generator tool pages are a part of the WAI website and therefore makes use of the [wai-website-theme](https://github.com/w3c/wai-website-theme) as dependency. Both make use of [Jekyll static site generator](https://jekyllrb.com/) to create the pages.
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ab8755c7-85c1-465b-ad34-38fc72c3c958/deploy-status)](https://app.netlify.com/sites/wai-statements/deploys)
 
-- [Requirements](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
+Page Contents:
+* [Translation Notes](#translation-notes)
+* [Installation and local development](#installation-and-local-development)
+* [Customizing the generator tool](#customizing-the-generator-tool)
+* [On the W3C WAI site](#on-the-w3c-wai-site)
+
+---
+
+## Translation Notes
+
+To get started with translation, see:
+* [Translating WAI Resources](https://www.w3.org/WAI/about/translating/)
+
+The main file for translation is:
+* https://github.com/w3c/wai-statements/blob/master/generator.md
+
+Read carefully the [Important Translation Guidance](https://www.w3.org/wiki/WAI/Translation_Instructions#Important_Translation_Guidance) and note:
+* For the generator to work, you need to be careful not to change indentation, commas, quotes, and special characters. We recommend that you use a markdown editor or a simple text editor — and not a document editor like Microsoft Word that often changes quotes and indentation.
+* The file for translation includes words used for the code that need to stay in English. And words for you to translate. The words before colons stay in English. Translate the words after the colons.<br> For example, in:
+```yaml
+title: Basic information
+```
+Do not translate "title". Do translate "Basic information".
+
+Comments in the file start with #. You do not need to translate the comments.
 
 ---
 
@@ -67,7 +89,11 @@ For now you need to strip and modify all files manually to make it includeable i
 
 ### Add, remove and update content
 
-The generator tool is setup in such a way that content is seperated from function. In this way, adding and removing form or preview content is easy to do. Addition is only required inside the `generator.html` file.
+The generator tool is setup in such a way that content is separated from function. In this way, adding and removing form or preview content is easy to do. Addition is only required inside the `generator_layout.html` file.
+
+When adding new content make sure to update the translation files, these are named `generator.LANGUAGE.md` and contain all the text data that's used in `generator_layout.html`.
+
+If you only want to change the text content of the generator, that can be done in the `generator.md` files, without having to edit `generator_layout.html`.
 
 #### Editing the statement create form
 
@@ -192,9 +218,11 @@ Currently custom handled statement parts are:
 
 When changes are required here edits to generator.js are necessary.
 
+---
 
-### Internationalization
+## On the W3C WAI site
 
-Currently this application does not support easy translation. For now you need to duplicate the `generator.html` file and rename both something like `generator_en.html` and `generator_fr.html`. Then just edit the contents manually.
+Accessibility Statement generator tool pages are a part of the WAI website and use the [wai-website-theme](https://github.com/w3c/wai-website-theme) as dependency. Both use [Jekyll static site generator](https://jekyllrb.com/) to create the pages.
 
-Contents for the create page (form) are wrapped in `<section class="page create">`, preview inside `<section class="page preview">`.
+Background: [Requirements Analysis](https://www.w3.org/WAI/EO/wiki/Accessibility_Statements_Requirements)
+
