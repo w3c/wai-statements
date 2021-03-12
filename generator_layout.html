@@ -730,7 +730,7 @@
             <div id="statement-additions" data-if="accstmt_additions">
                 <h4>{{ page.basic_info.considerations.title }}</h4>
                 <p class="basic-information conformance-additions" data-print="accstmt_additions"
-                    data-printfilter="capitalize"></p>
+                    data-printfilter="markdown"></p>
             </div>
 
             <div
@@ -762,7 +762,7 @@
                         <span class="postal-address p-adr" data-print="accstmnt_contact_write"></span>
                     </li>
                     <li class="contact-other p-note" data-if="accstmnt_contact_other"
-                        data-print="accstmnt_contact_other"></li>
+                        data-print="accstmnt_contact_other" data-printfilter="markdown"></li>
                 </ul>
                 <p data-if="accstmnt_contact_responsetime">
                     {{ page.preview.feedback.response }} <span class="feedback responsetime"
@@ -866,7 +866,7 @@
 
             <div data-if="accstmt_complaints">
                 <h3>{{ page.approval_and_complaints.complaints.title }}</h3>
-                <p class="complaints" data-print="accstmt_complaints"></p>
+                <p class="complaints" data-print="accstmt_complaints" data-printfilter="markdown"></p>
             </div>
 
             <div id="statement-approval-block"
@@ -903,6 +903,8 @@
     </section>
 </div>
 
-<script src="{{ '/content-images/wai-statements/generator.js' | relative_url}}"></script>
+<!-- Include Marked and main generator script -->
+<script src="{{ '/content-images/wai-statements/marked.js' | relative_url }}"></script>
+<script src="{{ '/content-images/wai-statements/generator.js' | relative_url }}"></script>
 
 {:/}

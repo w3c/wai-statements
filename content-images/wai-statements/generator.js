@@ -508,6 +508,9 @@
         var rest = string.slice(1);
 
         return firstChar + rest;
+      },
+      markdown: function markdown(string) {
+        return marked ? marked(string) : string
       }
     };
 
@@ -569,7 +572,7 @@
             break;
 
           default:
-            item.innerText = printData;
+            item.innerHTML = printData;
         }
       }
     })
