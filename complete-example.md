@@ -65,9 +65,9 @@ The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standar
 We welcome your feedback on the accessibility of <span class="basic-information website-name">Citylights WebStore</span>. Please let us know if you encounter accessibility barriers on <span class="basic-information website-name">Citylights WebStore</span>:
 
 <ul class="basic-information feedback h-card">
-	<li>Phone: <span class="phone-number p-tel">+12 34 567 89 00</span></li>
-	<li>E-mail: <a class="email u-email" href="mailto:accessibility@example.org">accessibility@example.org</a></li>
-	<li>Postal address: <span class="postal-address p-adr">PO Box 1, 234 Example Ville</span></li>
+  <li>Phone: <span class="phone-number p-tel">+12 34 567 89 00</span></li>
+  <li>E-mail: <a class="email u-email" href="mailto:accessibility@example.org">accessibility@example.org</a></li>
+  <li>Postal address: <span class="postal-address p-adr">PO Box 1, 234 Example Ville</span></li>
 </ul>
 
 We try to respond to feedback within <span class="feedback responsetime">5 business days</span>.
@@ -134,7 +134,9 @@ An evaluation statement for <span class="basic-information website-name">Citylig
 
 This Accessibility Statement is approved by:
 
-<span class="approval"> <span class="basic-information organization-name">Citylights Inc.</span> <br><span class="approved-by">Communication Department</span> <br><span class="approved-by-jobtitle">Director of Communication</span>
+<span class="approval"><span class="basic-information organization-name">Citylights Inc.</span> 
+<span class="approved-by">Communication Department</span> 
+<span class="approved-by-jobtitle">Director of Communication</span></span>
 
 <hr noshade="noshade">
 
