@@ -53,14 +53,13 @@ footer: >   # Translate words below, including "Date:" and "Editor:" Translate t
 
 The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
 
-<span class="basic-information website-name">Citylights WebStore</span>	is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with <span class="basic-information conformance-standard">WCAG 2.1 level AA</span>. <span><span class="basic-information conformance-status">Partially conformant</span> means that <span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
+<span class="basic-information website-name">Citylights WebStore</span> is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with <span class="basic-information conformance-standard">WCAG 2.1 level AA</span>. <span><span class="basic-information conformance-status">Partially conformant</span> means that <span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
 
 #### Additional accessibility considerations
 
-<span class="basic-information conformance-additions">Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA Success Criteria: Images of text are only used for decorative purposes. Re-authentication after a session expires does not cause loss of data. Some videos have sign language interpretation.
+<span class="basic-information conformance-additions">Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA Success Criteria: Images of text are only used for decorative purposes. Re-authentication after a session expires does not cause loss of data. Some videos have sign language interpretation.</span>
 
 ### Feedback
-
 
 We welcome your feedback on the accessibility of <span class="basic-information website-name">Citylights WebStore</span>. Please let us know if you encounter accessibility barriers on <span class="basic-information website-name">Citylights WebStore</span>:
 
@@ -74,13 +73,13 @@ We try to respond to feedback within <span class="feedback responsetime">5 busin
 
 ### Compatibility with browsers and assistive technology
 
-<span class="basic-information website-name">Citylights WebStore</span>	is designed to be compatible with the following assistive technologies:
+<span class="basic-information website-name">Citylights WebStore</span> is designed to be compatible with the following assistive technologies:
 
 <ul class="technical-information compatible-environments">
   <li>browser X with assistive technology Y on operating system Z</li>
 </ul>
 
-<span class="basic-information website-name">Citylights WebStore</span>	is not compatible with:
+<span class="basic-information website-name">Citylights WebStore</span> is not compatible with:
 
 <ul class="technical-information incompatible-environments">
   <li>browsers older than 3 major versions" or "Mobile operating systems older than 5 year</li>
@@ -128,7 +127,7 @@ An evaluation statement for <span class="basic-information website-name">Citylig
 
 ### Formal complaints
 
-<p class="complaints">We aim to respond to accessibility feedback within 5 business days, and to propose a solution within 10 business days. You are entitled to escalate a complaint to the national authority, should you be dissatisfied with our response to you.</p>
+<span class="complaints">We aim to respond to accessibility feedback within 5 business days, and to propose a solution within 10 business days. You are entitled to escalate a complaint to the national authority, should you be dissatisfied with our response to you.</span>
 
 ### Formal approval of this accessibility statement
 
