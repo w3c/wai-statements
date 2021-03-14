@@ -33,7 +33,7 @@ footer: >   # Translate words below, including "Date:" and "Editor:" Translate t
 
 {% include box.html type="start" title="Summary" class="" %}
 
-This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it. Read more below about accessibility statements or [generate an accessibility statement]({{ '/planning/statements/generator/' | relative_url }}#create) right away.
+This tool helps you create an accessibility statement for your own website, mobile application, or other digital content. You can download the statement you created, and further customize, style, and brand it. Read more below about accessibility statements or [generate an accessibility statement]({{ '/planning/statements/generator/' | relative_url }}) right away.
 
 {% include box.html type="end" %}
 
@@ -127,4 +127,4 @@ This generator tool allows you to enter different types of information to create
 
 {% include excol.html type="end" %}
 
-<a href="{{ '/planning/statements/generator/' | relative_url }}#create" class="button" style="margin-top: 2rem;">Generate an accessibility statement</a>
+<a href="{{ '/planning/statements/generator/' | relative_url }}" class="button" style="margin-top: 2rem;">Generate an accessibility statement</a>
