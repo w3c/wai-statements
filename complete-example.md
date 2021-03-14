@@ -35,7 +35,7 @@ footer: >   # Translate words below, including "Date:" and "Editor:" Translate t
 
 ## Accessibility Statement for <span class="basic-information website-name">Citylights WebStore</span>
 
-<span class="basic-information organization-name">Citylights Inc.</span> is committed to ensuring digital accessibility for people with disabilities.	We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+<span class="basic-information organization-name">Citylights Inc.</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
 
 ### Measures to support accessibility
 
@@ -53,7 +53,7 @@ footer: >   # Translate words below, including "Date:" and "Editor:" Translate t
 
 The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
 
-<span class="basic-information website-name">Citylights WebStore</span>	is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with	<span class="basic-information conformance-standard">WCAG 2.1 level AA</span>. <span><span class="basic-information conformance-status">Partially conformant</span> means that	<span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
+<span class="basic-information website-name">Citylights WebStore</span>	is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with <span class="basic-information conformance-standard">WCAG 2.1 level AA</span>. <span><span class="basic-information conformance-status">Partially conformant</span> means that <span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
 
 #### Additional accessibility considerations
 
@@ -62,12 +62,12 @@ The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standar
 ### Feedback
 
 
-We welcome your feedback on the accessibility of <span class="basic-information website-name">Citylights WebStore</span>.	Please let us know if you encounter accessibility barriers on	<span class="basic-information website-name">Citylights WebStore</span>:
+We welcome your feedback on the accessibility of <span class="basic-information website-name">Citylights WebStore</span>. Please let us know if you encounter accessibility barriers on <span class="basic-information website-name">Citylights WebStore</span>:
 
 <ul class="basic-information feedback h-card">
 	<li>Phone: <span class="phone-number p-tel">+12 34 567 89 00</span></li>
-	<li>E-mail:	<a class="email u-email" href="mailto:accessibility@example.org">accessibility@example.org</a></li>
-	<li>Postal address:	<span class="postal-address p-adr">PO Box 1, 234 Example Ville</span></li>
+	<li>E-mail: <a class="email u-email" href="mailto:accessibility@example.org">accessibility@example.org</a></li>
+	<li>Postal address: <span class="postal-address p-adr">PO Box 1, 234 Example Ville</span></li>
 </ul>
 
 We try to respond to feedback within <span class="feedback responsetime">5 business days</span>.
@@ -106,8 +106,8 @@ Despite our best efforts to ensure accessibility of <span class="basic-informati
 Known limitations for <span class="basic-information website-name">Citylights WebStore</span>:
 
 <ol class="technical-information accessibility-limitations">
-	<li><strong>Comments from users</strong>: uploaded images may not have text alternatives because we cannot ensure the quality of contributions. We monitor user comments and typically repair issues within 10 business days. Please use the 'report issue' button if you encounter an issue.</li>
-	<li><strong>Archived documents</strong>: might not work with current assistive technologies because they use outdated technologies that do not support accessibility. We convert documents to new formats upon request within 3 business days. Please contact documents@example.org for support.</li>
+  <li><strong>Comments from users</strong>: uploaded images may not have text alternatives because we cannot ensure the quality of contributions. We monitor user comments and typically repair issues within 10 business days. Please use the 'report issue' button if you encounter an issue.</li>
+  <li><strong>Archived documents</strong>: might not work with current assistive technologies because they use outdated technologies that do not support accessibility. We convert documents to new formats upon request within 3 business days. Please contact documents@example.org for support.</li>
 </ol>
 
 ### Assessment approach
@@ -120,7 +120,7 @@ Known limitations for <span class="basic-information website-name">Citylights We
 
 ### Evaluation report
 
-An evaluation report for <span class="basic-information website-name">Citylights WebStore</span> is available at:	<a class="technical-information related-evidence" href="https://www.w3.org/WAI/demos/bad/after/reports/report">https://www.w3.org/WAI/demos/bad/after/reports/report</a>.
+An evaluation report for <span class="basic-information website-name">Citylights WebStore</span> is available at: <a class="technical-information related-evidence" href="https://www.w3.org/WAI/demos/bad/after/reports/report">https://www.w3.org/WAI/demos/bad/after/reports/report</a>.
 
 ### Evaluation statement
 
@@ -134,10 +134,10 @@ An evaluation statement for <span class="basic-information website-name">Citylig
 
 This Accessibility Statement is approved by:
 
-<span class="approval"> <span class="basic-information organization-name">Citylights Inc.</span> <br /><span class="approved-by">Communication Department</span> <br /><span class="approved-by-jobtitle">Director of Communication</span>
+<span class="approval"> <span class="basic-information organization-name">Citylights Inc.</span> <br><span class="approved-by">Communication Department</span> <br><span class="approved-by-jobtitle">Director of Communication</span>
 
 <hr noshade="noshade">
 
-This statement was created on	<span class="basic-information statement-created-date">16 October 2018</span>	using the <a href="../">W3C Accessibility Statement Generator Tool</a>.
+This statement was created on <span class="basic-information statement-created-date">16 October 2018</span> using the <a href="../">W3C Accessibility Statement Generator Tool</a>.
 
 {% include box.html type="end" %}
