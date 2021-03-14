@@ -133,9 +133,7 @@ An evaluation statement for <span class="basic-information website-name">Citylig
 
 This Accessibility Statement is approved by:
 
-<span class="approval"><span class="basic-information organization-name">Citylights Inc.</span> 
-<span class="approved-by">Communication Department</span> 
-<span class="approved-by-jobtitle">Director of Communication</span></span>
+<span class="approval"><span class="basic-information organization-name">Citylights Inc.</span> <br><span class="approved-by">Communication Department</span> <br><span class="approved-by-jobtitle">Director of Communication</span></span>
 
 <hr noshade="noshade">
 
