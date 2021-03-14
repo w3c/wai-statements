@@ -35,28 +35,28 @@ footer: >   # Translate words below, including "Date:" and "Editor:" Translate t
 
 ## Accessibility Statement for <span class="basic-information website-name">Citylights WebStore</span>
 
-<span class="basic-information organization-name">Citylights Inc.</span> is committed to ensuring digital accessibility for people with disabilities.	We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+<span class="basic-information organization-name">Citylights Inc.</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
 
 ### Conformance status
 
 The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
 
-<span class="basic-information website-name">Citylights WebStore</span>	is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with	<span class="basic-information conformance-standard">WCAG 2.1 level AA</span>. <span><span class="basic-information conformance-status">Partially conformant</span> means that	<span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
+<span class="basic-information website-name">Citylights WebStore</span>	is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with <span class="basic-information conformance-standard">WCAG 2.1 level AA</span>. <span><span class="basic-information conformance-status">Partially conformant</span> means that <span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
 
 ### Feedback
 
-We welcome your feedback on the accessibility of <span class="basic-information website-name">Citylights WebStore</span>.	Please let us know if you encounter accessibility barriers on	<span class="basic-information website-name">Citylights WebStore</span>:
+We welcome your feedback on the accessibility of <span class="basic-information website-name">Citylights WebStore</span>. Please let us know if you encounter accessibility barriers on <span class="basic-information website-name">Citylights WebStore</span>:
 
 <ul class="basic-information feedback h-card">
 	<li>Phone: <span class="phone-number p-tel">+12 34 567 89 00</span></li>
-	<li>E-mail:	<a class="email u-email" href="mailto:accessibility@example.org">accessibility@example.org</a></li>
-	<li>Postal address:	<span class="postal-address p-adr">PO Box 1, 234 Example Ville</span></li>
+	<li>E-mail: <a class="email u-email" href="mailto:accessibility@example.org">accessibility@example.org</a></li>
+	<li>Postal address: <span class="postal-address p-adr">PO Box 1, 234 Example Ville</span></li>
 </ul>
 
 We try to respond to feedback within <span class="feedback responsetime">5 business days</span>.
 
 <hr noshade="noshade">
 
-This statement was created on	<span class="basic-information statement-created-date">26 October 2018</span>	using the <a href="../">W3C Accessibility Statement Generator Tool</a>.
+This statement was created on <span class="basic-information statement-created-date">26 October 2018</span> using the <a href="../">W3C Accessibility Statement Generator Tool</a>.
 
 {% include box.html type="end" %}
