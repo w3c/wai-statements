@@ -442,8 +442,11 @@
       page.setAttribute('hidden', '');
     });
 
+    // get current page element
+    // default to create page if not 'preview'
+    var elem = currentPage === 'preview' ? pages[1] : pages[0];
     // show current page
-    document.querySelector('#accstatement .page.' + currentPage).removeAttribute('hidden');
+    elem.removeAttribute('hidden');
 
     window.scrollTo(0, 0);
   }
