@@ -340,9 +340,5 @@ preview:
 
 ---
 
-{% comment %}
 [//]: # Don't change the following include:
 {% include_relative /generator_layout.html %}
-{% endcomment %}
-
-Title is {{ page.title }}
