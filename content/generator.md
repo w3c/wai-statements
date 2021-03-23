@@ -341,4 +341,4 @@ preview:
 ---
 
 [//]: # Don't change the following include:
-{% include_relative generator_layout.html %}
+{% include_relative /content/generator_layout.html %}
