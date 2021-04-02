@@ -19,7 +19,7 @@ parent_path: /planning/statements/
 ref: /planning/statements/generator/
 github:
     repository: w3c/wai-statements
-    path: "generator.nl.md"
+    path: generator.nl.md
 external_css: /content-images/wai-statements/generator.css
 footer: >
    <p><strong>Datum:</strong> Gepubliceerd op 29 november 2018. </p>
