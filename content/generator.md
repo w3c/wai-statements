@@ -17,7 +17,7 @@ layout: default
 parent_path: /planning/statements/
 github:
     repository: w3c/wai-statements
-    path: "generator.md"   # Add the language shortcode to the middle of the filename, for example: generator.nl.md
+    path: "content/generator.md"   # Add the language shortcode to the middle of the filename, for example: generator.nl.md
 external_css: /content-images/wai-statements/generator.css
 
 footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
