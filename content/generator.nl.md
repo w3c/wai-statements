@@ -221,11 +221,11 @@ technical_info:
     report:
       title: Link naar een recent evaluatie rapport
       info: Een evaluatierapport geeft details over de  toegankelijkheidseisen waaraan wel en niet wordt voldaan. Hoewel dit meestal technischer van aard is dan de gemiddelde gebruiker, kan het sommige gebruikers helpen de problemen te begrijpen waar ze mogelijk tegenaan zijn gelopen. U kunt de <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a> gebruiken om een evaluatie rapport te creeren. Plaats de link naar het rapport hier.
-      example: "(Voorbeeld: “https://example.org/accessibility-evaulation-report”)"
+      example: "(Voorbeeld: “https://example.org/accessibility-evaluation-report”)"
     statement:
       title: Link naar evaluatie verklaring
       info: Een evaluatie verklaring bevat de belangrijkste  uitkomsten van een evalutie rapport. De <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a> geeft een overzicht van de vereisten voor een evaluatie verklaring in <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Stap 5.c</a>. Dit kan aanvullend zijn of de plaats innemen van het evaluatie rapport.
-      example: "(Voorbeeld: “https://example.org/accessibility-evaulation-statement”)"
+      example: "(Voorbeeld: “https://example.org/accessibility-evaluation-statement”)"
     other_text: Andere bewijsstukken
     other_example: "(Voorbeeld: “https://example.org/accessibility-evaluation-certificate”)"
     add_button_text: Voeg nog een ander bewijsstuk toe
