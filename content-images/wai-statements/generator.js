@@ -549,13 +549,16 @@
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(data, index) {
-
-            if (index === 0) {
-              return '\n\t<li>' + data + '</li>\n';
+          .map(function makeElement(data) {
+            // check if starts with "http"
+            const isLink = String(data).startsWith('http');
+            
+            // make it a link is true
+            if(isLink) {
+              return '\n\t<li><a href="' + data + '">' + data + '</a></li>';
             }
 
-            return '\t<li>' + data + '</li>\n';
+            return '\n\t<li>' + data + '</li>\n';
           })
           .join('');
       } else {
