@@ -552,12 +552,11 @@
           .map(function makeElement(data) {
             // check if starts with "http"
             const isLink = String(data).startsWith('http');
-            
-            // make it a link is true
+            // make it a link if true
             if(isLink) {
               return '\n\t<li><a href="' + data + '">' + data + '</a></li>';
             }
-
+            // else return as li element
             return '\n\t<li>' + data + '</li>\n';
           })
           .join('');
