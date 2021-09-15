@@ -1,3 +1,4 @@
+//@ts-nocheck
 /**
  * ACCESSIBILITY STATEMENT GENERATOR
  * ---
@@ -557,13 +558,12 @@
             return '\t<li>' + data + '</li>\n';
           })
           .join('');
-
       } else {
-
         switch (nodeName) {
           case 'A':
-            var hrefPrefix = item.getAttribute('href');
-
+            // checks item for data-href-prefix, prepends to href if it exists
+            var hrefPrefix = item.dataset.hrefPrefix || '';
+            
             item.setAttribute('href', hrefPrefix + printData);
             item.innerText = printData;
             break;
