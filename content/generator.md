@@ -1,5 +1,6 @@
 ---
 # Translation instructions are after the "#" character in this first section. (They are comments that do not show up in the web page.)
+# Read Translations Notes for this resource at https://github.com/w3c/wai-statements#readme
 
 title: Generate an Accessibility Statement   # Do not translate "title:". Do translate the text after "title:".
 
