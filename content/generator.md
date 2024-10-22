@@ -7,22 +7,22 @@ title: Generate an Accessibility Statement   # Do not translate "title:". Do tra
 lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
 
-last_updated: 2021-@@-@@   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+last_updated: 2021-03-11   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 # translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and one space)
 #   - name: "Translator Name Here"
 #   - name: "Translator Name Here" # To list multiple translators, delete the # at the beginning of this line. You can add more translator name lines.
 # contributors: # To list translation contributors, delete the # at the beginning of this line and the next line. You can add more contributors’ names.
 #   - name: "Translation Contributor Name Here"
 
-layout: default
 parent_path: /planning/statements/
 github:
-    repository: w3c/wai-statements
-    path: "content/generator.md"   # Add the language shortcode to the middle of the filename, for example: generator.nl.md
+  repository: w3c/wai-statements
+  path: "content/generator.md"   # Add the language shortcode to the middle of the filename, for example: generator.nl.md
 external_css: /content-images/wai-statements/generator.css
 
+changelog: /planning/statements/changelog/ # Do not change this
 footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-  <p><strong>Date:</strong> Updated 11 March 2021. First published November 2018. <a href="../changelog/">Changelog</a>.</p>
+  <p>First published November 2018.</p>
   <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 
