@@ -8,6 +8,8 @@ lang: en   # Change "en" to the translated language shortcode from https://www.i
 permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
 
 last_updated: 2021-03-11   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+first_published: "November 2018"
+
 # translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and one space)
 #   - name: "Translator Name Here"
 #   - name: "Translator Name Here" # To list multiple translators, delete the # at the beginning of this line. You can add more translator name lines.
@@ -22,7 +24,6 @@ external_css: /content-images/wai-statements/generator.css
 
 changelog: /planning/statements/changelog/ # Do not change this
 footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-  <p>First published November 2018.</p>
   <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 
