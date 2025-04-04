@@ -1,6 +1,6 @@
 ---
 title: Changelog - Web Accessibility Statements
-last_updated: 2021-03-11
+last_updated: 2025-04-04
 first_published: "November 2018"
 permalink: /planning/statements/changelog/
 parent: /planning/statements/
@@ -9,6 +9,10 @@ footer: >
   <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 ---
+
+## 4 April 2025
+
+* Added references to WCAG 2.2.
 
 ## 11 March 2021
 
