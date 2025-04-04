@@ -89,8 +89,14 @@
                     <fieldset class="field" id="standard-applied">
                         <legend class="label">{{ page.basic_info.standards.standard_followed }}</legend>
                         <div class="radio-field">
+                            <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag22aa"
+                                   checked="checked" value="{{ page.basic_info.standards.wcag_22_AA }}" />
+                            <label for="accstmnt_standard_wcag22aa">{{ page.basic_info.standards.wcag_22_AA }}</label>
+                        </div>
+
+                        <div class="radio-field">
                             <input type="radio" name="accstmnt_standard" id="accstmnt_standard_wcag21aa"
-                                checked="checked" value="{{ page.basic_info.standards.wcag_21_AA }}" />
+                                value="{{ page.basic_info.standards.wcag_21_AA }}" />
                             <label for="accstmnt_standard_wcag21aa">{{ page.basic_info.standards.wcag_21_AA }}</label>
                         </div>
 
