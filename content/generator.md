@@ -26,7 +26,7 @@ changelog: /planning/statements/changelog/ # Do not change this
 footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
   <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
-
+  <p>This is not legal advice. This work is subject to <a href="https://www.w3.org/Consortium/Legal/ipr-notice">W3C Policies and Legal Information</a>, including <a href="https://www.w3.org/Consortium/Legal/copyright-documents">Disclaimer of liability</a>.</p>
 
 # --- MAIN CONTENT ---
 # Do not translate the initial text with colons: "introduction:", "intro_explaination:", "page_contents:", "show_all_info:", etc. Do translate the text after the colons (:).
