@@ -2,7 +2,13 @@
 # Translation instructions are after the "#" character in this first section. (They are comments that do not show up in the web page.)
 title: Genereer een Toegankelijkheidsverklaring # Do not translate "title:". Do translate the text after "title:".
 lang: nl   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-last_updated: 2021-02-10   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+
+last_updated: 2021-02-10
+
+translation:
+    last_updated: 2021-02-10   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+    status: outdated
+
 translators: #Add one -name: line for every translator
   - name: "Bas de Bruin"
   - name: "Eric Velleman"
@@ -95,8 +101,8 @@ basic_info:
   # Additional accessibility considerations
   considerations:
     title: Aanvullende toegankelijkheidsoverwegingen
-    info: "Soms past u mogelijk meer toegankelijkheidsvereisten toe dan die gespecificeerd in de hierboven vermelde toegankelijkheidsstandaard. U levert bijvoorbeeld gebarentaal bij video's of context-afhankelijke hulp functionaliteit. Hier kunt u deze aanvullende toegankelijkheidsvereisten vermelden. < / p> <br>
-    <p> <strong> Voorbeeld: </strong> “Hoewel het ons doel is om te voldoen aan WCAG 2.1 niveau AA, hebben we ook enkele niveau AAA succescriteria toegepast: Afbeeldingen van tekst worden alleen gebruikt voor decoratieve doeleinden. Herauthenticatie nadat een sessie is verlopen, leidt niet tot verlies van gegevens. Sommige video’s zijn voorzien van gebarentaal."
+    info: "Soms past u mogelijk meer toegankelijkheidsvereisten toe dan die gespecificeerd in de hierboven vermelde toegankelijkheidsstandaard. U levert bijvoorbeeld gebarentaal bij video's of context-afhankelijke hulp functionaliteit. Hier kunt u deze aanvullende toegankelijkheidsvereisten vermelden.</p>
+    <p><strong> Voorbeeld: </strong> “Hoewel het ons doel is om te voldoen aan WCAG 2.1 niveau AA, hebben we ook enkele niveau AAA succescriteria toegepast: Afbeeldingen van tekst worden alleen gebruikt voor decoratieve doeleinden. Herauthenticatie nadat een sessie is verlopen, leidt niet tot verlies van gegevens. Sommige video’s zijn voorzien van gebarentaal.”"
     requirements: Aanvullend toegepaste toegankelijkheidseisen
   # Feedback Options
   feedback:
@@ -328,10 +334,6 @@ preview:
   back: Terug naar Generator
   download: Download als HTML pagina
   because: omdat
-
-
-
-
 ---
 
 [//]: # Don't change the following include:
