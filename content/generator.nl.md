@@ -74,8 +74,9 @@ basic_info:
   # Accessibility Standards
   standards:
     title: Toegepaste toegankelijkheidsstandaarden
-    info: Welke toegankelijkheidsstandaard heeft u gebruikt? De <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> wordt internationaal erkend. De nieuwste versie is WCAG 2.1.
+    info: Welke toegankelijkheidsstandaard heeft u gebruikt? De <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> wordt internationaal erkend. De nieuwste versie is WCAG 2.2.
     standard_followed: "Gebruikte toegankelijkheidsstandaard:"
+    wcag_22_AA: WCAG 2.2 niveau AA
     wcag_21_AA: WCAG 2.1 niveau AA
     wcag_20_AA: WCAG 2.0 niveau AA
     other_text: Anders
@@ -102,7 +103,7 @@ basic_info:
   considerations:
     title: Aanvullende toegankelijkheidsoverwegingen
     info: "Soms past u mogelijk meer toegankelijkheidsvereisten toe dan die gespecificeerd in de hierboven vermelde toegankelijkheidsstandaard. U levert bijvoorbeeld gebarentaal bij video's of context-afhankelijke hulp functionaliteit. Hier kunt u deze aanvullende toegankelijkheidsvereisten vermelden.</p>
-    <p><strong> Voorbeeld: </strong> “Hoewel het ons doel is om te voldoen aan WCAG 2.1 niveau AA, hebben we ook enkele niveau AAA succescriteria toegepast: Afbeeldingen van tekst worden alleen gebruikt voor decoratieve doeleinden. Herauthenticatie nadat een sessie is verlopen, leidt niet tot verlies van gegevens. Sommige video’s zijn voorzien van gebarentaal.”"
+    <p><strong> Voorbeeld: </strong> “Hoewel het ons doel is om te voldoen aan WCAG 2.2 niveau AA, hebben we ook enkele niveau AAA succescriteria toegepast: Afbeeldingen van tekst worden alleen gebruikt voor decoratieve doeleinden. Herauthenticatie nadat een sessie is verlopen, leidt niet tot verlies van gegevens. Sommige video’s zijn voorzien van gebarentaal.”"
     requirements: Aanvullend toegepaste toegankelijkheidseisen
   # Feedback Options
   feedback:
