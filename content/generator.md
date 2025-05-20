@@ -7,7 +7,7 @@ title: Generate an Accessibility Statement   # Do not translate "title:". Do tra
 lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
 
-last_updated: 2025-04-04   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+last_updated: 2025-05-20   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 first_published: "November 2018"
 
 # translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and one space)

@@ -1,6 +1,6 @@
 ---
 title: Changelog - Web Accessibility Statements
-last_updated: 2025-04-04
+last_updated: 2025-05-20
 first_published: "November 2018"
 permalink: /planning/statements/changelog/
 parent: /planning/statements/
@@ -10,7 +10,7 @@ footer: >
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 ---
 
-## 4 April 2025
+## 20 May 2025
 
 * Added references to WCAG 2.2.
 
