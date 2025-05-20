@@ -231,13 +231,13 @@ technical_info:
     report:
       title: Link to recent evaluation report
       info: An evaluation report provides details on which accessibility requirements are met, and which are not. While this is usually more technical of nature than the average user, it can help some users to understand issues they have been observing. You can use the <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Evaluation Report Tool</a> to create an evaluation report. Place the link to the report here.
-      example: "(Example: “https://example.org/accessibility-evaulation-report”)"
+      example: "(Example: “https://example.org/accessibility-evaluation-report”)"
     statement:
       title: Link to evaluation statement
       info: An evaluation statement summarizes the essential outcomes of an evaluation report. The <a href="https://www.w3.org/TR/WCAG-EM/">Website Accessibility Conformance Evaluation Methodology (WCAG-EM)</a> defines requirements for evaluation statements in <a href="https://www.w3.org/TR/WCAG-EM/#step5c">Step 5.c</a> of the document. This can be provided instead of or in addition to an evaluation report provided above.
-      example: "(Example: “https://example.org/accessibility-evaulation-statement”)"
+      example: "(Example: “https://example.org/accessibility-evaluation-statement”)"
     other_text: Other evidence
-    other_example: "(Example: “https://example.org/accessibility-evaulation-certificate”)"
+    other_example: "(Example: “https://example.org/accessibility-evaluation-certificate”)"
     add_button_text: Add another related evidence
 
 # Approval and complaints process 
