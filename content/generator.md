@@ -1,12 +1,10 @@
 ---
-# Translation instructions are after the "#" character in this first section. (They are comments that do not show up in the web page.)
+# Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after "#".
+# In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
 # Read Translations Notes for this resource at https://github.com/w3c/wai-statements#readme
 
 title: Generate an Accessibility Statement   # Do not translate "title:". Do translate the text after "title:".
-
-lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
-
+lang: en   # Change "en" to the translated-language shortcode
 last_updated: 2025-05-20   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 first_published: "November 2018"
 
@@ -16,17 +14,25 @@ first_published: "November 2018"
 # contributors: # To list translation contributors, delete the # at the beginning of this line and the next line. You can add more contributors’ names.
 #   - name: "Translation Contributor Name Here"
 
-parent_path: /planning/statements/
+permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at the end. For example /path/to/file/fr
+ref: /planning/statements/generator/    # Do not change this
+parent_path: /planning/statements/  # Do not change this
+
 github:
   repository: w3c/wai-statements
-  path: "content/generator.md"   # Add the language shortcode to the middle of the filename, for example: generator.nl.md
+  path: content/generator.md   # Add the language shortcode to the middle of the filename, for example: index.fr.md
+
 external_css: /content-images/wai-statements/generator.css
+changelog: planning/statements/changelog/ # Do not change this
+acknowledgements: /planning/statements/acknowledgements/ # Do not change this
 
-changelog: /planning/statements/changelog/ # Do not change this
-footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-  <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
+# In the footer below:
+# Do not translate ACKNOWLEDGEMENTS
+# Translate other words, including "Project Team:"
+# Translate the Working Group name. Leave the Working Group acronym in English.
+footer: >
+  <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. ACKNOWLEDGEMENTS.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
-
 
 # --- MAIN CONTENT ---
 # Do not translate the initial text with colons: "introduction:", "intro_explaination:", "page_contents:", "show_all_info:", etc. Do translate the text after the colons (:).
