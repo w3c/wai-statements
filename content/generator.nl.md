@@ -3,11 +3,10 @@
 title: Genereer een Toegankelijkheidsverklaring # Do not translate "title:". Do translate the text after "title:".
 lang: nl   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 
-last_updated: 2021-02-10
+last_updated: 2025-05-20
 
 translation:
-    last_updated: 2021-02-10   # Put the date of this translation YYYY-MM-DD (with month in the middle)
-    status: outdated
+    last_updated: 2025-07-22   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
 translators: #Add one -name: line for every translator
   - name: "Bas de Bruin"
