@@ -4,7 +4,9 @@
 # Read Translations Notes for this resource at https://github.com/w3c/wai-statements#readme
 
 title: Generate an Accessibility Statement   # Do not translate "title:". Do translate the text after "title:".
-lang: en   # Change "en" to the translated-language shortcode
+lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
+permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
+ref: /planning/statements/generator/
 last_updated: 2025-05-20   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 first_published: "November 2018"
 
@@ -105,7 +107,7 @@ basic_info:
   # Additional accessibility considerations
   considerations:
     title: Additional accessibility considerations
-    info: "Sometimes you may be applying more accessibility requirements than those specified in the accessibility standard stated above. For example, you may be providing sign language videos or context-sensitive help for functionality. Here you can list these additional accessibility requirements.</p> <br>
+    info: "Sometimes you may be applying more accessibility requirements than those specified in the accessibility standard stated above. For example, you may be providing sign language videos or context-sensitive help for functionality. Here you can list these additional accessibility requirements.</p>
     <p> <strong>Example:</strong> “Although our goal is WCAG 2.2 Level AA conformance, we have also applied some Level AAA Success Criteria: Images of text are only used for decorative purposes. Re-authentication after a session expires does not cause loss of data. Some videos have sign language interpretation.”"
     requirements: Additional accessibility requirements applied
   # Feedback Options
@@ -344,10 +346,6 @@ preview:
   back: Back to generator tool
   download: Download as HTML page
   because: because
-
-
-
-
 ---
 
 [//]: # Don't change the following include:
