@@ -1,3 +1,4 @@
+//@ts-nocheck
 /**
  * ACCESSIBILITY STATEMENT GENERATOR
  * ---
@@ -548,22 +549,23 @@
 
       if (dataList && nodeName === 'UL' || nodeName === 'OL') {
         item.innerHTML = printData
-          .map(function wrapInLi(data, index) {
-
-            if (index === 0) {
-              return '\n\t<li>' + data + '</li>\n';
+          .map(function makeElement(data) {
+            // check if starts with "http"
+            const isLink = String(data).startsWith('http');
+            // make it a link if true
+            if(isLink) {
+              return '\n\t<li><a href="' + data + '">' + data + '</a></li>';
             }
-
-            return '\t<li>' + data + '</li>\n';
+            // else return as li element
+            return '\n\t<li>' + data + '</li>\n';
           })
           .join('');
-
       } else {
-
         switch (nodeName) {
           case 'A':
-            var hrefPrefix = item.getAttribute('href');
-
+            // checks item for data-href-prefix, prepends to href if it exists
+            var hrefPrefix = item.dataset.hrefPrefix || '';
+            
             item.setAttribute('href', hrefPrefix + printData);
             item.innerText = printData;
             break;
