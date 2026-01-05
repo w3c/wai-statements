@@ -1,12 +1,14 @@
 ---
+# Do not translate Changelog
 title: Changelog - Web Accessibility Statements
 last_updated: 2025-05-20
 first_published: "November 2018"
-permalink: /planning/statements/changelog/
 parent: /planning/statements/
-nosidenav: true
+permalink: /planning/statements/changelog/
+ref: /planning/statements/changelog/
+acknowledgements: /planning/statements/acknowledgements/ # Do not change this
 footer: >
-  <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
+  <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. ACKNOWLEDGEMENTS.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 ---
 

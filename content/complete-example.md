@@ -1,12 +1,11 @@
 ---
-# Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after #.
+# Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after "#".
 # In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
-
 title: "Example of Complete Accessibility Statement"
-
-lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-last_updated: 2021-03-11   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+lang: en   # Change "en" to the translated-language shortcode
+last_updated: 2021-03-11   # Keep the date of the English version
 first_published: "November 2018"
+description:  This resource helps you create an accessibility statement for your own website, mobile application, or other digital content.
 
 # translators:    # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
 # - name: "Jan Doe"   # Replace Jan Doe with translator name
@@ -17,22 +16,26 @@ first_published: "November 2018"
 
 github:
   repository: w3c/wai-statements
-  path: "content/complete-example.html"   # Add the language shortcode to the middle of the filename, for example: complete-example.fr.html
-permalink: /planning/statements/complete-example/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/complete-example/fr
+  path: complete-example.md   # Add the language shortcode to the middle of the filename, for example: index.fr.md
 
-ref: /planning/statements/complete-example/   # Translators, do not change this
+permalink: /planning/statements/complete-example/   # Add the language shortcode to the end, with no slash at the end. For example /path/to/file/fr
+ref: /planning/statements/complete-example/   # Do not change this
+
 external_css: /content-images/wai-statements/generator.css
+changelog: planning/statements/changelog/ # Do not change this
+acknowledgements: /planning/statements/acknowledgements/ # Do not change this
 
-description:  This resource helps you create an accessibility statement for your own website, mobile application, or other digital content.   # translate the description
-
-changelog: /planning/statements/changelog/ # Do not change this
-footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
-  <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
+# In the footer below:
+# Do not translate ACKNOWLEDGEMENTS
+# Translate other words, including "Project Team:"
+# Translate the Working Group name. Leave the Working Group acronym in English.
+footer: >
+  <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. ACKNOWLEDGEMENTS.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
-
 ---
 
 {% include box.html type="start" title="Example of an accessibility statement including all parts of the generator tool" class="example" %}
+
 <h2>Accessibility Statement for <span class="basic-information website-name">Citylights WebStore</span></h2>
 <p>
 	<span class="basic-information organization-name">Citylights Inc.</span>
@@ -156,4 +159,5 @@ footer: >   # Translate words below, including "Date:" and "Editor:" Translate t
 	<span class="basic-information statement-created-date">16 October 2018</span>
 	using the <a href="../">W3C Accessibility Statement Generator Tool</a>.
 </p>
+
 {% include box.html type="end" %}

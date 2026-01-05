@@ -3,12 +3,12 @@
 # In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
 
 title: "Example of Minimal Accessibility Statement"
-
-lang: en   # Change "en" to the translated-language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-last_updated: 2021-03-11   # Put the date of this translation YYYY-MM-DD (with month in the middle)
+lang: en   # Change "en" to the translated-language shortcode
+last_updated: 2021-03-11   # Keep the date of the English version
 first_published: "November 2018"
+description:  This resource helps you create an accessibility statement for your own website, mobile application, or other digital content.
 
-# translators:    # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
+# translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
 # - name: "Jan Doe"   # Replace Jan Doe with translator name
 # - name: "Jan Doe"   # Replace Jan Doe with name, or delete this line if not multiple translators
 # contributors:
@@ -17,16 +17,21 @@ first_published: "November 2018"
 
 github:
   repository: w3c/wai-statements
-  path: "content/minimal-example.html"   # Add the language shortcode to the middle of the filename, for example: minimal-example.fr.html
-permalink: /planning/statements/minimal-example/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/minimal-example/fr
+  path: minimal-example.md   # Add the language shortcode to the middle of the filename, for example: index.fr.md
 
-ref: /planning/statements/minimal-example/   # Translators, do not change this
+permalink: /planning/statements/minimal-example/   # Add the language shortcode to the end, with no slash at the end. For example /path/to/file/fr
+
+ref: /planning/statements/minimal-example/   # Do not change this
 external_css: /content-images/wai-statements/generator.css
 
-description:  This resource helps you create an accessibility statement for your own website, mobile application, or other digital content.   # translate the description
+changelog: planning/statements/changelog/ # Do not change this
+acknowledgements: /planning/statements/acknowledgements/ # Do not change this
 
-changelog: /planning/statements/changelog/ # Do not change this
-footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
+# In the footer below:
+# Do not translate ACKNOWLEDGEMENTS
+# Translate other words, including "Project Team:"
+# Translate the Working Group name. Leave the Working Group acronym in English.
+footer: >
   <p><strong>Project Team:</strong> <a href="https://www.w3.org/People/shadi">Shadi Abou-Zahra</a>, Eric Velleman, Sanne Eendebak, Roel Antonisse, and Bas de Bruin. <a href="../acknowledgements/">Acknowledgements</a>.</p>
   <p>Developed by the <a href="https://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a>. Developed as part of the <a href="https://www.w3.org/WAI/Tools/">WAI-Tools project</a>, co-funded by the European Commission.</p>
 
