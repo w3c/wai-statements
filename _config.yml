@@ -30,7 +30,7 @@ kramdown:
   syntax_highlighter: rouge
 highlighter: rouge
 
-remote_theme: w3c/wai-website-theme
+theme: wai-website-theme
 
 defaults:
   -
