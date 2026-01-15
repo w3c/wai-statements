@@ -5,8 +5,6 @@
 
 title: Generate an Accessibility Statement   # Do not translate "title:". Do translate the text after "title:".
 lang: en   # Change "en" to the translated language shortcode from https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
-permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at end, for example: /planning/statements/generator/nl
-ref: /planning/statements/generator/
 last_updated: 2025-05-20   # Put the date of this translation YYYY-MM-DD (with month in the middle)
 first_published: "November 2018"
 
@@ -19,10 +17,6 @@ first_published: "November 2018"
 permalink: /planning/statements/generator/   # Add the language shortcode to the end, with no slash at the end. For example /path/to/file/fr
 ref: /planning/statements/generator/    # Do not change this
 parent_path: /planning/statements/  # Do not change this
-
-github:
-  repository: w3c/wai-statements
-  path: content/generator.md   # Add the language shortcode to the middle of the filename, for example: index.fr.md
 
 external_css: /content-images/wai-statements/generator.css
 changelog: planning/statements/changelog/ # Do not change this
