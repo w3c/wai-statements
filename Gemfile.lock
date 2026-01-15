@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/w3c/wai-website-plugin
-  revision: 7cd3702a96d1b6a84c50fdfd3f6ceb62c72c69ae
-  branch: v2026
+  revision: e9f2c0e098caf80e010f1985ba942b6bf540e85e
+  branch: main
   specs:
     wai-website-plugin (0.3)
       jekyll (~> 4.4.1)
@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/w3c/wai-website-theme
-  revision: f182969afb7a8fb47bd7434707f247b9302e11ba
-  branch: updates
+  revision: f33b9fef553b59ef8ecf35c3bef264de8b1ad4a9
+  branch: main
   specs:
     wai-website-theme (1.10)
       jekyll (~> 4.4.1)
