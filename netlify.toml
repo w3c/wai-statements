@@ -1,9 +1,9 @@
 [build]
-command = "git submodule update --init --remote && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
+command = "bundle update wai-website-theme --conservative && bundle update wai-website-plugin --conservative && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
 publish = "_site"
 
 [build.environment]
-RUBY_VERSION = "3.3.3"
+RUBY_VERSION = "3.4.8"
 
 [[redirects]]
   from = "/"

@@ -14,10 +14,6 @@ description:  This resource helps you create an accessibility statement for your
 # - name: "Jan Doe"   # Replace Jan Doe with contributor name, or delete this line if none
 # - name: "Jan Doe"   # Replace Jan Doe with name, or delete this line if not multiple contributors
 
-github:
-  repository: w3c/wai-statements
-  path: complete-example.md   # Add the language shortcode to the middle of the filename, for example: index.fr.md
-
 permalink: /planning/statements/complete-example/   # Add the language shortcode to the end, with no slash at the end. For example /path/to/file/fr
 ref: /planning/statements/complete-example/   # Do not change this
 
