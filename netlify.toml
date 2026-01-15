@@ -1,5 +1,5 @@
 [build]
-command = "bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
+command = "bundle update wai-website-theme --conservative && bundle update wai-website-plugin --conservative && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
 publish = "_site"
 
 [build.environment]
