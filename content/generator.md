@@ -1,4 +1,4 @@
----
+desbloqueado---
 # Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after "#".
 # In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
 # Read Translations Notes for this resource at https://github.com/w3c/wai-statements#readme
