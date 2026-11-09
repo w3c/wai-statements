@@ -3,7 +3,7 @@ command = "bundle update wai-website-theme --conservative && bundle update wai-w
 publish = "_site"
 
 [build.environment]
-RUBY_VERSION = "3.4.8"
+RUBY_VERSION = "3.4.12"
 
 [[redirects]]
   from = "/"
